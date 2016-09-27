@@ -1,24 +1,23 @@
 //
-//  SecondViewController.m
+//  AccountViewController.m
 //  HealthEdu
 //
-//  Created by NetEase on 16/9/26.
+//  Created by NetEase on 16/9/27.
 //  Copyright © 2016年 allWants. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "AccountViewController.h"
 
-@interface SecondViewController ()
+@interface AccountViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation AccountViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
