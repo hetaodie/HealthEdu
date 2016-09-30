@@ -1,4 +1,8 @@
-source 'http://github.com/CocoaPods/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
 
-pod 'AFNetworking', :git => 'https://github.com/Janyave/AFNetworking'
-pod 'SDWebImage', :git => 'https://github.com/Janyave/SDWebImage'
+target ‘HealthEdu’ do
+pod 'AFNetworking', '~> 3.0'
+end
+
+pod 'SDWebImage', '~>3.8'
