@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4FB205F51DB4BDA3007396A8 /* HomeTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB205F41DB4BDA3007396A8 /* HomeTagView.m */; };
 		4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB205F61DB4BDBD007396A8 /* HomeTagView.xib */; };
+		4FDE9CD41DB4D20600D9C790 /* HomeContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE9CD21DB4D20600D9C790 /* HomeContentTableViewCell.m */; };
+		4FDE9CD51DB4D20600D9C790 /* HomeContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE9CD31DB4D20600D9C790 /* HomeContentTableViewCell.xib */; };
 		87FF3A461CC04FFE94D920AA /* libPods-HealthEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E718DE9FCA3253C2582194C5 /* libPods-HealthEdu.a */; };
 		E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E62342C31D9A0A6000FE8254 /* HomeViewController.m */; };
 		E62342DB1D9A154300FE8254 /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E62342DA1D9A154300FE8254 /* ServiceViewController.m */; };
@@ -44,6 +46,9 @@
 		4FB205F31DB4BDA3007396A8 /* HomeTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTagView.h; sourceTree = "<group>"; };
 		4FB205F41DB4BDA3007396A8 /* HomeTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTagView.m; sourceTree = "<group>"; };
 		4FB205F61DB4BDBD007396A8 /* HomeTagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTagView.xib; sourceTree = "<group>"; };
+		4FDE9CD11DB4D20600D9C790 /* HomeContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeContentTableViewCell.h; sourceTree = "<group>"; };
+		4FDE9CD21DB4D20600D9C790 /* HomeContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeContentTableViewCell.m; sourceTree = "<group>"; };
+		4FDE9CD31DB4D20600D9C790 /* HomeContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeContentTableViewCell.xib; sourceTree = "<group>"; };
 		9323F8D8773924F12DA09357 /* Pods-HealthEdu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.debug.xcconfig"; sourceTree = "<group>"; };
 		A216E4697B5EBA35B628872D /* Pods-HealthEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.release.xcconfig"; sourceTree = "<group>"; };
 		E62342C21D9A0A6000FE8254 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -109,6 +114,7 @@
 		4FB205E31DB4A469007396A8 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4FDE9CD01DB4D1E100D9C790 /* cell */,
 				4FB205F31DB4BDA3007396A8 /* HomeTagView.h */,
 				4FB205F41DB4BDA3007396A8 /* HomeTagView.m */,
 				4FB205F61DB4BDBD007396A8 /* HomeTagView.xib */,
@@ -227,6 +233,16 @@
 			children = (
 			);
 			path = object;
+			sourceTree = "<group>";
+		};
+		4FDE9CD01DB4D1E100D9C790 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				4FDE9CD11DB4D20600D9C790 /* HomeContentTableViewCell.h */,
+				4FDE9CD21DB4D20600D9C790 /* HomeContentTableViewCell.m */,
+				4FDE9CD31DB4D20600D9C790 /* HomeContentTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		89C1F562CB5BBC99C346DC2C /* Frameworks */ = {
@@ -491,6 +507,7 @@
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
 				E6C699131D990B2A00D2818C /* LaunchScreen.storyboard in Resources */,
 				E6C699101D990B2A00D2818C /* Assets.xcassets in Resources */,
+				4FDE9CD51DB4D20600D9C790 /* HomeContentTableViewCell.xib in Resources */,
 				E6C6990E1D990B2A00D2818C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,6 +585,7 @@
 				E6C699021D990B2A00D2818C /* main.m in Sources */,
 				4FB205F51DB4BDA3007396A8 /* HomeTagView.m in Sources */,
 				E62342DB1D9A154300FE8254 /* ServiceViewController.m in Sources */,
+				4FDE9CD41DB4D20600D9C790 /* HomeContentTableViewCell.m in Sources */,
 				E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */,
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
 				E62342DE1D9A157600FE8254 /* ConsultationViewController.m in Sources */,

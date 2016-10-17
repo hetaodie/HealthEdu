@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +31,7 @@
             <objects>
                 <navigationController id="59w-5c-6g7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="咨询" image="zixun2" selectedImage="zixun2" id="KX2-go-hXT"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VWj-8p-J0A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VWj-8p-J0A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,7 +51,7 @@
         <!--浙江健康教育-->
         <scene sceneID="qbT-4i-Cx7">
             <objects>
-                <viewController id="4pw-cr-srr" sceneMemberID="viewController">
+                <viewController id="4pw-cr-srr" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="znj-LL-UHQ"/>
                         <viewControllerLayoutGuide type="bottom" id="E19-Ds-V62"/>
@@ -60,13 +59,40 @@
                     <view key="view" contentMode="scaleToFill" id="nx7-Mo-8G2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adh-fV-uBN" customClass="HomeTagView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="j4o-AK-yZ4"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kdf-9L-38w">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4pw-cr-srr" id="ma8-3W-Mqb"/>
+                                    <outlet property="delegate" destination="4pw-cr-srr" id="0gC-pz-hFp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="adh-fV-uBN" firstAttribute="top" secondItem="znj-LL-UHQ" secondAttribute="bottom" id="6t1-kv-MKk"/>
+                            <constraint firstItem="adh-fV-uBN" firstAttribute="leading" secondItem="nx7-Mo-8G2" secondAttribute="leading" id="BzI-IM-cZe"/>
+                            <constraint firstAttribute="bottom" secondItem="Kdf-9L-38w" secondAttribute="bottom" constant="49" id="DE6-di-lhQ"/>
+                            <constraint firstAttribute="trailing" secondItem="adh-fV-uBN" secondAttribute="trailing" id="F4n-kB-PtQ"/>
+                            <constraint firstItem="Kdf-9L-38w" firstAttribute="leading" secondItem="nx7-Mo-8G2" secondAttribute="leading" id="Fns-QP-vhm"/>
+                            <constraint firstItem="Kdf-9L-38w" firstAttribute="top" secondItem="adh-fV-uBN" secondAttribute="bottom" id="dga-of-sHX"/>
+                            <constraint firstAttribute="trailing" secondItem="Kdf-9L-38w" secondAttribute="trailing" id="wFJ-nw-2LO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="浙江健康教育" id="fKm-qn-p94"/>
+                    <connections>
+                        <outlet property="contentTableView" destination="Kdf-9L-38w" id="Qo0-xw-Pqn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsm-Xk-bWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3172" y="-1189"/>
+            <point key="canvasLocation" x="-3172" y="-1189.6551724137933"/>
         </scene>
         <!--服务-->
         <scene sceneID="JmF-nT-gbF">
@@ -130,7 +156,7 @@
             <objects>
                 <navigationController id="Zc9-7Q-4Ld" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="服务" image="fuwu" selectedImage="fuwu2" id="his-8j-SZV"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5tl-UW-YDH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5tl-UW-YDH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,7 +178,7 @@
             <objects>
                 <navigationController id="oRC-VX-sgg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我" image="wode" selectedImage="wode2" id="cpm-bO-A4e"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qMW-Ek-GFi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qMW-Ek-GFi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -174,7 +200,7 @@
             <objects>
                 <navigationController id="pPw-2Z-frc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="shouye" selectedImage="shouye2" id="AZQ-PP-oCN"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ou4-fZ-XHP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ou4-fZ-XHP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>

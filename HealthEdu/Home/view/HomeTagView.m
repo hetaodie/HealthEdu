@@ -8,14 +8,47 @@
 
 #import "HomeTagView.h"
 
+@interface HomeTagView ()
+@property (strong, nonatomic) IBOutlet UIView *contentView;
+
+@end
+
 @implementation HomeTagView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark -
+#pragma mark lifecycle
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    self.contentView.frame = self.bounds;
 }
-*/
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        NSString *className = NSStringFromClass([self class]);
+        self.contentView = [[[NSBundle mainBundle] loadNibNamed:className owner:self options:nil] firstObject];
+        [self addSubview:self.contentView];
+        return self;
+    }
+    return nil;
+}
+
+
+#pragma mark -
+#pragma mark IBActions
+
+#pragma mark -
+#pragma mark public
+
+#pragma mark -
+#pragma mark delegate
+
+#pragma mark -
+#pragma mark NSNotification
+
+#pragma mark -
+#pragma mark private
 
 @end

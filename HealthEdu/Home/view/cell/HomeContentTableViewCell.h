@@ -1,5 +1,5 @@
 //
-//  HomeTagView.h
+//  HomeContentTableViewCell.h
 //  HealthEdu
 //
 //  Created by xu.wei on 16/10/17.
@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol HomeTagViewDelegate <NSObject>
-
-- (void)onSelectBtnWithTag:(int)aTag;
-
-@end
-
-@interface HomeTagView : UIView
+@interface HomeContentTableViewCell : UITableViewCell
 
 @end

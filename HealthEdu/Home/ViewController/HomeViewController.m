@@ -7,31 +7,70 @@
 //
 
 #import "HomeViewController.h"
+#import "HomeContentTableViewCell.h"
 
-@interface HomeViewController ()
+
+#define HomeContentCellHeight 168
+
+
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *contentTableView;
 
 @end
 
 @implementation HomeViewController
 
+#pragma mark -
+#pragma mark lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setUpContentTableView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark -
+#pragma mark IBActions
+
+#pragma mark -
+#pragma mark public
+
+#pragma mark -
+#pragma mark delegate
+
+#pragma mark -
+#pragma mark UITableViewDelegate & UITableViewDataSource
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
 }
-*/
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HomeContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeContentTableViewCell" forIndexPath:indexPath];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return HomeContentCellHeight;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+}
+
+#pragma mark -
+#pragma mark NSNotification
+
+#pragma mark -
+#pragma mark private
+
+- (void)setUpContentTableView{
+    UINib *nib = [UINib nibWithNibName:@"HomeContentTableViewCell" bundle:nil];
+    [self.contentTableView registerNib:nib forCellReuseIdentifier:@"HomeContentTableViewCell"];
+}
 @end
