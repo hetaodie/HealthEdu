@@ -8,10 +8,10 @@
 
 #import "HomeViewController.h"
 #import "HomeContentTableViewCell.h"
+#import "HomeContentHeaderView.h"
 
 
 #define HomeContentCellHeight 168
-
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
@@ -72,5 +72,8 @@
 - (void)setUpContentTableView{
     UINib *nib = [UINib nibWithNibName:@"HomeContentTableViewCell" bundle:nil];
     [self.contentTableView registerNib:nib forCellReuseIdentifier:@"HomeContentTableViewCell"];
+    
+    HomeContentHeaderView *view = [HomeContentHeaderView viewWithXib];
+    self.contentTableView.tableHeaderView = view;
 }
 @end
