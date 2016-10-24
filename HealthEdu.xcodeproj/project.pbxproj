@@ -25,6 +25,32 @@
 		E6C699131D990B2A00D2818C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6C699111D990B2A00D2818C /* LaunchScreen.storyboard */; };
 		E6C6991E1D990B2A00D2818C /* HealthEduTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C6991D1D990B2A00D2818C /* HealthEduTests.m */; };
 		E6C699291D990B2A00D2818C /* HealthEduUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C699281D990B2A00D2818C /* HealthEduUITests.m */; };
+		E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27901DBD988E00DEE06D /* ConsultViewController.m */; };
+		E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27911DBD988E00DEE06D /* ConsultViewController.xib */; };
+		E6EC27971DBD995B00DEE06D /* ConSultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27951DBD995B00DEE06D /* ConSultDetailViewController.m */; };
+		E6EC27981DBD995B00DEE06D /* ConSultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27961DBD995B00DEE06D /* ConSultDetailViewController.xib */; };
+		E6EC279C1DBD998F00DEE06D /* BaiKeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC279A1DBD998F00DEE06D /* BaiKeViewController.m */; };
+		E6EC279D1DBD998F00DEE06D /* BaiKeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC279B1DBD998F00DEE06D /* BaiKeViewController.xib */; };
+		E6EC27A11DBD99A700DEE06D /* BKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC279F1DBD99A700DEE06D /* BKDetailViewController.m */; };
+		E6EC27A21DBD99A700DEE06D /* BKDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27A01DBD99A700DEE06D /* BKDetailViewController.xib */; };
+		E6EC27A61DBD99C800DEE06D /* LectureHailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27A41DBD99C800DEE06D /* LectureHailViewController.m */; };
+		E6EC27A71DBD99C800DEE06D /* LectureHailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27A51DBD99C800DEE06D /* LectureHailViewController.xib */; };
+		E6EC27AB1DBD9A4C00DEE06D /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27A91DBD9A4C00DEE06D /* PlayerViewController.m */; };
+		E6EC27AC1DBD9A4C00DEE06D /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27AA1DBD9A4C00DEE06D /* PlayerViewController.xib */; };
+		E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27AE1DBD9A6C00DEE06D /* PlayHistoryViewController.m */; };
+		E6EC27B11DBD9A6C00DEE06D /* PlayHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27AF1DBD9A6C00DEE06D /* PlayHistoryViewController.xib */; };
+		E6EC27B51DBD9A8F00DEE06D /* LearnCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27B31DBD9A8F00DEE06D /* LearnCommunityViewController.m */; };
+		E6EC27B61DBD9A8F00DEE06D /* LearnCommunityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27B41DBD9A8F00DEE06D /* LearnCommunityViewController.xib */; };
+		E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27B81DBD9B1400DEE06D /* LoginViewController.m */; };
+		E6EC27BB1DBD9B1400DEE06D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27B91DBD9B1400DEE06D /* LoginViewController.xib */; };
+		E6EC27BF1DBD9CAD00DEE06D /* DoctorRepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27BD1DBD9CAD00DEE06D /* DoctorRepeatViewController.m */; };
+		E6EC27C01DBD9CAD00DEE06D /* DoctorRepeatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27BE1DBD9CAD00DEE06D /* DoctorRepeatViewController.xib */; };
+		E6EC27C41DBD9D7B00DEE06D /* CacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27C21DBD9D7B00DEE06D /* CacheViewController.m */; };
+		E6EC27C51DBD9D7B00DEE06D /* CacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27C31DBD9D7B00DEE06D /* CacheViewController.xib */; };
+		E6EC27C91DBD9D9400DEE06D /* BMIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27C71DBD9D9400DEE06D /* BMIViewController.m */; };
+		E6EC27CA1DBD9D9400DEE06D /* BMIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27C81DBD9D9400DEE06D /* BMIViewController.xib */; };
+		E6EC27CE1DBD9E4D00DEE06D /* PersonInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27CC1DBD9E4D00DEE06D /* PersonInfoViewController.m */; };
+		E6EC27CF1DBD9E4D00DEE06D /* PersonInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27CD1DBD9E4D00DEE06D /* PersonInfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +104,45 @@
 		E6C699241D990B2A00D2818C /* HealthEduUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthEduUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C699281D990B2A00D2818C /* HealthEduUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthEduUITests.m; sourceTree = "<group>"; };
 		E6C6992A1D990B2A00D2818C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6EC278F1DBD988E00DEE06D /* ConsultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultViewController.h; sourceTree = "<group>"; };
+		E6EC27901DBD988E00DEE06D /* ConsultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultViewController.m; sourceTree = "<group>"; };
+		E6EC27911DBD988E00DEE06D /* ConsultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultViewController.xib; sourceTree = "<group>"; };
+		E6EC27941DBD995B00DEE06D /* ConSultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConSultDetailViewController.h; sourceTree = "<group>"; };
+		E6EC27951DBD995B00DEE06D /* ConSultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConSultDetailViewController.m; sourceTree = "<group>"; };
+		E6EC27961DBD995B00DEE06D /* ConSultDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConSultDetailViewController.xib; sourceTree = "<group>"; };
+		E6EC27991DBD998F00DEE06D /* BaiKeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiKeViewController.h; sourceTree = "<group>"; };
+		E6EC279A1DBD998F00DEE06D /* BaiKeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiKeViewController.m; sourceTree = "<group>"; };
+		E6EC279B1DBD998F00DEE06D /* BaiKeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiKeViewController.xib; sourceTree = "<group>"; };
+		E6EC279E1DBD99A700DEE06D /* BKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDetailViewController.h; sourceTree = "<group>"; };
+		E6EC279F1DBD99A700DEE06D /* BKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDetailViewController.m; sourceTree = "<group>"; };
+		E6EC27A01DBD99A700DEE06D /* BKDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BKDetailViewController.xib; sourceTree = "<group>"; };
+		E6EC27A31DBD99C800DEE06D /* LectureHailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureHailViewController.h; sourceTree = "<group>"; };
+		E6EC27A41DBD99C800DEE06D /* LectureHailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureHailViewController.m; sourceTree = "<group>"; };
+		E6EC27A51DBD99C800DEE06D /* LectureHailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LectureHailViewController.xib; sourceTree = "<group>"; };
+		E6EC27A81DBD9A4C00DEE06D /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		E6EC27A91DBD9A4C00DEE06D /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		E6EC27AA1DBD9A4C00DEE06D /* PlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
+		E6EC27AD1DBD9A6C00DEE06D /* PlayHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayHistoryViewController.h; sourceTree = "<group>"; };
+		E6EC27AE1DBD9A6C00DEE06D /* PlayHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayHistoryViewController.m; sourceTree = "<group>"; };
+		E6EC27AF1DBD9A6C00DEE06D /* PlayHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayHistoryViewController.xib; sourceTree = "<group>"; };
+		E6EC27B21DBD9A8F00DEE06D /* LearnCommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnCommunityViewController.h; sourceTree = "<group>"; };
+		E6EC27B31DBD9A8F00DEE06D /* LearnCommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnCommunityViewController.m; sourceTree = "<group>"; };
+		E6EC27B41DBD9A8F00DEE06D /* LearnCommunityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnCommunityViewController.xib; sourceTree = "<group>"; };
+		E6EC27B71DBD9B1400DEE06D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E6EC27B81DBD9B1400DEE06D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E6EC27B91DBD9B1400DEE06D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E6EC27BC1DBD9CAD00DEE06D /* DoctorRepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorRepeatViewController.h; sourceTree = "<group>"; };
+		E6EC27BD1DBD9CAD00DEE06D /* DoctorRepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorRepeatViewController.m; sourceTree = "<group>"; };
+		E6EC27BE1DBD9CAD00DEE06D /* DoctorRepeatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorRepeatViewController.xib; sourceTree = "<group>"; };
+		E6EC27C11DBD9D7B00DEE06D /* CacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheViewController.h; sourceTree = "<group>"; };
+		E6EC27C21DBD9D7B00DEE06D /* CacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheViewController.m; sourceTree = "<group>"; };
+		E6EC27C31DBD9D7B00DEE06D /* CacheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CacheViewController.xib; sourceTree = "<group>"; };
+		E6EC27C61DBD9D9400DEE06D /* BMIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIViewController.h; sourceTree = "<group>"; };
+		E6EC27C71DBD9D9400DEE06D /* BMIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIViewController.m; sourceTree = "<group>"; };
+		E6EC27C81DBD9D9400DEE06D /* BMIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMIViewController.xib; sourceTree = "<group>"; };
+		E6EC27CB1DBD9E4D00DEE06D /* PersonInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoViewController.h; sourceTree = "<group>"; };
+		E6EC27CC1DBD9E4D00DEE06D /* PersonInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoViewController.m; sourceTree = "<group>"; };
+		E6EC27CD1DBD9E4D00DEE06D /* PersonInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonInfoViewController.xib; sourceTree = "<group>"; };
 		E718DE9FCA3253C2582194C5 /* libPods-HealthEdu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthEdu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -276,6 +341,30 @@
 			children = (
 				E62342C21D9A0A6000FE8254 /* HomeViewController.h */,
 				E62342C31D9A0A6000FE8254 /* HomeViewController.m */,
+				E6EC278F1DBD988E00DEE06D /* ConsultViewController.h */,
+				E6EC27901DBD988E00DEE06D /* ConsultViewController.m */,
+				E6EC27911DBD988E00DEE06D /* ConsultViewController.xib */,
+				E6EC27941DBD995B00DEE06D /* ConSultDetailViewController.h */,
+				E6EC27951DBD995B00DEE06D /* ConSultDetailViewController.m */,
+				E6EC27961DBD995B00DEE06D /* ConSultDetailViewController.xib */,
+				E6EC27991DBD998F00DEE06D /* BaiKeViewController.h */,
+				E6EC279A1DBD998F00DEE06D /* BaiKeViewController.m */,
+				E6EC279B1DBD998F00DEE06D /* BaiKeViewController.xib */,
+				E6EC279E1DBD99A700DEE06D /* BKDetailViewController.h */,
+				E6EC279F1DBD99A700DEE06D /* BKDetailViewController.m */,
+				E6EC27A01DBD99A700DEE06D /* BKDetailViewController.xib */,
+				E6EC27A31DBD99C800DEE06D /* LectureHailViewController.h */,
+				E6EC27A41DBD99C800DEE06D /* LectureHailViewController.m */,
+				E6EC27A51DBD99C800DEE06D /* LectureHailViewController.xib */,
+				E6EC27A81DBD9A4C00DEE06D /* PlayerViewController.h */,
+				E6EC27A91DBD9A4C00DEE06D /* PlayerViewController.m */,
+				E6EC27AA1DBD9A4C00DEE06D /* PlayerViewController.xib */,
+				E6EC27AD1DBD9A6C00DEE06D /* PlayHistoryViewController.h */,
+				E6EC27AE1DBD9A6C00DEE06D /* PlayHistoryViewController.m */,
+				E6EC27AF1DBD9A6C00DEE06D /* PlayHistoryViewController.xib */,
+				E6EC27B21DBD9A8F00DEE06D /* LearnCommunityViewController.h */,
+				E6EC27B31DBD9A8F00DEE06D /* LearnCommunityViewController.m */,
+				E6EC27B41DBD9A8F00DEE06D /* LearnCommunityViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -295,6 +384,21 @@
 			children = (
 				E62342E21D9A18A700FE8254 /* AccountViewController.h */,
 				E62342E31D9A18A700FE8254 /* AccountViewController.m */,
+				E6EC27B71DBD9B1400DEE06D /* LoginViewController.h */,
+				E6EC27B81DBD9B1400DEE06D /* LoginViewController.m */,
+				E6EC27B91DBD9B1400DEE06D /* LoginViewController.xib */,
+				E6EC27BC1DBD9CAD00DEE06D /* DoctorRepeatViewController.h */,
+				E6EC27BD1DBD9CAD00DEE06D /* DoctorRepeatViewController.m */,
+				E6EC27BE1DBD9CAD00DEE06D /* DoctorRepeatViewController.xib */,
+				E6EC27C11DBD9D7B00DEE06D /* CacheViewController.h */,
+				E6EC27C21DBD9D7B00DEE06D /* CacheViewController.m */,
+				E6EC27C31DBD9D7B00DEE06D /* CacheViewController.xib */,
+				E6EC27C61DBD9D9400DEE06D /* BMIViewController.h */,
+				E6EC27C71DBD9D9400DEE06D /* BMIViewController.m */,
+				E6EC27C81DBD9D9400DEE06D /* BMIViewController.xib */,
+				E6EC27CB1DBD9E4D00DEE06D /* PersonInfoViewController.h */,
+				E6EC27CC1DBD9E4D00DEE06D /* PersonInfoViewController.m */,
+				E6EC27CD1DBD9E4D00DEE06D /* PersonInfoViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -512,12 +616,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EC279D1DBD998F00DEE06D /* BaiKeViewController.xib in Resources */,
+				E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */,
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
+				E6EC27C51DBD9D7B00DEE06D /* CacheViewController.xib in Resources */,
+				E6EC27981DBD995B00DEE06D /* ConSultDetailViewController.xib in Resources */,
+				E6EC27B61DBD9A8F00DEE06D /* LearnCommunityViewController.xib in Resources */,
+				E6EC27BB1DBD9B1400DEE06D /* LoginViewController.xib in Resources */,
 				E6C699131D990B2A00D2818C /* LaunchScreen.storyboard in Resources */,
+				E6EC27AC1DBD9A4C00DEE06D /* PlayerViewController.xib in Resources */,
 				4FDE9CDA1DB4EC2300D9C790 /* HomeContentHeaderView.xib in Resources */,
+				E6EC27A21DBD99A700DEE06D /* BKDetailViewController.xib in Resources */,
+				E6EC27C01DBD9CAD00DEE06D /* DoctorRepeatViewController.xib in Resources */,
+				E6EC27A71DBD99C800DEE06D /* LectureHailViewController.xib in Resources */,
 				E6C699101D990B2A00D2818C /* Assets.xcassets in Resources */,
+				E6EC27CF1DBD9E4D00DEE06D /* PersonInfoViewController.xib in Resources */,
 				4FDE9CD51DB4D20600D9C790 /* HomeContentTableViewCell.xib in Resources */,
+				E6EC27CA1DBD9D9400DEE06D /* BMIViewController.xib in Resources */,
 				E6C6990E1D990B2A00D2818C /* Main.storyboard in Resources */,
+				E6EC27B11DBD9A6C00DEE06D /* PlayHistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,15 +707,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EC27A11DBD99A700DEE06D /* BKDetailViewController.m in Sources */,
 				E6C699051D990B2A00D2818C /* AppDelegate.m in Sources */,
+				E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */,
 				E6C699021D990B2A00D2818C /* main.m in Sources */,
+				E6EC27B51DBD9A8F00DEE06D /* LearnCommunityViewController.m in Sources */,
 				4FDE9CD81DB4EC1000D9C790 /* HomeContentHeaderView.m in Sources */,
 				4FB205F51DB4BDA3007396A8 /* HomeTagView.m in Sources */,
+				E6EC27C41DBD9D7B00DEE06D /* CacheViewController.m in Sources */,
+				E6EC27C91DBD9D9400DEE06D /* BMIViewController.m in Sources */,
 				E62342DB1D9A154300FE8254 /* ServiceViewController.m in Sources */,
+				E6EC27971DBD995B00DEE06D /* ConSultDetailViewController.m in Sources */,
+				E6EC279C1DBD998F00DEE06D /* BaiKeViewController.m in Sources */,
 				4FDE9CD41DB4D20600D9C790 /* HomeContentTableViewCell.m in Sources */,
 				E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */,
+				E6EC27BF1DBD9CAD00DEE06D /* DoctorRepeatViewController.m in Sources */,
+				E6EC27A61DBD99C800DEE06D /* LectureHailViewController.m in Sources */,
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
+				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
+				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
 				E62342DE1D9A157600FE8254 /* ConsultationViewController.m in Sources */,
+				E6EC27AB1DBD9A4C00DEE06D /* PlayerViewController.m in Sources */,
+				E6EC27CE1DBD9E4D00DEE06D /* PersonInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
