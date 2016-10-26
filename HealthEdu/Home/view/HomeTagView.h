@@ -8,12 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, HomeTagsName) {
+    HomeTagsNameOfConsult = 0,
+    HomeTagsNameOfBaiKe,
+    HomeTagsNameOfLectureHail,
+    HomeTagsNameOfLearnCommuity,
+};
+
 @protocol HomeTagViewDelegate <NSObject>
 
-- (void)onSelectBtnWithTag:(int)aTag;
+- (void)onSelectBtnWithTag:(HomeTagsName)aTag;
 
 @end
 
 @interface HomeTagView : UIView
+@property (nonatomic,assign) id<HomeTagViewDelegate>delegate;
 
 @end

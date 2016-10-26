@@ -39,6 +39,13 @@
 #pragma mark -
 #pragma mark IBActions
 
+- (IBAction)homeTagButtonPress:(UIButton *)sender {
+    HomeTagsName tagsName = sender.tag;
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onSelectBtnWithTag:)]) {
+        [self.delegate onSelectBtnWithTag:tagsName];
+    }  
+}
 #pragma mark -
 #pragma mark public
 

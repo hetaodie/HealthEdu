@@ -9,12 +9,18 @@
 #import "HomeViewController.h"
 #import "HomeContentTableViewCell.h"
 #import "HomeContentHeaderView.h"
+#import "HomeTagView.h"
 
+#import "ConsultViewController.h"
+#import "BaiKeViewController.h"
+#import "LectureHailViewController.h"
+#import "LearnCommunityViewController.h"
 
 #define HomeContentCellHeight 168
 
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,HomeTagViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
+@property (weak, nonatomic) IBOutlet HomeTagView *homeTagView;
 
 @end
 
@@ -26,6 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpContentTableView];
+    
+    self.homeTagView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +49,45 @@
 
 #pragma mark -
 #pragma mark delegate
+
+#pragma mark -
+#pragma mark HomeTagViewDelegate
+
+- (void)onSelectBtnWithTag:(HomeTagsName)aTag{
+    switch (aTag) {
+        case HomeTagsNameOfConsult:
+        {
+            ConsultViewController *ndVC = [[ConsultViewController alloc] initWithNibName:@"ConsultViewController" bundle:nil];
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
+            break;
+        }
+        case HomeTagsNameOfBaiKe:
+        {
+            BaiKeViewController *ndVC = [[BaiKeViewController alloc] initWithNibName:@"BaiKeViewController" bundle:nil];
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
+            break;
+        }
+        case HomeTagsNameOfLectureHail:
+        {
+            LectureHailViewController *ndVC = [[LectureHailViewController alloc] initWithNibName:@"LectureHailViewController" bundle:nil];
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
+            break;
+        }
+        case HomeTagsNameOfLearnCommuity:
+        {
+            LearnCommunityViewController *ndVC = [[LearnCommunityViewController alloc] initWithNibName:@"LearnCommunityViewController" bundle:nil];
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
+            break;
+        }
+            
+        default:
+            break;
+    }
+}
 
 #pragma mark -
 #pragma mark UITableViewDelegate & UITableViewDataSource
