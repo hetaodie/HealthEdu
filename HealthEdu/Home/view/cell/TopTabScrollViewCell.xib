@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ghH-cd-sRN" customClass="TopTabScrollViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFb-Oy-hM5">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4I-Di-FRB">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="H4I-Di-FRB" secondAttribute="bottom" id="AL4-tX-gsT"/>
+                <constraint firstItem="MFb-Oy-hM5" firstAttribute="centerY" secondItem="ghH-cd-sRN" secondAttribute="centerY" id="CmU-rA-Ii7"/>
+                <constraint firstItem="MFb-Oy-hM5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ghH-cd-sRN" secondAttribute="leading" constant="4" id="Qey-J0-i7j"/>
+                <constraint firstItem="H4I-Di-FRB" firstAttribute="leading" secondItem="ghH-cd-sRN" secondAttribute="leading" id="Sjp-3N-GC1"/>
+                <constraint firstItem="MFb-Oy-hM5" firstAttribute="centerX" secondItem="ghH-cd-sRN" secondAttribute="centerX" id="T3e-8p-Upo"/>
+                <constraint firstItem="H4I-Di-FRB" firstAttribute="top" secondItem="ghH-cd-sRN" secondAttribute="top" id="cYG-5y-lvf"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MFb-Oy-hM5" secondAttribute="trailing" constant="4" id="iRk-wg-VOn"/>
+                <constraint firstAttribute="trailing" secondItem="H4I-Di-FRB" secondAttribute="trailing" id="r3x-3m-1sx"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="120" y="12"/>
+        </view>
+    </objects>
+</document>

@@ -85,10 +85,12 @@
                             <constraint firstAttribute="trailing" secondItem="Kdf-9L-38w" secondAttribute="trailing" id="wFJ-nw-2LO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="浙江健康教育" id="fKm-qn-p94"/>
+                    <navigationItem key="navigationItem" title="浙江健康教育" id="fKm-qn-p94">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="WnO-X1-22y"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentTableView" destination="Kdf-9L-38w" id="Qo0-xw-Pqn"/>
-                        <outlet property="homeTagView" destination="adh-fV-uBN" id="egA-I4-zmc"/>
+                        <outlet property="homeTagView" destination="adh-fV-uBN" id="d6A-ia-d9O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsm-Xk-bWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,9 +203,10 @@
             <objects>
                 <navigationController id="pPw-2Z-frc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="shouye" selectedImage="shouye2" id="AZQ-PP-oCN"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ou4-fZ-XHP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ou4-fZ-XHP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>

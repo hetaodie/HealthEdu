@@ -25,6 +25,9 @@
 		E6C699131D990B2A00D2818C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6C699111D990B2A00D2818C /* LaunchScreen.storyboard */; };
 		E6C6991E1D990B2A00D2818C /* HealthEduTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C6991D1D990B2A00D2818C /* HealthEduTests.m */; };
 		E6C699291D990B2A00D2818C /* HealthEduUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C699281D990B2A00D2818C /* HealthEduUITests.m */; };
+		E6E153691DC0BA5F0094A947 /* TopTabScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E153681DC0BA5F0094A947 /* TopTabScrollView.m */; };
+		E6E1536C1DC0BC070094A947 /* TopTabScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E1536B1DC0BC070094A947 /* TopTabScrollViewCell.m */; };
+		E6E1536E1DC0BC1C0094A947 /* TopTabScrollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E1536D1DC0BC1C0094A947 /* TopTabScrollViewCell.xib */; };
 		E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27901DBD988E00DEE06D /* ConsultViewController.m */; };
 		E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27911DBD988E00DEE06D /* ConsultViewController.xib */; };
 		E6EC27971DBD995B00DEE06D /* ConSultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27951DBD995B00DEE06D /* ConSultDetailViewController.m */; };
@@ -104,6 +107,11 @@
 		E6C699241D990B2A00D2818C /* HealthEduUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthEduUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C699281D990B2A00D2818C /* HealthEduUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthEduUITests.m; sourceTree = "<group>"; };
 		E6C6992A1D990B2A00D2818C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6E153671DC0BA5F0094A947 /* TopTabScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopTabScrollView.h; path = HealthEdu/Home/View/TopTabScrollView.h; sourceTree = SOURCE_ROOT; };
+		E6E153681DC0BA5F0094A947 /* TopTabScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopTabScrollView.m; path = HealthEdu/Home/View/TopTabScrollView.m; sourceTree = SOURCE_ROOT; };
+		E6E1536A1DC0BC070094A947 /* TopTabScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopTabScrollViewCell.h; path = HealthEdu/Home/View/cell/TopTabScrollViewCell.h; sourceTree = SOURCE_ROOT; };
+		E6E1536B1DC0BC070094A947 /* TopTabScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopTabScrollViewCell.m; path = HealthEdu/Home/View/cell/TopTabScrollViewCell.m; sourceTree = SOURCE_ROOT; };
+		E6E1536D1DC0BC1C0094A947 /* TopTabScrollViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopTabScrollViewCell.xib; sourceTree = "<group>"; };
 		E6EC278F1DBD988E00DEE06D /* ConsultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultViewController.h; sourceTree = "<group>"; };
 		E6EC27901DBD988E00DEE06D /* ConsultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultViewController.m; sourceTree = "<group>"; };
 		E6EC27911DBD988E00DEE06D /* ConsultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultViewController.xib; sourceTree = "<group>"; };
@@ -191,6 +199,8 @@
 				4FDE9CD61DB4EC1000D9C790 /* HomeContentHeaderView.h */,
 				4FDE9CD71DB4EC1000D9C790 /* HomeContentHeaderView.m */,
 				4FDE9CD91DB4EC2300D9C790 /* HomeContentHeaderView.xib */,
+				E6E153671DC0BA5F0094A947 /* TopTabScrollView.h */,
+				E6E153681DC0BA5F0094A947 /* TopTabScrollView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -314,6 +324,9 @@
 				4FDE9CD11DB4D20600D9C790 /* HomeContentTableViewCell.h */,
 				4FDE9CD21DB4D20600D9C790 /* HomeContentTableViewCell.m */,
 				4FDE9CD31DB4D20600D9C790 /* HomeContentTableViewCell.xib */,
+				E6E1536A1DC0BC070094A947 /* TopTabScrollViewCell.h */,
+				E6E1536B1DC0BC070094A947 /* TopTabScrollViewCell.m */,
+				E6E1536D1DC0BC1C0094A947 /* TopTabScrollViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -621,6 +634,7 @@
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
 				E6EC27C51DBD9D7B00DEE06D /* CacheViewController.xib in Resources */,
 				E6EC27981DBD995B00DEE06D /* ConSultDetailViewController.xib in Resources */,
+				E6E1536E1DC0BC1C0094A947 /* TopTabScrollViewCell.xib in Resources */,
 				E6EC27B61DBD9A8F00DEE06D /* LearnCommunityViewController.xib in Resources */,
 				E6EC27BB1DBD9B1400DEE06D /* LoginViewController.xib in Resources */,
 				E6C699131D990B2A00D2818C /* LaunchScreen.storyboard in Resources */,
@@ -710,6 +724,7 @@
 				E6EC27A11DBD99A700DEE06D /* BKDetailViewController.m in Sources */,
 				E6C699051D990B2A00D2818C /* AppDelegate.m in Sources */,
 				E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */,
+				E6E153691DC0BA5F0094A947 /* TopTabScrollView.m in Sources */,
 				E6C699021D990B2A00D2818C /* main.m in Sources */,
 				E6EC27B51DBD9A8F00DEE06D /* LearnCommunityViewController.m in Sources */,
 				4FDE9CD81DB4EC1000D9C790 /* HomeContentHeaderView.m in Sources */,
@@ -727,6 +742,7 @@
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
 				E62342DE1D9A157600FE8254 /* ConsultationViewController.m in Sources */,
+				E6E1536C1DC0BC070094A947 /* TopTabScrollViewCell.m in Sources */,
 				E6EC27AB1DBD9A4C00DEE06D /* PlayerViewController.m in Sources */,
 				E6EC27CE1DBD9E4D00DEE06D /* PersonInfoViewController.m in Sources */,
 			);
