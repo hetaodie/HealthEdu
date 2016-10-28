@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HealthEdu/Home/ViewController/HomeViewController.m"
-            timestampString = "499166559.629015"
+            filePath = "HealthEdu/Home/View/TopTabScrollView.m"
+            timestampString = "499339327.203964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-onSelectBtnWithTag:"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
+            landmarkName = "-changeMoveViewFrameAtCell:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,30 +25,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HealthEdu/Home/view/HomeTagView.m"
-            timestampString = "499166574.316345"
+            filePath = "HealthEdu/Home/View/TopTabScrollView.m"
+            timestampString = "499339327.203964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "-homeTagButtonPress:"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "-oneTopTabCellSelect:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HealthEdu/Home/ViewController/HomeViewController.m"
-            timestampString = "499166668.127768"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TopTabScrollView oneTopTabCellSelect:]"
+                  moduleName = "HealthEdu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/netease/source/github/HealthEdu/HealthEdu/Home/View/TopTabScrollView.m"
+                  timestampString = "499339163.13759"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__40-[TopTabScrollView oneTopTabCellSelect:]_block_invoke"
+                  moduleName = "HealthEdu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/netease/source/github/HealthEdu/HealthEdu/Home/View/TopTabScrollView.m"
+                  timestampString = "499339163.138836"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -18,9 +18,12 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4I-Di-FRB">
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="buttonPress:" destination="ghH-cd-sRN" eventType="touchUpInside" id="pEA-pi-nXP"/>
+                    </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="H4I-Di-FRB" secondAttribute="bottom" id="AL4-tX-gsT"/>
                 <constraint firstItem="MFb-Oy-hM5" firstAttribute="centerY" secondItem="ghH-cd-sRN" secondAttribute="centerY" id="CmU-rA-Ii7"/>
@@ -35,6 +38,9 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="MFb-Oy-hM5" id="jyx-Xl-UNb"/>
+            </connections>
             <point key="canvasLocation" x="120" y="12"/>
         </view>
     </objects>

@@ -203,7 +203,7 @@
             <objects>
                 <navigationController id="pPw-2Z-frc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="shouye" selectedImage="shouye2" id="AZQ-PP-oCN"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ou4-fZ-XHP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ou4-fZ-XHP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

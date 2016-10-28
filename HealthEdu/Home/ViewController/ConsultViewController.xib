@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConsultViewController">
             <connections>
+                <outlet property="topTabScrollView" destination="Vov-Re-hbW" id="RNd-HL-uuQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,12 +16,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vov-Re-hbW">
-                    <frame key="frameInset" minY="42" width="375" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vov-Re-hbW" customClass="TopTabScrollView">
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="rOA-K8-qXQ"/>
+                    </constraints>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vov-Re-hbW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="4jU-1p-AhX"/>
+                <constraint firstAttribute="trailing" secondItem="Vov-Re-hbW" secondAttribute="trailing" id="imb-9Z-W2N"/>
+                <constraint firstItem="Vov-Re-hbW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r7X-9s-iaS"/>
+            </constraints>
             <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>
     </objects>
