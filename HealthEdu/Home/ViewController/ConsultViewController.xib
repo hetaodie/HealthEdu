@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConsultViewController">
             <connections>
+                <outlet property="consultContentView" destination="CZi-IY-AP3" id="fQI-5S-MrF"/>
                 <outlet property="topTabScrollView" destination="Vov-Re-hbW" id="RNd-HL-uuQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,17 +21,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vov-Re-hbW" customClass="TopTabScrollView">
+                    <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                     <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="rOA-K8-qXQ"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZi-IY-AP3" customClass="ConsultContentView">
+                    <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Vov-Re-hbW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="4jU-1p-AhX"/>
+                <constraint firstItem="CZi-IY-AP3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EEC-hA-dpf"/>
+                <constraint firstItem="CZi-IY-AP3" firstAttribute="top" secondItem="Vov-Re-hbW" secondAttribute="bottom" id="OPw-nW-Kn1"/>
+                <constraint firstAttribute="trailing" secondItem="CZi-IY-AP3" secondAttribute="trailing" id="djx-E7-VYQ"/>
                 <constraint firstAttribute="trailing" secondItem="Vov-Re-hbW" secondAttribute="trailing" id="imb-9Z-W2N"/>
                 <constraint firstItem="Vov-Re-hbW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r7X-9s-iaS"/>
+                <constraint firstAttribute="bottom" secondItem="CZi-IY-AP3" secondAttribute="bottom" id="t1P-ga-rUr"/>
             </constraints>
             <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>

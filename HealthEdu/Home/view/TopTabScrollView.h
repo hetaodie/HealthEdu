@@ -45,5 +45,5 @@ typedef NS_ENUM(NSInteger, TopTabScrollViewScrollPosition) {
 // 指定选择哪个row
 - (void)selectRow:(NSInteger)row animated:(BOOL)animated scrollPosition:(TopTabScrollViewScrollPosition)topTabScrollViewScrollPosition;
 
-
+- (void)moveWithOffset:(CGFloat)offset;
 @end

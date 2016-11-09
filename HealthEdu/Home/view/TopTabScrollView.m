@@ -8,6 +8,12 @@
 
 #import "TopTabScrollView.h"
 
+typedef NS_ENUM(NSInteger, MoveDirection) {
+    MoveDirectionLeft,
+    MoveDirectionRight
+};
+
+
 #define moveViewHeight 2
 #define moveViewWidth 38  // 这个初始值
 
@@ -122,6 +128,37 @@
         [self changeContentOffSetWithRow:row andPosition:topTabScrollViewScrollPosition animated:YES];
         self.cellIndex = row;
     }
+}
+
+- (void)moveWithOffset:(CGFloat)offset{
+    
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    NSInteger nextIndex = offset/screenWidth;
+    CGFloat offsetMod = fmodf(offset, screenWidth);
+    
+    MoveDirection moveDirection = [self getMoveDirectionWithOffset:offset];
+    CGFloat moveOffset;
+    
+    CGPoint center = self.moveView.center;
+    
+    if (moveDirection == MoveDirectionRight) {
+        
+        TopTabScrollViewCell *cell = [self.cellArray objectAtIndex:nextIndex];
+        CGFloat beginX = CGRectGetMidX(cell.frame);
+        
+        moveOffset = [self getTopMoveOffsetWithOffset:offsetMod andIndex:nextIndex + 1];
+        center.x = beginX + moveOffset;
+    }
+    else{
+        
+        TopTabScrollViewCell *cell = [self.cellArray objectAtIndex:nextIndex];
+        CGFloat beginX = CGRectGetMidX(cell.frame);
+        moveOffset = [self getTopMoveOffsetWithOffset: offsetMod andIndex:nextIndex];
+        center.x = beginX + moveOffset;
+    }
+
+    self.moveView.center = center;
+    
 }
 
 #pragma mark -
@@ -282,7 +319,30 @@
     CGPoint center = self.moveView.center;
     center.x = topTabScrollViewCell.center.x;
     self.moveView.center = center;
-    
-
 }
+
+- (MoveDirection)getMoveDirectionWithOffset:(CGFloat)offset{
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    NSInteger nextIndex = offset/screenWidth;
+
+    if (nextIndex >= self.cellIndex) {
+        return MoveDirectionRight;
+    }
+    else{
+        return MoveDirectionLeft;
+    }
+}
+
+- (CGFloat)getTopMoveOffsetWithOffset:(CGFloat)offset andIndex:(NSInteger)aIndex{
+    
+    if ([self.cellArray count]<=aIndex) {
+        return 0;
+    }
+    TopTabScrollViewCell *cell = [self.cellArray objectAtIndex:aIndex];
+    CGFloat width = CGRectGetWidth(cell.frame);
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat moveOffset = ((width+self.cellSpacing) * offset)/screenWidth;
+    return moveOffset;
+}
+
 @end

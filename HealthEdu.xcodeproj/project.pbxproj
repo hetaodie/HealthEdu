@@ -13,6 +13,12 @@
 		4FDE9CD51DB4D20600D9C790 /* HomeContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE9CD31DB4D20600D9C790 /* HomeContentTableViewCell.xib */; };
 		4FDE9CD81DB4EC1000D9C790 /* HomeContentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE9CD71DB4EC1000D9C790 /* HomeContentHeaderView.m */; };
 		4FDE9CDA1DB4EC2300D9C790 /* HomeContentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE9CD91DB4EC2300D9C790 /* HomeContentHeaderView.xib */; };
+		7C34F3951DD1D4AE00C61015 /* ConsultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34F3941DD1D4AE00C61015 /* ConsultContentView.m */; };
+		7C34F3971DD1D4BD00C61015 /* ConsultContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F3961DD1D4BD00C61015 /* ConsultContentView.xib */; };
+		7C34F39B1DD1E8F800C61015 /* ConsultContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34F3991DD1E8F800C61015 /* ConsultContentCollectionViewCell.m */; };
+		7C34F39C1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F39A1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib */; };
+		7C34F3A01DD1E91700C61015 /* ConsultContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34F39E1DD1E91700C61015 /* ConsultContentTableViewCell.m */; };
+		7C34F3A11DD1E91700C61015 /* ConsultContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */; };
 		87FF3A461CC04FFE94D920AA /* libPods-HealthEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E718DE9FCA3253C2582194C5 /* libPods-HealthEdu.a */; };
 		E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC51DC2E37400A0369B /* UIColor+HEX.m */; };
 		E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC81DC3484A00A0369B /* UIColor+MaxColor.m */; };
@@ -85,6 +91,15 @@
 		4FDE9CD61DB4EC1000D9C790 /* HomeContentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeContentHeaderView.h; sourceTree = "<group>"; };
 		4FDE9CD71DB4EC1000D9C790 /* HomeContentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeContentHeaderView.m; sourceTree = "<group>"; };
 		4FDE9CD91DB4EC2300D9C790 /* HomeContentHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeContentHeaderView.xib; sourceTree = "<group>"; };
+		7C34F3931DD1D4AE00C61015 /* ConsultContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultContentView.h; sourceTree = "<group>"; };
+		7C34F3941DD1D4AE00C61015 /* ConsultContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultContentView.m; sourceTree = "<group>"; };
+		7C34F3961DD1D4BD00C61015 /* ConsultContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultContentView.xib; sourceTree = "<group>"; };
+		7C34F3981DD1E8F800C61015 /* ConsultContentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultContentCollectionViewCell.h; sourceTree = "<group>"; };
+		7C34F3991DD1E8F800C61015 /* ConsultContentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultContentCollectionViewCell.m; sourceTree = "<group>"; };
+		7C34F39A1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		7C34F39D1DD1E91700C61015 /* ConsultContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultContentTableViewCell.h; sourceTree = "<group>"; };
+		7C34F39E1DD1E91700C61015 /* ConsultContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultContentTableViewCell.m; sourceTree = "<group>"; };
+		7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultContentTableViewCell.xib; sourceTree = "<group>"; };
 		9323F8D8773924F12DA09357 /* Pods-HealthEdu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.debug.xcconfig"; sourceTree = "<group>"; };
 		A216E4697B5EBA35B628872D /* Pods-HealthEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.release.xcconfig"; sourceTree = "<group>"; };
 		E6123CC41DC2E37400A0369B /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
@@ -207,6 +222,9 @@
 				4FDE9CD91DB4EC2300D9C790 /* HomeContentHeaderView.xib */,
 				E6E153671DC0BA5F0094A947 /* TopTabScrollView.h */,
 				E6E153681DC0BA5F0094A947 /* TopTabScrollView.m */,
+				7C34F3931DD1D4AE00C61015 /* ConsultContentView.h */,
+				7C34F3941DD1D4AE00C61015 /* ConsultContentView.m */,
+				7C34F3961DD1D4BD00C61015 /* ConsultContentView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -333,6 +351,12 @@
 				E6E1536A1DC0BC070094A947 /* TopTabScrollViewCell.h */,
 				E6E1536B1DC0BC070094A947 /* TopTabScrollViewCell.m */,
 				E6E1536D1DC0BC1C0094A947 /* TopTabScrollViewCell.xib */,
+				7C34F3981DD1E8F800C61015 /* ConsultContentCollectionViewCell.h */,
+				7C34F3991DD1E8F800C61015 /* ConsultContentCollectionViewCell.m */,
+				7C34F39A1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib */,
+				7C34F39D1DD1E91700C61015 /* ConsultContentTableViewCell.h */,
+				7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */,
+				7C34F39E1DD1E91700C61015 /* ConsultContentTableViewCell.m */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -652,13 +676,16 @@
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
 				E6EC27C51DBD9D7B00DEE06D /* CacheViewController.xib in Resources */,
 				E6EC27981DBD995B00DEE06D /* ConSultDetailViewController.xib in Resources */,
+				7C34F3971DD1D4BD00C61015 /* ConsultContentView.xib in Resources */,
 				E6E1536E1DC0BC1C0094A947 /* TopTabScrollViewCell.xib in Resources */,
+				7C34F3A11DD1E91700C61015 /* ConsultContentTableViewCell.xib in Resources */,
 				E6EC27B61DBD9A8F00DEE06D /* LearnCommunityViewController.xib in Resources */,
 				E6EC27BB1DBD9B1400DEE06D /* LoginViewController.xib in Resources */,
 				E6C699131D990B2A00D2818C /* LaunchScreen.storyboard in Resources */,
 				E6EC27AC1DBD9A4C00DEE06D /* PlayerViewController.xib in Resources */,
 				4FDE9CDA1DB4EC2300D9C790 /* HomeContentHeaderView.xib in Resources */,
 				E6EC27A21DBD99A700DEE06D /* BKDetailViewController.xib in Resources */,
+				7C34F39C1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib in Resources */,
 				E6EC27C01DBD9CAD00DEE06D /* DoctorRepeatViewController.xib in Resources */,
 				E6EC27A71DBD99C800DEE06D /* LectureHailViewController.xib in Resources */,
 				E6C699101D990B2A00D2818C /* Assets.xcassets in Resources */,
@@ -739,10 +766,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C34F3A01DD1E91700C61015 /* ConsultContentTableViewCell.m in Sources */,
 				E6EC27A11DBD99A700DEE06D /* BKDetailViewController.m in Sources */,
 				E6C699051D990B2A00D2818C /* AppDelegate.m in Sources */,
 				E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */,
 				E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */,
+				7C34F3951DD1D4AE00C61015 /* ConsultContentView.m in Sources */,
 				E6E153691DC0BA5F0094A947 /* TopTabScrollView.m in Sources */,
 				E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */,
 				E6C699021D990B2A00D2818C /* main.m in Sources */,
@@ -761,6 +790,7 @@
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
+				7C34F39B1DD1E8F800C61015 /* ConsultContentCollectionViewCell.m in Sources */,
 				E62342DE1D9A157600FE8254 /* ConsultationViewController.m in Sources */,
 				E6E1536C1DC0BC070094A947 /* TopTabScrollViewCell.m in Sources */,
 				E6EC27AB1DBD9A4C00DEE06D /* PlayerViewController.m in Sources */,
