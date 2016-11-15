@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConsultContentObject.h"
 
 @protocol ConsultContentCollectionViewCellDelegate <NSObject>
 
-- (void)clickOneElementOfCellWithInfo:(NSString *)aObject;
+- (void)clickOneElementOfCellWithInfo:(ConsultContentObject *)aObject withIndex:(NSInteger)aIndex;
 
 - (void)contentScrollOffSet:(CGPoint)offset;
 

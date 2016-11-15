@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BKDetailViewController">
             <connections>
+                <outlet property="contentWebView" destination="dJO-du-wzH" id="pjK-Wc-q7g"/>
+                <outlet property="titleLabel" destination="Vys-W5-JJ2" id="a4u-MZ-eNr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +19,57 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPY-kP-n72">
+                    <rect key="frame" x="0.0" y="64" width="375" height="66"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="青春痘" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vys-W5-JJ2">
+                            <rect key="frame" x="152.5" y="9.5" width="70" height="27.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiantouUp" translatesAutoresizingMaskIntoConstraints="NO" id="UHh-Ya-466">
+                            <rect key="frame" x="174" y="50" width="27" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="27" id="LH0-YT-dNm"/>
+                                <constraint firstAttribute="height" constant="16" id="f9k-Wp-FAc"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Vys-W5-JJ2" firstAttribute="centerY" secondItem="bPY-kP-n72" secondAttribute="centerY" constant="-10" id="0gS-U9-Rw2"/>
+                        <constraint firstAttribute="height" constant="66" id="A1W-rO-9Xv"/>
+                        <constraint firstItem="UHh-Ya-466" firstAttribute="centerX" secondItem="bPY-kP-n72" secondAttribute="centerX" id="JaA-Zh-PT1"/>
+                        <constraint firstItem="Vys-W5-JJ2" firstAttribute="centerX" secondItem="bPY-kP-n72" secondAttribute="centerX" id="MNp-XU-3Rc"/>
+                        <constraint firstItem="Vys-W5-JJ2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bPY-kP-n72" secondAttribute="leading" constant="15" id="T65-J7-0FT"/>
+                        <constraint firstAttribute="bottom" secondItem="UHh-Ya-466" secondAttribute="bottom" id="ewy-pw-hub"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Vys-W5-JJ2" secondAttribute="trailing" constant="15" id="zBU-uc-2Pt"/>
+                    </constraints>
+                </view>
+                <webView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJO-du-wzH">
+                    <rect key="frame" x="16" y="130" width="343" height="174"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="174" id="u2I-ax-akF"/>
+                    </constraints>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bPY-kP-n72" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="HEi-28-Yqc"/>
+                <constraint firstItem="dJO-du-wzH" firstAttribute="top" secondItem="bPY-kP-n72" secondAttribute="bottom" id="Pmn-ZW-eop"/>
+                <constraint firstItem="bPY-kP-n72" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wpz-B7-7it"/>
+                <constraint firstAttribute="trailing" secondItem="dJO-du-wzH" secondAttribute="trailing" constant="16" id="g30-pr-Zx7"/>
+                <constraint firstAttribute="trailing" secondItem="bPY-kP-n72" secondAttribute="trailing" id="svy-sH-2lA"/>
+                <constraint firstItem="dJO-du-wzH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="tZ6-D0-Vym"/>
+            </constraints>
+            <point key="canvasLocation" x="-212" y="-322"/>
         </view>
     </objects>
+    <resources>
+        <image name="jiantouUp" width="27" height="15"/>
+    </resources>
 </document>

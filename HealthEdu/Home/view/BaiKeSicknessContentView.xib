@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiKeSicknessContentView">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="9VN-ex-wY6"/>
+                <outlet property="tableView" destination="mbf-O4-PN0" id="8Zd-40-aBI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiantou" translatesAutoresizingMaskIntoConstraints="NO" id="oeM-OL-XVl">
+                    <rect key="frame" x="38" y="0.0" width="14" height="9"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="9" id="SY6-K8-ErC"/>
+                        <constraint firstAttribute="width" constant="14" id="YC9-t6-J2w"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mbf-O4-PN0">
+                    <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="25" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qRL-Ul-NDU"/>
+                        <outlet property="delegate" destination="-1" id="mqd-Fd-Zdt"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oeM-OL-XVl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="38" id="CLH-ai-itX"/>
+                <constraint firstItem="oeM-OL-XVl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="F2w-27-Stj"/>
+                <constraint firstAttribute="trailing" secondItem="mbf-O4-PN0" secondAttribute="trailing" id="Guz-2k-Yqh"/>
+                <constraint firstAttribute="bottom" secondItem="mbf-O4-PN0" secondAttribute="bottom" id="Mfq-GV-JDM"/>
+                <constraint firstItem="mbf-O4-PN0" firstAttribute="top" secondItem="oeM-OL-XVl" secondAttribute="bottom" constant="19" id="ieB-c8-Tw7"/>
+                <constraint firstItem="mbf-O4-PN0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lQh-1w-kC0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="58.5" y="59.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="jiantou" width="14" height="9"/>
+    </resources>
+</document>

@@ -9,7 +9,7 @@
 #import "ConsultContentView.h"
 #import "ConsultContentCollectionViewCell.h"
 
-@interface ConsultContentView()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface ConsultContentView()<UICollectionViewDelegate,UICollectionViewDataSource,ConsultContentViewDelegate,ConsultContentCollectionViewCellDelegate>
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
@@ -77,6 +77,21 @@
 #pragma mark delegate
 
 #pragma mark -
+#pragma mark ConsultContentViewDelegate
+
+
+- (void)clickOneElementOfCellWithInfo:(ConsultContentObject *)aObject withIndex:(NSInteger)aIndex{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(contentOneContentCellWithSelect:withIndex:)]) {
+        [self.delegate contentOneContentCellWithSelect:aObject withIndex:aIndex];
+    }
+
+}
+
+- (void)contentScrollOffSet:(CGPoint)offset{
+
+}
+
+#pragma mark -
 #pragma mark collectionViewdelegate
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -91,6 +106,7 @@
     NSArray *array = [self.contentArray objectAtIndex:row];
     
     ConsultContentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ConsultContentCollectionViewCell" forIndexPath:indexPath];
+    cell.delegate = self;
     [cell showCellWithData:array];
     
     if (row%2 == 0) {
@@ -103,11 +119,8 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
-    if (scrollView.isDragging) {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(contentViewWithscrollViewDidScroll:)]) {
-            [self.delegate contentViewWithscrollViewDidScroll:scrollView];
-        }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(contentViewWithscrollViewDidScroll:)]) {
+    [self.delegate contentViewWithscrollViewDidScroll:scrollView];
     }
 }
 

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaiKeSicknessFoldCategoryView">
+            <connections>
+                <outlet property="collectionView" destination="IJN-xv-Na1" id="LBl-Ma-2z1"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ode-9y-eZm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="92.5"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IJN-xv-Na1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="QFE-kp-G5C"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="16" id="1fU-7w-2tn">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="23" minY="0.0" maxX="23" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="CQE-IP-4MX"/>
+                        <outlet property="delegate" destination="-1" id="W2h-lO-Tus"/>
+                    </connections>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击展开" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAQ-zj-95b">
+                    <rect key="frame" x="293" y="53.5" width="41" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBh-Pa-k6f">
+                    <rect key="frame" x="293" y="53.5" width="41" height="34"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="unfoldBtnPress:" destination="-1" eventType="touchUpInside" id="G6W-gI-daq"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BaiKeUnfold" translatesAutoresizingMaskIntoConstraints="NO" id="pmI-gt-JvC">
+                    <rect key="frame" x="339" y="78.5" width="6" height="6"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="6" id="aPW-oq-Le6"/>
+                        <constraint firstAttribute="height" constant="6" id="d2O-PJ-jae"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pmI-gt-JvC" firstAttribute="leading" secondItem="WAQ-zj-95b" secondAttribute="trailing" constant="5" id="0bQ-O6-hxd"/>
+                <constraint firstItem="IJN-xv-Na1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5Vp-iD-nvu"/>
+                <constraint firstAttribute="bottom" secondItem="WAQ-zj-95b" secondAttribute="bottom" constant="5" id="CO6-aS-VFa"/>
+                <constraint firstAttribute="trailing" secondItem="IJN-xv-Na1" secondAttribute="trailing" id="HXH-vW-nq7"/>
+                <constraint firstAttribute="trailing" secondItem="pmI-gt-JvC" secondAttribute="trailing" constant="30" id="KIn-2J-Wvx"/>
+                <constraint firstItem="WAQ-zj-95b" firstAttribute="trailing" secondItem="zBh-Pa-k6f" secondAttribute="trailing" id="KTH-sh-WEY"/>
+                <constraint firstItem="WAQ-zj-95b" firstAttribute="top" secondItem="zBh-Pa-k6f" secondAttribute="top" id="N4k-Pu-6bA"/>
+                <constraint firstAttribute="bottom" secondItem="pmI-gt-JvC" secondAttribute="bottom" constant="8" id="cZ8-ud-HY4"/>
+                <constraint firstItem="WAQ-zj-95b" firstAttribute="leading" secondItem="zBh-Pa-k6f" secondAttribute="leading" id="dfB-di-i3w"/>
+                <constraint firstItem="WAQ-zj-95b" firstAttribute="bottom" secondItem="zBh-Pa-k6f" secondAttribute="bottom" id="efz-jl-wGC"/>
+                <constraint firstItem="IJN-xv-Na1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pPa-Jq-3XD"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-37" y="-101"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BaiKeUnfold" width="6" height="5"/>
+    </resources>
+</document>

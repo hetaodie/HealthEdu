@@ -63,7 +63,6 @@
     NSString *title = [self.contentArray objectAtIndex:row];
     
     ConsultContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ConsultContentTableViewCell" forIndexPath:indexPath];
-    [cell showCellWithData:title];
     
     return cell;
 
@@ -73,18 +72,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
     
-    NSString *object = [self.contentArray objectAtIndex:row];
-    if(self.delegate && [self.delegate respondsToSelector:@selector(clickOneElementOfCellWithInfo:)]){
-        [self.delegate clickOneElementOfCellWithInfo:object];
+    ConsultContentObject *object = [self.contentArray objectAtIndex:row];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(clickOneElementOfCellWithInfo:withIndex:)]){
+        [self.delegate clickOneElementOfCellWithInfo:object withIndex:row];
     }
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSInteger row = indexPath.row;
 
-    return 80;
+    return [ConsultContentTableViewCell cellHeightWithData:nil];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{

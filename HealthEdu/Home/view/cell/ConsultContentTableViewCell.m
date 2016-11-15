@@ -7,10 +7,13 @@
 //
 
 #import "ConsultContentTableViewCell.h"
+const float ConsultContentTableViewCellHeight = 126;
 
 
 @interface ConsultContentTableViewCell()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *desclabel;
+@property (weak, nonatomic) IBOutlet UILabel *showTimeslabel;
 
 @end
 
@@ -21,8 +24,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -36,9 +37,13 @@
 #pragma mark -
 #pragma mark public
 
-- (void)showCellWithData:(NSString *)aObject{
-    self.titleLabel.text = aObject;
+- (void)showCellWithData:(ConsultContentObject *)aObject{
 }
+
++ (CGFloat) cellHeightWithData:(ConsultContentObject *)aObject{
+    return ConsultContentTableViewCellHeight;
+}
+
 
 #pragma mark -
 #pragma mark delegate

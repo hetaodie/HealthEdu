@@ -1,13 +1,13 @@
 //
-//  ConsultDetailViewController.h
+//  ConsultContentObject.m
 //  HealthEdu
 //
 //  Created by weixu on 16/11/14.
 //  Copyright © 2016年 allWants. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ConsultContentObject.h"
 
-@interface ConsultDetailViewController : UIViewController
+@implementation ConsultContentObject
 
 @end

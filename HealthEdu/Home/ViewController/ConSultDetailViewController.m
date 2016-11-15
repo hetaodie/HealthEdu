@@ -1,37 +1,48 @@
 //
-//  ConSultDetailViewController.m
+//  ConsultDetailViewController.m
 //  HealthEdu
 //
-//  Created by NetEase on 16/10/24.
+//  Created by weixu on 16/11/14.
 //  Copyright © 2016年 allWants. All rights reserved.
 //
 
-#import "ConSultDetailViewController.h"
+#import "ConsultDetailViewController.h"
 
-@interface ConSultDetailViewController ()
+@interface ConsultDetailViewController ()
 
 @end
 
-@implementation ConSultDetailViewController
+@implementation ConsultDetailViewController
+#pragma mark -
+#pragma mark lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.navigationItem.title = @"资讯详情";
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+#pragma mark -
+#pragma mark IBActions
+
+#pragma mark -
+#pragma mark public
+
+#pragma mark -
+#pragma mark delegate
+
+
+#pragma mark -
+#pragma mark NSNotification
+
+#pragma mark -
+#pragma mark private
+
 
 @end

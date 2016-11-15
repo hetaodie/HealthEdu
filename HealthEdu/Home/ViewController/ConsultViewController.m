@@ -9,6 +9,7 @@
 #import "ConsultViewController.h"
 #import "TopTabScrollView.h"
 #import "ConsultContentView.h"
+#import "ConsultDetailViewController.h"
 
 @interface ConsultViewController () <TopTabScrollViewDelegate,ConsultContentViewDelegate>
 @property (weak, nonatomic) IBOutlet TopTabScrollView *topTabScrollView;
@@ -25,6 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"健康资讯";
 
     [self setUpData];
     [self setUpTopTab];
@@ -82,6 +85,13 @@
 - (void)topTabScrollView:(TopTabScrollView *)topTabScrollView didSelectRow:(NSInteger )row{
     [self.consultContentView selectContentWithIndex:row];
 }
+
+- (void)contentOneContentCellWithSelect:(ConsultContentObject *)aObject withIndex:(NSInteger)aIndex{
+    ConsultDetailViewController *ndVC = [[ConsultDetailViewController alloc] initWithNibName:@"ConsultDetailViewController" bundle:nil];
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+}
+
 #pragma mark -
 #pragma mark ConsultViewConrentdelegate
 
@@ -91,7 +101,7 @@
 }
 
 - (void)contentViewWithScrollView:(UIScrollView *)scrollView didScrollToIndex:(NSInteger)aIndex{
-    [self.topTabScrollView selectRow:aIndex animated:NO scrollPosition:TopTabScrollViewScrollPositionBottom];
+    [self.topTabScrollView selectRow:aIndex animated:NO scrollPosition:TopTabScrollViewScrollPositionNone];
 }
 
 #pragma mark -

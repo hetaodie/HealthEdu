@@ -7,6 +7,8 @@
 //
 
 #import "TopTabScrollView.h"
+#import "UIColor+MaxColor.h"
+#import "UIColor+HEX.h"
 
 typedef NS_ENUM(NSInteger, MoveDirection) {
     MoveDirectionLeft,
@@ -36,7 +38,6 @@ typedef NS_ENUM(NSInteger, MoveDirection) {
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-
 }
 
 - (void)layoutSubviews{
@@ -61,15 +62,11 @@ typedef NS_ENUM(NSInteger, MoveDirection) {
     self = [super initWithFrame:frame];
     if (self) {
         [self addNSNotification];
-          [self setUpData];
-        
+        [self setUpData];
+        [self setUpSubViews];
+        self.scrollEnabled = YES;
     }
     return self;
-}
-
-- (void)setFrame:(CGRect)frame{
-    [super setFrame:frame];
-//    [self reloadData];
 }
 
 #pragma mark -
@@ -137,25 +134,20 @@ typedef NS_ENUM(NSInteger, MoveDirection) {
     CGFloat offsetMod = fmodf(offset, screenWidth);
     
     MoveDirection moveDirection = [self getMoveDirectionWithOffset:offset];
-    CGFloat moveOffset;
     
+    CGFloat moveOffset;
     CGPoint center = self.moveView.center;
     
+    TopTabScrollViewCell *cell = [self.cellArray objectAtIndex:nextIndex];
+    CGFloat beginX = CGRectGetMidX(cell.frame);
+    
     if (moveDirection == MoveDirectionRight) {
-        
-        TopTabScrollViewCell *cell = [self.cellArray objectAtIndex:nextIndex];
-        CGFloat beginX = CGRectGetMidX(cell.frame);
-        
         moveOffset = [self getTopMoveOffsetWithOffset:offsetMod andIndex:nextIndex + 1];
-        center.x = beginX + moveOffset;
     }
     else{
-        
-        TopTabScrollViewCell *cell = [self.cellArray objectAtIndex:nextIndex];
-        CGFloat beginX = CGRectGetMidX(cell.frame);
         moveOffset = [self getTopMoveOffsetWithOffset: offsetMod andIndex:nextIndex];
-        center.x = beginX + moveOffset;
     }
+    center.x = beginX + moveOffset;
 
     self.moveView.center = center;
     
@@ -240,6 +232,18 @@ typedef NS_ENUM(NSInteger, MoveDirection) {
     switch (topTabScrollViewScrollPosition) {
         case TopTabScrollViewScrollPositionNone:
         {
+            CGFloat minX = CGRectGetMinX(cell.frame);
+            CGFloat maxX = CGRectGetMaxX(cell.frame);
+            if (minX - self.contentOffset.x <0){
+                moveX = minX;
+            }
+            else if(maxX-self.contentOffset.x > self.frame.size.width){
+                moveX = maxX - self.frame.size.width;
+            }
+            else{
+                moveX = self.contentOffset.x;
+            }
+            
             break;
         }
         case TopTabScrollViewScrollPositionTop:

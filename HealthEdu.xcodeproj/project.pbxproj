@@ -19,6 +19,21 @@
 		7C34F39C1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F39A1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib */; };
 		7C34F3A01DD1E91700C61015 /* ConsultContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34F39E1DD1E91700C61015 /* ConsultContentTableViewCell.m */; };
 		7C34F3A11DD1E91700C61015 /* ConsultContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */; };
+		7CC685751DD9682B00E2AB19 /* ConsultContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC685741DD9682B00E2AB19 /* ConsultContentObject.m */; };
+		7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC6857C1DD97E9D00E2AB19 /* ConsultDetailViewController.m */; };
+		7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC6857D1DD97E9D00E2AB19 /* ConsultDetailViewController.xib */; };
+		7CF736B01DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736AF1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m */; };
+		7CF736B21DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736B11DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib */; };
+		7CF736B61DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736B41DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m */; };
+		7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736B51DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib */; };
+		7CF736BA1DDADA7500F92222 /* UILabel+Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736B91DDADA7500F92222 /* UILabel+Calculate.m */; };
+		7CF736C31DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736C11DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.m */; };
+		7CF736C41DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736C21DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.xib */; };
+		7CF736C71DDAE66200F92222 /* BaiKeSicknessContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736C61DDAE66200F92222 /* BaiKeSicknessContentView.m */; };
+		7CF736C91DDAE66E00F92222 /* BaiKeSicknessContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736C81DDAE66E00F92222 /* BaiKeSicknessContentView.xib */; };
+		7CF736CD1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736CB1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m */; };
+		7CF736CE1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736CC1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib */; };
+		7CF736D41DDAFD0D00F92222 /* NSMutableArray+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736D31DDAFD0D00F92222 /* NSMutableArray+HF.m */; };
 		87FF3A461CC04FFE94D920AA /* libPods-HealthEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E718DE9FCA3253C2582194C5 /* libPods-HealthEdu.a */; };
 		E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC51DC2E37400A0369B /* UIColor+HEX.m */; };
 		E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC81DC3484A00A0369B /* UIColor+MaxColor.m */; };
@@ -38,8 +53,6 @@
 		E6E1536E1DC0BC1C0094A947 /* TopTabScrollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E1536D1DC0BC1C0094A947 /* TopTabScrollViewCell.xib */; };
 		E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27901DBD988E00DEE06D /* ConsultViewController.m */; };
 		E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27911DBD988E00DEE06D /* ConsultViewController.xib */; };
-		E6EC27971DBD995B00DEE06D /* ConSultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC27951DBD995B00DEE06D /* ConSultDetailViewController.m */; };
-		E6EC27981DBD995B00DEE06D /* ConSultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC27961DBD995B00DEE06D /* ConSultDetailViewController.xib */; };
 		E6EC279C1DBD998F00DEE06D /* BaiKeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC279A1DBD998F00DEE06D /* BaiKeViewController.m */; };
 		E6EC279D1DBD998F00DEE06D /* BaiKeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6EC279B1DBD998F00DEE06D /* BaiKeViewController.xib */; };
 		E6EC27A11DBD99A700DEE06D /* BKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC279F1DBD99A700DEE06D /* BKDetailViewController.m */; };
@@ -100,6 +113,30 @@
 		7C34F39D1DD1E91700C61015 /* ConsultContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultContentTableViewCell.h; sourceTree = "<group>"; };
 		7C34F39E1DD1E91700C61015 /* ConsultContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultContentTableViewCell.m; sourceTree = "<group>"; };
 		7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultContentTableViewCell.xib; sourceTree = "<group>"; };
+		7CC685731DD9682B00E2AB19 /* ConsultContentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultContentObject.h; sourceTree = "<group>"; };
+		7CC685741DD9682B00E2AB19 /* ConsultContentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultContentObject.m; sourceTree = "<group>"; };
+		7CC6857B1DD97E9D00E2AB19 /* ConsultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultDetailViewController.h; sourceTree = "<group>"; };
+		7CC6857C1DD97E9D00E2AB19 /* ConsultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultDetailViewController.m; sourceTree = "<group>"; };
+		7CC6857D1DD97E9D00E2AB19 /* ConsultDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultDetailViewController.xib; sourceTree = "<group>"; };
+		7CF736AE1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiKeSicknessFoldCategoryView.h; sourceTree = "<group>"; };
+		7CF736AF1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiKeSicknessFoldCategoryView.m; sourceTree = "<group>"; };
+		7CF736B11DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiKeSicknessFoldCategoryView.xib; sourceTree = "<group>"; };
+		7CF736B31DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiKeSicknessCategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		7CF736B41DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiKeSicknessCategoryCollectionViewCell.m; sourceTree = "<group>"; };
+		7CF736B51DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiKeSicknessCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		7CF736B81DDADA7500F92222 /* UILabel+Calculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Calculate.h"; sourceTree = "<group>"; };
+		7CF736B91DDADA7500F92222 /* UILabel+Calculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Calculate.m"; sourceTree = "<group>"; };
+		7CF736C01DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiKeSicknessUnfoldCategoryView.h; sourceTree = "<group>"; };
+		7CF736C11DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiKeSicknessUnfoldCategoryView.m; sourceTree = "<group>"; };
+		7CF736C21DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiKeSicknessUnfoldCategoryView.xib; sourceTree = "<group>"; };
+		7CF736C51DDAE66200F92222 /* BaiKeSicknessContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiKeSicknessContentView.h; sourceTree = "<group>"; };
+		7CF736C61DDAE66200F92222 /* BaiKeSicknessContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiKeSicknessContentView.m; sourceTree = "<group>"; };
+		7CF736C81DDAE66E00F92222 /* BaiKeSicknessContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiKeSicknessContentView.xib; sourceTree = "<group>"; };
+		7CF736CA1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaikeSicknessContentTableViewCell.h; sourceTree = "<group>"; };
+		7CF736CB1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaikeSicknessContentTableViewCell.m; sourceTree = "<group>"; };
+		7CF736CC1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaikeSicknessContentTableViewCell.xib; sourceTree = "<group>"; };
+		7CF736D21DDAFD0D00F92222 /* NSMutableArray+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+HF.h"; sourceTree = "<group>"; };
+		7CF736D31DDAFD0D00F92222 /* NSMutableArray+HF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+HF.m"; sourceTree = "<group>"; };
 		9323F8D8773924F12DA09357 /* Pods-HealthEdu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.debug.xcconfig"; sourceTree = "<group>"; };
 		A216E4697B5EBA35B628872D /* Pods-HealthEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.release.xcconfig"; sourceTree = "<group>"; };
 		E6123CC41DC2E37400A0369B /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
@@ -136,9 +173,6 @@
 		E6EC278F1DBD988E00DEE06D /* ConsultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultViewController.h; sourceTree = "<group>"; };
 		E6EC27901DBD988E00DEE06D /* ConsultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultViewController.m; sourceTree = "<group>"; };
 		E6EC27911DBD988E00DEE06D /* ConsultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultViewController.xib; sourceTree = "<group>"; };
-		E6EC27941DBD995B00DEE06D /* ConSultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConSultDetailViewController.h; sourceTree = "<group>"; };
-		E6EC27951DBD995B00DEE06D /* ConSultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConSultDetailViewController.m; sourceTree = "<group>"; };
-		E6EC27961DBD995B00DEE06D /* ConSultDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConSultDetailViewController.xib; sourceTree = "<group>"; };
 		E6EC27991DBD998F00DEE06D /* BaiKeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiKeViewController.h; sourceTree = "<group>"; };
 		E6EC279A1DBD998F00DEE06D /* BaiKeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiKeViewController.m; sourceTree = "<group>"; };
 		E6EC279B1DBD998F00DEE06D /* BaiKeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiKeViewController.xib; sourceTree = "<group>"; };
@@ -225,31 +259,17 @@
 				7C34F3931DD1D4AE00C61015 /* ConsultContentView.h */,
 				7C34F3941DD1D4AE00C61015 /* ConsultContentView.m */,
 				7C34F3961DD1D4BD00C61015 /* ConsultContentView.xib */,
+				7CF736AE1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.h */,
+				7CF736AF1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m */,
+				7CF736B11DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib */,
+				7CF736C01DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.h */,
+				7CF736C11DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.m */,
+				7CF736C21DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.xib */,
+				7CF736C51DDAE66200F92222 /* BaiKeSicknessContentView.h */,
+				7CF736C61DDAE66200F92222 /* BaiKeSicknessContentView.m */,
+				7CF736C81DDAE66E00F92222 /* BaiKeSicknessContentView.xib */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		4FB205E41DB4A469007396A8 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				4FB205E51DB4A469007396A8 /* model */,
-				4FB205E61DB4A469007396A8 /* object */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		4FB205E51DB4A469007396A8 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		4FB205E61DB4A469007396A8 /* object */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = object;
 			sourceTree = "<group>";
 		};
 		4FB205E71DB4A474007396A8 /* view */ = {
@@ -259,29 +279,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		4FB205E81DB4A474007396A8 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				4FB205E91DB4A474007396A8 /* model */,
-				4FB205EA1DB4A474007396A8 /* object */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		4FB205E91DB4A474007396A8 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		4FB205EA1DB4A474007396A8 /* object */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = object;
-			sourceTree = "<group>";
-		};
 		4FB205EB1DB4A47C007396A8 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,57 +286,11 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		4FB205EC1DB4A47C007396A8 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				4FB205ED1DB4A47C007396A8 /* model */,
-				4FB205EE1DB4A47C007396A8 /* object */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		4FB205ED1DB4A47C007396A8 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		4FB205EE1DB4A47C007396A8 /* object */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = object;
-			sourceTree = "<group>";
-		};
 		4FB205EF1DB4A486007396A8 /* view */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		4FB205F01DB4A486007396A8 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				4FB205F11DB4A486007396A8 /* model */,
-				4FB205F21DB4A486007396A8 /* object */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		4FB205F11DB4A486007396A8 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		4FB205F21DB4A486007396A8 /* object */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = object;
 			sourceTree = "<group>";
 		};
 		4FDE9CD01DB4D1E100D9C790 /* cell */ = {
@@ -355,10 +306,41 @@
 				7C34F3991DD1E8F800C61015 /* ConsultContentCollectionViewCell.m */,
 				7C34F39A1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib */,
 				7C34F39D1DD1E91700C61015 /* ConsultContentTableViewCell.h */,
-				7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */,
 				7C34F39E1DD1E91700C61015 /* ConsultContentTableViewCell.m */,
+				7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */,
+				7CF736B31DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.h */,
+				7CF736B41DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m */,
+				7CF736B51DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib */,
+				7CF736CA1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.h */,
+				7CF736CB1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m */,
+				7CF736CC1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		7CC685701DD9680300E2AB19 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7CC685711DD9680300E2AB19 /* model */,
+				7CC685721DD9680300E2AB19 /* object */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7CC685711DD9680300E2AB19 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7CC685721DD9680300E2AB19 /* object */ = {
+			isa = PBXGroup;
+			children = (
+				7CC685731DD9682B00E2AB19 /* ConsultContentObject.h */,
+				7CC685741DD9682B00E2AB19 /* ConsultContentObject.m */,
+			);
+			path = object;
 			sourceTree = "<group>";
 		};
 		89C1F562CB5BBC99C346DC2C /* Frameworks */ = {
@@ -376,6 +358,10 @@
 				E6123CC51DC2E37400A0369B /* UIColor+HEX.m */,
 				E6123CC71DC3484A00A0369B /* UIColor+MaxColor.h */,
 				E6123CC81DC3484A00A0369B /* UIColor+MaxColor.m */,
+				7CF736B81DDADA7500F92222 /* UILabel+Calculate.h */,
+				7CF736B91DDADA7500F92222 /* UILabel+Calculate.m */,
+				7CF736D21DDAFD0D00F92222 /* NSMutableArray+HF.h */,
+				7CF736D31DDAFD0D00F92222 /* NSMutableArray+HF.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -383,8 +369,8 @@
 		E62342AA1D9A076500FE8254 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7CC685701DD9680300E2AB19 /* model */,
 				4FB205E31DB4A469007396A8 /* view */,
-				4FB205E41DB4A469007396A8 /* model */,
 				E62342AF1D9A076500FE8254 /* ViewController */,
 			);
 			path = Home;
@@ -398,9 +384,9 @@
 				E6EC278F1DBD988E00DEE06D /* ConsultViewController.h */,
 				E6EC27901DBD988E00DEE06D /* ConsultViewController.m */,
 				E6EC27911DBD988E00DEE06D /* ConsultViewController.xib */,
-				E6EC27941DBD995B00DEE06D /* ConSultDetailViewController.h */,
-				E6EC27951DBD995B00DEE06D /* ConSultDetailViewController.m */,
-				E6EC27961DBD995B00DEE06D /* ConSultDetailViewController.xib */,
+				7CC6857B1DD97E9D00E2AB19 /* ConsultDetailViewController.h */,
+				7CC6857C1DD97E9D00E2AB19 /* ConsultDetailViewController.m */,
+				7CC6857D1DD97E9D00E2AB19 /* ConsultDetailViewController.xib */,
 				E6EC27991DBD998F00DEE06D /* BaiKeViewController.h */,
 				E6EC279A1DBD998F00DEE06D /* BaiKeViewController.m */,
 				E6EC279B1DBD998F00DEE06D /* BaiKeViewController.xib */,
@@ -427,7 +413,6 @@
 			isa = PBXGroup;
 			children = (
 				4FB205EF1DB4A486007396A8 /* view */,
-				4FB205F01DB4A486007396A8 /* model */,
 				E62342CC1D9A107300FE8254 /* ViewController */,
 			);
 			path = Account;
@@ -461,7 +446,6 @@
 			isa = PBXGroup;
 			children = (
 				4FB205E71DB4A474007396A8 /* view */,
-				4FB205E81DB4A474007396A8 /* model */,
 				E62342D21D9A107300FE8254 /* ViewController */,
 			);
 			path = Consultation;
@@ -480,7 +464,6 @@
 			isa = PBXGroup;
 			children = (
 				4FB205EB1DB4A47C007396A8 /* view */,
-				4FB205EC1DB4A47C007396A8 /* model */,
 				E62342D81D9A107300FE8254 /* ViewController */,
 			);
 			path = Service;
@@ -627,7 +610,7 @@
 		E6C698F51D990B2A00D2818C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = allWants;
 				TargetAttributes = {
 					E6C698FC1D990B2A00D2818C = {
@@ -671,18 +654,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF736C41DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.xib in Resources */,
 				E6EC279D1DBD998F00DEE06D /* BaiKeViewController.xib in Resources */,
 				E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */,
+				7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */,
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
 				E6EC27C51DBD9D7B00DEE06D /* CacheViewController.xib in Resources */,
-				E6EC27981DBD995B00DEE06D /* ConSultDetailViewController.xib in Resources */,
+				7CF736C91DDAE66E00F92222 /* BaiKeSicknessContentView.xib in Resources */,
 				7C34F3971DD1D4BD00C61015 /* ConsultContentView.xib in Resources */,
+				7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */,
 				E6E1536E1DC0BC1C0094A947 /* TopTabScrollViewCell.xib in Resources */,
 				7C34F3A11DD1E91700C61015 /* ConsultContentTableViewCell.xib in Resources */,
 				E6EC27B61DBD9A8F00DEE06D /* LearnCommunityViewController.xib in Resources */,
 				E6EC27BB1DBD9B1400DEE06D /* LoginViewController.xib in Resources */,
 				E6C699131D990B2A00D2818C /* LaunchScreen.storyboard in Resources */,
 				E6EC27AC1DBD9A4C00DEE06D /* PlayerViewController.xib in Resources */,
+				7CF736CE1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib in Resources */,
 				4FDE9CDA1DB4EC2300D9C790 /* HomeContentHeaderView.xib in Resources */,
 				E6EC27A21DBD99A700DEE06D /* BKDetailViewController.xib in Resources */,
 				7C34F39C1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib in Resources */,
@@ -693,6 +680,7 @@
 				4FDE9CD51DB4D20600D9C790 /* HomeContentTableViewCell.xib in Resources */,
 				E6EC27CA1DBD9D9400DEE06D /* BMIViewController.xib in Resources */,
 				E6C6990E1D990B2A00D2818C /* Main.storyboard in Resources */,
+				7CF736B21DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib in Resources */,
 				E6EC27B11DBD9A6C00DEE06D /* PlayHistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -768,25 +756,33 @@
 			files = (
 				7C34F3A01DD1E91700C61015 /* ConsultContentTableViewCell.m in Sources */,
 				E6EC27A11DBD99A700DEE06D /* BKDetailViewController.m in Sources */,
+				7CF736D41DDAFD0D00F92222 /* NSMutableArray+HF.m in Sources */,
 				E6C699051D990B2A00D2818C /* AppDelegate.m in Sources */,
 				E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */,
 				E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */,
 				7C34F3951DD1D4AE00C61015 /* ConsultContentView.m in Sources */,
+				7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */,
 				E6E153691DC0BA5F0094A947 /* TopTabScrollView.m in Sources */,
+				7CF736B61DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m in Sources */,
 				E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */,
 				E6C699021D990B2A00D2818C /* main.m in Sources */,
+				7CF736BA1DDADA7500F92222 /* UILabel+Calculate.m in Sources */,
 				E6EC27B51DBD9A8F00DEE06D /* LearnCommunityViewController.m in Sources */,
+				7CF736B01DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m in Sources */,
 				4FDE9CD81DB4EC1000D9C790 /* HomeContentHeaderView.m in Sources */,
 				4FB205F51DB4BDA3007396A8 /* HomeTagView.m in Sources */,
 				E6EC27C41DBD9D7B00DEE06D /* CacheViewController.m in Sources */,
 				E6EC27C91DBD9D9400DEE06D /* BMIViewController.m in Sources */,
 				E62342DB1D9A154300FE8254 /* ServiceViewController.m in Sources */,
-				E6EC27971DBD995B00DEE06D /* ConSultDetailViewController.m in Sources */,
+				7CC685751DD9682B00E2AB19 /* ConsultContentObject.m in Sources */,
+				7CF736C31DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.m in Sources */,
 				E6EC279C1DBD998F00DEE06D /* BaiKeViewController.m in Sources */,
 				4FDE9CD41DB4D20600D9C790 /* HomeContentTableViewCell.m in Sources */,
 				E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */,
+				7CF736C71DDAE66200F92222 /* BaiKeSicknessContentView.m in Sources */,
 				E6EC27BF1DBD9CAD00DEE06D /* DoctorRepeatViewController.m in Sources */,
 				E6EC27A61DBD99C800DEE06D /* LectureHailViewController.m in Sources */,
+				7CF736CD1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m in Sources */,
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
@@ -867,6 +863,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -915,6 +912,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

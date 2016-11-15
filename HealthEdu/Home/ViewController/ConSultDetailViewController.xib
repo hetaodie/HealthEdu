@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConSultDetailViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConsultDetailViewController">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -14,7 +18,81 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRY-Eo-1ri">
+                    <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如何美白脸部皮肤" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L01-oK-lEW">
+                            <rect key="frame" x="106.5" y="18" width="163.5" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="L01-oK-lEW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HRY-Eo-1ri" secondAttribute="leading" constant="15" id="7Pu-NU-AoP"/>
+                        <constraint firstItem="L01-oK-lEW" firstAttribute="centerX" secondItem="HRY-Eo-1ri" secondAttribute="centerX" id="Bss-V7-1J0"/>
+                        <constraint firstItem="L01-oK-lEW" firstAttribute="centerY" secondItem="HRY-Eo-1ri" secondAttribute="centerY" id="DRc-Qq-GDK"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L01-oK-lEW" secondAttribute="trailing" constant="15" id="gFJ-Oq-PMF"/>
+                        <constraint firstAttribute="height" constant="60" id="l8I-14-D8P"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aei-7U-rZz">
+                    <rect key="frame" x="0.0" y="124" width="375" height="33"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="来源：健康报" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ca5-B4-FiQ">
+                            <rect key="frame" x="15" y="8.5" width="86" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016.09.15 15:16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivI-um-WAg">
+                            <rect key="frame" x="253.5" y="8" width="108.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ivI-um-WAg" secondAttribute="trailing" constant="13" id="KHg-xf-NLX"/>
+                        <constraint firstItem="Ca5-B4-FiQ" firstAttribute="leading" secondItem="aei-7U-rZz" secondAttribute="leading" constant="15" id="erR-Ut-Yj9"/>
+                        <constraint firstItem="ivI-um-WAg" firstAttribute="centerY" secondItem="aei-7U-rZz" secondAttribute="centerY" id="kUD-Wo-KXg"/>
+                        <constraint firstItem="Ca5-B4-FiQ" firstAttribute="centerY" secondItem="aei-7U-rZz" secondAttribute="centerY" id="sOF-a4-Glr"/>
+                        <constraint firstAttribute="height" constant="33" id="uqa-je-iOH"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consultDetailDefault" translatesAutoresizingMaskIntoConstraints="NO" id="I6G-Tg-3QE">
+                    <rect key="frame" x="12" y="172" width="351" height="185.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="I6G-Tg-3QE" secondAttribute="height" multiplier="172:91" id="awh-fc-ooR"/>
+                    </constraints>
+                </imageView>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4X7-Xr-NV7">
+                    <rect key="frame" x="12" y="385" width="351" height="282"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </webView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aei-7U-rZz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8El-Mg-03j"/>
+                <constraint firstItem="I6G-Tg-3QE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="8gq-ri-hPk"/>
+                <constraint firstAttribute="trailing" secondItem="4X7-Xr-NV7" secondAttribute="trailing" constant="12" id="9Tm-G1-9wh"/>
+                <constraint firstAttribute="trailing" secondItem="HRY-Eo-1ri" secondAttribute="trailing" id="Frj-sZ-eWI"/>
+                <constraint firstItem="HRY-Eo-1ri" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NxZ-bO-8x5"/>
+                <constraint firstAttribute="trailing" secondItem="I6G-Tg-3QE" secondAttribute="trailing" constant="12" id="QuZ-Fw-fSN"/>
+                <constraint firstItem="I6G-Tg-3QE" firstAttribute="top" secondItem="aei-7U-rZz" secondAttribute="bottom" constant="15" id="R9Y-Il-Naq"/>
+                <constraint firstItem="aei-7U-rZz" firstAttribute="top" secondItem="HRY-Eo-1ri" secondAttribute="bottom" id="ba3-Qk-Iu3"/>
+                <constraint firstItem="HRY-Eo-1ri" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="c52-u8-3Gf"/>
+                <constraint firstItem="4X7-Xr-NV7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="fV9-V7-dfG"/>
+                <constraint firstItem="4X7-Xr-NV7" firstAttribute="top" secondItem="I6G-Tg-3QE" secondAttribute="bottom" constant="27.5" id="hba-L2-b2l"/>
+                <constraint firstAttribute="bottom" secondItem="4X7-Xr-NV7" secondAttribute="bottom" id="nPS-qq-L6v"/>
+                <constraint firstAttribute="trailing" secondItem="aei-7U-rZz" secondAttribute="trailing" id="tFj-gB-nJW"/>
+            </constraints>
+            <point key="canvasLocation" x="81.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="consultDetailDefault" width="344" height="182"/>
+    </resources>
 </document>
