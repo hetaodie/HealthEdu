@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LectureHailViewController">
             <connections>
+                <outlet property="contentView" destination="hDD-ht-HEY" id="yQ1-GY-5lC"/>
+                <outlet property="cycleBannersView" destination="q4d-4M-vwY" id="S2P-xi-cdT"/>
+                <outlet property="topTabScrollView" destination="f8r-WI-2uM" id="EqS-wI-YKH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +21,38 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4d-4M-vwY" customClass="CycleBannersView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="q4d-4M-vwY" secondAttribute="height" multiplier="75:28" id="gFA-0i-nWq"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8r-WI-2uM" customClass="TopTabScrollView">
+                    <rect key="frame" x="0.0" y="140" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="5yI-f8-Rwb"/>
+                    </constraints>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDD-ht-HEY" customClass="LectureHailContentView">
+                    <rect key="frame" x="0.0" y="184" width="375" height="483"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hDD-ht-HEY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="36U-ec-iXE"/>
+                <constraint firstItem="q4d-4M-vwY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="89D-qK-ZJt"/>
+                <constraint firstAttribute="trailing" secondItem="f8r-WI-2uM" secondAttribute="trailing" id="Awj-Of-w0l"/>
+                <constraint firstAttribute="bottom" secondItem="hDD-ht-HEY" secondAttribute="bottom" id="b6k-9d-iB3"/>
+                <constraint firstItem="hDD-ht-HEY" firstAttribute="top" secondItem="f8r-WI-2uM" secondAttribute="bottom" id="cgy-sD-Sdf"/>
+                <constraint firstAttribute="trailing" secondItem="q4d-4M-vwY" secondAttribute="trailing" id="f33-u2-JR0"/>
+                <constraint firstItem="q4d-4M-vwY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gRm-Ua-y7f"/>
+                <constraint firstItem="f8r-WI-2uM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pwT-eT-5yd"/>
+                <constraint firstAttribute="trailing" secondItem="hDD-ht-HEY" secondAttribute="trailing" id="wa2-1n-f20"/>
+                <constraint firstItem="f8r-WI-2uM" firstAttribute="top" secondItem="q4d-4M-vwY" secondAttribute="bottom" id="xzk-q1-aym"/>
+            </constraints>
         </view>
     </objects>
 </document>

@@ -167,7 +167,7 @@ typedef NS_ENUM(NSInteger, MoveDirection) {
     self.moveView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, moveViewWidth, moveViewHeight)];
     
     [self addSubview:self.moveView];
-    self.moveView.backgroundColor = [UIColor redColor];
+    self.moveView.backgroundColor = [UIColor colorWithHexString:@"0099e6" alpha:1.0f];
 }
 
 - (void)addNSNotification{

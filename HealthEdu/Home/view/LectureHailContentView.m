@@ -1,22 +1,23 @@
 //
-//  BaiKeSicknessCategoryView.m
+//  LectureHailContentView.m
 //  HealthEdu
 //
-//  Created by weixu on 16/11/15.
+//  Created by weixu on 16/11/16.
 //  Copyright © 2016年 allWants. All rights reserved.
 //
 
-#import "BaiKeSicknessUnfoldCategoryView.h"
-#import "BaiKeSicknessCategoryCollectionViewCell.h"
+#import "LectureHailContentView.h"
+#import "LectureHailContentCollectionViewCell.h"
 
-@interface BaiKeSicknessUnfoldCategoryView()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface LectureHailContentView()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) NSMutableArray *contentArray;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
-@implementation BaiKeSicknessUnfoldCategoryView
+@implementation LectureHailContentView
+
 
 #pragma mark -
 #pragma mark lifecycle
@@ -28,8 +29,8 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    [self setUpCollectionView];
     
+    [self setUpCollectionView];
     self.contentArray = [[NSMutableArray alloc] init];
 }
 
@@ -44,23 +45,20 @@
     return self;
 }
 
-
 #pragma mark -
 #pragma mark IBActions
 
 #pragma mark -
 #pragma mark public
 
-- (void)showUnfoldCategoryViewWithArray:(NSArray *)aArray{
+- (void)showViewWithArray:(NSArray *)aArray{
     [self.contentArray setArray:aArray];
+    
     [self.collectionView reloadData];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionNone];
 }
 
-
 #pragma mark -
-#pragma mark UICollectionViewDelegate 
+#pragma mark delegate
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     NSInteger count = [self.contentArray count];
@@ -68,31 +66,24 @@
 }
 
 - ( UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    BaiKeSicknessCategoryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BaiKeSicknessCategoryCollectionViewCell" forIndexPath:indexPath];
-    
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
-    [cell showCellWithTitle:title];
-    
+    LectureHailContentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LectureHailContentCollectionViewCell" forIndexPath:indexPath];
+        
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(onUnfoldCategoryOneElementSelectWithData:withIndex:)]) {
-        [self.delegate onUnfoldCategoryOneElementSelectWithData:title withIndex:indexPath.row];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onOneElementContentSelectWithData:withIndex:)]) {
+        [self.delegate onOneElementContentSelectWithData:nil withIndex:indexPath.row];
     }
-
+    
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
-
     
-    CGSize size =[BaiKeSicknessCategoryCollectionViewCell cellSizeForString:title];
+    CGSize size =[LectureHailContentCollectionViewCell cellSizeWithData:nil];
     return size;
 }
-#pragma mark -
-#pragma mark delegate
+
 
 
 #pragma mark -
@@ -100,7 +91,10 @@
 
 #pragma mark -
 #pragma mark private
-
-
+- (void)setUpCollectionView{
+    UINib *nib = [UINib nibWithNibName:@"LectureHailContentCollectionViewCell" bundle:nil];
+    
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"LectureHailContentCollectionViewCell"];
+}
 
 @end

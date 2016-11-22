@@ -34,6 +34,15 @@
 		7CF736CD1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736CB1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m */; };
 		7CF736CE1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736CC1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib */; };
 		7CF736D41DDAFD0D00F92222 /* NSMutableArray+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736D31DDAFD0D00F92222 /* NSMutableArray+HF.m */; };
+		7CF736D81DDB101600F92222 /* CycleBannersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736D61DDB101600F92222 /* CycleBannersView.m */; };
+		7CF736D91DDB101600F92222 /* CycleBannersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736D71DDB101600F92222 /* CycleBannersView.xib */; };
+		7CF736DD1DDB102900F92222 /* CycleBannersCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736DB1DDB102900F92222 /* CycleBannersCollectionViewCell.m */; };
+		7CF736DE1DDB102900F92222 /* CycleBannersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736DC1DDB102900F92222 /* CycleBannersCollectionViewCell.xib */; };
+		7CF736E11DDBB3BB00F92222 /* LectureHailContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736E01DDBB3BB00F92222 /* LectureHailContentView.m */; };
+		7CF736E31DDBB41700F92222 /* LectureHailContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736E21DDBB41700F92222 /* LectureHailContentView.xib */; };
+		7CF736E71DDBB61B00F92222 /* LectureHailContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736E51DDBB61B00F92222 /* LectureHailContentCollectionViewCell.m */; };
+		7CF736E81DDBB61B00F92222 /* LectureHailContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736E61DDBB61B00F92222 /* LectureHailContentCollectionViewCell.xib */; };
+		7CF736ED1DDBEDDA00F92222 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736EC1DDBEDDA00F92222 /* PlayerView.m */; };
 		87FF3A461CC04FFE94D920AA /* libPods-HealthEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E718DE9FCA3253C2582194C5 /* libPods-HealthEdu.a */; };
 		E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC51DC2E37400A0369B /* UIColor+HEX.m */; };
 		E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC81DC3484A00A0369B /* UIColor+MaxColor.m */; };
@@ -137,6 +146,21 @@
 		7CF736CC1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaikeSicknessContentTableViewCell.xib; sourceTree = "<group>"; };
 		7CF736D21DDAFD0D00F92222 /* NSMutableArray+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+HF.h"; sourceTree = "<group>"; };
 		7CF736D31DDAFD0D00F92222 /* NSMutableArray+HF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+HF.m"; sourceTree = "<group>"; };
+		7CF736D51DDB101600F92222 /* CycleBannersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleBannersView.h; sourceTree = "<group>"; };
+		7CF736D61DDB101600F92222 /* CycleBannersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleBannersView.m; sourceTree = "<group>"; };
+		7CF736D71DDB101600F92222 /* CycleBannersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleBannersView.xib; sourceTree = "<group>"; };
+		7CF736DA1DDB102900F92222 /* CycleBannersCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleBannersCollectionViewCell.h; sourceTree = "<group>"; };
+		7CF736DB1DDB102900F92222 /* CycleBannersCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleBannersCollectionViewCell.m; sourceTree = "<group>"; };
+		7CF736DC1DDB102900F92222 /* CycleBannersCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleBannersCollectionViewCell.xib; sourceTree = "<group>"; };
+		7CF736DF1DDBB3BB00F92222 /* LectureHailContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureHailContentView.h; sourceTree = "<group>"; };
+		7CF736E01DDBB3BB00F92222 /* LectureHailContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureHailContentView.m; sourceTree = "<group>"; };
+		7CF736E21DDBB41700F92222 /* LectureHailContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LectureHailContentView.xib; sourceTree = "<group>"; };
+		7CF736E41DDBB61B00F92222 /* LectureHailContentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureHailContentCollectionViewCell.h; sourceTree = "<group>"; };
+		7CF736E51DDBB61B00F92222 /* LectureHailContentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureHailContentCollectionViewCell.m; sourceTree = "<group>"; };
+		7CF736E61DDBB61B00F92222 /* LectureHailContentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LectureHailContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		7CF736EA1DDBEDDA00F92222 /* PlayerEnum-all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PlayerEnum-all.h"; sourceTree = "<group>"; };
+		7CF736EB1DDBEDDA00F92222 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
+		7CF736EC1DDBEDDA00F92222 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
 		9323F8D8773924F12DA09357 /* Pods-HealthEdu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.debug.xcconfig"; sourceTree = "<group>"; };
 		A216E4697B5EBA35B628872D /* Pods-HealthEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.release.xcconfig"; sourceTree = "<group>"; };
 		E6123CC41DC2E37400A0369B /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
@@ -268,6 +292,12 @@
 				7CF736C51DDAE66200F92222 /* BaiKeSicknessContentView.h */,
 				7CF736C61DDAE66200F92222 /* BaiKeSicknessContentView.m */,
 				7CF736C81DDAE66E00F92222 /* BaiKeSicknessContentView.xib */,
+				7CF736D51DDB101600F92222 /* CycleBannersView.h */,
+				7CF736D61DDB101600F92222 /* CycleBannersView.m */,
+				7CF736D71DDB101600F92222 /* CycleBannersView.xib */,
+				7CF736DF1DDBB3BB00F92222 /* LectureHailContentView.h */,
+				7CF736E01DDBB3BB00F92222 /* LectureHailContentView.m */,
+				7CF736E21DDBB41700F92222 /* LectureHailContentView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -314,6 +344,12 @@
 				7CF736CA1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.h */,
 				7CF736CB1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m */,
 				7CF736CC1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib */,
+				7CF736DA1DDB102900F92222 /* CycleBannersCollectionViewCell.h */,
+				7CF736DB1DDB102900F92222 /* CycleBannersCollectionViewCell.m */,
+				7CF736DC1DDB102900F92222 /* CycleBannersCollectionViewCell.xib */,
+				7CF736E41DDBB61B00F92222 /* LectureHailContentCollectionViewCell.h */,
+				7CF736E51DDBB61B00F92222 /* LectureHailContentCollectionViewCell.m */,
+				7CF736E61DDBB61B00F92222 /* LectureHailContentCollectionViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -341,6 +377,16 @@
 				7CC685741DD9682B00E2AB19 /* ConsultContentObject.m */,
 			);
 			path = object;
+			sourceTree = "<group>";
+		};
+		7CF736E91DDBEDDA00F92222 /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				7CF736EA1DDBEDDA00F92222 /* PlayerEnum-all.h */,
+				7CF736EB1DDBEDDA00F92222 /* PlayerView.h */,
+				7CF736EC1DDBEDDA00F92222 /* PlayerView.m */,
+			);
+			path = AVPlayer;
 			sourceTree = "<group>";
 		};
 		89C1F562CB5BBC99C346DC2C /* Frameworks */ = {
@@ -503,6 +549,7 @@
 		E6C698FF1D990B2A00D2818C /* HealthEdu */ = {
 			isa = PBXGroup;
 			children = (
+				7CF736E91DDBEDDA00F92222 /* AVPlayer */,
 				E6123CC31DC2E36D00A0369B /* Public */,
 				E62342AA1D9A076500FE8254 /* Home */,
 				E62342CD1D9A107300FE8254 /* Consultation */,
@@ -654,7 +701,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF736E31DDBB41700F92222 /* LectureHailContentView.xib in Resources */,
 				7CF736C41DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.xib in Resources */,
+				7CF736DE1DDB102900F92222 /* CycleBannersCollectionViewCell.xib in Resources */,
 				E6EC279D1DBD998F00DEE06D /* BaiKeViewController.xib in Resources */,
 				E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */,
 				7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */,
@@ -663,7 +712,9 @@
 				7CF736C91DDAE66E00F92222 /* BaiKeSicknessContentView.xib in Resources */,
 				7C34F3971DD1D4BD00C61015 /* ConsultContentView.xib in Resources */,
 				7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */,
+				7CF736D91DDB101600F92222 /* CycleBannersView.xib in Resources */,
 				E6E1536E1DC0BC1C0094A947 /* TopTabScrollViewCell.xib in Resources */,
+				7CF736E81DDBB61B00F92222 /* LectureHailContentCollectionViewCell.xib in Resources */,
 				7C34F3A11DD1E91700C61015 /* ConsultContentTableViewCell.xib in Resources */,
 				E6EC27B61DBD9A8F00DEE06D /* LearnCommunityViewController.xib in Resources */,
 				E6EC27BB1DBD9B1400DEE06D /* LoginViewController.xib in Resources */,
@@ -755,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C34F3A01DD1E91700C61015 /* ConsultContentTableViewCell.m in Sources */,
+				7CF736ED1DDBEDDA00F92222 /* PlayerView.m in Sources */,
 				E6EC27A11DBD99A700DEE06D /* BKDetailViewController.m in Sources */,
 				7CF736D41DDAFD0D00F92222 /* NSMutableArray+HF.m in Sources */,
 				E6C699051D990B2A00D2818C /* AppDelegate.m in Sources */,
@@ -765,6 +817,8 @@
 				E6E153691DC0BA5F0094A947 /* TopTabScrollView.m in Sources */,
 				7CF736B61DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m in Sources */,
 				E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */,
+				7CF736E71DDBB61B00F92222 /* LectureHailContentCollectionViewCell.m in Sources */,
+				7CF736E11DDBB3BB00F92222 /* LectureHailContentView.m in Sources */,
 				E6C699021D990B2A00D2818C /* main.m in Sources */,
 				7CF736BA1DDADA7500F92222 /* UILabel+Calculate.m in Sources */,
 				E6EC27B51DBD9A8F00DEE06D /* LearnCommunityViewController.m in Sources */,
@@ -781,8 +835,10 @@
 				E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */,
 				7CF736C71DDAE66200F92222 /* BaiKeSicknessContentView.m in Sources */,
 				E6EC27BF1DBD9CAD00DEE06D /* DoctorRepeatViewController.m in Sources */,
+				7CF736DD1DDB102900F92222 /* CycleBannersCollectionViewCell.m in Sources */,
 				E6EC27A61DBD99C800DEE06D /* LectureHailViewController.m in Sources */,
 				7CF736CD1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m in Sources */,
+				7CF736D81DDB101600F92222 /* CycleBannersView.m in Sources */,
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
