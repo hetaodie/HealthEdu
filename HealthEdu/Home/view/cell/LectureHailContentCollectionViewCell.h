@@ -2,17 +2,21 @@
 //  LectureHailContentCollectionViewCell.h
 //  HealthEdu
 //
-//  Created by weixu on 16/11/16.
+//  Created by weixu on 16/11/22.
 //  Copyright © 2016年 allWants. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "LectureHailContentObject.h"
 
+
+@protocol LectureHailContentCollectionViewCellDelegate <NSObject>
+
+- (void)clickOneElementOfCellWithInfo:(LectureHailContentObject *)aObject withIndex:(NSInteger)aIndex;
+
+
+@end
+
 @interface LectureHailContentCollectionViewCell : UICollectionViewCell
-
-+ (CGSize)cellSizeWithData:(LectureHailContentObject *)aData;
-
-- (void)showCellWithData:(LectureHailContentObject *)aData;
-
+@property (nonatomic, weak) id<LectureHailContentCollectionViewCellDelegate>delegate;
 @end

@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LectureHailContentObject.h"
 
 @protocol LectureHailContentViewDelegate <NSObject>
 
-- (void)onOneElementContentSelectWithData:(NSString *)aObject withIndex:(NSInteger)aIndex;
+@optional
+
+- (void)contentViewWithScrollView:(UIScrollView *)scrollView didScrollToIndex:(NSInteger)aIndex;
+- (void)contentViewWithscrollViewDidScroll:(UIScrollView *)scrollView;
+
+- (void)contentOneContentCellWithSelect:(LectureHailContentObject *)aObject withIndex:(NSInteger)aIndex;
+
 
 @end
 
@@ -18,4 +25,6 @@
 @property (nonatomic, weak) id<LectureHailContentViewDelegate>delegate;
 
 - (void)showViewWithArray:(NSArray *)aArray;
+
+- (void)selectContentWithIndex:(NSInteger)aIndex;
 @end

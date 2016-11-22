@@ -50,12 +50,13 @@
     
     NSArray *tmpArray = [NSArray arrayWithObjects:@"推荐",@"常见病",@"养生",@"健身",@"两性",@"美容", @"推荐",@"热点",@"前沿",@"时评",@"政策",@"提醒", nil];
     [self.topArray setArray:tmpArray];
+    [self.contentView showViewWithArray:self.contentArray];
+
     [self.topTabScrollView reloadData];
     
     [self.topTabScrollView selectRow:0 animated:YES scrollPosition:TopTabScrollViewScrollPositionNone];
     
     [self.cycleBannersView showBannersWithBannersArray:self.bannersArray];
-    //[self.contentView showViewWithArray:self.contentArray];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
@@ -109,7 +110,19 @@
 }
 
 - (void)topTabScrollView:(TopTabScrollView *)topTabScrollView didSelectRow:(NSInteger )row{
-    //[self.consultContentView selectContentWithIndex:row];
+    [self.contentView selectContentWithIndex:row];
+}
+
+#pragma mark -
+#pragma mark ConsultViewConrentdelegate
+
+- (void)contentViewWithscrollViewDidScroll:(UIScrollView *)scrollView{
+    CGPoint offset = scrollView.contentOffset;
+    [self.topTabScrollView moveWithOffset:offset.x];
+}
+
+- (void)contentViewWithScrollView:(UIScrollView *)scrollView didScrollToIndex:(NSInteger)aIndex{
+    [self.topTabScrollView selectRow:aIndex animated:NO scrollPosition:TopTabScrollViewScrollPositionNone];
 }
 
 #pragma mark -

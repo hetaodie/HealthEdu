@@ -2,80 +2,75 @@
 //  LectureHailContentCollectionViewCell.m
 //  HealthEdu
 //
-//  Created by weixu on 16/11/16.
+//  Created by weixu on 16/11/22.
 //  Copyright © 2016年 allWants. All rights reserved.
 //
 
 #import "LectureHailContentCollectionViewCell.h"
-#import "PlayerView.h"
+#import "LectureHailContentElementCollectionViewCell.h"
 
-const CGFloat LectureHailContentCollectionViewCellCapHeight = 53.5;
-const CGFloat LectureHailContentCollectionViewCellCapWidth = 43;
-
-@interface LectureHailContentCollectionViewCell()<PlayerViewDelegate>
-@property (weak, nonatomic) IBOutlet PlayerView *playerView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *videoTimeLabel;
+@interface LectureHailContentCollectionViewCell()<UICollectionViewDelegate,UICollectionViewDataSource>
+@property (nonatomic, strong) NSMutableArray *contentArray;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
+
 @implementation LectureHailContentCollectionViewCell
-
-
-#pragma mark -
-#pragma mark lifecycle
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.contentArray = [[NSMutableArray alloc] init];
+    
+    [self setUpCollectionView];
+    [self addTestData];
 }
 
-#pragma mark -
-#pragma mark IBActions
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    NSInteger count = [self.contentArray count];
+    return count;
+}
 
-#pragma mark -
-#pragma mark public
+- ( UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    LectureHailContentElementCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LectureHailContentElementCollectionViewCell" forIndexPath:indexPath];
+    LectureHailContentObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    
+    [cell showCellWithData:object];
+    
+    return cell;
+}
 
-+ (CGSize)cellSizeWithData:(NSString *)aData{
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    CGFloat cellWidth = (screenWidth-LectureHailContentCollectionViewCellCapWidth)/2.0f;
-    CGFloat height = cellWidth * 89/167 + LectureHailContentCollectionViewCellCapHeight;
-    CGSize size = CGSizeMake(cellWidth, height);
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger row = indexPath.row;
+    
+    LectureHailContentObject *object = [self.contentArray objectAtIndex:row];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(clickOneElementOfCellWithInfo:withIndex:)]){
+        [self.delegate clickOneElementOfCellWithInfo:object withIndex:row];
+    }
+
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CGSize size =[LectureHailContentElementCollectionViewCell cellSizeWithData:nil];
     return size;
 }
 
-- (void)showCellWithData:(LectureHailContentObject *)aData{
-    NSURL *url = [NSURL URLWithString:aData.videoUrl];
-    [self.playerView setNewUrl:url isCircle:NO];
-    self.playerView.delegate = self;
+- (void)setUpCollectionView{
+    UINib *nib = [UINib nibWithNibName:@"LectureHailContentElementCollectionViewCell" bundle:nil];
     
-    self.titleLabel.text = aData.title;
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"LectureHailContentElementCollectionViewCell"];
 }
 
-
-
-#pragma mark -
-#pragma mark delegate
-
-
-#pragma mark -
-#pragma mark NSNotification
-
-#pragma mark -
-#pragma mark private
-
-- (void)onPlayerloadSuccessWithTotalSecond:(float)totalSecond{
-    self.videoTimeLabel.text = [self timeFormatted:rintf(totalSecond)];
+- (void)addTestData{
+    for (int i =0; i<20; i++) {
+        LectureHailContentObject *object = [[LectureHailContentObject alloc] init];
+        object.videoUrl= @"http://v.jxvdy.com/sendfile/w5bgP3A8JgiQQo5l0hvoNGE2H16WbN09X-ONHPq3P3C1BISgf7C-qVs6_c8oaw3zKScO78I--b0BGFBRxlpw13sf2e54QA";
+        object.title = @"台湾医疗美容市场流行用高压氧抗老用高压氧抗老用高压氧抗老";
+        [self.contentArray addObject:object];
+    }
+    [self.collectionView reloadData];
 }
 
-- (NSString *)timeFormatted:(int)totalSeconds
-{
-    
-    int seconds = totalSeconds % 60;
-    int minutes = (totalSeconds / 60) % 60;
-    int hours = totalSeconds / 3600;
-    
-    return [NSString stringWithFormat:@"%02d:%02d:%02d",hours, minutes, seconds];
-}
 
 @end
