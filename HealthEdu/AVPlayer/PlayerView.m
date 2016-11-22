@@ -46,6 +46,16 @@
 #pragma mark -
 #pragma mark public Function
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.totalTime = 0.0;
+        [self setupPlayer];
+    }
+    return self;
+}
+
 - (PlayerView *)initPlayerViewWithURl:(NSURL *)aUrl isCircle:(BOOL)isCircle{
     self = [super init];
     if (self) {
@@ -68,6 +78,7 @@
     }
     return self;
 }
+
 
 
 - (void)setNewUrl:(NSURL *)aNewUrl isCircle:(BOOL)isCircle{

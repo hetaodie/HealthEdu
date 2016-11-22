@@ -48,6 +48,7 @@
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X3k-gC-Vfk" secondAttribute="trailing" constant="15" id="B79-W5-JFn"/>
                 <constraint firstItem="X3k-gC-Vfk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AjU-UL-miL" secondAttribute="leading" constant="15" id="FE5-Zx-h8v"/>
                 <constraint firstAttribute="trailing" secondItem="ugs-Nt-hfO" secondAttribute="trailing" id="LQ8-4H-VTp"/>
+                <constraint firstItem="X3k-gC-Vfk" firstAttribute="centerX" secondItem="AjU-UL-miL" secondAttribute="centerX" id="RTm-WS-Awh"/>
                 <constraint firstItem="ugs-Nt-hfO" firstAttribute="leading" secondItem="AjU-UL-miL" secondAttribute="leading" id="Wwa-6u-4JK"/>
                 <constraint firstAttribute="bottom" secondItem="X3k-gC-Vfk" secondAttribute="bottom" id="aj7-5J-bAP"/>
                 <constraint firstItem="ugs-Nt-hfO" firstAttribute="top" secondItem="AjU-UL-miL" secondAttribute="top" id="zke-Ft-KRZ"/>

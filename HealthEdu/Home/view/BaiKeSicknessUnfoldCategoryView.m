@@ -91,6 +91,7 @@
     CGSize size =[BaiKeSicknessCategoryCollectionViewCell cellSizeForString:title];
     return size;
 }
+
 #pragma mark -
 #pragma mark delegate
 
@@ -101,6 +102,12 @@
 #pragma mark -
 #pragma mark private
 
+
+- (void)setUpCollectionView{
+    UINib *nib = [UINib nibWithNibName:@"BaiKeSicknessCategoryCollectionViewCell" bundle:nil];
+    
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"BaiKeSicknessCategoryCollectionViewCell"];
+}
 
 
 @end

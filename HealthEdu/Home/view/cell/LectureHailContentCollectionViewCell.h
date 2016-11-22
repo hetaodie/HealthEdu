@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LectureHailContentObject.h"
 
 @interface LectureHailContentCollectionViewCell : UICollectionViewCell
 
-+ (CGSize)cellSizeWithData:(NSString *)aData;
++ (CGSize)cellSizeWithData:(LectureHailContentObject *)aData;
+
+- (void)showCellWithData:(LectureHailContentObject *)aData;
+
 @end

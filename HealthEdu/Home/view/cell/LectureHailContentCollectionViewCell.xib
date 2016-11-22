@@ -25,6 +25,12 @@
                             <constraint firstAttribute="width" secondItem="V9T-pC-VMi" secondAttribute="height" multiplier="167:89" id="qHA-m4-SIe"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edF-Ch-OvD">
+                        <rect key="frame" x="6" y="57.5" width="27.5" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台湾医疗美容市场流行用高压氧抗老用高压氧抗老用高压氧抗老" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPI-MC-3H4">
                         <rect key="frame" x="10" y="84.5" width="120" height="33.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -35,8 +41,10 @@
             </view>
             <constraints>
                 <constraint firstItem="V9T-pC-VMi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0BC-4Q-dAa"/>
+                <constraint firstItem="edF-Ch-OvD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="6oq-7v-tQ9"/>
                 <constraint firstAttribute="trailing" secondItem="V9T-pC-VMi" secondAttribute="trailing" id="E88-va-AMf"/>
                 <constraint firstAttribute="trailing" secondItem="ZPI-MC-3H4" secondAttribute="trailing" constant="10" id="Jl0-43-82r"/>
+                <constraint firstItem="edF-Ch-OvD" firstAttribute="bottom" secondItem="V9T-pC-VMi" secondAttribute="bottom" constant="-5" id="PRP-Ox-Byj"/>
                 <constraint firstItem="ZPI-MC-3H4" firstAttribute="top" secondItem="V9T-pC-VMi" secondAttribute="bottom" constant="10" id="aAa-wk-XQq"/>
                 <constraint firstItem="ZPI-MC-3H4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="eTv-O0-wt1"/>
                 <constraint firstItem="V9T-pC-VMi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xs3-Ay-wpf"/>
@@ -44,6 +52,7 @@
             <connections>
                 <outlet property="playerView" destination="V9T-pC-VMi" id="OAs-zP-diq"/>
                 <outlet property="titleLabel" destination="ZPI-MC-3H4" id="Gtr-ak-CjE"/>
+                <outlet property="videoTimeLabel" destination="edF-Ch-OvD" id="0Ci-5x-2Wl"/>
             </connections>
             <point key="canvasLocation" x="80" y="54"/>
         </collectionViewCell>

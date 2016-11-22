@@ -55,7 +55,7 @@
     [self.topTabScrollView selectRow:0 animated:YES scrollPosition:TopTabScrollViewScrollPositionNone];
     
     [self.cycleBannersView showBannersWithBannersArray:self.bannersArray];
-    [self.contentView showViewWithArray:self.contentArray];
+    //[self.contentView showViewWithArray:self.contentArray];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
 }

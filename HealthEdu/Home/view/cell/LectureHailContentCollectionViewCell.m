@@ -12,10 +12,11 @@
 const CGFloat LectureHailContentCollectionViewCellCapHeight = 53.5;
 const CGFloat LectureHailContentCollectionViewCellCapWidth = 43;
 
-@interface LectureHailContentCollectionViewCell()
+@interface LectureHailContentCollectionViewCell()<PlayerViewDelegate>
 @property (weak, nonatomic) IBOutlet PlayerView *playerView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *videoTimeLabel;
 
 @end
 
@@ -43,6 +44,16 @@ const CGFloat LectureHailContentCollectionViewCellCapWidth = 43;
     return size;
 }
 
+- (void)showCellWithData:(LectureHailContentObject *)aData{
+    NSURL *url = [NSURL URLWithString:aData.videoUrl];
+    [self.playerView setNewUrl:url isCircle:NO];
+    self.playerView.delegate = self;
+    
+    self.titleLabel.text = aData.title;
+}
+
+
+
 #pragma mark -
 #pragma mark delegate
 
@@ -52,5 +63,19 @@ const CGFloat LectureHailContentCollectionViewCellCapWidth = 43;
 
 #pragma mark -
 #pragma mark private
+
+- (void)onPlayerloadSuccessWithTotalSecond:(float)totalSecond{
+    self.videoTimeLabel.text = [self timeFormatted:rintf(totalSecond)];
+}
+
+- (NSString *)timeFormatted:(int)totalSeconds
+{
+    
+    int seconds = totalSeconds % 60;
+    int minutes = (totalSeconds / 60) % 60;
+    int hours = totalSeconds / 3600;
+    
+    return [NSString stringWithFormat:@"%02d:%02d:%02d",hours, minutes, seconds];
+}
 
 @end
