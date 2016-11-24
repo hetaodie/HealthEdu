@@ -14,7 +14,6 @@
 
 - (void)clickOneElementOfCellWithInfo:(LectureHailContentObject *)aObject withIndex:(NSInteger)aIndex;
 
-
 @end
 
 @interface LectureHailContentCollectionViewCell : UICollectionViewCell

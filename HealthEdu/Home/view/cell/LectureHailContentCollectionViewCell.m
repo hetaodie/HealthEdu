@@ -18,6 +18,10 @@
 
 @implementation LectureHailContentCollectionViewCell
 
+#pragma mark -
+#pragma mark lifecycle
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.contentArray = [[NSMutableArray alloc] init];
@@ -25,6 +29,17 @@
     [self setUpCollectionView];
     [self addTestData];
 }
+
+#pragma mark -
+#pragma mark IBActions
+
+#pragma mark -
+#pragma mark public
+
+#pragma mark -
+#pragma mark delegate
+
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     NSInteger count = [self.contentArray count];
@@ -47,7 +62,7 @@
     if(self.delegate && [self.delegate respondsToSelector:@selector(clickOneElementOfCellWithInfo:withIndex:)]){
         [self.delegate clickOneElementOfCellWithInfo:object withIndex:row];
     }
-
+    
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -56,6 +71,14 @@
     return size;
 }
 
+
+#pragma mark -
+#pragma mark NSNotification
+
+#pragma mark -
+#pragma mark private
+
+
 - (void)setUpCollectionView{
     UINib *nib = [UINib nibWithNibName:@"LectureHailContentElementCollectionViewCell" bundle:nil];
     
@@ -63,14 +86,19 @@
 }
 
 - (void)addTestData{
-    for (int i =0; i<20; i++) {
+    for (int i =1; i<16; i++) {
         LectureHailContentObject *object = [[LectureHailContentObject alloc] init];
-        object.videoUrl= @"http://v.jxvdy.com/sendfile/w5bgP3A8JgiQQo5l0hvoNGE2H16WbN09X-ONHPq3P3C1BISgf7C-qVs6_c8oaw3zKScO78I--b0BGFBRxlpw13sf2e54QA";
+        NSString *strUrl = [NSString stringWithFormat:@"http://120.25.226.186:32812/resources/videos/minion_0%d.mp4",i];
+        object.videoUrl= strUrl;
         object.title = @"台湾医疗美容市场流行用高压氧抗老用高压氧抗老用高压氧抗老";
         [self.contentArray addObject:object];
     }
     [self.collectionView reloadData];
 }
 
+- (void)dealloc
+{
+    
+}
 
 @end

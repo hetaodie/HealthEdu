@@ -89,6 +89,7 @@
     [self removeNotification];
     [self removeObserverFromPlayerItem:self.player.currentItem];
     AVPlayerItem *playerItem = [AVPlayerItem  playerItemWithURL:aNewUrl];
+    playerItem.canUseNetworkResourcesForLiveStreamingWhilePaused = NO;
     [self addObserverToPlayerItem:playerItem];
     //切换视频
     [self.player replaceCurrentItemWithPlayerItem:playerItem];
@@ -141,6 +142,7 @@
     [self.player seekToTime:changedTime];
     [self.player pause];
     [self unmonitoringPlayback:self.player.currentItem];
+    
 }
 
 - (void)setPlayerMute:(BOOL)isMute{

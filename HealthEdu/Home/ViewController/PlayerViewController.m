@@ -7,31 +7,61 @@
 //
 
 #import "PlayerViewController.h"
+#import "LecturePlayerView.h"
+#import "VideoDownloaderManger.h"
 
 @interface PlayerViewController ()
+@property (weak, nonatomic) IBOutlet LecturePlayerView *playerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *playerViewLayout;
+@property (weak, nonatomic) IBOutlet UIButton *downLoadButton;
+@property (weak, nonatomic) IBOutlet UILabel *downBtnNameLabel;
 
 @end
 
 @implementation PlayerViewController
 
+#pragma mark -
+#pragma mark lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    VideoDownloaderManger *manager = [VideoDownloaderManger sharedInstance];
+    NSArray *downVideoArray = [manager getDownVideoArray];
+    NSArray *completedVideoArray = [manager getCompletedVideoArray];
+    if ([downVideoArray containsObject:self.videoObject.videoUrl] || [completedVideoArray containsObject:self.videoObject.videoUrl]) {
+        [self.downBtnNameLabel setText:@"已缓存"];
+        [self.downLoadButton setEnabled:NO];
+    }
+    else{
+        [self.downBtnNameLabel setText:@"缓存视频"];
+        [self.downLoadButton setEnabled:YES];
+
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark -
+#pragma mark IBActions
+- (IBAction)downLoadBtnPress:(id)sender {
+
+    [[VideoDownloaderManger sharedInstance] downloadVideoWithString:self.videoObject.videoUrl];
 }
-*/
+
+#pragma mark -
+#pragma mark public
+
+#pragma mark -
+#pragma mark delegate
+
+
+#pragma mark -
+#pragma mark NSNotification
+
+#pragma mark -
+#pragma mark private
+
 
 @end

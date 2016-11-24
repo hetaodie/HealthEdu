@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LectureHailContentObject.h"
 
 @interface PlayerViewController : UIViewController
-
+@property (nonatomic, strong) LectureHailContentObject *videoObject;
 @end

@@ -36,7 +36,7 @@
                     </constraints>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDD-ht-HEY" customClass="LectureHailContentView">
-                    <rect key="frame" x="0.0" y="184" width="375" height="483"/>
+                    <rect key="frame" x="0.0" y="208" width="375" height="459"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
@@ -46,7 +46,7 @@
                 <constraint firstItem="q4d-4M-vwY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="89D-qK-ZJt"/>
                 <constraint firstAttribute="trailing" secondItem="f8r-WI-2uM" secondAttribute="trailing" id="Awj-Of-w0l"/>
                 <constraint firstAttribute="bottom" secondItem="hDD-ht-HEY" secondAttribute="bottom" id="b6k-9d-iB3"/>
-                <constraint firstItem="hDD-ht-HEY" firstAttribute="top" secondItem="f8r-WI-2uM" secondAttribute="bottom" id="cgy-sD-Sdf"/>
+                <constraint firstItem="hDD-ht-HEY" firstAttribute="top" secondItem="f8r-WI-2uM" secondAttribute="bottom" constant="24" id="cgy-sD-Sdf"/>
                 <constraint firstAttribute="trailing" secondItem="q4d-4M-vwY" secondAttribute="trailing" id="f33-u2-JR0"/>
                 <constraint firstItem="q4d-4M-vwY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gRm-Ua-y7f"/>
                 <constraint firstItem="f8r-WI-2uM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pwT-eT-5yd"/>

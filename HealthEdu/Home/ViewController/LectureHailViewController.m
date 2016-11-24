@@ -10,6 +10,7 @@
 #import "CycleBannersView.h"
 #import "TopTabScrollView.h"
 #import "LectureHailContentView.h"
+#import "PlayerViewController.h"
 
 @interface LectureHailViewController ()<TopTabScrollViewDelegate,CycleBannersViewDelegate,LectureHailContentViewDelegate>
 @property (nonatomic, strong) NSMutableArray *bannersArray;
@@ -21,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet TopTabScrollView *topTabScrollView;
 
 @property (weak, nonatomic) IBOutlet LectureHailContentView *contentView;
+
 
 @end
 
@@ -112,6 +114,14 @@
 - (void)topTabScrollView:(TopTabScrollView *)topTabScrollView didSelectRow:(NSInteger )row{
     [self.contentView selectContentWithIndex:row];
 }
+
+- (void)contentOneContentCellWithSelect:(LectureHailContentObject *)aObject withIndex:(NSInteger)aIndex{
+    PlayerViewController *ndVC = [[PlayerViewController alloc] initWithNibName:@"PlayerViewController" bundle:nil];
+    ndVC.videoObject = aObject;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+}
+
 
 #pragma mark -
 #pragma mark ConsultViewConrentdelegate
