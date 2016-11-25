@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *downLoadButton;
 @property (weak, nonatomic) IBOutlet UILabel *downBtnNameLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *playerViewTopLayout;
+@property (weak, nonatomic) IBOutlet UILabel *videoTitleLabel;
 
 @end
 
@@ -32,6 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.playerView.delegate = self;
+    
+    self.videoTitleLabel.text = self.videoObject.title;
     
     VideoDownloaderManger *manager = [VideoDownloaderManger sharedInstance];
     NSDictionary *completedVideoDic = [manager getCompletedVideo];
@@ -105,7 +108,7 @@
     }
     else{
          [self.navigationController setNavigationBarHidden:NO];
-        self.playerViewTopLayout.constant = 64;
+        self.playerViewTopLayout.constant = 107;
 
     }
 }

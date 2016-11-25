@@ -16,6 +16,7 @@
                 <outlet property="playerView" destination="HJx-0B-Qus" id="nBz-Kw-D9E"/>
                 <outlet property="playerViewLayout" destination="5oQ-Bn-b2f" id="LgH-Aj-EPG"/>
                 <outlet property="playerViewTopLayout" destination="1WV-NR-uwk" id="Npt-ck-pQo"/>
+                <outlet property="videoTitleLabel" destination="QN4-4V-6eB" id="o1K-Xg-lU3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,15 +25,34 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grn-Xn-uJn">
+                    <rect key="frame" x="0.0" y="64" width="375" height="43"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QN4-4V-6eB">
+                            <rect key="frame" x="15" y="11" width="345" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="QN4-4V-6eB" firstAttribute="centerY" secondItem="grn-Xn-uJn" secondAttribute="centerY" id="3sc-pQ-zAk"/>
+                        <constraint firstItem="QN4-4V-6eB" firstAttribute="centerX" secondItem="grn-Xn-uJn" secondAttribute="centerX" id="Tju-KF-nOf"/>
+                        <constraint firstAttribute="trailing" secondItem="QN4-4V-6eB" secondAttribute="trailing" constant="15" id="WUW-vY-Ibb"/>
+                        <constraint firstAttribute="height" constant="43" id="b69-n1-ZtI"/>
+                        <constraint firstItem="QN4-4V-6eB" firstAttribute="leading" secondItem="grn-Xn-uJn" secondAttribute="leading" constant="15" id="hzt-ep-wAp"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJx-0B-Qus" customClass="LecturePlayerView">
-                    <rect key="frame" x="0.0" y="64" width="375" height="211"/>
+                    <rect key="frame" x="0.0" y="107" width="375" height="211"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="HJx-0B-Qus" secondAttribute="height" multiplier="16:9" priority="900" id="ypQ-V4-Du6"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NE1-QT-qev">
-                    <rect key="frame" x="117" y="305" width="141" height="37"/>
+                    <rect key="frame" x="117" y="348" width="141" height="37"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anniu" translatesAutoresizingMaskIntoConstraints="NO" id="Glh-c1-m7j">
                             <rect key="frame" x="0.0" y="0.0" width="141" height="37"/>
@@ -79,10 +99,13 @@
             </subviews>
             <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="HJx-0B-Qus" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="1WV-NR-uwk"/>
+                <constraint firstItem="HJx-0B-Qus" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="107" id="1WV-NR-uwk"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HJx-0B-Qus" secondAttribute="bottom" id="5oQ-Bn-b2f"/>
+                <constraint firstItem="grn-Xn-uJn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="6yx-xO-b8d"/>
+                <constraint firstItem="grn-Xn-uJn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9UM-jg-Lj7"/>
                 <constraint firstAttribute="trailing" secondItem="HJx-0B-Qus" secondAttribute="trailing" id="R46-0I-DTJ"/>
                 <constraint firstItem="HJx-0B-Qus" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dAk-OW-wpE"/>
+                <constraint firstAttribute="trailing" secondItem="grn-Xn-uJn" secondAttribute="trailing" id="pfD-Ip-OtQ"/>
                 <constraint firstItem="NE1-QT-qev" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u9a-TL-PNR"/>
                 <constraint firstItem="NE1-QT-qev" firstAttribute="top" secondItem="HJx-0B-Qus" secondAttribute="bottom" constant="30" id="xDF-3x-YnZ"/>
             </constraints>

@@ -56,5 +56,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationUsageDescription</key>
+	<string>如果需要定位，只有能同意才可以</string>
 </dict>
 </plist>
