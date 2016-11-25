@@ -9,6 +9,7 @@
 #import "PlayHistoryViewController.h"
 #import "PlayHistoryTableViewCell.h"
 #import "VideoHistoryManager.h"
+#import "PlayerViewController.h"
 
 @interface PlayHistoryViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -87,6 +88,16 @@
     LectureHailContentObject *object = [self.historyVideoArray objectAtIndex:indexPath.row];
     [cell showCellWithObject:object];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    LectureHailContentObject *object = [self.historyVideoArray objectAtIndex:indexPath.row];
+    PlayerViewController *ndVC = [[PlayerViewController alloc] initWithNibName:@"PlayerViewController" bundle:nil];
+    ndVC.videoObject = object;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+
 }
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

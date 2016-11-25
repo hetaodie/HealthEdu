@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LearnCommunityViewController">
             <connections>
+                <outlet property="contentView" destination="5pf-ga-bVA" id="sLF-CR-gZE"/>
+                <outlet property="cycleBannersView" destination="g0a-fm-9Z7" id="1Zi-I1-upF"/>
+                <outlet property="topTabScrollView" destination="tft-fg-aDi" id="ut2-QF-KaG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +21,39 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0a-fm-9Z7" customClass="CycleBannersView">
+                    <rect key="frame" x="0.0" y="64" width="375" height="140"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="g0a-fm-9Z7" secondAttribute="height" multiplier="75:28" id="Lbw-Wy-HIL"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tft-fg-aDi" customClass="TopTabScrollView">
+                    <rect key="frame" x="0.0" y="204" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Qsb-pr-fTz"/>
+                    </constraints>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pf-ga-bVA" customClass="LectureHailContentView">
+                    <rect key="frame" x="0.0" y="272" width="375" height="395"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tft-fg-aDi" firstAttribute="top" secondItem="g0a-fm-9Z7" secondAttribute="bottom" id="3Sv-ML-MzQ"/>
+                <constraint firstAttribute="trailing" secondItem="tft-fg-aDi" secondAttribute="trailing" id="HbQ-rc-BA5"/>
+                <constraint firstItem="g0a-fm-9Z7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JvK-aQ-auM"/>
+                <constraint firstItem="5pf-ga-bVA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Mki-gV-CJq"/>
+                <constraint firstAttribute="trailing" secondItem="5pf-ga-bVA" secondAttribute="trailing" id="Wry-PT-eFS"/>
+                <constraint firstItem="5pf-ga-bVA" firstAttribute="top" secondItem="tft-fg-aDi" secondAttribute="bottom" constant="24" id="a8w-cZ-aRt"/>
+                <constraint firstItem="g0a-fm-9Z7" firstAttribute="width" secondItem="g0a-fm-9Z7" secondAttribute="height" multiplier="75:28" id="adH-hp-Nc5"/>
+                <constraint firstAttribute="trailing" secondItem="g0a-fm-9Z7" secondAttribute="trailing" id="dVd-AN-kQC"/>
+                <constraint firstItem="g0a-fm-9Z7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="gjJ-BC-tjb"/>
+                <constraint firstItem="tft-fg-aDi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hqY-Qk-py5"/>
+                <constraint firstAttribute="bottom" secondItem="5pf-ga-bVA" secondAttribute="bottom" id="oed-0W-wjt"/>
+            </constraints>
         </view>
     </objects>
 </document>
