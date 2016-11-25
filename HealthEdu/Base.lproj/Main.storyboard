@@ -21,6 +21,7 @@
                     <connections>
                         <segue destination="pPw-2Z-frc" kind="relationship" relationship="viewControllers" id="LG6-xw-HFF"/>
                         <segue destination="59w-5c-6g7" kind="relationship" relationship="viewControllers" id="RAc-t0-0sP"/>
+                        <segue destination="Yoy-9S-EN8" kind="relationship" relationship="viewControllers" id="EYE-QF-wCd"/>
                         <segue destination="Zc9-7Q-4Ld" kind="relationship" relationship="viewControllers" id="Li7-sD-WhT"/>
                         <segue destination="oRC-VX-sgg" kind="relationship" relationship="viewControllers" id="dHe-y8-1jk"/>
                     </connections>
@@ -146,7 +147,7 @@
                                     <outlet property="delegate" destination="sX4-aY-6rN" id="wwh-Pv-jur"/>
                                 </connections>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2X-4m-8D0" customClass="CitysView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D2X-4m-8D0" customClass="CitysView">
                                 <rect key="frame" x="0.0" y="145" width="375" height="473"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -262,6 +263,43 @@
             </objects>
             <point key="canvasLocation" x="199" y="-46"/>
         </scene>
+        <!--挂号-->
+        <scene sceneID="ECQ-q2-Tno">
+            <objects>
+                <navigationController id="Yoy-9S-EN8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="挂号" image="guahao1" selectedImage="guahao1" id="YmS-qd-xE8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZTW-h8-Jdn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cSs-9E-RRj" kind="relationship" relationship="rootViewController" id="a7I-x0-Sde"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqF-Eg-vy6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538" y="457"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NE7-nb-aOL">
+            <objects>
+                <viewController id="cSs-9E-RRj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OIE-78-tjf"/>
+                        <viewControllerLayoutGuide type="bottom" id="N6c-nP-1Te"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fs8-29-vMS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DTk-Wm-JAm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sA1-np-mJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="670"/>
+        </scene>
         <!--首页-->
         <scene sceneID="pXh-W5-Um7">
             <objects>
@@ -289,6 +327,7 @@
     <resources>
         <image name="fuwu" width="20" height="25"/>
         <image name="fuwu2" width="20" height="25"/>
+        <image name="guahao1" width="25" height="24"/>
         <image name="shouye" width="26" height="23"/>
         <image name="shouye2" width="26" height="23"/>
         <image name="wode" width="23" height="24"/>

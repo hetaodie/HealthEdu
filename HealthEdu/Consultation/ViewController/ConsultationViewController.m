@@ -10,13 +10,14 @@
 #import "SelectCityView.h"
 #import "ConsultationContentTableViewCell.h"
 #import "CitysView.h"
+#import "LocationManager.h"
 
-@interface ConsultationViewController ()<UITableViewDelegate,UITableViewDataSource,CitysViewDelegate,SelectCityViewDelegate>
+@interface ConsultationViewController ()<UITableViewDelegate,UITableViewDataSource,CitysViewDelegate,SelectCityViewDelegate,LocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet SelectCityView *selectCityView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet CitysView *cityView;
 @property (nonatomic, strong) NSMutableArray *citysArray;
-
+@property (nonatomic, strong) LocationManager *locationManager;
 @end
 
 @implementation ConsultationViewController
@@ -35,6 +36,9 @@
     self.selectCityView.delegate = self;
     
     [self.cityView showViewWithArray:self.citysArray];
+    self.locationManager = [[LocationManager alloc] init];
+    self.locationManager.delegate = self;
+    [self.locationManager getLocationCity];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +53,10 @@
 
 #pragma mark -
 #pragma mark delegate
+
+- (void)onlocationCity:(NSString *)aCityName{
+    [self.selectCityView setLocCityName:aCityName];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 10;

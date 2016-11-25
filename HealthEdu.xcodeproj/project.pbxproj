@@ -32,6 +32,7 @@
 		7C87BFB41DE81ADC0034C613 /* CitysView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BFB31DE81ADC0034C613 /* CitysView.xib */; };
 		7C87BFBD1DE81C680034C613 /* CitysViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BFBB1DE81C680034C613 /* CitysViewCollectionViewCell.m */; };
 		7C87BFBE1DE81C680034C613 /* CitysViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BFBC1DE81C680034C613 /* CitysViewCollectionViewCell.xib */; };
+		7C87BFC11DE833080034C613 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BFC01DE833080034C613 /* LocationManager.m */; };
 		7CC685751DD9682B00E2AB19 /* ConsultContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC685741DD9682B00E2AB19 /* ConsultContentObject.m */; };
 		7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC6857C1DD97E9D00E2AB19 /* ConsultDetailViewController.m */; };
 		7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC6857D1DD97E9D00E2AB19 /* ConsultDetailViewController.xib */; };
@@ -163,6 +164,8 @@
 		7C87BFBA1DE81C680034C613 /* CitysViewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitysViewCollectionViewCell.h; sourceTree = "<group>"; };
 		7C87BFBB1DE81C680034C613 /* CitysViewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitysViewCollectionViewCell.m; sourceTree = "<group>"; };
 		7C87BFBC1DE81C680034C613 /* CitysViewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CitysViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		7C87BFBF1DE833080034C613 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManager.h; path = HealthEdu/Consultation/View/LocationManager.h; sourceTree = SOURCE_ROOT; };
+		7C87BFC01DE833080034C613 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationManager.m; path = HealthEdu/Consultation/View/LocationManager.m; sourceTree = SOURCE_ROOT; };
 		7CC685731DD9682B00E2AB19 /* ConsultContentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultContentObject.h; sourceTree = "<group>"; };
 		7CC685741DD9682B00E2AB19 /* ConsultContentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultContentObject.m; sourceTree = "<group>"; };
 		7CC6857B1DD97E9D00E2AB19 /* ConsultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultDetailViewController.h; sourceTree = "<group>"; };
@@ -421,6 +424,8 @@
 		7C87BFA21DE80BBB0034C613 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				7C87BFBF1DE833080034C613 /* LocationManager.h */,
+				7C87BFC01DE833080034C613 /* LocationManager.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -938,6 +943,7 @@
 				7CF8F39F1DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.m in Sources */,
 				E6C699051D990B2A00D2818C /* AppDelegate.m in Sources */,
 				E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */,
+				7C87BFC11DE833080034C613 /* LocationManager.m in Sources */,
 				7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */,
 				7C87BFB21DE81ACF0034C613 /* CitysView.m in Sources */,
 				E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */,
