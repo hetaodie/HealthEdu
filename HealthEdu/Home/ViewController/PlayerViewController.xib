@@ -15,6 +15,7 @@
                 <outlet property="downLoadButton" destination="aCT-Wy-0vH" id="PR1-ZC-sBK"/>
                 <outlet property="playerView" destination="HJx-0B-Qus" id="nBz-Kw-D9E"/>
                 <outlet property="playerViewLayout" destination="5oQ-Bn-b2f" id="LgH-Aj-EPG"/>
+                <outlet property="playerViewTopLayout" destination="1WV-NR-uwk" id="Npt-ck-pQo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -79,7 +80,7 @@
             <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="HJx-0B-Qus" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="1WV-NR-uwk"/>
-                <constraint firstAttribute="bottom" secondItem="HJx-0B-Qus" secondAttribute="bottom" priority="888" id="5oQ-Bn-b2f"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HJx-0B-Qus" secondAttribute="bottom" id="5oQ-Bn-b2f"/>
                 <constraint firstAttribute="trailing" secondItem="HJx-0B-Qus" secondAttribute="trailing" id="R46-0I-DTJ"/>
                 <constraint firstItem="HJx-0B-Qus" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dAk-OW-wpE"/>
                 <constraint firstItem="NE1-QT-qev" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u9a-TL-PNR"/>

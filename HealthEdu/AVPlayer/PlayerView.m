@@ -128,7 +128,7 @@
     
     CMTime changedTime = CMTimeMakeWithSeconds(aTime, 1);
     [self.player seekToTime:changedTime];
-    [self.player play];
+    //[self.player play];
     [self monitoringPlayback:self.player.currentItem];
 }
 

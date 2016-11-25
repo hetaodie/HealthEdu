@@ -9,22 +9,39 @@
 #define VideoDownloaderMangerDownVideoChanged @"VideoDownloaderMangerDownVideoChanged"
 #define VideoDownloaderMangerCompletedVideoChanged @"VideoDownloaderMangerCompletedVideoChanged"
 
+#define VideoDownloaderMangerDataPregross @"VideoDownloaderMangerDataPregross"
+#define VideoDownloaderDownloadingCompleted @"VideoDownloaderDownloadingCompleted"
+#define VideoDownloaderDownloadingError @"VideoDownloaderDownloadingError"
+
+
 #import <Foundation/Foundation.h>
+#import "LectureHailContentObject.h"
 
 @interface VideoDownloaderManger : NSObject
 
 + (instancetype)sharedInstance;
 
-- (NSArray *)getDownVideoArray;
+- (NSDictionary *)getDownloadingVideo;
 
-- (NSArray *)getCompletedVideoArray;
+- (NSDictionary *)getCompletedVideo;
 
-- (void)downloadVideoWithString:(NSString *)aStrUrl;
+- (void)downloadVideoWithString:(LectureHailContentObject *)aObject;
+
+- (void)downloadAllVideo;
 
 - (void)stopDownLoadWithString:(NSString *)aStrUrl;
 
-- (void)startDownLoadWithString:(NSString *)aStrUrl;
-
 - (void)stopAllDownLoad;
+
 - (void)startAllDownLoad;
+
+- (void)removeDownLoadingVideoWithString:(NSString *)aStrUrl;
+
+- (void)removeAllDownLoadingVideo;
+
+- (void)removeCompletedVideoWithString:(NSString *)aStrUrl;
+
+- (void)removeAllCompletedVideo;
+
+- (NSString *)getVideoFilePathWithUrl:(NSString *)aStrUrl;
 @end

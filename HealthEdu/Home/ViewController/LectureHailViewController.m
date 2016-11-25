@@ -12,6 +12,8 @@
 #import "LectureHailContentView.h"
 #import "PlayerViewController.h"
 
+#import "PlayHistoryViewController.h"
+
 @interface LectureHailViewController ()<TopTabScrollViewDelegate,CycleBannersViewDelegate,LectureHailContentViewDelegate>
 @property (nonatomic, strong) NSMutableArray *bannersArray;
 @property (nonatomic, strong) NSMutableArray *topArray;
@@ -150,7 +152,9 @@
 }
 
 - (void)lookHistory:(id)sender{
-    
+    PlayHistoryViewController *ndVC = [[PlayHistoryViewController alloc] initWithNibName:@"PlayHistoryViewController" bundle:nil];
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 - (void)setUpData{

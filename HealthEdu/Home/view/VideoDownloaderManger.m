@@ -9,16 +9,17 @@
 #import "VideoDownloaderManger.h"
 #import "AFNetworking.h"
 #import "NSString+MD5.h"
+#import "VideoDownLoaderObject.h"
 
 #define completedVideoFileName @"completedVideoFile"
 #define downVideoFileName @"downVideoFile"
 
-@interface VideoDownloaderManger()
-@property (nonatomic, strong) NSMutableArray *completedVideoArray;
-@property (nonatomic, strong) NSMutableArray *downVideoArray;
+@interface VideoDownloaderManger()<NSURLSessionDelegate>
+@property (nonatomic, strong) NSMutableDictionary *completedVideoDic;
+@property (nonatomic, strong) NSMutableDictionary *downVideoDic;
 @property (nonatomic, strong) NSMutableDictionary *taskDictionary;
 @property (nonatomic, strong) NSURLSessionDownloadTask *downloadTask;
-
+@property (nonatomic, strong) NSMutableDictionary *requestDownVideoDic;
 
 @end
 
@@ -55,18 +56,19 @@ static VideoDownloaderManger *instance;
 {
     self = [super init];
     if (self) {
-        self.downVideoArray = [[NSMutableArray alloc] init];
-        self.completedVideoArray = [[NSMutableArray alloc] init];
+        self.downVideoDic = [[NSMutableDictionary alloc] init];
+        self.completedVideoDic = [[NSMutableDictionary alloc] init];
         self.taskDictionary = [[NSMutableDictionary alloc] init];
+        self.requestDownVideoDic = [[NSMutableDictionary alloc] init];
         
-        NSArray *downVideos = [self readDownVideoForFile];
-        if ([downVideos count] > 0) {
-            [self.downVideoArray setArray:downVideos];
+        NSDictionary *downVideos = [self readDownVideoForFile];
+        if ([downVideos.allKeys count] > 0) {
+            [self.downVideoDic setDictionary:downVideos];
         }
         
-        NSArray *completedVideos = [self readDownVideoForFile];
-        if ([completedVideos count] > 0) {
-            [self.completedVideoArray setArray:completedVideos];
+        NSDictionary *completedVideos = [self readCompletedVideoForFile];
+        if ([completedVideos.allKeys count] > 0) {
+            [self.completedVideoDic setDictionary:completedVideos];
         }
         
     }
@@ -79,84 +81,202 @@ static VideoDownloaderManger *instance;
 #pragma mark -
 #pragma mark public
 
-- (NSArray *)getDownVideoArray{
-    return self.downVideoArray;
+
+- (NSDictionary *)getDownloadingVideo{
+    return self.downVideoDic;
 }
 
-- (NSArray *)getCompletedVideoArray{
-    return self.completedVideoArray;
+- (NSDictionary *)getCompletedVideo{
+    return self.completedVideoDic;
 }
 
-- (void)downloadVideoWithString:(NSString *)aStrUrl{
-    NSString *VideoDataName = aStrUrl.MD5;
-    NSString *path = [self getVideoFilePath];
-    NSString *videoPath = [path stringByAppendingPathComponent:VideoDataName];
-    
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    
-    //AFN3.0+基于封住URLSession的句柄
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-    
-    //请求
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:aStrUrl]];
-    
-    //下载Task操作
-    self.downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-        // @property int64_t totalUnitCount;     需要下载文件的总大小
-        // @property int64_t completedUnitCount; 当前已经下载的大小
-        
-        // 给Progress添加监听 KVO
-        NSLog(@"%f",1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
-        // 回到主队列刷新UI
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // 设置进度条的百分比
-        });
-        
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        
-        NSString *VideoDataName = aStrUrl.MD5;
-        NSString *path = [self getVideoFilePath];
-        NSString *videoPath = [path stringByAppendingPathComponent:VideoDataName];
-        return [NSURL fileURLWithPath:videoPath];
-        
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        //设置下载完成操作
-        // filePath就是你下载文件的位置，你可以解压，也可以直接拿来使用
-        
-        NSString *imgFilePath = [filePath path];// 将NSURL转成NSString
-        
+- (void)downloadAllVideo{
+    [self.downVideoDic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, LectureHailContentObject *obj, BOOL * _Nonnull stop) {
+        [self downloadVideoWithString:obj];
     }];
-    [self.downloadTask resume];
+}
 
-    [self.taskDictionary setObject:self.downloadTask forKey:aStrUrl.MD5];
+
+- (void)downloadVideoWithString:(LectureHailContentObject *)aObject{
+    NSString *aStrUrl = aObject.videoUrl;
+    
+    if ([aStrUrl length]==0) {
+        return;
+    }
+    
+    [self.downVideoDic setObject:aObject forKey:aStrUrl.MD5];
+    [self writeDownVideoToFile];
+    
+    [self.requestDownVideoDic setObject:aObject forKey:aStrUrl.MD5];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:VideoDownloaderMangerDownVideoChanged object:nil];
+    
+    if ([self.taskDictionary valueForKey:aStrUrl.MD5]) {
+        VideoDownLoaderObject *videoLoaderObject = [self.taskDictionary valueForKey:aStrUrl.MD5];
+        if (videoLoaderObject.task.state != NSURLSessionTaskStateRunning) {
+            [videoLoaderObject.task resume];
+        }
+        return;
+    }
+    
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[[NSOperationQueue alloc] init]];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:aStrUrl]];
+    // 设置请求头
+    NSString *range = [NSString stringWithFormat:@"bytes=%zd-", [self getFileDownloadedLength:aStrUrl]];
+    [request setValue:range forHTTPHeaderField:@"Range"];
+    
+    // 创建一个Data任务
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request];
+    
+    
+    VideoDownLoaderObject *videoLoaderObject = [[VideoDownLoaderObject alloc]init];
+    videoLoaderObject.task = task;
+    [self.taskDictionary setValue:videoLoaderObject forKey:aStrUrl.MD5];
+    
+    [task resume];
     
 }
 
 - (void)stopDownLoadWithString:(NSString *)aStrUrl{
-    NSURLSessionDownloadTask *downloadTask = [self.taskDictionary objectForKey:aStrUrl.MD5];
-    [downloadTask suspend];
+    VideoDownLoaderObject *videoLoaderObject = [self.taskDictionary valueForKey:aStrUrl.MD5];
+    if (videoLoaderObject) {
+        [videoLoaderObject.task suspend];
+    }
 }
 
-- (void)startDownLoadWithString:(NSString *)aStrUrl{
-    NSURLSessionDownloadTask *downloadTask = [self.taskDictionary objectForKey:aStrUrl.MD5];
-    [downloadTask resume];
-}
 
 - (void)stopAllDownLoad{
-    [self.taskDictionary.allValues enumerateObjectsUsingBlock:^(NSURLSessionDownloadTask *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj suspend];
+    [self.taskDictionary.allValues enumerateObjectsUsingBlock:^(VideoDownLoaderObject *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj.task suspend];
     }];
 }
 
 - (void)startAllDownLoad{
-    [self.taskDictionary.allValues enumerateObjectsUsingBlock:^(NSURLSessionDownloadTask *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj resume];
+    [self.taskDictionary.allValues enumerateObjectsUsingBlock:^(VideoDownLoaderObject *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj.task resume];
     }];
+}
+
+- (void)removeDownLoadingVideoWithString:(NSString *)aStrUrl{
+    NSString *fullPath = [self getVideoFilePathWithUrl:aStrUrl];
+    NSFileManager *fileManager = [NSFileManager defaultManager ];
+    if ([fileManager fileExistsAtPath:fullPath]) {
+        [fileManager removeItemAtPath:fullPath error:nil];
+    }
+    VideoDownLoaderObject *lc_D = [self.taskDictionary valueForKey:aStrUrl.MD5];
+    if (lc_D) {
+        [lc_D.task cancel];
+    }
+    [self.downVideoDic removeObjectForKey:aStrUrl.MD5];
+
+}
+
+- (void)removeAllDownLoadingVideo{
+    [self.downVideoDic.allValues enumerateObjectsUsingBlock:^(  LectureHailContentObject *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *fullPath = [self getVideoFilePathWithUrl:obj.videoUrl];
+        NSFileManager *fileManager = [NSFileManager defaultManager ];
+        if ([fileManager fileExistsAtPath:fullPath]) {
+            [fileManager removeItemAtPath:fullPath error:nil];
+        }
+        VideoDownLoaderObject *lc_D = [self.taskDictionary valueForKey:obj.videoUrl.MD5];
+        if (lc_D) {
+            [lc_D.task cancel];
+        }
+    }];
+    [self.downVideoDic removeAllObjects];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:VideoDownloaderMangerDownVideoChanged object:nil];
+}
+
+- (void)removeCompletedVideoWithString:(NSString *)aStrUrl{
+    NSString *fullPath = [self getVideoFilePathWithUrl:aStrUrl];
+    NSFileManager *fileManager = [NSFileManager defaultManager ];
+    if ([fileManager fileExistsAtPath:fullPath]) {
+        [fileManager removeItemAtPath:fullPath error:nil];
+    }
+    VideoDownLoaderObject *lc_D = [self.taskDictionary valueForKey:aStrUrl.MD5];
+    if (lc_D) {
+        [lc_D.task cancel];
+        [self.completedVideoDic removeObjectForKey:aStrUrl.MD5];
+    }
+}
+
+- (void)removeAllCompletedVideo{
+    [self.completedVideoDic.allValues enumerateObjectsUsingBlock:^(  LectureHailContentObject *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *fullPath = [self getVideoFilePathWithUrl:obj.videoUrl];
+        NSFileManager *fileManager = [NSFileManager defaultManager ];
+        if ([fileManager fileExistsAtPath:fullPath]) {
+            [fileManager removeItemAtPath:fullPath error:nil];
+        }
+        VideoDownLoaderObject *lc_D = [self.taskDictionary valueForKey:obj.videoUrl.MD5];
+        if (lc_D) {
+            [lc_D.task cancel];
+        }
+    }];
+    [self.completedVideoDic removeAllObjects];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:VideoDownloaderMangerCompletedVideoChanged object:nil];
 }
 
 #pragma mark -
 #pragma mark delegate
+
+// 收到响应
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSHTTPURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
+    
+    NSString *strUrl = dataTask.currentRequest.URL.absoluteString;
+    VideoDownLoaderObject *videoDownLoaderObject = [self.taskDictionary valueForKey:strUrl.MD5];
+    
+    NSString *fullPath = [self getVideoFilePathWithUrl:strUrl];
+    
+    // 创建流
+    NSOutputStream *stream = [NSOutputStream outputStreamToFileAtPath:fullPath append:YES];
+    videoDownLoaderObject.stream = stream;
+    [videoDownLoaderObject.stream open];
+    completionHandler(NSURLSessionResponseAllow);
+    
+}
+// 接受数据（会多次调用）
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+    
+    NSString *strUrl = dataTask.currentRequest.URL.absoluteString;
+
+    VideoDownLoaderObject *videoDownLoaderObject  = [self.taskDictionary valueForKey:strUrl.MD5];
+    if (videoDownLoaderObject) {
+        [videoDownLoaderObject.stream write:data.bytes maxLength:data.length];
+    }
+    
+}
+
+// 请求完毕或失败
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    NSString *strUrl = task.currentRequest.URL.absoluteString;
+    
+    VideoDownLoaderObject *videoDownLoaderObject  = [self.taskDictionary valueForKey:strUrl.MD5];
+    [videoDownLoaderObject.stream close];
+    videoDownLoaderObject.stream = nil;
+
+    [self.taskDictionary removeObjectForKey:strUrl.MD5];
+    if (error) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:VideoDownloaderDownloadingError object:nil userInfo:@{@"videoUrl":strUrl}];
+
+    }
+    else{
+        [self.completedVideoDic setObject:[self.requestDownVideoDic objectForKey:strUrl.MD5] forKey:strUrl.MD5];
+        [self.downVideoDic removeObjectForKey:strUrl.MD5];
+        [self writeDownVideoToFile];
+        [self writeCompletedVideoToFile];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:VideoDownloaderDownloadingCompleted object:nil userInfo:@{@"videoUrl":strUrl}];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:VideoDownloaderMangerDownVideoChanged object:nil];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:VideoDownloaderMangerCompletedVideoChanged object:nil];
+    }
+}
 
 
 #pragma mark -
@@ -174,48 +294,64 @@ static VideoDownloaderManger *instance;
     return path;
 }
 
-- (void)writeDownVideoArray{
+- (NSString *)getVideoFilePathWithUrl:(NSString *)aStrUrl{
+    
+    NSString *videoPath = [self getVideoFilePath];
+    
+    NSString *strName = [NSString stringWithFormat:@"%@.mp4",aStrUrl.MD5];
+    NSString *fullPath = [videoPath stringByAppendingPathComponent:strName];
+    return fullPath;
+}
+
+- (void)writeDownVideoToFile{
     NSString *videoPath = [self getVideoFilePath];
     
     NSString *docPath = [videoPath stringByAppendingPathComponent:downVideoFileName];
     
-    [NSKeyedArchiver archiveRootObject:self.downVideoArray toFile:docPath];
+    [NSKeyedArchiver archiveRootObject:self.downVideoDic toFile:docPath];
 }
 
-- (NSMutableArray *)readDownVideoForFile{
+- (NSMutableDictionary *)readDownVideoForFile{
     NSString *videoPath = [self getVideoFilePath];
     
     NSString *docPath = [videoPath stringByAppendingPathComponent:downVideoFileName];
-    NSMutableArray *downVideoArray = [NSKeyedUnarchiver unarchiveObjectWithFile:docPath];
-    return downVideoArray;
+    NSMutableDictionary *downVideoDic = [NSKeyedUnarchiver unarchiveObjectWithFile:docPath];
+    return downVideoDic;
 }
 
-- (void)writeCompletedVideoArray{
+- (void)writeCompletedVideoToFile{
     NSString *videoPath = [self getVideoFilePath];
     
     NSString *docPath = [videoPath stringByAppendingPathComponent:completedVideoFileName];
     
-    [NSKeyedArchiver archiveRootObject:self.completedVideoArray toFile:docPath];
+    [NSKeyedArchiver archiveRootObject:self.completedVideoDic toFile:docPath];
 }
 
-- (NSMutableArray *)readCompletedVideoForFile{
+- (NSMutableDictionary *)readCompletedVideoForFile{
     NSString *videoPath = [self getVideoFilePath];
     
     NSString *docPath = [videoPath stringByAppendingPathComponent:completedVideoFileName];
-    NSMutableArray *completedVideoArray = [NSKeyedUnarchiver unarchiveObjectWithFile:docPath];
-    return completedVideoArray;
+    NSMutableDictionary *completedVideoDic = [NSKeyedUnarchiver unarchiveObjectWithFile:docPath];
+    return completedVideoDic;
 }
 
-- ( long long)fileSizeForPath:(NSString *)path{
-    long long fileSize = 0;
-    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
-        NSError *error;
-        NSDictionary *fileDict = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error];
-        if (!error && fileDict) {
-            fileSize = [fileDict fileSize];
-        }
+
+- (NSData *)getFileDownloadedData:(NSString *)aStrUrl {
+    NSString *videoPath = [self getVideoFilePath];
+    
+    NSString *fullPath = [videoPath stringByAppendingPathComponent:aStrUrl.MD5];
+    NSFileManager *fileManager =[NSFileManager defaultManager];
+        if ([fileManager fileExistsAtPath:fullPath]) {
+        NSData *data = [NSData dataWithContentsOfFile:fullPath];
+        return data;
     }
-    return fileSize;
+    return nil;
+}
+// 获取本地已经下载的大小
+- (NSUInteger)getFileDownloadedLength:(NSString *)aStrUrl{
+    NSData *data = [self getFileDownloadedData:aStrUrl];
+    if (data) return data.length;
+    return 0.0;
 }
 
 @end

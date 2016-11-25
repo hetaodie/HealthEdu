@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LecturePlayerView : UIView
+@protocol LecturePlayerViewDelegate <NSObject>
 
+- (void)onChangeDeviceOrientation:(BOOL)isFull;
+
+@end
+
+@interface LecturePlayerView : UIView
+@property (nonatomic,weak) id<LecturePlayerViewDelegate>delegate;
+- (void)setNewUrl:(NSURL *)aNewUrl isCircle:(BOOL)isCircle;
 @end

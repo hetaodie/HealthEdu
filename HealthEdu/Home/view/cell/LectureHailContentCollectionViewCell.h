@@ -17,5 +17,5 @@
 @end
 
 @interface LectureHailContentCollectionViewCell : UICollectionViewCell
-@property (nonatomic, weak) id<LectureHailContentCollectionViewCellDelegate>delegate;
+@property (nonatomic, assign) id<LectureHailContentCollectionViewCellDelegate>delegate;
 @end
