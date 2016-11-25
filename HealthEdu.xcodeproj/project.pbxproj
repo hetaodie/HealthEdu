@@ -24,6 +24,14 @@
 		7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF581DE7D3530034C613 /* PlayHistoryTableViewCell.m */; };
 		7C87BF5B1DE7D3530034C613 /* PlayHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BF591DE7D3530034C613 /* PlayHistoryTableViewCell.xib */; };
 		7C87BF5E1DE7D6B00034C613 /* VideoHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF5D1DE7D6B00034C613 /* VideoHistoryManager.m */; };
+		7C87BFA71DE80BD30034C613 /* SelectCityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BFA61DE80BD30034C613 /* SelectCityView.m */; };
+		7C87BFA91DE80BDE0034C613 /* SelectCityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BFA81DE80BDE0034C613 /* SelectCityView.xib */; };
+		7C87BFAE1DE8146C0034C613 /* ConsultationContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BFAC1DE8146C0034C613 /* ConsultationContentTableViewCell.m */; };
+		7C87BFAF1DE8146C0034C613 /* ConsultationContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BFAD1DE8146C0034C613 /* ConsultationContentTableViewCell.xib */; };
+		7C87BFB21DE81ACF0034C613 /* CitysView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BFB11DE81ACF0034C613 /* CitysView.m */; };
+		7C87BFB41DE81ADC0034C613 /* CitysView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BFB31DE81ADC0034C613 /* CitysView.xib */; };
+		7C87BFBD1DE81C680034C613 /* CitysViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BFBB1DE81C680034C613 /* CitysViewCollectionViewCell.m */; };
+		7C87BFBE1DE81C680034C613 /* CitysViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BFBC1DE81C680034C613 /* CitysViewCollectionViewCell.xib */; };
 		7CC685751DD9682B00E2AB19 /* ConsultContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC685741DD9682B00E2AB19 /* ConsultContentObject.m */; };
 		7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC6857C1DD97E9D00E2AB19 /* ConsultDetailViewController.m */; };
 		7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC6857D1DD97E9D00E2AB19 /* ConsultDetailViewController.xib */; };
@@ -143,6 +151,18 @@
 		7C87BF591DE7D3530034C613 /* PlayHistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		7C87BF5C1DE7D6B00034C613 /* VideoHistoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoHistoryManager.h; path = HealthEdu/Home/view/cell/VideoHistoryManager.h; sourceTree = SOURCE_ROOT; };
 		7C87BF5D1DE7D6B00034C613 /* VideoHistoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoHistoryManager.m; path = HealthEdu/Home/view/cell/VideoHistoryManager.m; sourceTree = SOURCE_ROOT; };
+		7C87BFA51DE80BD30034C613 /* SelectCityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityView.h; sourceTree = "<group>"; };
+		7C87BFA61DE80BD30034C613 /* SelectCityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCityView.m; sourceTree = "<group>"; };
+		7C87BFA81DE80BDE0034C613 /* SelectCityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectCityView.xib; sourceTree = "<group>"; };
+		7C87BFAB1DE8146C0034C613 /* ConsultationContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultationContentTableViewCell.h; sourceTree = "<group>"; };
+		7C87BFAC1DE8146C0034C613 /* ConsultationContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultationContentTableViewCell.m; sourceTree = "<group>"; };
+		7C87BFAD1DE8146C0034C613 /* ConsultationContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultationContentTableViewCell.xib; sourceTree = "<group>"; };
+		7C87BFB01DE81ACF0034C613 /* CitysView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitysView.h; sourceTree = "<group>"; };
+		7C87BFB11DE81ACF0034C613 /* CitysView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitysView.m; sourceTree = "<group>"; };
+		7C87BFB31DE81ADC0034C613 /* CitysView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CitysView.xib; sourceTree = "<group>"; };
+		7C87BFBA1DE81C680034C613 /* CitysViewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitysViewCollectionViewCell.h; sourceTree = "<group>"; };
+		7C87BFBB1DE81C680034C613 /* CitysViewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitysViewCollectionViewCell.m; sourceTree = "<group>"; };
+		7C87BFBC1DE81C680034C613 /* CitysViewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CitysViewCollectionViewCell.xib; sourceTree = "<group>"; };
 		7CC685731DD9682B00E2AB19 /* ConsultContentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultContentObject.h; sourceTree = "<group>"; };
 		7CC685741DD9682B00E2AB19 /* ConsultContentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultContentObject.m; sourceTree = "<group>"; };
 		7CC6857B1DD97E9D00E2AB19 /* ConsultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultDetailViewController.h; sourceTree = "<group>"; };
@@ -338,13 +358,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		4FB205E71DB4A474007396A8 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		4FB205EB1DB4A47C007396A8 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +407,56 @@
 				7C87BF591DE7D3530034C613 /* PlayHistoryTableViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		7C87BFA11DE80BBB0034C613 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7C87BFA21DE80BBB0034C613 /* model */,
+				7C87BFA31DE80BBB0034C613 /* object */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7C87BFA21DE80BBB0034C613 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7C87BFA31DE80BBB0034C613 /* object */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = object;
+			sourceTree = "<group>";
+		};
+		7C87BFA41DE80BBB0034C613 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C87BFAA1DE814400034C613 /* cell */,
+				7C87BFA51DE80BD30034C613 /* SelectCityView.h */,
+				7C87BFA61DE80BD30034C613 /* SelectCityView.m */,
+				7C87BFA81DE80BDE0034C613 /* SelectCityView.xib */,
+				7C87BFB01DE81ACF0034C613 /* CitysView.h */,
+				7C87BFB11DE81ACF0034C613 /* CitysView.m */,
+				7C87BFB31DE81ADC0034C613 /* CitysView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C87BFAA1DE814400034C613 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				7C87BFAB1DE8146C0034C613 /* ConsultationContentTableViewCell.h */,
+				7C87BFAC1DE8146C0034C613 /* ConsultationContentTableViewCell.m */,
+				7C87BFAD1DE8146C0034C613 /* ConsultationContentTableViewCell.xib */,
+				7C87BFBA1DE81C680034C613 /* CitysViewCollectionViewCell.h */,
+				7C87BFBB1DE81C680034C613 /* CitysViewCollectionViewCell.m */,
+				7C87BFBC1DE81C680034C613 /* CitysViewCollectionViewCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		7CC685701DD9680300E2AB19 /* model */ = {
@@ -545,7 +608,8 @@
 		E62342CD1D9A107300FE8254 /* Consultation */ = {
 			isa = PBXGroup;
 			children = (
-				4FB205E71DB4A474007396A8 /* view */,
+				7C87BFA11DE80BBB0034C613 /* model */,
+				7C87BFA41DE80BBB0034C613 /* View */,
 				E62342D21D9A107300FE8254 /* ViewController */,
 			);
 			path = Consultation;
@@ -760,6 +824,7 @@
 				7CF736DE1DDB102900F92222 /* CycleBannersCollectionViewCell.xib in Resources */,
 				E6EC279D1DBD998F00DEE06D /* BaiKeViewController.xib in Resources */,
 				E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */,
+				7C87BFAF1DE8146C0034C613 /* ConsultationContentTableViewCell.xib in Resources */,
 				7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */,
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
 				E6EC27C51DBD9D7B00DEE06D /* CacheViewController.xib in Resources */,
@@ -767,6 +832,7 @@
 				7CF8F3A01DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.xib in Resources */,
 				7C34F3971DD1D4BD00C61015 /* ConsultContentView.xib in Resources */,
 				7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */,
+				7C87BFB41DE81ADC0034C613 /* CitysView.xib in Resources */,
 				7CF736D91DDB101600F92222 /* CycleBannersView.xib in Resources */,
 				E6E1536E1DC0BC1C0094A947 /* TopTabScrollViewCell.xib in Resources */,
 				7CF736E81DDBB61B00F92222 /* LectureHailContentElementCollectionViewCell.xib in Resources */,
@@ -778,10 +844,12 @@
 				7CF736CE1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib in Resources */,
 				4FDE9CDA1DB4EC2300D9C790 /* HomeContentHeaderView.xib in Resources */,
 				E6EC27A21DBD99A700DEE06D /* BKDetailViewController.xib in Resources */,
+				7C87BFA91DE80BDE0034C613 /* SelectCityView.xib in Resources */,
 				7C87BF5B1DE7D3530034C613 /* PlayHistoryTableViewCell.xib in Resources */,
 				7C34F39C1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib in Resources */,
 				E6EC27C01DBD9CAD00DEE06D /* DoctorRepeatViewController.xib in Resources */,
 				E6EC27A71DBD99C800DEE06D /* LectureHailViewController.xib in Resources */,
+				7C87BFBE1DE81C680034C613 /* CitysViewCollectionViewCell.xib in Resources */,
 				E6C699101D990B2A00D2818C /* Assets.xcassets in Resources */,
 				E6EC27CF1DBD9E4D00DEE06D /* PersonInfoViewController.xib in Resources */,
 				4FDE9CD51DB4D20600D9C790 /* HomeContentTableViewCell.xib in Resources */,
@@ -871,6 +939,7 @@
 				E6C699051D990B2A00D2818C /* AppDelegate.m in Sources */,
 				E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */,
 				7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */,
+				7C87BFB21DE81ACF0034C613 /* CitysView.m in Sources */,
 				E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */,
 				7C34F3951DD1D4AE00C61015 /* ConsultContentView.m in Sources */,
 				7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */,
@@ -888,12 +957,15 @@
 				4FDE9CD81DB4EC1000D9C790 /* HomeContentHeaderView.m in Sources */,
 				4FB205F51DB4BDA3007396A8 /* HomeTagView.m in Sources */,
 				E6EC27C41DBD9D7B00DEE06D /* CacheViewController.m in Sources */,
+				7C87BFBD1DE81C680034C613 /* CitysViewCollectionViewCell.m in Sources */,
 				7CF8F3A31DE48BAA003BBE60 /* LecturePlayerView.m in Sources */,
 				E6EC27C91DBD9D9400DEE06D /* BMIViewController.m in Sources */,
 				E62342DB1D9A154300FE8254 /* ServiceViewController.m in Sources */,
 				7CC685751DD9682B00E2AB19 /* ConsultContentObject.m in Sources */,
 				7CF736C31DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.m in Sources */,
+				7C87BFA71DE80BD30034C613 /* SelectCityView.m in Sources */,
 				E6EC279C1DBD998F00DEE06D /* BaiKeViewController.m in Sources */,
+				7C87BFAE1DE8146C0034C613 /* ConsultationContentTableViewCell.m in Sources */,
 				4FDE9CD41DB4D20600D9C790 /* HomeContentTableViewCell.m in Sources */,
 				E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */,
 				7CF736C71DDAE66200F92222 /* BaiKeSicknessContentView.m in Sources */,
