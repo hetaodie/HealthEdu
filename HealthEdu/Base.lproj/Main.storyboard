@@ -241,6 +241,13 @@
                                     <constraint firstAttribute="height" constant="103" id="43R-Kc-cJf"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RC-o4-R8i">
+                                <rect key="frame" x="136" y="74" width="103" height="103"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="infoBtnPress:" destination="1J4-yg-J00" eventType="touchUpInside" id="39u-MO-hBi"/>
+                                </connections>
+                            </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-CW-Nhk">
                                 <rect key="frame" x="0.0" y="195" width="375" height="53"/>
                                 <subviews>
@@ -328,8 +335,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="V3L-47-94M" firstAttribute="top" secondItem="3Es-CW-Nhk" secondAttribute="top" id="2Nj-ES-kHw"/>
+                            <constraint firstItem="5RC-o4-R8i" firstAttribute="trailing" secondItem="9lz-T0-MSh" secondAttribute="trailing" id="90D-Qi-yJS"/>
                             <constraint firstItem="de4-0X-rku" firstAttribute="top" secondItem="wGQ-5T-V0T" secondAttribute="top" id="9CD-qQ-lPv"/>
                             <constraint firstItem="V3L-47-94M" firstAttribute="trailing" secondItem="3Es-CW-Nhk" secondAttribute="trailing" id="C9v-Xq-QPZ"/>
+                            <constraint firstItem="5RC-o4-R8i" firstAttribute="top" secondItem="9lz-T0-MSh" secondAttribute="top" id="IiQ-Bk-FtX"/>
                             <constraint firstItem="DH1-K3-iew" firstAttribute="top" secondItem="hqU-HQ-3mY" secondAttribute="bottom" id="JEC-C5-ibM"/>
                             <constraint firstAttribute="trailing" secondItem="MZ8-Ba-7hU" secondAttribute="trailing" id="Jol-gK-Sij"/>
                             <constraint firstItem="3Es-CW-Nhk" firstAttribute="bottom" secondItem="MZ8-Ba-7hU" secondAttribute="bottom" id="KQo-Z4-RFd"/>
@@ -345,8 +354,10 @@
                             <constraint firstAttribute="trailing" secondItem="hqU-HQ-3mY" secondAttribute="trailing" id="ksE-mb-kGE"/>
                             <constraint firstItem="3Es-CW-Nhk" firstAttribute="top" secondItem="9lz-T0-MSh" secondAttribute="bottom" constant="18" id="oqp-qb-IXn"/>
                             <constraint firstAttribute="trailing" secondItem="de4-0X-rku" secondAttribute="trailing" id="pxA-4z-EvP"/>
+                            <constraint firstItem="5RC-o4-R8i" firstAttribute="leading" secondItem="9lz-T0-MSh" secondAttribute="leading" id="sVO-Vk-vE8"/>
                             <constraint firstItem="9lz-T0-MSh" firstAttribute="centerX" secondItem="wGQ-5T-V0T" secondAttribute="centerX" id="sdw-tl-j4u"/>
                             <constraint firstItem="hqU-HQ-3mY" firstAttribute="leading" secondItem="wGQ-5T-V0T" secondAttribute="leading" id="unA-gS-Fca"/>
+                            <constraint firstItem="5RC-o4-R8i" firstAttribute="bottom" secondItem="9lz-T0-MSh" secondAttribute="bottom" id="w8J-em-48N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="我" id="ZeO-IV-UNX"/>

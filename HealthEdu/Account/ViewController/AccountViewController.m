@@ -18,6 +18,7 @@
 #import "PersonInfoViewController.h"
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
+#import "SettingViewController.h"
 
 @interface AccountViewController () <UITableViewDelegate,UITableViewDataSource,LoginViewControllerDelegate,RegisterViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *settingButton;
@@ -58,10 +59,16 @@
 #pragma mark IBActions
 
 - (IBAction)settingBtnPress:(id)sender {
-    PersonInfoViewController *ndVC = [[PersonInfoViewController alloc] initWithNibName:@"PersonInfoViewController" bundle:nil];
+    SettingViewController *ndVC = [[SettingViewController alloc] initWithNibName:@"SettingViewController" bundle:nil];
     ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
 
+}
+
+- (IBAction)infoBtnPress:(id)sender {
+    PersonInfoViewController *ndVC = [[PersonInfoViewController alloc] initWithNibName:@"PersonInfoViewController" bundle:nil];
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 - (IBAction)loginBtnPress:(id)sender {
@@ -69,7 +76,6 @@
     ndVC.delegate = self;
     ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
-    
 
 }
 

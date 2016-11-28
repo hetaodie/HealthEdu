@@ -19,11 +19,20 @@
 		7C34F39C1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F39A1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib */; };
 		7C34F3A01DD1E91700C61015 /* ConsultContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34F39E1DD1E91700C61015 /* ConsultContentTableViewCell.m */; };
 		7C34F3A11DD1E91700C61015 /* ConsultContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */; };
-		7C379ADF1DEBF2F5004627E9 /* AccountContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379ADD1DEBF2F5004627E9 /* AccountContentTableViewCell.m */; };
-		7C379AE01DEBF2F5004627E9 /* AccountContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379ADE1DEBF2F5004627E9 /* AccountContentTableViewCell.xib */; };
 		7C379AE41DEBF7CC004627E9 /* AccountContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379AE31DEBF7CC004627E9 /* AccountContentObject.m */; };
 		7C379AF01DEC1C04004627E9 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379AEE1DEC1C04004627E9 /* RegisterViewController.m */; };
 		7C379AF11DEC1C04004627E9 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379AEF1DEC1C04004627E9 /* RegisterViewController.xib */; };
+		7C379AF51DEC31C3004627E9 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379AF31DEC31C3004627E9 /* SettingViewController.m */; };
+		7C379AF61DEC31C3004627E9 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379AF41DEC31C3004627E9 /* SettingViewController.xib */; };
+		7C379AFB1DEC6985004627E9 /* AccountContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379AF91DEC6985004627E9 /* AccountContentTableViewCell.m */; };
+		7C379AFC1DEC6985004627E9 /* AccountContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379AFA1DEC6985004627E9 /* AccountContentTableViewCell.xib */; };
+		7C379B001DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379AFE1DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.m */; };
+		7C379B011DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379AFF1DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.xib */; };
+		7C379B051DEC6B9B004627E9 /* PersonInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B031DEC6B9B004627E9 /* PersonInfoTableViewCell.m */; };
+		7C379B061DEC6B9B004627E9 /* PersonInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B041DEC6B9B004627E9 /* PersonInfoTableViewCell.xib */; };
+		7C379B091DEC6D85004627E9 /* PersonInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B081DEC6D85004627E9 /* PersonInfoObject.m */; };
+		7C379B0D1DEC6F17004627E9 /* PersonMiMaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B0B1DEC6F17004627E9 /* PersonMiMaTableViewCell.m */; };
+		7C379B0E1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B0C1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib */; };
 		7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */; };
 		7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF551DE73F470034C613 /* UIDevice+JWDevice.m */; };
 		7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF581DE7D3530034C613 /* PlayHistoryTableViewCell.m */; };
@@ -148,14 +157,28 @@
 		7C34F39D1DD1E91700C61015 /* ConsultContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultContentTableViewCell.h; sourceTree = "<group>"; };
 		7C34F39E1DD1E91700C61015 /* ConsultContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultContentTableViewCell.m; sourceTree = "<group>"; };
 		7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultContentTableViewCell.xib; sourceTree = "<group>"; };
-		7C379ADC1DEBF2F5004627E9 /* AccountContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountContentTableViewCell.h; sourceTree = "<group>"; };
-		7C379ADD1DEBF2F5004627E9 /* AccountContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountContentTableViewCell.m; sourceTree = "<group>"; };
-		7C379ADE1DEBF2F5004627E9 /* AccountContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountContentTableViewCell.xib; sourceTree = "<group>"; };
 		7C379AE21DEBF7CC004627E9 /* AccountContentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountContentObject.h; sourceTree = "<group>"; };
 		7C379AE31DEBF7CC004627E9 /* AccountContentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountContentObject.m; sourceTree = "<group>"; };
 		7C379AED1DEC1C04004627E9 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		7C379AEE1DEC1C04004627E9 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		7C379AEF1DEC1C04004627E9 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		7C379AF21DEC31C3004627E9 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		7C379AF31DEC31C3004627E9 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		7C379AF41DEC31C3004627E9 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		7C379AF81DEC6985004627E9 /* AccountContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountContentTableViewCell.h; sourceTree = "<group>"; };
+		7C379AF91DEC6985004627E9 /* AccountContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountContentTableViewCell.m; sourceTree = "<group>"; };
+		7C379AFA1DEC6985004627E9 /* AccountContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountContentTableViewCell.xib; sourceTree = "<group>"; };
+		7C379AFD1DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoHeaderTableViewCell.h; sourceTree = "<group>"; };
+		7C379AFE1DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoHeaderTableViewCell.m; sourceTree = "<group>"; };
+		7C379AFF1DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonInfoHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		7C379B021DEC6B9B004627E9 /* PersonInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoTableViewCell.h; sourceTree = "<group>"; };
+		7C379B031DEC6B9B004627E9 /* PersonInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoTableViewCell.m; sourceTree = "<group>"; };
+		7C379B041DEC6B9B004627E9 /* PersonInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonInfoTableViewCell.xib; sourceTree = "<group>"; };
+		7C379B071DEC6D85004627E9 /* PersonInfoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoObject.h; sourceTree = "<group>"; };
+		7C379B081DEC6D85004627E9 /* PersonInfoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonInfoObject.m; sourceTree = "<group>"; };
+		7C379B0A1DEC6F17004627E9 /* PersonMiMaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonMiMaTableViewCell.h; sourceTree = "<group>"; };
+		7C379B0B1DEC6F17004627E9 /* PersonMiMaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonMiMaTableViewCell.m; sourceTree = "<group>"; };
+		7C379B0C1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonMiMaTableViewCell.xib; sourceTree = "<group>"; };
 		7C87BF511DE6D76C0034C613 /* VideoDownLoaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDownLoaderObject.h; sourceTree = "<group>"; };
 		7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDownLoaderObject.m; sourceTree = "<group>"; };
 		7C87BF541DE73F470034C613 /* UIDevice+JWDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JWDevice.h"; sourceTree = "<group>"; };
@@ -377,6 +400,7 @@
 		4FB205EF1DB4A486007396A8 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				7C379AF71DEC6985004627E9 /* cell */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -428,19 +452,8 @@
 		7C379AD51DEBDEA5004627E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C379AD61DEBDEB8004627E9 /* cell */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		7C379AD61DEBDEB8004627E9 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				7C379ADC1DEBF2F5004627E9 /* AccountContentTableViewCell.h */,
-				7C379ADD1DEBF2F5004627E9 /* AccountContentTableViewCell.m */,
-				7C379ADE1DEBF2F5004627E9 /* AccountContentTableViewCell.xib */,
-			);
-			path = cell;
 			sourceTree = "<group>";
 		};
 		7C379AE11DEBF7A8004627E9 /* Model */ = {
@@ -448,9 +461,31 @@
 			children = (
 				7C379AE21DEBF7CC004627E9 /* AccountContentObject.h */,
 				7C379AE31DEBF7CC004627E9 /* AccountContentObject.m */,
+				7C379B071DEC6D85004627E9 /* PersonInfoObject.h */,
+				7C379B081DEC6D85004627E9 /* PersonInfoObject.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
+		};
+		7C379AF71DEC6985004627E9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				7C379AF81DEC6985004627E9 /* AccountContentTableViewCell.h */,
+				7C379AF91DEC6985004627E9 /* AccountContentTableViewCell.m */,
+				7C379AFA1DEC6985004627E9 /* AccountContentTableViewCell.xib */,
+				7C379AFD1DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.h */,
+				7C379AFE1DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.m */,
+				7C379AFF1DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.xib */,
+				7C379B021DEC6B9B004627E9 /* PersonInfoTableViewCell.h */,
+				7C379B031DEC6B9B004627E9 /* PersonInfoTableViewCell.m */,
+				7C379B041DEC6B9B004627E9 /* PersonInfoTableViewCell.xib */,
+				7C379B0A1DEC6F17004627E9 /* PersonMiMaTableViewCell.h */,
+				7C379B0B1DEC6F17004627E9 /* PersonMiMaTableViewCell.m */,
+				7C379B0C1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib */,
+			);
+			name = cell;
+			path = HealthEdu/Account/View/cell;
+			sourceTree = SOURCE_ROOT;
 		};
 		7C87BFA11DE80BBB0034C613 /* model */ = {
 			isa = PBXGroup;
@@ -650,6 +685,9 @@
 				E6EC27CB1DBD9E4D00DEE06D /* PersonInfoViewController.h */,
 				E6EC27CC1DBD9E4D00DEE06D /* PersonInfoViewController.m */,
 				E6EC27CD1DBD9E4D00DEE06D /* PersonInfoViewController.xib */,
+				7C379AF21DEC31C3004627E9 /* SettingViewController.h */,
+				7C379AF31DEC31C3004627E9 /* SettingViewController.m */,
+				7C379AF41DEC31C3004627E9 /* SettingViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -872,16 +910,18 @@
 				7CF736E31DDBB41700F92222 /* LectureHailContentView.xib in Resources */,
 				7CF736C41DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.xib in Resources */,
 				7CF736DE1DDB102900F92222 /* CycleBannersCollectionViewCell.xib in Resources */,
-				7C379AE01DEBF2F5004627E9 /* AccountContentTableViewCell.xib in Resources */,
 				E6EC279D1DBD998F00DEE06D /* BaiKeViewController.xib in Resources */,
 				E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */,
 				7C87BFAF1DE8146C0034C613 /* ConsultationContentTableViewCell.xib in Resources */,
+				7C379AF61DEC31C3004627E9 /* SettingViewController.xib in Resources */,
 				7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */,
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
+				7C379B011DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.xib in Resources */,
 				E6EC27C51DBD9D7B00DEE06D /* CacheViewController.xib in Resources */,
 				7CF736C91DDAE66E00F92222 /* BaiKeSicknessContentView.xib in Resources */,
 				7CF8F3A01DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.xib in Resources */,
 				7C34F3971DD1D4BD00C61015 /* ConsultContentView.xib in Resources */,
+				7C379B0E1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib in Resources */,
 				7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */,
 				7C87BFB41DE81ADC0034C613 /* CitysView.xib in Resources */,
 				7CF736D91DDB101600F92222 /* CycleBannersView.xib in Resources */,
@@ -894,6 +934,7 @@
 				E6C699131D990B2A00D2818C /* LaunchScreen.storyboard in Resources */,
 				E6EC27AC1DBD9A4C00DEE06D /* PlayerViewController.xib in Resources */,
 				7CF736CE1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib in Resources */,
+				7C379B061DEC6B9B004627E9 /* PersonInfoTableViewCell.xib in Resources */,
 				4FDE9CDA1DB4EC2300D9C790 /* HomeContentHeaderView.xib in Resources */,
 				E6EC27A21DBD99A700DEE06D /* BKDetailViewController.xib in Resources */,
 				7C87BFA91DE80BDE0034C613 /* SelectCityView.xib in Resources */,
@@ -904,6 +945,7 @@
 				7C87BFBE1DE81C680034C613 /* CitysViewCollectionViewCell.xib in Resources */,
 				E6C699101D990B2A00D2818C /* Assets.xcassets in Resources */,
 				E6EC27CF1DBD9E4D00DEE06D /* PersonInfoViewController.xib in Resources */,
+				7C379AFC1DEC6985004627E9 /* AccountContentTableViewCell.xib in Resources */,
 				4FDE9CD51DB4D20600D9C790 /* HomeContentTableViewCell.xib in Resources */,
 				E6EC27CA1DBD9D9400DEE06D /* BMIViewController.xib in Resources */,
 				E6C6990E1D990B2A00D2818C /* Main.storyboard in Resources */,
@@ -1000,6 +1042,8 @@
 				E6E153691DC0BA5F0094A947 /* TopTabScrollView.m in Sources */,
 				7CF8F3A81DE542E7003BBE60 /* VideoDownloaderManger.m in Sources */,
 				7CF736B61DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m in Sources */,
+				7C379B0D1DEC6F17004627E9 /* PersonMiMaTableViewCell.m in Sources */,
+				7C379B001DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.m in Sources */,
 				7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */,
 				E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */,
 				7CF736E71DDBB61B00F92222 /* LectureHailContentElementCollectionViewCell.m in Sources */,
@@ -1013,14 +1057,16 @@
 				E6EC27C41DBD9D7B00DEE06D /* CacheViewController.m in Sources */,
 				7C87BFBD1DE81C680034C613 /* CitysViewCollectionViewCell.m in Sources */,
 				7CF8F3A31DE48BAA003BBE60 /* LecturePlayerView.m in Sources */,
+				7C379AFB1DEC6985004627E9 /* AccountContentTableViewCell.m in Sources */,
 				E6EC27C91DBD9D9400DEE06D /* BMIViewController.m in Sources */,
 				E62342DB1D9A154300FE8254 /* ServiceViewController.m in Sources */,
 				7CC685751DD9682B00E2AB19 /* ConsultContentObject.m in Sources */,
 				7CF736C31DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.m in Sources */,
 				7C87BFA71DE80BD30034C613 /* SelectCityView.m in Sources */,
+				7C379B051DEC6B9B004627E9 /* PersonInfoTableViewCell.m in Sources */,
+				7C379B091DEC6D85004627E9 /* PersonInfoObject.m in Sources */,
 				E6EC279C1DBD998F00DEE06D /* BaiKeViewController.m in Sources */,
 				7C87BFAE1DE8146C0034C613 /* ConsultationContentTableViewCell.m in Sources */,
-				7C379ADF1DEBF2F5004627E9 /* AccountContentTableViewCell.m in Sources */,
 				4FDE9CD41DB4D20600D9C790 /* HomeContentTableViewCell.m in Sources */,
 				E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */,
 				7CF736C71DDAE66200F92222 /* BaiKeSicknessContentView.m in Sources */,
@@ -1041,6 +1087,7 @@
 				E6E1536C1DC0BC070094A947 /* TopTabScrollViewCell.m in Sources */,
 				E6EC27AB1DBD9A4C00DEE06D /* PlayerViewController.m in Sources */,
 				E6EC27CE1DBD9E4D00DEE06D /* PersonInfoViewController.m in Sources */,
+				7C379AF51DEC31C3004627E9 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
