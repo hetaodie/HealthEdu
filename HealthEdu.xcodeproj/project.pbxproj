@@ -19,6 +19,9 @@
 		7C34F39C1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F39A1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib */; };
 		7C34F3A01DD1E91700C61015 /* ConsultContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34F39E1DD1E91700C61015 /* ConsultContentTableViewCell.m */; };
 		7C34F3A11DD1E91700C61015 /* ConsultContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */; };
+		7C379ADF1DEBF2F5004627E9 /* AccountContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379ADD1DEBF2F5004627E9 /* AccountContentTableViewCell.m */; };
+		7C379AE01DEBF2F5004627E9 /* AccountContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379ADE1DEBF2F5004627E9 /* AccountContentTableViewCell.xib */; };
+		7C379AE41DEBF7CC004627E9 /* AccountContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379AE31DEBF7CC004627E9 /* AccountContentObject.m */; };
 		7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */; };
 		7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF551DE73F470034C613 /* UIDevice+JWDevice.m */; };
 		7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF581DE7D3530034C613 /* PlayHistoryTableViewCell.m */; };
@@ -143,6 +146,11 @@
 		7C34F39D1DD1E91700C61015 /* ConsultContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultContentTableViewCell.h; sourceTree = "<group>"; };
 		7C34F39E1DD1E91700C61015 /* ConsultContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultContentTableViewCell.m; sourceTree = "<group>"; };
 		7C34F39F1DD1E91700C61015 /* ConsultContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultContentTableViewCell.xib; sourceTree = "<group>"; };
+		7C379ADC1DEBF2F5004627E9 /* AccountContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountContentTableViewCell.h; sourceTree = "<group>"; };
+		7C379ADD1DEBF2F5004627E9 /* AccountContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountContentTableViewCell.m; sourceTree = "<group>"; };
+		7C379ADE1DEBF2F5004627E9 /* AccountContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountContentTableViewCell.xib; sourceTree = "<group>"; };
+		7C379AE21DEBF7CC004627E9 /* AccountContentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountContentObject.h; sourceTree = "<group>"; };
+		7C379AE31DEBF7CC004627E9 /* AccountContentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountContentObject.m; sourceTree = "<group>"; };
 		7C87BF511DE6D76C0034C613 /* VideoDownLoaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDownLoaderObject.h; sourceTree = "<group>"; };
 		7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDownLoaderObject.m; sourceTree = "<group>"; };
 		7C87BF541DE73F470034C613 /* UIDevice+JWDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JWDevice.h"; sourceTree = "<group>"; };
@@ -361,13 +369,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		4FB205EB1DB4A47C007396A8 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		4FB205EF1DB4A486007396A8 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +411,40 @@
 				7C87BF591DE7D3530034C613 /* PlayHistoryTableViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		7C379AD41DEBDEA5004627E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C379AD51DEBDEA5004627E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C379AD61DEBDEB8004627E9 /* cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C379AD61DEBDEB8004627E9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				7C379ADC1DEBF2F5004627E9 /* AccountContentTableViewCell.h */,
+				7C379ADD1DEBF2F5004627E9 /* AccountContentTableViewCell.m */,
+				7C379ADE1DEBF2F5004627E9 /* AccountContentTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		7C379AE11DEBF7A8004627E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C379AE21DEBF7CC004627E9 /* AccountContentObject.h */,
+				7C379AE31DEBF7CC004627E9 /* AccountContentObject.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7C87BFA11DE80BBB0034C613 /* model */ = {
@@ -580,6 +615,7 @@
 		E62342C71D9A107300FE8254 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				7C379AE11DEBF7A8004627E9 /* Model */,
 				4FB205EF1DB4A486007396A8 /* view */,
 				E62342CC1D9A107300FE8254 /* ViewController */,
 			);
@@ -632,7 +668,8 @@
 		E62342D31D9A107300FE8254 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				4FB205EB1DB4A47C007396A8 /* view */,
+				7C379AD41DEBDEA5004627E9 /* Model */,
+				7C379AD51DEBDEA5004627E9 /* View */,
 				E62342D81D9A107300FE8254 /* ViewController */,
 			);
 			path = Service;
@@ -827,6 +864,7 @@
 				7CF736E31DDBB41700F92222 /* LectureHailContentView.xib in Resources */,
 				7CF736C41DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.xib in Resources */,
 				7CF736DE1DDB102900F92222 /* CycleBannersCollectionViewCell.xib in Resources */,
+				7C379AE01DEBF2F5004627E9 /* AccountContentTableViewCell.xib in Resources */,
 				E6EC279D1DBD998F00DEE06D /* BaiKeViewController.xib in Resources */,
 				E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */,
 				7C87BFAF1DE8146C0034C613 /* ConsultationContentTableViewCell.xib in Resources */,
@@ -947,6 +985,7 @@
 				7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */,
 				7C87BFB21DE81ACF0034C613 /* CitysView.m in Sources */,
 				E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */,
+				7C379AE41DEBF7CC004627E9 /* AccountContentObject.m in Sources */,
 				7C34F3951DD1D4AE00C61015 /* ConsultContentView.m in Sources */,
 				7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */,
 				E6E153691DC0BA5F0094A947 /* TopTabScrollView.m in Sources */,
@@ -972,6 +1011,7 @@
 				7C87BFA71DE80BD30034C613 /* SelectCityView.m in Sources */,
 				E6EC279C1DBD998F00DEE06D /* BaiKeViewController.m in Sources */,
 				7C87BFAE1DE8146C0034C613 /* ConsultationContentTableViewCell.m in Sources */,
+				7C379ADF1DEBF2F5004627E9 /* AccountContentTableViewCell.m in Sources */,
 				4FDE9CD41DB4D20600D9C790 /* HomeContentTableViewCell.m in Sources */,
 				E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */,
 				7CF736C71DDAE66200F92222 /* BaiKeSicknessContentView.m in Sources */,

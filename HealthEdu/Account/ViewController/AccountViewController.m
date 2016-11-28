@@ -7,21 +7,188 @@
 //
 
 #import "AccountViewController.h"
+#import "UIColor+HEX.h"
+#import "AccountContentTableViewCell.h"
+#import "AccountContentObject.h"
 
-@interface AccountViewController ()
+#import "DoctorRepeatViewController.h"
+#import "CacheViewController.h"
+#import "BMIViewController.h"
+
+#import "PersonInfoViewController.h"
+
+@interface AccountViewController () <UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIButton *settingButton;
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+@property (weak, nonatomic) IBOutlet UIView *loginedView;
+@property (weak, nonatomic) IBOutlet UIView *NoLoginedView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSMutableArray *contentArray;
 
 @end
 
 @implementation AccountViewController
 
+#pragma mark -
+#pragma mark lifecycle
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.contentArray = [[NSMutableArray  alloc] init];
+    [self setUpTableView];
+
+    [self testData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+#pragma mark -
+#pragma mark IBActions
+
+- (IBAction)settingBtnPress:(id)sender {
+    PersonInfoViewController *ndVC = [[PersonInfoViewController alloc] initWithNibName:@"PersonInfoViewController" bundle:nil];
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+
+}
+
+#pragma mark -
+#pragma mark public
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    NSInteger count = [self.contentArray count];
+    return count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    NSInteger count = [[self.contentArray objectAtIndex:section] count];
+    return count;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerSectionView = [[UIView alloc] init];
+    headerSectionView.backgroundColor = [UIColor colorWithHexString:@"ededed" alpha:1.0];
+    return headerSectionView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 5.0f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 53;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSInteger section = indexPath.section;
+    NSInteger row = indexPath.row;
+    
+    NSArray *sections = [self.contentArray objectAtIndex:section];
+    AccountContentObject *object = [sections objectAtIndex:row];
+    
+    
+    AccountContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AccountContentTableViewCell" forIndexPath:indexPath];
+    
+    [cell showCellWithData:object];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger section = indexPath.section;
+    NSInteger row = indexPath.row;
+    
+    NSArray *sections = [self.contentArray objectAtIndex:section];
+    AccountContentObject *object = [sections objectAtIndex:row];
+
+    [self presentVCWithAction:object.pAction];
+}
+
+#pragma mark -
+#pragma mark delegate
+
+
+#pragma mark -
+#pragma mark NSNotification
+
+#pragma mark -
+#pragma mark private
+
+- (void)presentVCWithAction:(NSInteger)aAction{
+    switch (aAction) {
+        case 0:
+        {
+            DoctorRepeatViewController *ndVC = [[DoctorRepeatViewController alloc] initWithNibName:@"DoctorRepeatViewController" bundle:nil];
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
+
+        }
+            break;
+            
+        case 1:
+        {
+            CacheViewController *ndVC = [[CacheViewController alloc] initWithNibName:@"CacheViewController" bundle:nil];
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
+
+        }
+            break;
+
+            
+        case 2:
+        {
+            BMIViewController *ndVC = [[BMIViewController alloc] initWithNibName:@"BMIViewController" bundle:nil];
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
+ 
+        }
+            break;
+
+        default:
+            break;
+    }
+}
+
+- (void)setUpTableView{
+    UINib *nib = [UINib nibWithNibName:@"AccountContentTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"AccountContentTableViewCell"];
+}
+
+- (void)testData{
+    NSMutableArray *array1 = [NSMutableArray array];
+    
+    AccountContentObject *object1 = [[AccountContentObject alloc] init];
+    object1.headerImage = @"xiaoxi";
+    object1.title = @"医生回复";
+    object1.pAction = 0;
+    [array1 addObject:object1];
+    
+    NSMutableArray *array2 = [NSMutableArray array];
+    
+    AccountContentObject *object2 = [[AccountContentObject alloc] init];
+    object2.headerImage = @"huancun";
+    object2.title = @"我的缓存";
+    object2.pAction = 1;
+    [array2 addObject:object2];
+    
+    AccountContentObject *object3 = [[AccountContentObject alloc] init];
+    object3.headerImage = @"BIM";
+    object3.title = @"BMI指数";
+    object3.pAction = 2;
+    [array2 addObject:object3];
+    
+    [self.contentArray addObject:array1];
+    [self.contentArray addObject:array2];
 }
 
 
