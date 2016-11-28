@@ -16,8 +16,10 @@
 #import "BMIViewController.h"
 
 #import "PersonInfoViewController.h"
+#import "LoginViewController.h"
+#import "RegisterViewController.h"
 
-@interface AccountViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface AccountViewController () <UITableViewDelegate,UITableViewDataSource,LoginViewControllerDelegate,RegisterViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *settingButton;
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 @property (weak, nonatomic) IBOutlet UIView *loginedView;
@@ -57,6 +59,23 @@
 
 - (IBAction)settingBtnPress:(id)sender {
     PersonInfoViewController *ndVC = [[PersonInfoViewController alloc] initWithNibName:@"PersonInfoViewController" bundle:nil];
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+
+}
+
+- (IBAction)loginBtnPress:(id)sender {
+    LoginViewController *ndVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    ndVC.delegate = self;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+    
+
+}
+
+- (IBAction)registerBtnPress:(id)sender {
+    RegisterViewController *ndVC = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
+    ndVC.delegate = self;
     ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
 
@@ -105,6 +124,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
     
@@ -112,6 +133,35 @@
     AccountContentObject *object = [sections objectAtIndex:row];
 
     [self presentVCWithAction:object.pAction];
+}
+
+- (void)onClictToRegiterViewController:(UIViewController *)aVC{
+    RegisterViewController *ndVC = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
+    ndVC.delegate = self;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+    
+    NSMutableArray * viewControllers = [self.navigationController.viewControllers mutableCopy];
+
+    if ([viewControllers containsObject:aVC]) {
+        [viewControllers removeObject:aVC];
+    }
+    [self.navigationController setViewControllers:viewControllers animated:YES];
+    
+}
+
+- (void)onClictToLoginViewController:(UIViewController *)aVC{
+    LoginViewController *ndVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    ndVC.delegate = self;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+    
+    NSMutableArray * viewControllers = [self.navigationController.viewControllers mutableCopy];
+    
+    if ([viewControllers containsObject:aVC]) {
+        [viewControllers removeObject:aVC];
+    }
+    [self.navigationController setViewControllers:viewControllers animated:YES];
 }
 
 #pragma mark -

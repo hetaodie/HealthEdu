@@ -6,15 +6,15 @@
 //  Copyright © 2016年 allWants. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "RegisterViewController.h"
 #import "UIColor+HEX.h"
 
-@interface LoginViewController ()
+@interface RegisterViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *tipsLabel;
 
 @end
 
-@implementation LoginViewController
+@implementation RegisterViewController
 
 
 #pragma mark -
@@ -74,11 +74,10 @@
 
 -(void)dealClickURL:(UITapGestureRecognizer *)tap
 {
-
-    UILabel *label = (UILabel *)tap.view;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(onClictToRegiterViewController:)]) {
-        [self.delegate onClictToRegiterViewController:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onClictToLoginViewController:)]) {
+        [self.delegate onClictToLoginViewController:self];
     }
+    
 }
 
 @end

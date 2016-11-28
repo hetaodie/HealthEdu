@@ -270,6 +270,9 @@
                                         <state key="normal" title="登录">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginBtnPress:" destination="1J4-yg-J00" eventType="touchUpInside" id="d3e-WO-2hD"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Cu-Az-jnz">
                                         <rect key="frame" x="137.5" y="34" width="40" height="1"/>
@@ -287,6 +290,9 @@
                                         <state key="normal" title="注册">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerBtnPress:" destination="1J4-yg-J00" eventType="touchUpInside" id="Omy-wG-PAU"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1f-tq-Jkr">
                                         <rect key="frame" x="197.5" y="34" width="40" height="1"/>

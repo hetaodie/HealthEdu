@@ -22,6 +22,8 @@
 		7C379ADF1DEBF2F5004627E9 /* AccountContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379ADD1DEBF2F5004627E9 /* AccountContentTableViewCell.m */; };
 		7C379AE01DEBF2F5004627E9 /* AccountContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379ADE1DEBF2F5004627E9 /* AccountContentTableViewCell.xib */; };
 		7C379AE41DEBF7CC004627E9 /* AccountContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379AE31DEBF7CC004627E9 /* AccountContentObject.m */; };
+		7C379AF01DEC1C04004627E9 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379AEE1DEC1C04004627E9 /* RegisterViewController.m */; };
+		7C379AF11DEC1C04004627E9 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379AEF1DEC1C04004627E9 /* RegisterViewController.xib */; };
 		7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */; };
 		7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF551DE73F470034C613 /* UIDevice+JWDevice.m */; };
 		7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF581DE7D3530034C613 /* PlayHistoryTableViewCell.m */; };
@@ -151,6 +153,9 @@
 		7C379ADE1DEBF2F5004627E9 /* AccountContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountContentTableViewCell.xib; sourceTree = "<group>"; };
 		7C379AE21DEBF7CC004627E9 /* AccountContentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountContentObject.h; sourceTree = "<group>"; };
 		7C379AE31DEBF7CC004627E9 /* AccountContentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountContentObject.m; sourceTree = "<group>"; };
+		7C379AED1DEC1C04004627E9 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		7C379AEE1DEC1C04004627E9 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		7C379AEF1DEC1C04004627E9 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		7C87BF511DE6D76C0034C613 /* VideoDownLoaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDownLoaderObject.h; sourceTree = "<group>"; };
 		7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDownLoaderObject.m; sourceTree = "<group>"; };
 		7C87BF541DE73F470034C613 /* UIDevice+JWDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JWDevice.h"; sourceTree = "<group>"; };
@@ -630,6 +635,9 @@
 				E6EC27B71DBD9B1400DEE06D /* LoginViewController.h */,
 				E6EC27B81DBD9B1400DEE06D /* LoginViewController.m */,
 				E6EC27B91DBD9B1400DEE06D /* LoginViewController.xib */,
+				7C379AED1DEC1C04004627E9 /* RegisterViewController.h */,
+				7C379AEE1DEC1C04004627E9 /* RegisterViewController.m */,
+				7C379AEF1DEC1C04004627E9 /* RegisterViewController.xib */,
 				E6EC27BC1DBD9CAD00DEE06D /* DoctorRepeatViewController.h */,
 				E6EC27BD1DBD9CAD00DEE06D /* DoctorRepeatViewController.m */,
 				E6EC27BE1DBD9CAD00DEE06D /* DoctorRepeatViewController.xib */,
@@ -877,6 +885,7 @@
 				7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */,
 				7C87BFB41DE81ADC0034C613 /* CitysView.xib in Resources */,
 				7CF736D91DDB101600F92222 /* CycleBannersView.xib in Resources */,
+				7C379AF11DEC1C04004627E9 /* RegisterViewController.xib in Resources */,
 				E6E1536E1DC0BC1C0094A947 /* TopTabScrollViewCell.xib in Resources */,
 				7CF736E81DDBB61B00F92222 /* LectureHailContentElementCollectionViewCell.xib in Resources */,
 				7C34F3A11DD1E91700C61015 /* ConsultContentTableViewCell.xib in Resources */,
@@ -1025,6 +1034,7 @@
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
+				7C379AF01DEC1C04004627E9 /* RegisterViewController.m in Sources */,
 				7C34F39B1DD1E8F800C61015 /* ConsultContentCollectionViewCell.m in Sources */,
 				7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */,
 				E62342DE1D9A157600FE8254 /* ConsultationViewController.m in Sources */,
