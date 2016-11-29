@@ -14,24 +14,29 @@
 #pragma mark lifecycle
 
 //计算单个文件大小
-+(float)fileSizeAtPath:(NSString *)path{
++(double)fileSizeAtPath:(NSString *)path{
     NSFileManager *fileManager=[NSFileManager defaultManager];
     if([fileManager fileExistsAtPath:path]){
-        long long size=[fileManager attributesOfItemAtPath:path error:nil].fileSize;
-        return size/1024.0/1024.0;
+        double size=[fileManager attributesOfItemAtPath:path error:nil].fileSize;
+        return size;
     }
     return 0;
 }
 
 //计算目录的大小
-+(float)folderSizeAtPath:(NSString *)path{
++(double)folderSizeAtPath:(NSString *)path{
     NSFileManager *fileManager=[NSFileManager defaultManager];
-    float folderSize;
+    double folderSize = 0.0;
     if ([fileManager fileExistsAtPath:path]) {
         NSArray *childerFiles=[fileManager subpathsAtPath:path];
         for (NSString *fileName in childerFiles) {
             NSString *absolutePath=[path stringByAppendingPathComponent:fileName];
-            folderSize +=[CacheManager fileSizeAtPath:absolutePath];
+            if (isnan(folderSize)) {
+                folderSize = 0.f;
+            }
+            else{
+                folderSize +=[CacheManager fileSizeAtPath:absolutePath];
+            }
         }
         return folderSize;
     }

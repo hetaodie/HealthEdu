@@ -25,8 +25,9 @@
     
     NSString *path = [self getVideoFilePath];
     
-    CGFloat cacheSize = [CacheManager folderSizeAtPath:path];
-    self.cacheSizeLabel.text = [NSString stringWithFormat:@"%.2fM",cacheSize];
+    double cacheSize = [CacheManager folderSizeAtPath:path];
+    CGFloat cacheSizeM = cacheSize/(1024*1024);
+    self.cacheSizeLabel.text = [NSString stringWithFormat:@"%.2fM",cacheSizeM];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,6 +44,8 @@
 #pragma mark -
 #pragma mark IBActions
 - (IBAction)clearCacheBtnPress:(id)sender {
+    [CacheManager clearCache:[self getVideoFilePath]];
+    self.cacheSizeLabel.text = @"0";
 }
 
 - (IBAction)tuichuBtnPress:(id)sender {

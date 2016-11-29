@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface CacheManager : NSObject
-+(float)fileSizeAtPath:(NSString *)path;
++(double)fileSizeAtPath:(NSString *)path;
 
-+(float)folderSizeAtPath:(NSString *)path;
++(double)folderSizeAtPath:(NSString *)path;
 
 +(void)clearCache:(NSString *)path;
 @end
