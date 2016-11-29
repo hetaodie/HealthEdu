@@ -37,6 +37,7 @@
 		7C379B131DED1595004627E9 /* ChangePassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B111DED1594004627E9 /* ChangePassWordViewController.xib */; };
 		7C379B1C1DED5E74004627E9 /* CacheCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B1A1DED5E74004627E9 /* CacheCollectionViewCell.m */; };
 		7C379B1D1DED5E74004627E9 /* CacheCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B1B1DED5E74004627E9 /* CacheCollectionViewCell.xib */; };
+		7C379B201DED9D3F004627E9 /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B1F1DED9D3F004627E9 /* CacheManager.m */; };
 		7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */; };
 		7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF551DE73F470034C613 /* UIDevice+JWDevice.m */; };
 		7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF581DE7D3530034C613 /* PlayHistoryTableViewCell.m */; };
@@ -189,6 +190,8 @@
 		7C379B191DED5E74004627E9 /* CacheCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheCollectionViewCell.h; sourceTree = "<group>"; };
 		7C379B1A1DED5E74004627E9 /* CacheCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheCollectionViewCell.m; sourceTree = "<group>"; };
 		7C379B1B1DED5E74004627E9 /* CacheCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CacheCollectionViewCell.xib; sourceTree = "<group>"; };
+		7C379B1E1DED9D3F004627E9 /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
+		7C379B1F1DED9D3F004627E9 /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
 		7C87BF511DE6D76C0034C613 /* VideoDownLoaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDownLoaderObject.h; sourceTree = "<group>"; };
 		7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDownLoaderObject.m; sourceTree = "<group>"; };
 		7C87BF541DE73F470034C613 /* UIDevice+JWDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JWDevice.h"; sourceTree = "<group>"; };
@@ -618,6 +621,8 @@
 				7CF736D31DDAFD0D00F92222 /* NSMutableArray+HF.m */,
 				7CF8F3A91DE57568003BBE60 /* NSString+MD5.h */,
 				7CF8F3AA1DE57568003BBE60 /* NSString+MD5.m */,
+				7C379B1E1DED9D3F004627E9 /* CacheManager.h */,
+				7C379B1F1DED9D3F004627E9 /* CacheManager.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1081,6 +1086,7 @@
 				7CC685751DD9682B00E2AB19 /* ConsultContentObject.m in Sources */,
 				7CF736C31DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.m in Sources */,
 				7C87BFA71DE80BD30034C613 /* SelectCityView.m in Sources */,
+				7C379B201DED9D3F004627E9 /* CacheManager.m in Sources */,
 				7C379B051DEC6B9B004627E9 /* PersonInfoTableViewCell.m in Sources */,
 				7C379B091DEC6D85004627E9 /* PersonInfoObject.m in Sources */,
 				E6EC279C1DBD998F00DEE06D /* BaiKeViewController.m in Sources */,
