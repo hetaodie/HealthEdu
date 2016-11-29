@@ -51,6 +51,10 @@
                     <constraint firstItem="ESA-JP-Fyb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="v2k-H7-Fh4"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="bNW-nP-9Df" id="Szc-Px-VFN"/>
+                <outlet property="titleTagLabel" destination="ESA-JP-Fyb" id="vZY-hd-9GC"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

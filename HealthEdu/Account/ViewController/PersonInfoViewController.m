@@ -12,6 +12,7 @@
 #import "PersonInfoHeaderTableViewCell.h"
 #import "PersonInfoTableViewCell.h"
 #import "PersonMiMaTableViewCell.h"
+#import "ChangePassWordViewController.h"
 
 #import "UIColor+HEX.h"
 
@@ -29,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title=@"个人信息";
     
     self.contentArray = [[NSMutableArray  alloc] init];
     [self setUpTableView];
@@ -110,6 +112,7 @@
     }
     else if (section ==1){
         PersonInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonInfoTableViewCell" forIndexPath:indexPath];
+        [cell showCellWithData:object];
         return cell;
     }
     else if (section ==2){
@@ -121,7 +124,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger section = indexPath.section;
+    NSInteger row = indexPath.row;
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSArray *sections = [self.contentArray objectAtIndex:section];
+    PersonInfoObject *object = [sections objectAtIndex:row];
+    
+    [self presentVCWithAction:object.pAction];
+    
 }
 
 
@@ -131,6 +143,36 @@
 
 #pragma mark -
 #pragma mark private
+
+- (void)presentVCWithAction:(NSInteger)pAction{
+    switch (pAction) {
+        case 0:
+        {
+        
+        }
+            break;
+        case 1:
+        {
+            
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            ChangePassWordViewController *ndVC = [[ChangePassWordViewController alloc] initWithNibName:@"ChangePassWordViewController" bundle:nil];
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 
 - (void)setUpTableView{
     UINib *nib = [UINib nibWithNibName:@"PersonInfoHeaderTableViewCell" bundle:nil];
@@ -176,7 +218,7 @@
     PersonInfoObject *object4 = [[PersonInfoObject alloc] init];
     object4.infoTag = @"修改密码";
     object4.info = @"修改密码";
-    object4.pAction = 0;
+    object4.pAction = 3;
     [array3 addObject:object4];
     
     [self.contentArray addObject:array3];

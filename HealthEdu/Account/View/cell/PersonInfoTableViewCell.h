@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PersonInfoObject.h"
 
 @interface PersonInfoTableViewCell : UITableViewCell
 
+- (void)showCellWithData:(PersonInfoObject *)aObject;
 @end

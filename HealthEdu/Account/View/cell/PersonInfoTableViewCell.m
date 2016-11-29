@@ -8,17 +8,48 @@
 
 #import "PersonInfoTableViewCell.h"
 
+@interface PersonInfoTableViewCell()
+@property (weak, nonatomic) IBOutlet UILabel *titleTagLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end
+
+
 @implementation PersonInfoTableViewCell
+
+#pragma mark -
+#pragma mark lifecycle
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
+
+
+#pragma mark -
+#pragma mark IBActions
+
+#pragma mark -
+#pragma mark public
+
+- (void)showCellWithData:(PersonInfoObject *)aObject{
+    self.titleLabel.text = aObject.info;
+    self.titleTagLabel.text = aObject.infoTag;
+}
+
+
+#pragma mark -
+#pragma mark delegate
+
+
+#pragma mark -
+#pragma mark NSNotification
+
+#pragma mark -
+#pragma mark private
 
 @end

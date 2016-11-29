@@ -33,6 +33,8 @@
 		7C379B091DEC6D85004627E9 /* PersonInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B081DEC6D85004627E9 /* PersonInfoObject.m */; };
 		7C379B0D1DEC6F17004627E9 /* PersonMiMaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B0B1DEC6F17004627E9 /* PersonMiMaTableViewCell.m */; };
 		7C379B0E1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B0C1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib */; };
+		7C379B121DED1595004627E9 /* ChangePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B101DED1594004627E9 /* ChangePassWordViewController.m */; };
+		7C379B131DED1595004627E9 /* ChangePassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B111DED1594004627E9 /* ChangePassWordViewController.xib */; };
 		7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */; };
 		7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF551DE73F470034C613 /* UIDevice+JWDevice.m */; };
 		7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF581DE7D3530034C613 /* PlayHistoryTableViewCell.m */; };
@@ -179,6 +181,9 @@
 		7C379B0A1DEC6F17004627E9 /* PersonMiMaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonMiMaTableViewCell.h; sourceTree = "<group>"; };
 		7C379B0B1DEC6F17004627E9 /* PersonMiMaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonMiMaTableViewCell.m; sourceTree = "<group>"; };
 		7C379B0C1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonMiMaTableViewCell.xib; sourceTree = "<group>"; };
+		7C379B0F1DED1594004627E9 /* ChangePassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePassWordViewController.h; sourceTree = "<group>"; };
+		7C379B101DED1594004627E9 /* ChangePassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePassWordViewController.m; sourceTree = "<group>"; };
+		7C379B111DED1594004627E9 /* ChangePassWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePassWordViewController.xib; sourceTree = "<group>"; };
 		7C87BF511DE6D76C0034C613 /* VideoDownLoaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDownLoaderObject.h; sourceTree = "<group>"; };
 		7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDownLoaderObject.m; sourceTree = "<group>"; };
 		7C87BF541DE73F470034C613 /* UIDevice+JWDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JWDevice.h"; sourceTree = "<group>"; };
@@ -688,6 +693,9 @@
 				7C379AF21DEC31C3004627E9 /* SettingViewController.h */,
 				7C379AF31DEC31C3004627E9 /* SettingViewController.m */,
 				7C379AF41DEC31C3004627E9 /* SettingViewController.xib */,
+				7C379B0F1DED1594004627E9 /* ChangePassWordViewController.h */,
+				7C379B101DED1594004627E9 /* ChangePassWordViewController.m */,
+				7C379B111DED1594004627E9 /* ChangePassWordViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -937,6 +945,7 @@
 				7C379B061DEC6B9B004627E9 /* PersonInfoTableViewCell.xib in Resources */,
 				4FDE9CDA1DB4EC2300D9C790 /* HomeContentHeaderView.xib in Resources */,
 				E6EC27A21DBD99A700DEE06D /* BKDetailViewController.xib in Resources */,
+				7C379B131DED1595004627E9 /* ChangePassWordViewController.xib in Resources */,
 				7C87BFA91DE80BDE0034C613 /* SelectCityView.xib in Resources */,
 				7C87BF5B1DE7D3530034C613 /* PlayHistoryTableViewCell.xib in Resources */,
 				7C34F39C1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib in Resources */,
@@ -1082,6 +1091,7 @@
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
 				7C379AF01DEC1C04004627E9 /* RegisterViewController.m in Sources */,
 				7C34F39B1DD1E8F800C61015 /* ConsultContentCollectionViewCell.m in Sources */,
+				7C379B121DED1595004627E9 /* ChangePassWordViewController.m in Sources */,
 				7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */,
 				E62342DE1D9A157600FE8254 /* ConsultationViewController.m in Sources */,
 				E6E1536C1DC0BC070094A947 /* TopTabScrollViewCell.m in Sources */,
