@@ -35,6 +35,8 @@
 		7C379B0E1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B0C1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib */; };
 		7C379B121DED1595004627E9 /* ChangePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B101DED1594004627E9 /* ChangePassWordViewController.m */; };
 		7C379B131DED1595004627E9 /* ChangePassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B111DED1594004627E9 /* ChangePassWordViewController.xib */; };
+		7C379B1C1DED5E74004627E9 /* CacheCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B1A1DED5E74004627E9 /* CacheCollectionViewCell.m */; };
+		7C379B1D1DED5E74004627E9 /* CacheCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B1B1DED5E74004627E9 /* CacheCollectionViewCell.xib */; };
 		7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */; };
 		7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF551DE73F470034C613 /* UIDevice+JWDevice.m */; };
 		7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF581DE7D3530034C613 /* PlayHistoryTableViewCell.m */; };
@@ -184,6 +186,9 @@
 		7C379B0F1DED1594004627E9 /* ChangePassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePassWordViewController.h; sourceTree = "<group>"; };
 		7C379B101DED1594004627E9 /* ChangePassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePassWordViewController.m; sourceTree = "<group>"; };
 		7C379B111DED1594004627E9 /* ChangePassWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePassWordViewController.xib; sourceTree = "<group>"; };
+		7C379B191DED5E74004627E9 /* CacheCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheCollectionViewCell.h; sourceTree = "<group>"; };
+		7C379B1A1DED5E74004627E9 /* CacheCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheCollectionViewCell.m; sourceTree = "<group>"; };
+		7C379B1B1DED5E74004627E9 /* CacheCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CacheCollectionViewCell.xib; sourceTree = "<group>"; };
 		7C87BF511DE6D76C0034C613 /* VideoDownLoaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDownLoaderObject.h; sourceTree = "<group>"; };
 		7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDownLoaderObject.m; sourceTree = "<group>"; };
 		7C87BF541DE73F470034C613 /* UIDevice+JWDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JWDevice.h"; sourceTree = "<group>"; };
@@ -487,6 +492,9 @@
 				7C379B0A1DEC6F17004627E9 /* PersonMiMaTableViewCell.h */,
 				7C379B0B1DEC6F17004627E9 /* PersonMiMaTableViewCell.m */,
 				7C379B0C1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib */,
+				7C379B191DED5E74004627E9 /* CacheCollectionViewCell.h */,
+				7C379B1A1DED5E74004627E9 /* CacheCollectionViewCell.m */,
+				7C379B1B1DED5E74004627E9 /* CacheCollectionViewCell.xib */,
 			);
 			name = cell;
 			path = HealthEdu/Account/View/cell;
@@ -930,6 +938,7 @@
 				7CF8F3A01DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.xib in Resources */,
 				7C34F3971DD1D4BD00C61015 /* ConsultContentView.xib in Resources */,
 				7C379B0E1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib in Resources */,
+				7C379B1D1DED5E74004627E9 /* CacheCollectionViewCell.xib in Resources */,
 				7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */,
 				7C87BFB41DE81ADC0034C613 /* CitysView.xib in Resources */,
 				7CF736D91DDB101600F92222 /* CycleBannersView.xib in Resources */,
@@ -1078,6 +1087,7 @@
 				7C87BFAE1DE8146C0034C613 /* ConsultationContentTableViewCell.m in Sources */,
 				4FDE9CD41DB4D20600D9C790 /* HomeContentTableViewCell.m in Sources */,
 				E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */,
+				7C379B1C1DED5E74004627E9 /* CacheCollectionViewCell.m in Sources */,
 				7CF736C71DDAE66200F92222 /* BaiKeSicknessContentView.m in Sources */,
 				E6EC27BF1DBD9CAD00DEE06D /* DoctorRepeatViewController.m in Sources */,
 				7CF736DD1DDB102900F92222 /* CycleBannersCollectionViewCell.m in Sources */,

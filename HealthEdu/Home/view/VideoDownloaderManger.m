@@ -171,6 +171,8 @@ static VideoDownloaderManger *instance;
         [lc_D.task cancel];
     }
     [self.downVideoDic removeObjectForKey:aStrUrl.MD5];
+    [self writeDownVideoToFile];
+
 
 }
 
@@ -187,6 +189,7 @@ static VideoDownloaderManger *instance;
         }
     }];
     [self.downVideoDic removeAllObjects];
+    [self writeDownVideoToFile];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:VideoDownloaderMangerDownVideoChanged object:nil];
 }
@@ -197,11 +200,9 @@ static VideoDownloaderManger *instance;
     if ([fileManager fileExistsAtPath:fullPath]) {
         [fileManager removeItemAtPath:fullPath error:nil];
     }
-    VideoDownLoaderObject *lc_D = [self.taskDictionary valueForKey:aStrUrl.MD5];
-    if (lc_D) {
-        [lc_D.task cancel];
-        [self.completedVideoDic removeObjectForKey:aStrUrl.MD5];
-    }
+
+    [self.completedVideoDic removeObjectForKey:aStrUrl.MD5];
+    [self writeCompletedVideoToFile];
 }
 
 - (void)removeAllCompletedVideo{
@@ -211,12 +212,9 @@ static VideoDownloaderManger *instance;
         if ([fileManager fileExistsAtPath:fullPath]) {
             [fileManager removeItemAtPath:fullPath error:nil];
         }
-        VideoDownLoaderObject *lc_D = [self.taskDictionary valueForKey:obj.videoUrl.MD5];
-        if (lc_D) {
-            [lc_D.task cancel];
-        }
     }];
     [self.completedVideoDic removeAllObjects];
+    [self writeCompletedVideoToFile];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:VideoDownloaderMangerCompletedVideoChanged object:nil];
 }
