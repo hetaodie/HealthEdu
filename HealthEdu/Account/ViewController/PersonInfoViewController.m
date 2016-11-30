@@ -16,6 +16,9 @@
 
 #import "UIColor+HEX.h"
 
+#import "ChangeNameViewController.h"
+#import "ChangeSexViewController.h"
+
 @interface PersonInfoViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *contentArray;
@@ -132,7 +135,7 @@
     NSArray *sections = [self.contentArray objectAtIndex:section];
     PersonInfoObject *object = [sections objectAtIndex:row];
     
-    [self presentVCWithAction:object.pAction];
+    [self presentVCWithObject:object];
     
 }
 
@@ -144,7 +147,9 @@
 #pragma mark -
 #pragma mark private
 
-- (void)presentVCWithAction:(NSInteger)pAction{
+- (void)presentVCWithObject:(PersonInfoObject *)aObject {
+    NSInteger pAction = aObject.pAction;
+    
     switch (pAction) {
         case 0:
         {
@@ -153,12 +158,20 @@
             break;
         case 1:
         {
+            ChangeNameViewController *ndVC = [[ChangeNameViewController alloc] initWithNibName:@"ChangeNameViewController" bundle:nil];
+            ndVC.name = aObject.info;
+            
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
             
         }
             break;
         case 2:
         {
-            
+            ChangeSexViewController *ndVC = [[ChangeSexViewController alloc] initWithNibName:@"ChangeSexViewController" bundle:nil];
+            ndVC.sex = aObject.info;
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
         }
             break;
         case 3:

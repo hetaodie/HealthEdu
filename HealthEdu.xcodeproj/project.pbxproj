@@ -38,6 +38,10 @@
 		7C379B1C1DED5E74004627E9 /* CacheCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B1A1DED5E74004627E9 /* CacheCollectionViewCell.m */; };
 		7C379B1D1DED5E74004627E9 /* CacheCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B1B1DED5E74004627E9 /* CacheCollectionViewCell.xib */; };
 		7C379B201DED9D3F004627E9 /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B1F1DED9D3F004627E9 /* CacheManager.m */; };
+		7C379B241DEE65BE004627E9 /* ChangeNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B221DEE65BE004627E9 /* ChangeNameViewController.m */; };
+		7C379B251DEE65BE004627E9 /* ChangeNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B231DEE65BE004627E9 /* ChangeNameViewController.xib */; };
+		7C379B2E1DEE6782004627E9 /* ChangeSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B2C1DEE6782004627E9 /* ChangeSexViewController.m */; };
+		7C379B2F1DEE6782004627E9 /* ChangeSexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B2D1DEE6782004627E9 /* ChangeSexViewController.xib */; };
 		7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */; };
 		7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF551DE73F470034C613 /* UIDevice+JWDevice.m */; };
 		7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF581DE7D3530034C613 /* PlayHistoryTableViewCell.m */; };
@@ -192,6 +196,12 @@
 		7C379B1B1DED5E74004627E9 /* CacheCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CacheCollectionViewCell.xib; sourceTree = "<group>"; };
 		7C379B1E1DED9D3F004627E9 /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
 		7C379B1F1DED9D3F004627E9 /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
+		7C379B211DEE65BE004627E9 /* ChangeNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeNameViewController.h; sourceTree = "<group>"; };
+		7C379B221DEE65BE004627E9 /* ChangeNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeNameViewController.m; sourceTree = "<group>"; };
+		7C379B231DEE65BE004627E9 /* ChangeNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeNameViewController.xib; sourceTree = "<group>"; };
+		7C379B2B1DEE6782004627E9 /* ChangeSexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeSexViewController.h; sourceTree = "<group>"; };
+		7C379B2C1DEE6782004627E9 /* ChangeSexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeSexViewController.m; sourceTree = "<group>"; };
+		7C379B2D1DEE6782004627E9 /* ChangeSexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeSexViewController.xib; sourceTree = "<group>"; };
 		7C87BF511DE6D76C0034C613 /* VideoDownLoaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDownLoaderObject.h; sourceTree = "<group>"; };
 		7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDownLoaderObject.m; sourceTree = "<group>"; };
 		7C87BF541DE73F470034C613 /* UIDevice+JWDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JWDevice.h"; sourceTree = "<group>"; };
@@ -709,6 +719,12 @@
 				7C379B0F1DED1594004627E9 /* ChangePassWordViewController.h */,
 				7C379B101DED1594004627E9 /* ChangePassWordViewController.m */,
 				7C379B111DED1594004627E9 /* ChangePassWordViewController.xib */,
+				7C379B211DEE65BE004627E9 /* ChangeNameViewController.h */,
+				7C379B221DEE65BE004627E9 /* ChangeNameViewController.m */,
+				7C379B231DEE65BE004627E9 /* ChangeNameViewController.xib */,
+				7C379B2B1DEE6782004627E9 /* ChangeSexViewController.h */,
+				7C379B2C1DEE6782004627E9 /* ChangeSexViewController.m */,
+				7C379B2D1DEE6782004627E9 /* ChangeSexViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -947,6 +963,7 @@
 				7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */,
 				7C87BFB41DE81ADC0034C613 /* CitysView.xib in Resources */,
 				7CF736D91DDB101600F92222 /* CycleBannersView.xib in Resources */,
+				7C379B251DEE65BE004627E9 /* ChangeNameViewController.xib in Resources */,
 				7C379AF11DEC1C04004627E9 /* RegisterViewController.xib in Resources */,
 				E6E1536E1DC0BC1C0094A947 /* TopTabScrollViewCell.xib in Resources */,
 				7CF736E81DDBB61B00F92222 /* LectureHailContentElementCollectionViewCell.xib in Resources */,
@@ -965,6 +982,7 @@
 				7C34F39C1DD1E8F800C61015 /* ConsultContentCollectionViewCell.xib in Resources */,
 				E6EC27C01DBD9CAD00DEE06D /* DoctorRepeatViewController.xib in Resources */,
 				E6EC27A71DBD99C800DEE06D /* LectureHailViewController.xib in Resources */,
+				7C379B2F1DEE6782004627E9 /* ChangeSexViewController.xib in Resources */,
 				7C87BFBE1DE81C680034C613 /* CitysViewCollectionViewCell.xib in Resources */,
 				E6C699101D990B2A00D2818C /* Assets.xcassets in Resources */,
 				E6EC27CF1DBD9E4D00DEE06D /* PersonInfoViewController.xib in Resources */,
@@ -1085,6 +1103,7 @@
 				E62342DB1D9A154300FE8254 /* ServiceViewController.m in Sources */,
 				7CC685751DD9682B00E2AB19 /* ConsultContentObject.m in Sources */,
 				7CF736C31DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.m in Sources */,
+				7C379B2E1DEE6782004627E9 /* ChangeSexViewController.m in Sources */,
 				7C87BFA71DE80BD30034C613 /* SelectCityView.m in Sources */,
 				7C379B201DED9D3F004627E9 /* CacheManager.m in Sources */,
 				7C379B051DEC6B9B004627E9 /* PersonInfoTableViewCell.m in Sources */,
@@ -1102,6 +1121,7 @@
 				7CF736CD1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m in Sources */,
 				7CF736D81DDB101600F92222 /* CycleBannersView.m in Sources */,
 				7CF8F3AB1DE57568003BBE60 /* NSString+MD5.m in Sources */,
+				7C379B241DEE65BE004627E9 /* ChangeNameViewController.m in Sources */,
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
