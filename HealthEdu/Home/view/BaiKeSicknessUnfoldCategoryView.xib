@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="92.5"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IJN-xv-Na1">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="92.5"/>
+                <collectionView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IJN-xv-Na1">
+                    <rect key="frame" x="0.0" y="15" width="375" height="77.5"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="1fU-7w-2tn">
                         <size key="itemSize" width="50" height="50"/>
@@ -37,7 +37,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="IJN-xv-Na1" secondAttribute="bottom" id="21X-IW-ob5"/>
-                <constraint firstItem="IJN-xv-Na1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5Vp-iD-nvu"/>
+                <constraint firstItem="IJN-xv-Na1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="5Vp-iD-nvu"/>
                 <constraint firstAttribute="trailing" secondItem="IJN-xv-Na1" secondAttribute="trailing" id="HXH-vW-nq7"/>
                 <constraint firstItem="IJN-xv-Na1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pPa-Jq-3XD"/>
             </constraints>

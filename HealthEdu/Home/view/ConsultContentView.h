@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ConsultContentObject.h"
+#import "ConsultListObject.h"
 @class ConsultContentView;
 
 @protocol ConsultContentViewDelegate <NSObject>
@@ -16,7 +16,7 @@
 - (void)contentViewWithScrollView:(UIScrollView *)scrollView didScrollToIndex:(NSInteger)aIndex;
 - (void)contentViewWithscrollViewDidScroll:(UIScrollView *)scrollView;
 
-- (void)contentOneContentCellWithSelect:(ConsultContentObject *)aObject withIndex:(NSInteger)aIndex;
+- (void)contentOneContentCellWithSelect:(ConsultListObject *)aObject withIndex:(NSInteger)aIndex;
 
 @end
 

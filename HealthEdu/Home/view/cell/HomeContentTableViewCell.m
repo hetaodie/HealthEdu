@@ -7,18 +7,29 @@
 //
 
 #import "HomeContentTableViewCell.h"
+#import "UIImageView+WebCache.h"
+
+@interface HomeContentTableViewCell()
+@property (weak, nonatomic) IBOutlet UIImageView *contentImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@end
+
 
 @implementation HomeContentTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+- (void)showCellWithObject:(PopularRecommendObject *)aObject{
+    self.titleLabel.text = aObject.title;
+    [self.contentImageView sd_setImageWithURL:[NSURL URLWithString:aObject.imageUrl] placeholderImage:[UIImage imageNamed:@"1.png"]];
+    [self setNeedsLayout];
+    
 }
 
 @end

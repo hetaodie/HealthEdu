@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PopularRecommendObject.h"
 
 @interface HomeContentTableViewCell : UITableViewCell
-
+- (void)showCellWithObject:(PopularRecommendObject *)aObject;
 @end

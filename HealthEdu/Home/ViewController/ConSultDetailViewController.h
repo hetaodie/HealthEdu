@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ConsultDetailViewController : UIViewController
-
+@property (nonatomic, strong) NSString *id;
 @end

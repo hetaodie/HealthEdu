@@ -80,7 +80,7 @@
 #pragma mark ConsultContentViewDelegate
 
 
-- (void)clickOneElementOfCellWithInfo:(ConsultContentObject *)aObject withIndex:(NSInteger)aIndex{
+- (void)clickOneElementOfCellWithInfo:(ConsultListObject *)aObject withIndex:(NSInteger)aIndex{
     if (self.delegate && [self.delegate respondsToSelector:@selector(contentOneContentCellWithSelect:withIndex:)]) {
         [self.delegate contentOneContentCellWithSelect:aObject withIndex:aIndex];
     }
@@ -109,12 +109,6 @@
     cell.delegate = self;
     [cell showCellWithData:array];
     
-    if (row%2 == 0) {
-        cell.backgroundColor = [UIColor redColor];
-    }
-    else{
-        cell.backgroundColor = [UIColor blueColor];
-    }
     return cell;
 }
 

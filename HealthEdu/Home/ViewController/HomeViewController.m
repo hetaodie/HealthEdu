@@ -15,12 +15,16 @@
 #import "BaiKeViewController.h"
 #import "LectureHailViewController.h"
 #import "LearnCommunityViewController.h"
+#import "HomePageModelSource.h"
+#import "ConSultDetailViewController.h"
 
 #define HomeContentCellHeight 168
 
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,HomeTagViewDelegate>
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,HomePageModelSourceDelegate,HomeTagViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
 @property (weak, nonatomic) IBOutlet HomeTagView *homeTagView;
+@property (strong, nonatomic) HomePageModelSource *modelSource;
+@property (strong, nonatomic) NSMutableArray *contentArray;
 
 @end
 
@@ -34,6 +38,12 @@
     [self setUpContentTableView];
     
     self.homeTagView.delegate = self;
+    
+    self.modelSource = [[HomePageModelSource alloc] init];
+    self.modelSource.delegate =self;
+    [self.modelSource getHomePageNews];
+    
+    self.contentArray = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +59,16 @@
 
 #pragma mark -
 #pragma mark delegate
+
+- (void)onHomePageNewsError{
+    
+}
+
+- (void)onHomePageNewsSuccess:(NSArray *)aArray{
+    [self.contentArray setArray:aArray];
+    [self.contentTableView reloadData];
+    
+}
 
 #pragma mark -
 #pragma mark HomeTagViewDelegate
@@ -94,11 +114,13 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    NSInteger count = [self.contentArray count];
+    return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HomeContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeContentTableViewCell" forIndexPath:indexPath];
+    [cell showCellWithObject:[self.contentArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
@@ -107,7 +129,12 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    PopularRecommendObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    
+    ConsultDetailViewController *ndVC = [[ConsultDetailViewController alloc] initWithNibName:@"ConsultDetailViewController" bundle:nil];
+    ndVC.id = object.id;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 #pragma mark -

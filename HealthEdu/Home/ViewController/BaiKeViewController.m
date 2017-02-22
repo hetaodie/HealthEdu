@@ -13,9 +13,13 @@
 #import "NSMutableArray+HF.h"
 #import "BKDetailViewController.h"
 
+#import "BaikeSource.h"
+#import "BaiKeClassifyObject.h"
+#import "BaikeObject.h"
+
 const float moveLeftConstraintDis = 30.0;
 
-@interface BaiKeViewController () <BaiKeSicknessContentViewDelegate,BaiKeSicknessFoldCategoryViewDelegate,BaiKeSicknessUnfoldCategoryViewDelegate>
+@interface BaiKeViewController () <BaiKeSicknessContentViewDelegate,BaiKeSicknessFoldCategoryViewDelegate,BaiKeSicknessUnfoldCategoryViewDelegate,BaikeSourceDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *selectPersonButton;
 @property (weak, nonatomic) IBOutlet UIButton *sicknessButton;
@@ -30,6 +34,8 @@ const float moveLeftConstraintDis = 30.0;
 @property (strong, nonatomic) NSMutableArray *sicknessfoldCategoryArray;
 @property (strong, nonatomic) NSMutableArray *sicknessContentArray;
 
+@property (strong, nonatomic) BaikeSource *baikeSource;
+
 @end
 
 @implementation BaiKeViewController
@@ -43,14 +49,18 @@ const float moveLeftConstraintDis = 30.0;
 
     
     [self setUpDataAndView];
-    [self addtestData];
+    //[self addtestData];
     
     self.sicknessFoldCategoryView.delegate = self;
     self.sicknessUnfoldCategoryView.delegate = self;
     self.sicknessContentView.delegate =self;
     
-    [self setUpCategoryView];
-    [self.sicknessContentView showViewWithArray:self.sicknessContentArray];
+   // [self.sicknessContentView showViewWithArray:self.sicknessContentArray];
+    
+    self.baikeSource = [[BaikeSource alloc] init];
+    self.baikeSource.delegate = self;
+    [self.baikeSource getBaikeClassify:0];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,7 +84,8 @@ const float moveLeftConstraintDis = 30.0;
     
     self.selectPersonButton.selected = YES;
     self.sicknessButton.selected = NO;
-    [self setUpCategoryView];
+    //[self setUpCategoryView];
+    [self.baikeSource getBaikeClassify:0];
 }
 
 - (IBAction)sicknessBtnPress:(id)sender {
@@ -97,7 +108,8 @@ const float moveLeftConstraintDis = 30.0;
     self.sicknessFoldCategoryView.hidden = NO;
     self.sicknessUnfoldCategoryView.hidden = YES;
     
-    [self setUpCategoryView];
+    [self.baikeSource getBaikeClassify:1];
+    //[self setUpCategoryView];
 
 }
 
@@ -131,6 +143,10 @@ const float moveLeftConstraintDis = 30.0;
     [self.navigationController pushViewController:ndVC animated:YES];
 }
 
+- (void)onBaikeClassifySuccess:(NSArray *)aArray{
+    [self.sicknessCategoryArray setArray:aArray];
+    [self setUpCategoryView];
+}
 
 #pragma mark -
 #pragma mark NSNotification

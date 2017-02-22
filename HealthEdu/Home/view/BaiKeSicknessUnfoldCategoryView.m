@@ -8,6 +8,7 @@
 
 #import "BaiKeSicknessUnfoldCategoryView.h"
 #import "BaiKeSicknessCategoryCollectionViewCell.h"
+#import "BaiKeClassifyObject.h"
 
 @interface BaiKeSicknessUnfoldCategoryView()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *contentView;
@@ -70,8 +71,8 @@
 - ( UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     BaiKeSicknessCategoryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BaiKeSicknessCategoryCollectionViewCell" forIndexPath:indexPath];
     
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
-    [cell showCellWithTitle:title];
+    BaiKeClassifyObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    [cell showCellWithTitle:object.title];
     
     return cell;
 }
@@ -85,10 +86,10 @@
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
+    BaiKeClassifyObject *object = [self.contentArray objectAtIndex:indexPath.row];
 
     
-    CGSize size =[BaiKeSicknessCategoryCollectionViewCell cellSizeForString:title];
+    CGSize size =[BaiKeSicknessCategoryCollectionViewCell cellSizeForString:object.title];
     return size;
 }
 

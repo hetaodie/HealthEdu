@@ -8,6 +8,7 @@
 
 #import "ConsultContentCollectionViewCell.h"
 #import "ConsultContentTableViewCell.h"
+#import "ConsultListObject.h"
 
 @interface ConsultContentCollectionViewCell()<UITableViewDelegate,UITableViewDataSource>
 
@@ -59,10 +60,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSInteger row = indexPath.row;
-    
-    NSString *title = [self.contentArray objectAtIndex:row];
+    ConsultListObject *object = [self.contentArray objectAtIndex:row];
     
     ConsultContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ConsultContentTableViewCell" forIndexPath:indexPath];
+    [cell showCellWithData:object];
     
     return cell;
 
@@ -72,7 +73,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
     
-    ConsultContentObject *object = [self.contentArray objectAtIndex:row];
+    ConsultListObject *object = [self.contentArray objectAtIndex:row];
     if(self.delegate && [self.delegate respondsToSelector:@selector(clickOneElementOfCellWithInfo:withIndex:)]){
         [self.delegate clickOneElementOfCellWithInfo:object withIndex:row];
     }
@@ -83,8 +84,12 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSInteger row = indexPath.row;
+    ConsultListObject *object = [self.contentArray objectAtIndex:row];
 
-    return [ConsultContentTableViewCell cellHeightWithData:nil];
+
+    return [ConsultContentTableViewCell cellHeightWithData:object];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
