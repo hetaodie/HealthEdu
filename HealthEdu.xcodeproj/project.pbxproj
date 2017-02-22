@@ -109,6 +109,8 @@
 		7CFCCC231E5DE3A100DCEC21 /* ConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC221E5DE3A100DCEC21 /* ConferenceViewController.m */; };
 		7CFCCC271E5DE5F200DCEC21 /* ConferenceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC251E5DE5F200DCEC21 /* ConferenceTableViewCell.m */; };
 		7CFCCC281E5DE5F200DCEC21 /* ConferenceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFCCC261E5DE5F200DCEC21 /* ConferenceTableViewCell.xib */; };
+		7CFCCC2B1E5DF17E00DCEC21 /* ConferenceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC2A1E5DF17E00DCEC21 /* ConferenceObject.m */; };
+		7CFCCC2E1E5DF1A400DCEC21 /* ConferenceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC2D1E5DF1A400DCEC21 /* ConferenceSource.m */; };
 		87FF3A461CC04FFE94D920AA /* libPods-HealthEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E718DE9FCA3253C2582194C5 /* libPods-HealthEdu.a */; };
 		E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC51DC2E37400A0369B /* UIColor+HEX.m */; };
 		E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC81DC3484A00A0369B /* UIColor+MaxColor.m */; };
@@ -341,6 +343,10 @@
 		7CFCCC241E5DE5F200DCEC21 /* ConferenceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceTableViewCell.h; sourceTree = "<group>"; };
 		7CFCCC251E5DE5F200DCEC21 /* ConferenceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceTableViewCell.m; sourceTree = "<group>"; };
 		7CFCCC261E5DE5F200DCEC21 /* ConferenceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceTableViewCell.xib; sourceTree = "<group>"; };
+		7CFCCC291E5DF17E00DCEC21 /* ConferenceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceObject.h; sourceTree = "<group>"; };
+		7CFCCC2A1E5DF17E00DCEC21 /* ConferenceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceObject.m; sourceTree = "<group>"; };
+		7CFCCC2C1E5DF1A400DCEC21 /* ConferenceSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceSource.h; sourceTree = "<group>"; };
+		7CFCCC2D1E5DF1A400DCEC21 /* ConferenceSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceSource.m; sourceTree = "<group>"; };
 		9323F8D8773924F12DA09357 /* Pods-HealthEdu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.debug.xcconfig"; sourceTree = "<group>"; };
 		A216E4697B5EBA35B628872D /* Pods-HealthEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.release.xcconfig"; sourceTree = "<group>"; };
 		E6123CC41DC2E37400A0369B /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
@@ -741,6 +747,8 @@
 		7CFCCC1C1E5DE37900DCEC21 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				7CFCCC2C1E5DF1A400DCEC21 /* ConferenceSource.h */,
+				7CFCCC2D1E5DF1A400DCEC21 /* ConferenceSource.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -748,6 +756,8 @@
 		7CFCCC1D1E5DE37900DCEC21 /* object */ = {
 			isa = PBXGroup;
 			children = (
+				7CFCCC291E5DF17E00DCEC21 /* ConferenceObject.h */,
+				7CFCCC2A1E5DF17E00DCEC21 /* ConferenceObject.m */,
 			);
 			path = object;
 			sourceTree = "<group>";
@@ -1244,6 +1254,7 @@
 				7C34F3A01DD1E91700C61015 /* ConsultContentTableViewCell.m in Sources */,
 				7CF736ED1DDBEDDA00F92222 /* PlayerView.m in Sources */,
 				E6EC27A11DBD99A700DEE06D /* BKDetailViewController.m in Sources */,
+				7CFCCC2E1E5DF1A400DCEC21 /* ConferenceSource.m in Sources */,
 				7CF736D41DDAFD0D00F92222 /* NSMutableArray+HF.m in Sources */,
 				7CF8F39F1DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.m in Sources */,
 				E6C699051D990B2A00D2818C /* AppDelegate.m in Sources */,
@@ -1318,6 +1329,7 @@
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
 				7CF5E1931E5BE21900EE42DE /* BaikeSource.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
+				7CFCCC2B1E5DF17E00DCEC21 /* ConferenceObject.m in Sources */,
 				7C379AF01DEC1C04004627E9 /* RegisterViewController.m in Sources */,
 				7C34F39B1DD1E8F800C61015 /* ConsultContentCollectionViewCell.m in Sources */,
 				7CF5E18A1E5BE03800EE42DE /* BaikeObject.m in Sources */,

@@ -117,6 +117,14 @@
                     <constraint firstItem="6q7-mO-RgV" firstAttribute="leading" secondItem="wmk-tp-iHL" secondAttribute="leading" id="zwu-RV-Hui"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="contentImageView" destination="HS6-4n-rRJ" id="C4P-Uw-wRZ"/>
+                <outlet property="locationLabel" destination="wmk-tp-iHL" id="g6r-rY-hdB"/>
+                <outlet property="numLabel" destination="6q7-mO-RgV" id="cez-wH-EDB"/>
+                <outlet property="numTagLabel" destination="rKA-jK-hJG" id="Bcp-Dr-HUP"/>
+                <outlet property="timeLabel" destination="sK1-ad-D08" id="9ZK-CV-LDT"/>
+                <outlet property="titleLabel" destination="sPR-3q-UR0" id="7dT-5A-2Cu"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

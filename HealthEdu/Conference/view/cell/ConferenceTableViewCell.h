@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConferenceObject.h"
 
 @interface ConferenceTableViewCell : UITableViewCell
 
+- (void)showCellWithObject:(ConferenceObject *)aObject;
 @end
