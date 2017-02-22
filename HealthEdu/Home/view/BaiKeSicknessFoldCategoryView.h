@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaiKeClassifyObject.h"
 
 @protocol BaiKeSicknessFoldCategoryViewDelegate <NSObject>
 
 - (void)onSelectUnfold;
 
-- (void)onSelectOneElementWithData:(NSString *)aString withIndex:(NSInteger)aIndex;
+- (void)onSelectOneElementWithData:(BaiKeClassifyObject *)aObject withIndex:(NSInteger)aIndex;
 
 @end
 @interface BaiKeSicknessFoldCategoryView : UIView

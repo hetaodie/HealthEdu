@@ -8,17 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "BaikeDetailObject.h"
 
-@protocol ConsultDetailSourceDelegate <NSObject>
-- (void)onConsultDetailSourceSuccess:(ConsultDetailObject *)aObject;
-- (void)onConsultDetailSourceError;
+@protocol BaikeDetailSourceDelegate <NSObject>
+- (void)onBaikeDetailSourceSuccess:(BaikeDetailObject *)aObject;
+- (void)onBaikeDetailSourceError;
 @end
 
-@interface ConsultDetailSource : NSObject
+@interface BaikeDetailSource : NSObject
 
-@property (nonatomic, weak) id <ConsultDetailSourceDelegate>delegate;
+@property (nonatomic, weak) id <BaikeDetailSourceDelegate>delegate;
 
-- (void)getCousultDetailWithId:(NSString *)aId;
+- (void)getBaikeDetailWithId:(NSString *)aId;
 
 
 @end

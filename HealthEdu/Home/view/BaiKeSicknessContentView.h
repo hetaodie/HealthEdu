@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaikeObject.h"
 
 @protocol BaiKeSicknessContentViewDelegate <NSObject>
 
-- (void)onSicknessContentOneElementSelectWithData:(NSString *)aData withIndex:(NSInteger)aIndex;
+- (void)onSicknessContentOneElementSelectWithData:(BaikeObject *)aObject withIndex:(NSInteger)aIndex;
 
 @end
 

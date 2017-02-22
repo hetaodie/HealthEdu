@@ -125,9 +125,8 @@ const float moveLeftConstraintDis = 30.0;
     [self.sicknessUnfoldCategoryView showUnfoldCategoryViewWithArray:self.sicknessCategoryArray];
 }
 
-- (void)onSelectOneElementWithData:(NSString *)aString withIndex:(NSInteger)aIndex{
-    [self.sicknessContentView showViewWithArray:self.sicknessContentArray];
-
+- (void)onSelectOneElementWithData:(BaiKeClassifyObject *)aObject withIndex:(NSInteger)aIndex{
+    [self.baikeSource getBaikeData:aObject.id];
 }
 
 - (void)onUnfoldCategoryOneElementSelectWithData:(NSString *)aData withIndex:(NSInteger)aIndex{
@@ -137,17 +136,29 @@ const float moveLeftConstraintDis = 30.0;
     
 }
 
-- (void)onSicknessContentOneElementSelectWithData:(NSString *)aData withIndex:(NSInteger)aIndex{
+- (void)onSicknessContentOneElementSelectWithData:(BaikeObject *)aObject withIndex:(NSInteger)aIndex{
     BKDetailViewController *ndVC = [[BKDetailViewController alloc] initWithNibName:@"BKDetailViewController" bundle:nil];
+    ndVC.id = aObject.id;
     ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 - (void)onBaikeClassifySuccess:(NSArray *)aArray{
+    if ([aArray count]==0) {
+        return;
+    }
     [self.sicknessCategoryArray setArray:aArray];
     [self setUpCategoryView];
+    
+    BaikeObject *object = [aArray objectAtIndex:0];
+    [self.baikeSource getBaikeData:object.id];
+
 }
 
+- (void)onBaikeDataSuccess:(NSArray *)aArray{
+    [self.sicknessContentArray setArray:aArray];
+    [self.sicknessContentView showViewWithArray:self.sicknessContentArray];
+}
 #pragma mark -
 #pragma mark NSNotification
 
@@ -172,7 +183,14 @@ const float moveLeftConstraintDis = 30.0;
     self.sicknessFoldCategoryView.hidden = NO;
     self.sicknessUnfoldCategoryView.hidden = YES;
     
-    NSArray *array = [self.sicknessCategoryArray subarrayWithRange:NSMakeRange(0, 4)];
+    NSInteger maxNum;
+    if ([self.sicknessCategoryArray count] >4) {
+        maxNum = 4;
+    }
+    else{
+        maxNum = [self.sicknessCategoryArray count];
+    }
+    NSArray *array = [self.sicknessCategoryArray subarrayWithRange:NSMakeRange(0, maxNum)];
     [self.sicknessfoldCategoryArray setArray:array];
     [self.sicknessFoldCategoryView showFoldCategoryViewWithArray:self.sicknessfoldCategoryArray];
 

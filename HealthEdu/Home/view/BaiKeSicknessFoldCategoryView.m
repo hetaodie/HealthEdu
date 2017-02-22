@@ -86,9 +86,9 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
+    BaiKeClassifyObject *object = [self.contentArray objectAtIndex:indexPath.row];
     if (self.delegate && [self.delegate respondsToSelector:@selector(onSelectOneElementWithData:withIndex:)]) {
-        [self.delegate onSelectOneElementWithData:title withIndex:indexPath.row];
+        [self.delegate onSelectOneElementWithData:object withIndex:indexPath.row];
     }
 }
 

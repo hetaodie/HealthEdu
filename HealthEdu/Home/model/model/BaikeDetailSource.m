@@ -6,44 +6,42 @@
 //  Copyright © 2016年 AllWantsLab. All rights reserved.
 //
 
-#import "ConsultDetailSource.h"
+#import "BaikeDetailSource.h"
 #import "HENetTask.h"
+#import "BaikeDetailObject.h"
 
 
-@interface ConsultDetailSource()
+@interface BaikeDetailSource()
 @property (nonatomic, strong) NSArray *dataArray;
 @end
 
-@implementation ConsultDetailSource
+@implementation BaikeDetailSource
 
-- (void)getCousultDetailWithId:(NSString *)aId{
+- (void)getBaikeDetailWithId:(NSString *)aId{
     NSString *strUrl = [NSString stringWithFormat:@"/mobile/getContentDetail.action?cid=%@",aId];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:strUrl];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onConsultDetailSourceSuccess:)]) {
-            ConsultDetailObject *object = [self arrayWithObject:responseObject];
-            [weakSelf.delegate onConsultDetailSourceSuccess:object];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onBaikeDetailSourceSuccess:)]) {
+            BaikeDetailObject *object = [self arrayWithObject:responseObject];
+            [weakSelf.delegate onBaikeDetailSourceSuccess:object];
         }
     };
     
     task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(onConsultDetailSourceError)]) {
-            [self.delegate onConsultDetailSourceError];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(onBaikeDetailSourceError)]) {
+            [self.delegate onBaikeDetailSourceError];
         }
     };
     
     [task runInMethod:HE_GET];
 }
 
-- (ConsultDetailObject *)arrayWithObject:(NSDictionary *)aDictionary{
-    ConsultDetailObject *object = [[ConsultDetailObject alloc] init];
+- (BaikeDetailObject *)arrayWithObject:(NSDictionary *)aDictionary{
+    BaikeDetailObject *object = [[BaikeDetailObject alloc] init];
     object.id = [aDictionary objectForKey:@"id"];
     object.title = [aDictionary objectForKey:@"title"];
-    object.picurl = [aDictionary objectForKey:@"picurl"];
-    object.content1 = [aDictionary objectForKey:@"content1"];
     object.contenttext = [aDictionary objectForKey:@"contenttext"];
-    object.createddate = [[aDictionary objectForKey:@"createdDate"] longLongValue];
     return object;
 }
 @end

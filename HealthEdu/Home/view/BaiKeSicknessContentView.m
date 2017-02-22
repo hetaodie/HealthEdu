@@ -70,8 +70,8 @@ const CGFloat BaiKeSicknessContentViewCellheight = 40;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     BaikeSicknessContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BaikeSicknessContentTableViewCell" forIndexPath:indexPath];
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
-    [cell showCellWithTitle:title];
+    BaikeObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    [cell showCellWithTitle:object.title];
     return cell;
 }
 
@@ -80,10 +80,10 @@ const CGFloat BaiKeSicknessContentViewCellheight = 40;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
+    BaikeObject *object = [self.contentArray objectAtIndex:indexPath.row];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(onSicknessContentOneElementSelectWithData:withIndex:)]) {
-        [self.delegate onSicknessContentOneElementSelectWithData:title withIndex:indexPath.row];
+        [self.delegate onSicknessContentOneElementSelectWithData:object withIndex:indexPath.row];
     }
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];

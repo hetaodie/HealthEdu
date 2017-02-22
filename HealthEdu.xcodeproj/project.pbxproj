@@ -73,6 +73,7 @@
 		7CF5E18D1E5BE0B400EE42DE /* BaikeDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E18C1E5BE0B400EE42DE /* BaikeDetailObject.m */; };
 		7CF5E1931E5BE21900EE42DE /* BaikeSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E1901E5BE21900EE42DE /* BaikeSource.m */; };
 		7CF5E1961E5CA5D600EE42DE /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E1951E5CA5D600EE42DE /* Comment.m */; };
+		7CF5E1991E5D353500EE42DE /* BaikeDetailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E1981E5D353500EE42DE /* BaikeDetailSource.m */; };
 		7CF736B01DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736AF1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m */; };
 		7CF736B21DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736B11DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib */; };
 		7CF736B61DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736B41DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m */; };
@@ -271,6 +272,8 @@
 		7CF5E1911E5BE21900EE42DE /* BaikeSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaikeSource.h; sourceTree = "<group>"; };
 		7CF5E1941E5CA5D500EE42DE /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		7CF5E1951E5CA5D600EE42DE /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		7CF5E1971E5D353500EE42DE /* BaikeDetailSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaikeDetailSource.h; sourceTree = "<group>"; };
+		7CF5E1981E5D353500EE42DE /* BaikeDetailSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaikeDetailSource.m; sourceTree = "<group>"; };
 		7CF736AE1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiKeSicknessFoldCategoryView.h; sourceTree = "<group>"; };
 		7CF736AF1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiKeSicknessFoldCategoryView.m; sourceTree = "<group>"; };
 		7CF736B11DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiKeSicknessFoldCategoryView.xib; sourceTree = "<group>"; };
@@ -532,6 +535,8 @@
 				7CF5E1821E5B49C300EE42DE /* ConsultListSource.m */,
 				7CF5E1911E5BE21900EE42DE /* BaikeSource.h */,
 				7CF5E1901E5BE21900EE42DE /* BaikeSource.m */,
+				7CF5E1971E5D353500EE42DE /* BaikeDetailSource.h */,
+				7CF5E1981E5D353500EE42DE /* BaikeDetailSource.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1207,6 +1212,7 @@
 				7CF8F3AB1DE57568003BBE60 /* NSString+MD5.m in Sources */,
 				7C379B241DEE65BE004627E9 /* ChangeNameViewController.m in Sources */,
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
+				7CF5E1991E5D353500EE42DE /* BaikeDetailSource.m in Sources */,
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
 				7CF5E1931E5BE21900EE42DE /* BaikeSource.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
