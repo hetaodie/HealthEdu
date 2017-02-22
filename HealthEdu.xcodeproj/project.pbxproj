@@ -74,6 +74,9 @@
 		7CF5E1931E5BE21900EE42DE /* BaikeSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E1901E5BE21900EE42DE /* BaikeSource.m */; };
 		7CF5E1961E5CA5D600EE42DE /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E1951E5CA5D600EE42DE /* Comment.m */; };
 		7CF5E1991E5D353500EE42DE /* BaikeDetailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E1981E5D353500EE42DE /* BaikeDetailSource.m */; };
+		7CF5E19C1E5D38F300EE42DE /* LectureHailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E19A1E5D38F300EE42DE /* LectureHailSource.m */; };
+		7CF5E19F1E5D396E00EE42DE /* LectureHailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E19E1E5D396E00EE42DE /* LectureHailObject.m */; };
+		7CF5E1A21E5D398C00EE42DE /* LectureHailClassifyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E1A11E5D398C00EE42DE /* LectureHailClassifyObject.m */; };
 		7CF736B01DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736AF1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m */; };
 		7CF736B21DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736B11DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib */; };
 		7CF736B61DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736B41DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.m */; };
@@ -95,12 +98,17 @@
 		7CF736E71DDBB61B00F92222 /* LectureHailContentElementCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736E51DDBB61B00F92222 /* LectureHailContentElementCollectionViewCell.m */; };
 		7CF736E81DDBB61B00F92222 /* LectureHailContentElementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF736E61DDBB61B00F92222 /* LectureHailContentElementCollectionViewCell.xib */; };
 		7CF736ED1DDBEDDA00F92222 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF736EC1DDBEDDA00F92222 /* PlayerView.m */; };
-		7CF8F3981DE430D2003BBE60 /* LectureHailContentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8F3971DE430D2003BBE60 /* LectureHailContentObject.m */; };
 		7CF8F39F1DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8F39D1DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.m */; };
 		7CF8F3A01DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF8F39E1DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.xib */; };
 		7CF8F3A31DE48BAA003BBE60 /* LecturePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8F3A21DE48BAA003BBE60 /* LecturePlayerView.m */; };
 		7CF8F3A51DE48BB6003BBE60 /* LecturePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF8F3A41DE48BB6003BBE60 /* LecturePlayerView.xib */; };
 		7CF8F3AB1DE57568003BBE60 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8F3AA1DE57568003BBE60 /* NSString+MD5.m */; };
+		7CFCCC131E5D748800DCEC21 /* LearnCommunitySource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC111E5D748800DCEC21 /* LearnCommunitySource.m */; };
+		7CFCCC181E5D754300DCEC21 /* LearnCommunityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC141E5D754300DCEC21 /* LearnCommunityObject.m */; };
+		7CFCCC191E5D754300DCEC21 /* LearnCommunityClassifyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC171E5D754300DCEC21 /* LearnCommunityClassifyObject.m */; };
+		7CFCCC231E5DE3A100DCEC21 /* ConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC221E5DE3A100DCEC21 /* ConferenceViewController.m */; };
+		7CFCCC271E5DE5F200DCEC21 /* ConferenceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC251E5DE5F200DCEC21 /* ConferenceTableViewCell.m */; };
+		7CFCCC281E5DE5F200DCEC21 /* ConferenceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFCCC261E5DE5F200DCEC21 /* ConferenceTableViewCell.xib */; };
 		87FF3A461CC04FFE94D920AA /* libPods-HealthEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E718DE9FCA3253C2582194C5 /* libPods-HealthEdu.a */; };
 		E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC51DC2E37400A0369B /* UIColor+HEX.m */; };
 		E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC81DC3484A00A0369B /* UIColor+MaxColor.m */; };
@@ -274,6 +282,12 @@
 		7CF5E1951E5CA5D600EE42DE /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		7CF5E1971E5D353500EE42DE /* BaikeDetailSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaikeDetailSource.h; sourceTree = "<group>"; };
 		7CF5E1981E5D353500EE42DE /* BaikeDetailSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaikeDetailSource.m; sourceTree = "<group>"; };
+		7CF5E19A1E5D38F300EE42DE /* LectureHailSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureHailSource.m; sourceTree = "<group>"; };
+		7CF5E19B1E5D38F300EE42DE /* LectureHailSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureHailSource.h; sourceTree = "<group>"; };
+		7CF5E19D1E5D396E00EE42DE /* LectureHailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureHailObject.h; sourceTree = "<group>"; };
+		7CF5E19E1E5D396E00EE42DE /* LectureHailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureHailObject.m; sourceTree = "<group>"; };
+		7CF5E1A01E5D398C00EE42DE /* LectureHailClassifyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureHailClassifyObject.h; sourceTree = "<group>"; };
+		7CF5E1A11E5D398C00EE42DE /* LectureHailClassifyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureHailClassifyObject.m; sourceTree = "<group>"; };
 		7CF736AE1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiKeSicknessFoldCategoryView.h; sourceTree = "<group>"; };
 		7CF736AF1DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaiKeSicknessFoldCategoryView.m; sourceTree = "<group>"; };
 		7CF736B11DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaiKeSicknessFoldCategoryView.xib; sourceTree = "<group>"; };
@@ -308,8 +322,6 @@
 		7CF736EA1DDBEDDA00F92222 /* PlayerEnum-all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PlayerEnum-all.h"; sourceTree = "<group>"; };
 		7CF736EB1DDBEDDA00F92222 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
 		7CF736EC1DDBEDDA00F92222 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
-		7CF8F3961DE430D2003BBE60 /* LectureHailContentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureHailContentObject.h; sourceTree = "<group>"; };
-		7CF8F3971DE430D2003BBE60 /* LectureHailContentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureHailContentObject.m; sourceTree = "<group>"; };
 		7CF8F39C1DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureHailContentCollectionViewCell.h; sourceTree = "<group>"; };
 		7CF8F39D1DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureHailContentCollectionViewCell.m; sourceTree = "<group>"; };
 		7CF8F39E1DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LectureHailContentCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -318,6 +330,17 @@
 		7CF8F3A41DE48BB6003BBE60 /* LecturePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LecturePlayerView.xib; sourceTree = "<group>"; };
 		7CF8F3A91DE57568003BBE60 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		7CF8F3AA1DE57568003BBE60 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		7CFCCC111E5D748800DCEC21 /* LearnCommunitySource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnCommunitySource.m; sourceTree = "<group>"; };
+		7CFCCC121E5D748800DCEC21 /* LearnCommunitySource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnCommunitySource.h; sourceTree = "<group>"; };
+		7CFCCC141E5D754300DCEC21 /* LearnCommunityObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnCommunityObject.m; sourceTree = "<group>"; };
+		7CFCCC151E5D754300DCEC21 /* LearnCommunityObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnCommunityObject.h; sourceTree = "<group>"; };
+		7CFCCC161E5D754300DCEC21 /* LearnCommunityClassifyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnCommunityClassifyObject.h; sourceTree = "<group>"; };
+		7CFCCC171E5D754300DCEC21 /* LearnCommunityClassifyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnCommunityClassifyObject.m; sourceTree = "<group>"; };
+		7CFCCC211E5DE3A100DCEC21 /* ConferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceViewController.h; sourceTree = "<group>"; };
+		7CFCCC221E5DE3A100DCEC21 /* ConferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceViewController.m; sourceTree = "<group>"; };
+		7CFCCC241E5DE5F200DCEC21 /* ConferenceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceTableViewCell.h; sourceTree = "<group>"; };
+		7CFCCC251E5DE5F200DCEC21 /* ConferenceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceTableViewCell.m; sourceTree = "<group>"; };
+		7CFCCC261E5DE5F200DCEC21 /* ConferenceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceTableViewCell.xib; sourceTree = "<group>"; };
 		9323F8D8773924F12DA09357 /* Pods-HealthEdu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.debug.xcconfig"; sourceTree = "<group>"; };
 		A216E4697B5EBA35B628872D /* Pods-HealthEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.release.xcconfig"; sourceTree = "<group>"; };
 		E6123CC41DC2E37400A0369B /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
@@ -537,6 +560,10 @@
 				7CF5E1901E5BE21900EE42DE /* BaikeSource.m */,
 				7CF5E1971E5D353500EE42DE /* BaikeDetailSource.h */,
 				7CF5E1981E5D353500EE42DE /* BaikeDetailSource.m */,
+				7CF5E19B1E5D38F300EE42DE /* LectureHailSource.h */,
+				7CF5E19A1E5D38F300EE42DE /* LectureHailSource.m */,
+				7CFCCC121E5D748800DCEC21 /* LearnCommunitySource.h */,
+				7CFCCC111E5D748800DCEC21 /* LearnCommunitySource.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -653,8 +680,6 @@
 		7CC685721DD9680300E2AB19 /* object */ = {
 			isa = PBXGroup;
 			children = (
-				7CF8F3961DE430D2003BBE60 /* LectureHailContentObject.h */,
-				7CF8F3971DE430D2003BBE60 /* LectureHailContentObject.m */,
 				7C87BF511DE6D76C0034C613 /* VideoDownLoaderObject.h */,
 				7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */,
 				7C85FF421E5408C80019C1D5 /* PopularRecommendObject.h */,
@@ -671,6 +696,14 @@
 				7CF5E1891E5BE03800EE42DE /* BaikeObject.m */,
 				7CF5E18B1E5BE0B400EE42DE /* BaikeDetailObject.h */,
 				7CF5E18C1E5BE0B400EE42DE /* BaikeDetailObject.m */,
+				7CF5E1A01E5D398C00EE42DE /* LectureHailClassifyObject.h */,
+				7CF5E1A11E5D398C00EE42DE /* LectureHailClassifyObject.m */,
+				7CF5E19D1E5D396E00EE42DE /* LectureHailObject.h */,
+				7CF5E19E1E5D396E00EE42DE /* LectureHailObject.m */,
+				7CFCCC151E5D754300DCEC21 /* LearnCommunityObject.h */,
+				7CFCCC141E5D754300DCEC21 /* LearnCommunityObject.m */,
+				7CFCCC161E5D754300DCEC21 /* LearnCommunityClassifyObject.h */,
+				7CFCCC171E5D754300DCEC21 /* LearnCommunityClassifyObject.m */,
 			);
 			path = object;
 			sourceTree = "<group>";
@@ -683,6 +716,67 @@
 				7CF736EC1DDBEDDA00F92222 /* PlayerView.m */,
 			);
 			path = AVPlayer;
+			sourceTree = "<group>";
+		};
+		7CFCCC1A1E5DE37900DCEC21 /* Conference */ = {
+			isa = PBXGroup;
+			children = (
+				7CFCCC1B1E5DE37900DCEC21 /* model */,
+				7CFCCC1E1E5DE37900DCEC21 /* view */,
+				7CFCCC201E5DE37900DCEC21 /* ViewController */,
+			);
+			name = Conference;
+			path = HealthEdu/Conference;
+			sourceTree = SOURCE_ROOT;
+		};
+		7CFCCC1B1E5DE37900DCEC21 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7CFCCC1C1E5DE37900DCEC21 /* model */,
+				7CFCCC1D1E5DE37900DCEC21 /* object */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7CFCCC1C1E5DE37900DCEC21 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7CFCCC1D1E5DE37900DCEC21 /* object */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = object;
+			sourceTree = "<group>";
+		};
+		7CFCCC1E1E5DE37900DCEC21 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7CFCCC1F1E5DE37900DCEC21 /* cell */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7CFCCC1F1E5DE37900DCEC21 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				7CFCCC241E5DE5F200DCEC21 /* ConferenceTableViewCell.h */,
+				7CFCCC251E5DE5F200DCEC21 /* ConferenceTableViewCell.m */,
+				7CFCCC261E5DE5F200DCEC21 /* ConferenceTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		7CFCCC201E5DE37900DCEC21 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7CFCCC211E5DE3A100DCEC21 /* ConferenceViewController.h */,
+				7CFCCC221E5DE3A100DCEC21 /* ConferenceViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		89C1F562CB5BBC99C346DC2C /* Frameworks */ = {
@@ -874,6 +968,7 @@
 				E6123CC31DC2E36D00A0369B /* Public */,
 				E62342AA1D9A076500FE8254 /* Home */,
 				E62342CD1D9A107300FE8254 /* Consultation */,
+				7CFCCC1A1E5DE37900DCEC21 /* Conference */,
 				E62342D31D9A107300FE8254 /* Service */,
 				E62342C71D9A107300FE8254 /* Account */,
 				E6C699031D990B2A00D2818C /* AppDelegate.h */,
@@ -1054,6 +1149,7 @@
 				7CF736CE1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.xib in Resources */,
 				7C379B061DEC6B9B004627E9 /* PersonInfoTableViewCell.xib in Resources */,
 				4FDE9CDA1DB4EC2300D9C790 /* HomeContentHeaderView.xib in Resources */,
+				7CFCCC281E5DE5F200DCEC21 /* ConferenceTableViewCell.xib in Resources */,
 				E6EC27A21DBD99A700DEE06D /* BKDetailViewController.xib in Resources */,
 				7C379B131DED1595004627E9 /* ChangePassWordViewController.xib in Resources */,
 				7C87BFA91DE80BDE0034C613 /* SelectCityView.xib in Resources */,
@@ -1149,18 +1245,19 @@
 				7CF736ED1DDBEDDA00F92222 /* PlayerView.m in Sources */,
 				E6EC27A11DBD99A700DEE06D /* BKDetailViewController.m in Sources */,
 				7CF736D41DDAFD0D00F92222 /* NSMutableArray+HF.m in Sources */,
-				7CF8F3981DE430D2003BBE60 /* LectureHailContentObject.m in Sources */,
 				7CF8F39F1DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.m in Sources */,
 				E6C699051D990B2A00D2818C /* AppDelegate.m in Sources */,
 				E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */,
 				7C366BF31E531F2C00F88D85 /* VideoHistoryManager.m in Sources */,
 				7C87BFC11DE833080034C613 /* LocationManager.m in Sources */,
+				7CF5E19F1E5D396E00EE42DE /* LectureHailObject.m in Sources */,
 				7C87BF5A1DE7D3530034C613 /* PlayHistoryTableViewCell.m in Sources */,
 				7C87BFB21DE81ACF0034C613 /* CitysView.m in Sources */,
 				E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */,
 				7C379AE41DEBF7CC004627E9 /* AccountContentObject.m in Sources */,
 				7C85FF441E5408C80019C1D5 /* PopularRecommendObject.m in Sources */,
 				7C34F3951DD1D4AE00C61015 /* ConsultContentView.m in Sources */,
+				7CFCCC181E5D754300DCEC21 /* LearnCommunityObject.m in Sources */,
 				7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */,
 				7CF03E951E5ADF020088CD9F /* ConsultDetailObject.m in Sources */,
 				E6E153691DC0BA5F0094A947 /* TopTabScrollView.m in Sources */,
@@ -1172,6 +1269,7 @@
 				7CF736E71DDBB61B00F92222 /* LectureHailContentElementCollectionViewCell.m in Sources */,
 				7CF736E11DDBB3BB00F92222 /* LectureHailContentView.m in Sources */,
 				E6C699021D990B2A00D2818C /* main.m in Sources */,
+				7CFCCC191E5D754300DCEC21 /* LearnCommunityClassifyObject.m in Sources */,
 				7CF736BA1DDADA7500F92222 /* UILabel+Calculate.m in Sources */,
 				7CF5E1961E5CA5D600EE42DE /* Comment.m in Sources */,
 				E6EC27B51DBD9A8F00DEE06D /* LearnCommunityViewController.m in Sources */,
@@ -1193,6 +1291,8 @@
 				7C379B201DED9D3F004627E9 /* CacheManager.m in Sources */,
 				7CF03E921E5ADE520088CD9F /* ConsultDetailSource.m in Sources */,
 				7C379B051DEC6B9B004627E9 /* PersonInfoTableViewCell.m in Sources */,
+				7CF5E1A21E5D398C00EE42DE /* LectureHailClassifyObject.m in Sources */,
+				7CF5E19C1E5D38F300EE42DE /* LectureHailSource.m in Sources */,
 				7CF5E17E1E5B48FE00EE42DE /* ConsultClassifyObject.m in Sources */,
 				7C379B091DEC6D85004627E9 /* PersonInfoObject.m in Sources */,
 				7CF5E1871E5BDFBE00EE42DE /* BaiKeClassifyObject.m in Sources */,
@@ -1201,6 +1301,7 @@
 				7C366BE21E531C0200F88D85 /* HENetTask.m in Sources */,
 				4FDE9CD41DB4D20600D9C790 /* HomeContentTableViewCell.m in Sources */,
 				E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */,
+				7CFCCC131E5D748800DCEC21 /* LearnCommunitySource.m in Sources */,
 				7C366BF21E531F2C00F88D85 /* VideoDownloaderManger.m in Sources */,
 				7C379B1C1DED5E74004627E9 /* CacheCollectionViewCell.m in Sources */,
 				7CF736C71DDAE66200F92222 /* BaiKeSicknessContentView.m in Sources */,
@@ -1208,6 +1309,7 @@
 				7CF736DD1DDB102900F92222 /* CycleBannersCollectionViewCell.m in Sources */,
 				E6EC27A61DBD99C800DEE06D /* LectureHailViewController.m in Sources */,
 				7CF736CD1DDAEE9D00F92222 /* BaikeSicknessContentTableViewCell.m in Sources */,
+				7CFCCC271E5DE5F200DCEC21 /* ConferenceTableViewCell.m in Sources */,
 				7CF736D81DDB101600F92222 /* CycleBannersView.m in Sources */,
 				7CF8F3AB1DE57568003BBE60 /* NSString+MD5.m in Sources */,
 				7C379B241DEE65BE004627E9 /* ChangeNameViewController.m in Sources */,
@@ -1224,6 +1326,7 @@
 				7CF5E1811E5B493C00EE42DE /* ConsultListObject.m in Sources */,
 				E62342DE1D9A157600FE8254 /* ConsultationViewController.m in Sources */,
 				E6E1536C1DC0BC070094A947 /* TopTabScrollViewCell.m in Sources */,
+				7CFCCC231E5DE3A100DCEC21 /* ConferenceViewController.m in Sources */,
 				E6EC27AB1DBD9A4C00DEE06D /* PlayerViewController.m in Sources */,
 				E6EC27CE1DBD9E4D00DEE06D /* PersonInfoViewController.m in Sources */,
 				7C379AF51DEC31C3004627E9 /* SettingViewController.m in Sources */,

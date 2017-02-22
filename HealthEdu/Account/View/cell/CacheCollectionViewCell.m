@@ -21,7 +21,7 @@ const CGFloat CacheCollectionViewCellCapWidth = 43;
 @property (weak, nonatomic) IBOutlet UILabel *videoTimeLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *editedStatusButton;
-@property (strong, nonatomic) LectureHailContentObject *hailContentObject;
+@property (strong, nonatomic) LectureHailObject *hailContentObject;
 @end
 
 @implementation CacheCollectionViewCell
@@ -63,10 +63,10 @@ const CGFloat CacheCollectionViewCellCapWidth = 43;
     return size;
 }
 
-- (void)showCellWithData:(LectureHailContentObject *)aData{
+- (void)showCellWithData:(LectureHailObject *)aData{
     self.hailContentObject = aData;
     
-    [self setVideoInfoWithUrl:aData.videoUrl];
+    [self setVideoInfoWithUrl:aData.exturl];
     self.titleLabel.text = aData.title;
 }
 

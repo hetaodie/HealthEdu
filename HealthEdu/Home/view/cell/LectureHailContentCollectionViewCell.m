@@ -27,7 +27,7 @@
     self.contentArray = [[NSMutableArray alloc] init];
     
     [self setUpCollectionView];
-    [self addTestData];
+   // [self addTestData];
 }
 
 #pragma mark -
@@ -35,6 +35,12 @@
 
 #pragma mark -
 #pragma mark public
+
+- (void)showCellWithArray:(NSArray *)aArray{
+    [self.contentArray setArray:aArray];
+    [self.collectionView reloadData];
+    
+}
 
 #pragma mark -
 #pragma mark delegate
@@ -48,7 +54,7 @@
 
 - ( UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     LectureHailContentElementCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LectureHailContentElementCollectionViewCell" forIndexPath:indexPath];
-    LectureHailContentObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    LectureHailObject *object = [self.contentArray objectAtIndex:indexPath.row];
     
     [cell showCellWithData:object];
     
@@ -58,7 +64,13 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
     
-    LectureHailContentObject *object = [self.contentArray objectAtIndex:row];
+    LectureHailObject *object = [self.contentArray objectAtIndex:row];
+    
+    if ([object.exturl length] == 0) {
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"提示" message:@"视频连接为空！" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles: nil];
+        [alertview show];
+        return;
+    }
     if(self.delegate && [self.delegate respondsToSelector:@selector(clickOneElementOfCellWithInfo:withIndex:)]){
         [self.delegate clickOneElementOfCellWithInfo:object withIndex:row];
     }
@@ -85,16 +97,16 @@
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"LectureHailContentElementCollectionViewCell"];
 }
 
-- (void)addTestData{
-    for (int i =1; i<16; i++) {
-        LectureHailContentObject *object = [[LectureHailContentObject alloc] init];
-        NSString *strUrl = [NSString stringWithFormat:@"http://120.25.226.186:32812/resources/videos/minion_0%d.mp4",i];
-        object.videoUrl= strUrl;
-        object.title = @"台湾医疗美容市场流行用高压氧抗老用高压氧抗老用高压氧抗老";
-        [self.contentArray addObject:object];
-    }
-    [self.collectionView reloadData];
-}
+//- (void)addTestData{
+//    for (int i =1; i<16; i++) {
+//        LectureHailObject *object = [[LectureHailObject alloc] init];
+//        NSString *strUrl = [NSString stringWithFormat:@"http://120.25.226.186:32812/resources/videos/minion_0%d.mp4",i];
+//        object.exturl= strUrl;
+//        object.title = @"台湾医疗美容市场流行用高压氧抗老用高压氧抗老用高压氧抗老";
+//        [self.contentArray addObject:object];
+//    }
+//    [self.collectionView reloadData];
+//}
 
 - (void)dealloc
 {

@@ -39,16 +39,16 @@
     VideoDownloaderManger *manager = [VideoDownloaderManger sharedInstance];
     NSDictionary *completedVideoDic = [manager getCompletedVideo];
     
-    LectureHailContentObject *completedVideoObject = [completedVideoDic objectForKey:self.videoObject.videoUrl.MD5];
+    LectureHailObject *completedVideoObject = [completedVideoDic objectForKey:self.videoObject.exturl.MD5];
     if (completedVideoObject) {
-        NSString *videoPath = [manager getVideoFilePathWithUrl:self.videoObject.videoUrl];
+        NSString *videoPath = [manager getVideoFilePathWithUrl:self.videoObject.exturl];
         NSURL *url=[NSURL fileURLWithPath:videoPath];
         [self.playerView setNewUrl:url isCircle:NO];
 
     }
     else{
         
-        NSURL *url = [NSURL URLWithString:self.videoObject.videoUrl ];
+        NSURL *url = [NSURL URLWithString:self.videoObject.exturl ];
         [self.playerView setNewUrl:url isCircle:NO];
 
     }
@@ -64,9 +64,9 @@
     NSDictionary *downVideoDic = [manager getDownloadingVideo];
     NSDictionary *completedVideoDic = [manager getCompletedVideo];
     
-    LectureHailContentObject *downVideoObject = [downVideoDic objectForKey:self.videoObject.videoUrl.MD5];
+    LectureHailObject *downVideoObject = [downVideoDic objectForKey:self.videoObject.exturl.MD5];
     
-    LectureHailContentObject *completedVideoObject = [completedVideoDic objectForKey:self.videoObject.videoUrl.MD5];
+    LectureHailObject *completedVideoObject = [completedVideoDic objectForKey:self.videoObject.exturl.MD5];
     
     if (downVideoObject) {
         [self.downBtnNameLabel setText:@"正在缓存"];
@@ -117,8 +117,8 @@
 
 - (void)videoDownLoadCompleted:(NSNotification *)notification{
     NSDictionary *userInfo = notification.userInfo;
-    NSString *videoUrl=[userInfo objectForKey:@"videoUrl"];
-    if ([videoUrl isEqualToString:self.videoObject.videoUrl]) {
+    NSString *exturl=[userInfo objectForKey:@"exturl"];
+    if ([exturl isEqualToString:self.videoObject.exturl]) {
         [self.downBtnNameLabel setText:@"已缓存"];
         [self.downLoadButton setEnabled:NO];
     }

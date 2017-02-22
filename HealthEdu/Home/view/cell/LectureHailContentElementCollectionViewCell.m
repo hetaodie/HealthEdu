@@ -8,6 +8,7 @@
 
 #import "LectureHailContentElementCollectionViewCell.h"
 #import "PlayerView.h"
+#import "UIImageView+WebCache.h"
 
 const CGFloat LectureHailContentCollectionViewCellCapHeight = 53.5;
 const CGFloat LectureHailContentCollectionViewCellCapWidth = 43;
@@ -46,10 +47,12 @@ const CGFloat LectureHailContentCollectionViewCellCapWidth = 43;
     return size;
 }
 
-- (void)showCellWithData:(LectureHailContentObject *)aData{
+- (void)showCellWithData:(LectureHailObject *)aData{
     
-    [self setVideoInfoWithUrl:aData.videoUrl];
+   // [self setVideoInfoWithUrl:aData.exturl];
     self.titleLabel.text = aData.title;
+    [self.playerImageView sd_setImageWithURL:[NSURL URLWithString:aData.picurl] placeholderImage:[UIImage imageNamed:@"lectureHailCycleDefaut.png"]];
+    self.videoTimeLabel.text = aData.content2;
 }
 
 - (void) setVideoInfoWithUrl:(NSString *)aStrUrl

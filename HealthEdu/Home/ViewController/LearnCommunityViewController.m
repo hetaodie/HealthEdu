@@ -14,8 +14,11 @@
 #import "PlayerViewController.h"
 
 #import "PlayHistoryViewController.h"
+#import "LearnCommunitySource.h"
 
-@interface LearnCommunityViewController ()<TopTabScrollViewDelegate,CycleBannersViewDelegate,LectureHailContentViewDelegate>
+#import "LearnCommunityClassifyObject.h"
+
+@interface LearnCommunityViewController ()<TopTabScrollViewDelegate,CycleBannersViewDelegate,LectureHailContentViewDelegate,LearnCommunitySourceDelegate>
 @property (nonatomic, strong) NSMutableArray *bannersArray;
 @property (nonatomic, strong) NSMutableArray *topArray;
 @property (nonatomic, strong) NSMutableArray *contentArray;
@@ -26,6 +29,8 @@
 
 @property (weak, nonatomic) IBOutlet LectureHailContentView *contentView;
 
+@property (nonatomic, strong) LearnCommunitySource *communitySource;
+@property (nonatomic, assign) NSInteger selectIndex;
 
 @end
 
@@ -53,13 +58,17 @@
     self.cycleBannersView.delegate = self;
     self.contentView.delegate = self;
     
-    NSArray *tmpArray = [NSArray arrayWithObjects:@"推荐",@"常见病",@"养生",@"健身",@"两性",@"美容", @"推荐",@"热点",@"前沿",@"时评",@"政策",@"提醒", nil];
-    [self.topArray setArray:tmpArray];
-    [self.contentView showViewWithArray:self.contentArray];
+//    NSArray *tmpArray = [NSArray arrayWithObjects:@"推荐",@"常见病",@"养生",@"健身",@"两性",@"美容", @"推荐",@"热点",@"前沿",@"时评",@"政策",@"提醒", nil];
+//    [self.topArray setArray:tmpArray];
+//    [self.contentView showViewWithArray:self.contentArray];
     
-    [self.topTabScrollView reloadData];
+ //   [self.topTabScrollView reloadData];
     
-    [self.topTabScrollView selectRow:0 animated:YES scrollPosition:TopTabScrollViewScrollPositionNone];
+    
+    //[self.topTabScrollView selectRow:0 animated:YES scrollPosition:TopTabScrollViewScrollPositionNone];
+    self.communitySource  = [[LearnCommunitySource alloc] init];
+    self.communitySource.delegate = self;
+    [self.communitySource getLearnCommunityClassify];
     
     [self.cycleBannersView showBannersWithBannersArray:self.bannersArray];
     
@@ -101,30 +110,57 @@
 }
 
 - (CGFloat)topTabScrollView:(TopTabScrollView *)topTabScrollView widthForItemAtRow:(NSInteger)row{
-    NSString *content = [self.topArray objectAtIndex:row];
-    CGFloat width = [TopTabScrollViewCell cellWidthWithString:content];
+    LearnCommunityClassifyObject *object = [self.topArray objectAtIndex:row];
+    CGFloat width = [TopTabScrollViewCell cellWidthWithString:object.title];
     return width;
 }
 
 - (TopTabScrollViewCell *)topTabScrollView:(TopTabScrollView *)topTabScrollView cellForItemAtRow:(NSInteger)row{
     TopTabScrollViewCell *cell = [TopTabScrollViewCell viewFromXib];
     
-    NSString *content = [self.topArray objectAtIndex:row];
-    cell.titleLabel.text = content;
+     LearnCommunityClassifyObject *object = [self.topArray objectAtIndex:row];
+    cell.titleLabel.text = object.title;
     return cell;
 }
 
 - (void)topTabScrollView:(TopTabScrollView *)topTabScrollView didSelectRow:(NSInteger )row{
+    self.selectIndex = row;
+
+    LearnCommunityClassifyObject *object = [self.topArray objectAtIndex:row];
+    [self.communitySource getLearnCommunityData:object.id];
     [self.contentView selectContentWithIndex:row];
 }
 
-- (void)contentOneContentCellWithSelect:(LectureHailContentObject *)aObject withIndex:(NSInteger)aIndex{
+- (void)contentOneContentCellWithSelect:(LectureHailObject *)aObject withIndex:(NSInteger)aIndex{
     PlayerViewController *ndVC = [[PlayerViewController alloc] initWithNibName:@"PlayerViewController" bundle:nil];
     ndVC.videoObject = aObject;
     ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
 }
 
+- (void)onLearnCommunityClassifySuccess:(NSArray *)aArray{
+    [self.topArray setArray:aArray];
+    self.selectIndex = 0;
+    
+    [self testData];
+    [self.contentView showViewWithArray:self.contentArray];
+    
+    [self.topTabScrollView reloadData];
+    [self.topTabScrollView selectRow:0 animated:YES scrollPosition:TopTabScrollViewScrollPositionNone];
+}
+
+- (void)onLearnCommunityClassifyError{
+
+}
+
+- (void)onLearnCommunityDataSuccess:(NSArray *)aArray{
+    [self.contentArray replaceObjectAtIndex:self.selectIndex withObject:aArray];
+    [self.contentView showViewWithArray:self.contentArray];
+}
+
+- (void)onLearnCommunityDataError{
+
+}
 
 #pragma mark -
 #pragma mark ConsultViewConrentdelegate
@@ -148,8 +184,11 @@
     NSArray *banners = [NSArray arrayWithObjects:@"1", @"1", @"1", @"1", @"1", @"1", nil];
     [self.bannersArray setArray:banners];
     
-    NSArray *contents = [NSArray arrayWithObjects:@"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", @"11", nil];
-    [self.contentArray setArray:contents];
+    NSInteger count = [self.topArray count];
+    for (int i= 0; i<count; i++) {
+        NSArray *array = [NSArray array];
+        [self.contentArray addObject:array];
+    }
 }
 
 - (void)lookHistory:(id)sender{

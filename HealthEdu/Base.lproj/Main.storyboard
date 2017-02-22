@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -641,7 +641,7 @@
             <objects>
                 <navigationController id="oRC-VX-sgg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我" image="wode" selectedImage="wode2" id="cpm-bO-A4e"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="qMW-Ek-GFi">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" translucent="NO" id="qMW-Ek-GFi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -660,15 +660,18 @@
             </objects>
             <point key="canvasLocation" x="199" y="-46"/>
         </scene>
-        <!--挂号-->
+        <!--会议-->
         <scene sceneID="ECQ-q2-Tno">
             <objects>
                 <navigationController id="Yoy-9S-EN8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="挂号" image="guahao1" selectedImage="guahao1" id="YmS-qd-xE8"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZTW-h8-Jdn">
+                    <tabBarItem key="tabBarItem" title="会议" image="conferenceicon2" selectedImage="conferenceicon" id="YmS-qd-xE8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZTW-h8-Jdn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="cSs-9E-RRj" kind="relationship" relationship="rootViewController" id="a7I-x0-Sde"/>
@@ -678,10 +681,10 @@
             </objects>
             <point key="canvasLocation" x="-538" y="457"/>
         </scene>
-        <!--View Controller-->
+        <!--会议-->
         <scene sceneID="NE7-nb-aOL">
             <objects>
-                <viewController id="cSs-9E-RRj" sceneMemberID="viewController">
+                <viewController id="cSs-9E-RRj" customClass="ConferenceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OIE-78-tjf"/>
                         <viewControllerLayoutGuide type="bottom" id="N6c-nP-1Te"/>
@@ -689,9 +692,24 @@
                     <view key="view" contentMode="scaleToFill" id="fs8-29-vMS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xyq-CH-e3X">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xyq-CH-e3X" secondAttribute="trailing" id="0Yb-fx-tAL"/>
+                            <constraint firstItem="Xyq-CH-e3X" firstAttribute="top" secondItem="OIE-78-tjf" secondAttribute="bottom" id="2Ok-Kn-Uok"/>
+                            <constraint firstItem="N6c-nP-1Te" firstAttribute="top" secondItem="Xyq-CH-e3X" secondAttribute="bottom" id="XwV-EX-RaA"/>
+                            <constraint firstItem="Xyq-CH-e3X" firstAttribute="leading" secondItem="fs8-29-vMS" secondAttribute="leading" id="bbi-EE-IH6"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DTk-Wm-JAm"/>
+                    <navigationItem key="navigationItem" title="会议" id="DTk-Wm-JAm"/>
+                    <connections>
+                        <outlet property="contentTableView" destination="Xyq-CH-e3X" id="Oa3-zu-x3M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sA1-np-mJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -722,10 +740,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="conferenceicon" width="26" height="24"/>
+        <image name="conferenceicon2" width="26" height="24"/>
         <image name="di" width="750" height="368"/>
         <image name="fuwu" width="20" height="25"/>
         <image name="fuwu2" width="20" height="25"/>
-        <image name="guahao1" width="25" height="24"/>
         <image name="shouye" width="26" height="23"/>
         <image name="shouye2" width="26" height="23"/>
         <image name="touxiang" width="207" height="207"/>

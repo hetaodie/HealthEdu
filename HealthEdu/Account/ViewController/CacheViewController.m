@@ -8,7 +8,7 @@
 
 #import "CacheViewController.h"
 #import "UIColor+HEX.h"
-#import "LectureHailContentObject.h"
+#import "LectureHailObject.h"
 #import "VideoDownloaderManger.h"
 #import "CacheCollectionViewCell.h"
 
@@ -93,12 +93,12 @@
 }
 
 - (IBAction)deleteBtnPress:(id)sender {
-    [self.selectVideoArray enumerateObjectsUsingBlock:^(LectureHailContentObject *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.selectVideoArray enumerateObjectsUsingBlock:^(LectureHailObject *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (self.selectCacheTag == 0) {
-            [[VideoDownloaderManger sharedInstance] removeCompletedVideoWithString:obj.videoUrl];
+            [[VideoDownloaderManger sharedInstance] removeCompletedVideoWithString:obj.exturl];
         }
         else{
-            [[VideoDownloaderManger sharedInstance] removeDownLoadingVideoWithString:obj.videoUrl];
+            [[VideoDownloaderManger sharedInstance] removeDownLoadingVideoWithString:obj.exturl];
         }
         
     }];
@@ -161,7 +161,7 @@
 #pragma mark -
 #pragma mark delegate
 
-- (void)onSelectVideoWithData:(LectureHailContentObject *)aObject andIsSelected:(BOOL)isSelected{
+- (void)onSelectVideoWithData:(LectureHailObject *)aObject andIsSelected:(BOOL)isSelected{
     if (isSelected) {
         [self.selectVideoArray addObject:aObject];
     }
@@ -181,7 +181,7 @@
     NSInteger status = [[self.videoStatusArray objectAtIndex:indexPath.row] integerValue];
     
     CacheCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CacheCollectionViewCell" forIndexPath:indexPath];
-    LectureHailContentObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    LectureHailObject *object = [self.contentArray objectAtIndex:indexPath.row];
     cell.delegate = self;
     
     [cell showCellWithData:object];
@@ -195,7 +195,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row;
     
-    LectureHailContentObject *object = [self.contentArray objectAtIndex:row];
+    LectureHailObject *object = [self.contentArray objectAtIndex:row];
     
 }
 

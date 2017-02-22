@@ -37,9 +37,9 @@
 #pragma mark -
 #pragma mark public
 
-- (void)showCellWithObject:(LectureHailContentObject *)aObject{
+- (void)showCellWithObject:(LectureHailObject *)aObject{
     self.titleLabel.text = aObject.title;
-    [self setVideoInfoWithUrl:aObject.videoUrl];
+    [self setVideoInfoWithUrl:aObject.exturl];
 }
 
 #pragma mark -

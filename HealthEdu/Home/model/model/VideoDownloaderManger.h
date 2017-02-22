@@ -15,7 +15,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "LectureHailContentObject.h"
+#import "LectureHailObject.h"
 
 @interface VideoDownloaderManger : NSObject
 
@@ -25,7 +25,7 @@
 
 - (NSDictionary *)getCompletedVideo;
 
-- (void)downloadVideoWithString:(LectureHailContentObject *)aObject;
+- (void)downloadVideoWithString:(LectureHailObject *)aObject;
 
 - (void)downloadAllVideo;
 

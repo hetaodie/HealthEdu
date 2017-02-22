@@ -85,14 +85,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     PlayHistoryTableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:@"PlayHistoryTableViewCell" forIndexPath:indexPath];
     
-    LectureHailContentObject *object = [self.historyVideoArray objectAtIndex:indexPath.row];
+    LectureHailObject *object = [self.historyVideoArray objectAtIndex:indexPath.row];
     [cell showCellWithObject:object];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    LectureHailContentObject *object = [self.historyVideoArray objectAtIndex:indexPath.row];
+    LectureHailObject *object = [self.historyVideoArray objectAtIndex:indexPath.row];
     PlayerViewController *ndVC = [[PlayerViewController alloc] initWithNibName:@"PlayerViewController" bundle:nil];
     ndVC.videoObject = object;
     ndVC.hidesBottomBarWhenPushed = YES;

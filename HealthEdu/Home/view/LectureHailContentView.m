@@ -8,7 +8,7 @@
 
 #import "LectureHailContentView.h"
 #import "LectureHailContentCollectionViewCell.h"
-#import "LectureHailContentObject.h"
+#import "LectureHailObject.h"
 
 @interface LectureHailContentView()<UICollectionViewDelegate,UICollectionViewDataSource,LectureHailContentViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *contentView;
@@ -78,7 +78,7 @@
 #pragma mark ConsultContentViewDelegate
 
 
-- (void)clickOneElementOfCellWithInfo:(LectureHailContentObject *)aObject withIndex:(NSInteger)aIndex{
+- (void)clickOneElementOfCellWithInfo:(LectureHailObject *)aObject withIndex:(NSInteger)aIndex{
     if (self.delegate && [self.delegate respondsToSelector:@selector(contentOneContentCellWithSelect:withIndex:)]) {
         [self.delegate contentOneContentCellWithSelect:aObject withIndex:aIndex];
     }
@@ -97,6 +97,7 @@
 - ( UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     LectureHailContentCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LectureHailContentCollectionViewCell" forIndexPath:indexPath];
         cell.delegate = self;
+    [cell showCellWithArray:[self.contentArray objectAtIndex:indexPath.row]];
     
     return cell;
 }

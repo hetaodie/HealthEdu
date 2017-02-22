@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LectureHailContentObject.h"
+#import "LectureHailObject.h"
 
 @interface VideoHistoryManager : NSObject
 
 + (instancetype)sharedInstance;
 
-- (void)addVideoToHistory:(LectureHailContentObject *)aObject;
+- (void)addVideoToHistory:(LectureHailObject *)aObject;
 
 - (NSArray *)getAllVideoHistory;
 
-- (void)removeVideoFromHistory:(LectureHailContentObject *)aObject;
+- (void)removeVideoFromHistory:(LectureHailObject *)aObject;
 
 @end

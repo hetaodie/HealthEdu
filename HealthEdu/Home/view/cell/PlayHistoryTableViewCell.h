@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LectureHailContentObject.h"
+#import "LectureHailObject.h"
 
 @interface PlayHistoryTableViewCell : UITableViewCell
 
-- (void)showCellWithObject:(LectureHailContentObject *)aObject;
+- (void)showCellWithObject:(LectureHailObject *)aObject;
 @end

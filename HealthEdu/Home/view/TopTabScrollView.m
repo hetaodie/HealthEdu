@@ -138,6 +138,9 @@ typedef NS_ENUM(NSInteger, MoveDirection) {
     CGFloat moveOffset;
     CGPoint center = self.moveView.center;
     
+    if (nextIndex>=[self.cellArray count]) {
+        return;
+    }
     TopTabScrollViewCell *cell = [self.cellArray objectAtIndex:nextIndex];
     CGFloat beginX = CGRectGetMidX(cell.frame);
     
@@ -164,6 +167,10 @@ typedef NS_ENUM(NSInteger, MoveDirection) {
 }
 
 - (void)setUpSubViews{
+    if (self.moveView) {
+        [self.moveView removeFromSuperview];
+    }
+    
     self.moveView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, moveViewWidth, moveViewHeight)];
     
     [self addSubview:self.moveView];

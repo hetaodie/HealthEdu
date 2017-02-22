@@ -7,15 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LectureHailContentObject.h"
+#import "LectureHailObject.h"
+#import "LectureHailObject.h"
 
 
 @protocol LectureHailContentCollectionViewCellDelegate <NSObject>
 
-- (void)clickOneElementOfCellWithInfo:(LectureHailContentObject *)aObject withIndex:(NSInteger)aIndex;
+- (void)clickOneElementOfCellWithInfo:(LectureHailObject *)aObject withIndex:(NSInteger)aIndex;
 
 @end
 
 @interface LectureHailContentCollectionViewCell : UICollectionViewCell
-@property (nonatomic, assign) id<LectureHailContentCollectionViewCellDelegate>delegate;
+@property (nonatomic, weak) id<LectureHailContentCollectionViewCellDelegate>delegate;
+
+- (void)showCellWithArray:(NSArray *)aArray;
 @end

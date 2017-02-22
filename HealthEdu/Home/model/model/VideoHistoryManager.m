@@ -65,9 +65,9 @@ static VideoHistoryManager *instance;
 #pragma mark -
 #pragma mark public
 
-- (void)addVideoToHistory:(LectureHailContentObject *)aObject{
+- (void)addVideoToHistory:(LectureHailObject *)aObject{
     @synchronized (self.historyDic) {
-        [self.historyDic setObject:aObject forKey:aObject.videoUrl.MD5];
+        [self.historyDic setObject:aObject forKey:aObject.exturl.MD5];
     }
     [self writeHistoryVideoToFile];
 }
@@ -76,9 +76,9 @@ static VideoHistoryManager *instance;
     return [self.historyDic allValues];
 }
 
-- (void)removeVideoFromHistory:(LectureHailContentObject *)aObject{
+- (void)removeVideoFromHistory:(LectureHailObject *)aObject{
     @synchronized (self.historyDic) {
-        [self.historyDic removeObjectForKey:aObject.videoUrl.MD5];
+        [self.historyDic removeObjectForKey:aObject.exturl.MD5];
     }
     
     [self writeHistoryVideoToFile];

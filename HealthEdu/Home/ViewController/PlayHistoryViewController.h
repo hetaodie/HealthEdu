@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LectureHailContentObject.h"
+#import "LectureHailObject.h"
 
 @interface PlayHistoryViewController : UIViewController
 

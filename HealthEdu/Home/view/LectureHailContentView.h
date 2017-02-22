@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LectureHailContentObject.h"
+#import "LectureHailObject.h"
 
 @protocol LectureHailContentViewDelegate <NSObject>
 
@@ -16,7 +16,7 @@
 - (void)contentViewWithScrollView:(UIScrollView *)scrollView didScrollToIndex:(NSInteger)aIndex;
 - (void)contentViewWithscrollViewDidScroll:(UIScrollView *)scrollView;
 
-- (void)contentOneContentCellWithSelect:(LectureHailContentObject *)aObject withIndex:(NSInteger)aIndex;
+- (void)contentOneContentCellWithSelect:(LectureHailObject *)aObject withIndex:(NSInteger)aIndex;
 
 
 @end

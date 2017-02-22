@@ -7,20 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LectureHailContentObject.h"
+#import "LectureHailObject.h"
 
 @protocol CacheCollectionViewCellDelegate <NSObject>
 
-- (void)onSelectVideoWithData:(LectureHailContentObject *)aObject andIsSelected:(BOOL)isSelected;
+- (void)onSelectVideoWithData:(LectureHailObject *)aObject andIsSelected:(BOOL)isSelected;
 
 @end
 
 @interface CacheCollectionViewCell : UICollectionViewCell
 @property (nonatomic,weak)id<CacheCollectionViewCellDelegate>delegate;
 
-+ (CGSize)cellSizeWithData:(LectureHailContentObject *)aData;
++ (CGSize)cellSizeWithData:(LectureHailObject *)aData;
 
-- (void)showCellWithData:(LectureHailContentObject *)aData;
+- (void)showCellWithData:(LectureHailObject *)aData;
 
 - (void)setCellEditStatus:(NSInteger)aStatus;
 @end

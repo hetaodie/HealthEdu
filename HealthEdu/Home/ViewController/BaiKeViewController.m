@@ -159,6 +159,7 @@ const float moveLeftConstraintDis = 30.0;
     [self.sicknessContentArray setArray:aArray];
     [self.sicknessContentView showViewWithArray:self.sicknessContentArray];
 }
+
 #pragma mark -
 #pragma mark NSNotification
 
