@@ -9,6 +9,7 @@
 #import "ConferenceViewController.h"
 #import "ConferenceTableViewCell.h"
 #import "ConferenceSource.h"
+#import "ConferenceDetailViewController.h"
 
 @interface ConferenceViewController ()<UITableViewDelegate,UITableViewDataSource,ConferenceSourceDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
@@ -55,14 +56,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-//    NSInteger section = indexPath.section;
-//    NSInteger row = indexPath.row;
-//    
-//    NSArray *sections = [self.contentArray objectAtIndex:section];
-//    AccountContentObject *object = [sections objectAtIndex:row];
-//    
-//    [self presentVCWithAction:object.pAction];
+    ConferenceDetailViewController *ndVC = [[ConferenceDetailViewController alloc] initWithNibName:@"ConferenceDetailViewController" bundle:nil];
+    //ndVC.id = aObject.id;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 - (void)onConferenceSuccess:(NSArray *)aArray{

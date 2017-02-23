@@ -111,6 +111,8 @@
 		7CFCCC281E5DE5F200DCEC21 /* ConferenceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFCCC261E5DE5F200DCEC21 /* ConferenceTableViewCell.xib */; };
 		7CFCCC2B1E5DF17E00DCEC21 /* ConferenceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC2A1E5DF17E00DCEC21 /* ConferenceObject.m */; };
 		7CFCCC2E1E5DF1A400DCEC21 /* ConferenceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC2D1E5DF1A400DCEC21 /* ConferenceSource.m */; };
+		7CFCCC321E5E635100DCEC21 /* ConferenceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFCCC301E5E635100DCEC21 /* ConferenceDetailViewController.m */; };
+		7CFCCC331E5E635100DCEC21 /* ConferenceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CFCCC311E5E635100DCEC21 /* ConferenceDetailViewController.xib */; };
 		87FF3A461CC04FFE94D920AA /* libPods-HealthEdu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E718DE9FCA3253C2582194C5 /* libPods-HealthEdu.a */; };
 		E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC51DC2E37400A0369B /* UIColor+HEX.m */; };
 		E6123CC91DC3484A00A0369B /* UIColor+MaxColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6123CC81DC3484A00A0369B /* UIColor+MaxColor.m */; };
@@ -347,6 +349,9 @@
 		7CFCCC2A1E5DF17E00DCEC21 /* ConferenceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceObject.m; sourceTree = "<group>"; };
 		7CFCCC2C1E5DF1A400DCEC21 /* ConferenceSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceSource.h; sourceTree = "<group>"; };
 		7CFCCC2D1E5DF1A400DCEC21 /* ConferenceSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceSource.m; sourceTree = "<group>"; };
+		7CFCCC2F1E5E635100DCEC21 /* ConferenceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailViewController.h; sourceTree = "<group>"; };
+		7CFCCC301E5E635100DCEC21 /* ConferenceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceDetailViewController.m; sourceTree = "<group>"; };
+		7CFCCC311E5E635100DCEC21 /* ConferenceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceDetailViewController.xib; sourceTree = "<group>"; };
 		9323F8D8773924F12DA09357 /* Pods-HealthEdu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.debug.xcconfig"; sourceTree = "<group>"; };
 		A216E4697B5EBA35B628872D /* Pods-HealthEdu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthEdu.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthEdu/Pods-HealthEdu.release.xcconfig"; sourceTree = "<group>"; };
 		E6123CC41DC2E37400A0369B /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
@@ -785,6 +790,9 @@
 			children = (
 				7CFCCC211E5DE3A100DCEC21 /* ConferenceViewController.h */,
 				7CFCCC221E5DE3A100DCEC21 /* ConferenceViewController.m */,
+				7CFCCC2F1E5E635100DCEC21 /* ConferenceDetailViewController.h */,
+				7CFCCC301E5E635100DCEC21 /* ConferenceDetailViewController.m */,
+				7CFCCC311E5E635100DCEC21 /* ConferenceDetailViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1138,6 +1146,7 @@
 				7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */,
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
 				7C379B011DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.xib in Resources */,
+				7CFCCC331E5E635100DCEC21 /* ConferenceDetailViewController.xib in Resources */,
 				E6EC27C51DBD9D7B00DEE06D /* CacheViewController.xib in Resources */,
 				7CF736C91DDAE66E00F92222 /* BaiKeSicknessContentView.xib in Resources */,
 				7CF8F3A01DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.xib in Resources */,
@@ -1300,6 +1309,7 @@
 				7C379B2E1DEE6782004627E9 /* ChangeSexViewController.m in Sources */,
 				7C87BFA71DE80BD30034C613 /* SelectCityView.m in Sources */,
 				7C379B201DED9D3F004627E9 /* CacheManager.m in Sources */,
+				7CFCCC321E5E635100DCEC21 /* ConferenceDetailViewController.m in Sources */,
 				7CF03E921E5ADE520088CD9F /* ConsultDetailSource.m in Sources */,
 				7C379B051DEC6B9B004627E9 /* PersonInfoTableViewCell.m in Sources */,
 				7CF5E1A21E5D398C00EE42DE /* LectureHailClassifyObject.m in Sources */,
