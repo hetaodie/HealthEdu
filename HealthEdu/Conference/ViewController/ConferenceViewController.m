@@ -56,8 +56,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+    ConferenceObject *object = [self.contentArray objectAtIndex:indexPath.row];
     ConferenceDetailViewController *ndVC = [[ConferenceDetailViewController alloc] initWithNibName:@"ConferenceDetailViewController" bundle:nil];
-    //ndVC.id = aObject.id;
+    ndVC.id = object.id;
     ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
 }

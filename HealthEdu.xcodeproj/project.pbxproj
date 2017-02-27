@@ -47,6 +47,14 @@
 		7C379B251DEE65BE004627E9 /* ChangeNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B231DEE65BE004627E9 /* ChangeNameViewController.xib */; };
 		7C379B2E1DEE6782004627E9 /* ChangeSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B2C1DEE6782004627E9 /* ChangeSexViewController.m */; };
 		7C379B2F1DEE6782004627E9 /* ChangeSexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B2D1DEE6782004627E9 /* ChangeSexViewController.xib */; };
+		7C79969B1E6000AA00938EC4 /* ConferenceDetailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */; };
+		7C79969E1E6000BD00938EC4 /* ConferenceDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79969D1E6000BD00938EC4 /* ConferenceDetailObject.m */; };
+		7C7996A21E607BB200938EC4 /* ConferenceEnrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7996A01E607BB200938EC4 /* ConferenceEnrollViewController.m */; };
+		7C7996A31E607BB200938EC4 /* ConferenceEnrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C7996A11E607BB200938EC4 /* ConferenceEnrollViewController.xib */; };
+		7C7996A71E6081F300938EC4 /* ConferenceEnrollTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7996A51E6081F300938EC4 /* ConferenceEnrollTableViewCell.m */; };
+		7C7996A81E6081F300938EC4 /* ConferenceEnrollTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C7996A61E6081F300938EC4 /* ConferenceEnrollTableViewCell.xib */; };
+		7C7996AB1E60872200938EC4 /* ConferenceEnrollObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7996AA1E60872200938EC4 /* ConferenceEnrollObject.m */; };
+		7C7996AE1E6087B800938EC4 /* ConferenceEnrollPersionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7996AD1E6087B800938EC4 /* ConferenceEnrollPersionObject.m */; };
 		7C85FF441E5408C80019C1D5 /* PopularRecommendObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FF431E5408C80019C1D5 /* PopularRecommendObject.m */; };
 		7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */; };
 		7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF551DE73F470034C613 /* UIDevice+JWDevice.m */; };
@@ -238,6 +246,20 @@
 		7C379B2B1DEE6782004627E9 /* ChangeSexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeSexViewController.h; sourceTree = "<group>"; };
 		7C379B2C1DEE6782004627E9 /* ChangeSexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeSexViewController.m; sourceTree = "<group>"; };
 		7C379B2D1DEE6782004627E9 /* ChangeSexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeSexViewController.xib; sourceTree = "<group>"; };
+		7C7996991E6000AA00938EC4 /* ConferenceDetailSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailSource.h; sourceTree = "<group>"; };
+		7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceDetailSource.m; sourceTree = "<group>"; };
+		7C79969C1E6000BD00938EC4 /* ConferenceDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailObject.h; sourceTree = "<group>"; };
+		7C79969D1E6000BD00938EC4 /* ConferenceDetailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceDetailObject.m; sourceTree = "<group>"; };
+		7C79969F1E607BB200938EC4 /* ConferenceEnrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceEnrollViewController.h; sourceTree = "<group>"; };
+		7C7996A01E607BB200938EC4 /* ConferenceEnrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceEnrollViewController.m; sourceTree = "<group>"; };
+		7C7996A11E607BB200938EC4 /* ConferenceEnrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceEnrollViewController.xib; sourceTree = "<group>"; };
+		7C7996A41E6081F300938EC4 /* ConferenceEnrollTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceEnrollTableViewCell.h; sourceTree = "<group>"; };
+		7C7996A51E6081F300938EC4 /* ConferenceEnrollTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceEnrollTableViewCell.m; sourceTree = "<group>"; };
+		7C7996A61E6081F300938EC4 /* ConferenceEnrollTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConferenceEnrollTableViewCell.xib; sourceTree = "<group>"; };
+		7C7996A91E60872200938EC4 /* ConferenceEnrollObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceEnrollObject.h; sourceTree = "<group>"; };
+		7C7996AA1E60872200938EC4 /* ConferenceEnrollObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceEnrollObject.m; sourceTree = "<group>"; };
+		7C7996AC1E6087B800938EC4 /* ConferenceEnrollPersionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceEnrollPersionObject.h; sourceTree = "<group>"; };
+		7C7996AD1E6087B800938EC4 /* ConferenceEnrollPersionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceEnrollPersionObject.m; sourceTree = "<group>"; };
 		7C85FF421E5408C80019C1D5 /* PopularRecommendObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularRecommendObject.h; sourceTree = "<group>"; };
 		7C85FF431E5408C80019C1D5 /* PopularRecommendObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularRecommendObject.m; sourceTree = "<group>"; };
 		7C87BF511DE6D76C0034C613 /* VideoDownLoaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDownLoaderObject.h; sourceTree = "<group>"; };
@@ -754,6 +776,8 @@
 			children = (
 				7CFCCC2C1E5DF1A400DCEC21 /* ConferenceSource.h */,
 				7CFCCC2D1E5DF1A400DCEC21 /* ConferenceSource.m */,
+				7C7996991E6000AA00938EC4 /* ConferenceDetailSource.h */,
+				7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -763,6 +787,12 @@
 			children = (
 				7CFCCC291E5DF17E00DCEC21 /* ConferenceObject.h */,
 				7CFCCC2A1E5DF17E00DCEC21 /* ConferenceObject.m */,
+				7C79969C1E6000BD00938EC4 /* ConferenceDetailObject.h */,
+				7C79969D1E6000BD00938EC4 /* ConferenceDetailObject.m */,
+				7C7996A91E60872200938EC4 /* ConferenceEnrollObject.h */,
+				7C7996AA1E60872200938EC4 /* ConferenceEnrollObject.m */,
+				7C7996AC1E6087B800938EC4 /* ConferenceEnrollPersionObject.h */,
+				7C7996AD1E6087B800938EC4 /* ConferenceEnrollPersionObject.m */,
 			);
 			path = object;
 			sourceTree = "<group>";
@@ -781,6 +811,9 @@
 				7CFCCC241E5DE5F200DCEC21 /* ConferenceTableViewCell.h */,
 				7CFCCC251E5DE5F200DCEC21 /* ConferenceTableViewCell.m */,
 				7CFCCC261E5DE5F200DCEC21 /* ConferenceTableViewCell.xib */,
+				7C7996A41E6081F300938EC4 /* ConferenceEnrollTableViewCell.h */,
+				7C7996A51E6081F300938EC4 /* ConferenceEnrollTableViewCell.m */,
+				7C7996A61E6081F300938EC4 /* ConferenceEnrollTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -793,6 +826,9 @@
 				7CFCCC2F1E5E635100DCEC21 /* ConferenceDetailViewController.h */,
 				7CFCCC301E5E635100DCEC21 /* ConferenceDetailViewController.m */,
 				7CFCCC311E5E635100DCEC21 /* ConferenceDetailViewController.xib */,
+				7C79969F1E607BB200938EC4 /* ConferenceEnrollViewController.h */,
+				7C7996A01E607BB200938EC4 /* ConferenceEnrollViewController.m */,
+				7C7996A11E607BB200938EC4 /* ConferenceEnrollViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1138,10 +1174,12 @@
 			files = (
 				7CF736E31DDBB41700F92222 /* LectureHailContentView.xib in Resources */,
 				7CF736C41DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.xib in Resources */,
+				7C7996A81E6081F300938EC4 /* ConferenceEnrollTableViewCell.xib in Resources */,
 				7CF736DE1DDB102900F92222 /* CycleBannersCollectionViewCell.xib in Resources */,
 				E6EC279D1DBD998F00DEE06D /* BaiKeViewController.xib in Resources */,
 				E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */,
 				7C87BFAF1DE8146C0034C613 /* ConsultationContentTableViewCell.xib in Resources */,
+				7C7996A31E607BB200938EC4 /* ConferenceEnrollViewController.xib in Resources */,
 				7C379AF61DEC31C3004627E9 /* SettingViewController.xib in Resources */,
 				7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */,
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
@@ -1264,6 +1302,7 @@
 				7CF736ED1DDBEDDA00F92222 /* PlayerView.m in Sources */,
 				E6EC27A11DBD99A700DEE06D /* BKDetailViewController.m in Sources */,
 				7CFCCC2E1E5DF1A400DCEC21 /* ConferenceSource.m in Sources */,
+				7C79969B1E6000AA00938EC4 /* ConferenceDetailSource.m in Sources */,
 				7CF736D41DDAFD0D00F92222 /* NSMutableArray+HF.m in Sources */,
 				7CF8F39F1DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.m in Sources */,
 				E6C699051D990B2A00D2818C /* AppDelegate.m in Sources */,
@@ -1309,14 +1348,17 @@
 				7C379B2E1DEE6782004627E9 /* ChangeSexViewController.m in Sources */,
 				7C87BFA71DE80BD30034C613 /* SelectCityView.m in Sources */,
 				7C379B201DED9D3F004627E9 /* CacheManager.m in Sources */,
+				7C7996AE1E6087B800938EC4 /* ConferenceEnrollPersionObject.m in Sources */,
 				7CFCCC321E5E635100DCEC21 /* ConferenceDetailViewController.m in Sources */,
 				7CF03E921E5ADE520088CD9F /* ConsultDetailSource.m in Sources */,
 				7C379B051DEC6B9B004627E9 /* PersonInfoTableViewCell.m in Sources */,
+				7C79969E1E6000BD00938EC4 /* ConferenceDetailObject.m in Sources */,
 				7CF5E1A21E5D398C00EE42DE /* LectureHailClassifyObject.m in Sources */,
 				7CF5E19C1E5D38F300EE42DE /* LectureHailSource.m in Sources */,
 				7CF5E17E1E5B48FE00EE42DE /* ConsultClassifyObject.m in Sources */,
 				7C379B091DEC6D85004627E9 /* PersonInfoObject.m in Sources */,
 				7CF5E1871E5BDFBE00EE42DE /* BaiKeClassifyObject.m in Sources */,
+				7C7996A21E607BB200938EC4 /* ConferenceEnrollViewController.m in Sources */,
 				E6EC279C1DBD998F00DEE06D /* BaiKeViewController.m in Sources */,
 				7C87BFAE1DE8146C0034C613 /* ConsultationContentTableViewCell.m in Sources */,
 				7C366BE21E531C0200F88D85 /* HENetTask.m in Sources */,
@@ -1324,6 +1366,7 @@
 				E62342C41D9A0A6000FE8254 /* HomeViewController.m in Sources */,
 				7CFCCC131E5D748800DCEC21 /* LearnCommunitySource.m in Sources */,
 				7C366BF21E531F2C00F88D85 /* VideoDownloaderManger.m in Sources */,
+				7C7996AB1E60872200938EC4 /* ConferenceEnrollObject.m in Sources */,
 				7C379B1C1DED5E74004627E9 /* CacheCollectionViewCell.m in Sources */,
 				7CF736C71DDAE66200F92222 /* BaiKeSicknessContentView.m in Sources */,
 				E6EC27BF1DBD9CAD00DEE06D /* DoctorRepeatViewController.m in Sources */,
@@ -1348,6 +1391,7 @@
 				7CF5E1811E5B493C00EE42DE /* ConsultListObject.m in Sources */,
 				E62342DE1D9A157600FE8254 /* ConsultationViewController.m in Sources */,
 				E6E1536C1DC0BC070094A947 /* TopTabScrollViewCell.m in Sources */,
+				7C7996A71E6081F300938EC4 /* ConferenceEnrollTableViewCell.m in Sources */,
 				7CFCCC231E5DE3A100DCEC21 /* ConferenceViewController.m in Sources */,
 				E6EC27AB1DBD9A4C00DEE06D /* PlayerViewController.m in Sources */,
 				E6EC27CE1DBD9E4D00DEE06D /* PersonInfoViewController.m in Sources */,
