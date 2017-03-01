@@ -8,10 +8,15 @@
 
 #import "LoginViewController.h"
 #import "UIColor+HEX.h"
+#import "LoginSource.h"
+#import "UserInfoManager.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <LoginSourceDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *tipsLabel;
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
 
+@property (weak, nonatomic) IBOutlet UITextField *pwdField;
+@property (nonatomic, strong) LoginSource *loginSource;
 @end
 
 @implementation LoginViewController
@@ -24,6 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUptipsLabel];
+    
+    self.loginSource = [[LoginSource alloc] init];
+    self.loginSource.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +53,15 @@
 #pragma mark -
 #pragma mark delegate
 
+- (void)onLoginSuccess:(UserInfo *)aUserInfo{
+    UserInfoManager *infoManager = [UserInfoManager shareManager];
+    [infoManager LoginSeccessWith:aUserInfo];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)onLoginError{
+
+}
 
 #pragma mark -
 #pragma mark NSNotification
@@ -81,4 +98,7 @@
     }
 }
 
+- (IBAction)loginBtnPress:(id)sender {
+    [self.loginSource LoginWithName:self.usernameField.text andPWD:self.pwdField.text];
+}
 @end

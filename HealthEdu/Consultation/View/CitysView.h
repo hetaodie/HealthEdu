@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConsultationObject.h"
 
 @protocol CitysViewDelegate <NSObject>
 
-- (void)onSelectOneElementWithData:(NSString *)aString withIndex:(NSInteger)aIndex;
+- (void)onSelectOneElementWithData:(ConsultationObject *)aObject withIndex:(NSInteger)aIndex;
 
 @end
 

@@ -10,6 +10,7 @@
 #import "ConferenceEnrollTableViewCell.h"
 #import "ConferenceEnrollObject.h"
 #import "ConferenceEnrollPersionObject.h"
+#import "PayViewController.h"
 
 @interface ConferenceEnrollViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *firstbgView;
@@ -19,6 +20,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) ConferenceEnrollObject *enrollObject;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *conferenceTimeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *conferenceLocLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numPriceLabel;
 
 @end
 
@@ -36,13 +46,25 @@
     self.tableView.dataSource = self;
     [self setUpContentTableView];
     
+    self.titleLabel.text = self.detailObject.title;
+    self.priceLabel.text = self.detailObject.content2;
+    self.numLabel.text = @"1";
+    
+    NSInteger price = 1 * [self.priceLabel.text integerValue];
+    self.numPriceLabel.text = [NSString stringWithFormat:@"%ld",(long)price];
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
     
     self.enrollObject = [[ConferenceEnrollObject alloc] init];
+    self.enrollObject.title = self.detailObject.title;
+    self.enrollObject.price = [self.detailObject.content2 integerValue];
+    self.enrollObject.num = 1;
     
     [self setUpPersionInfo];
     [self.tableView reloadData];
+    
+    
 }
 
 
@@ -111,4 +133,35 @@
     [self.enrollObject.persionInfoArray addObject:object5];
     
 }
+
+- (IBAction)jianBtnPress:(id)sender {
+    NSInteger num = [self.numLabel.text integerValue];
+    if (num > 0) {
+        num --;
+    }
+    self.numLabel.text = [NSString stringWithFormat:@"%ld",(long)num];
+    
+    NSInteger price = num * [self.priceLabel.text integerValue];
+    self.numPriceLabel.text = [NSString stringWithFormat:@"%ld",(long)price];
+    self.enrollObject.num = num;
+}
+
+- (IBAction)jiaBtnPress:(id)sender {
+    NSInteger num = [self.numLabel.text integerValue];
+    num++;
+    self.numLabel.text = [NSString stringWithFormat:@"%ld",(long)num];
+    self.enrollObject.num = num;
+    
+    NSInteger price = num * [self.priceLabel.text integerValue];
+    self.numPriceLabel.text = [NSString stringWithFormat:@"%ld",(long)price];
+
+}
+
+- (IBAction)PayBtnPress:(id)sender {
+    PayViewController *ndVC = [[PayViewController alloc] initWithNibName:@"PayViewController" bundle:nil];
+    ndVC.enrollObject = self.enrollObject;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+}
+
 @end

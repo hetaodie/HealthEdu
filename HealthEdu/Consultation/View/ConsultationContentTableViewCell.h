@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConsultationListObject.h"
 
 @interface ConsultationContentTableViewCell : UITableViewCell
 
-+(CGFloat)cellHeightWithData:(NSString *)aString;
++(CGFloat)cellHeightWithData:(ConsultationListObject *)aObject;
+
+- (void)showCellWithObject:(ConsultationListObject *)aObject;
 @end

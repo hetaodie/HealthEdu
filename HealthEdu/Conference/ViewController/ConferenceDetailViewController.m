@@ -42,6 +42,8 @@
     
     self.button.clipsToBounds = YES;
     self.button.layer.cornerRadius = 15;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

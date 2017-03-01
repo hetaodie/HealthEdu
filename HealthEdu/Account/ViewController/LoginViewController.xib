@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="pwdField" destination="dUD-Lv-aM3" id="kv7-47-qQm"/>
                 <outlet property="tipsLabel" destination="bTk-8N-6Mx" id="O1X-Qo-ekh"/>
+                <outlet property="usernameField" destination="hFb-Ko-kqn" id="Wh7-cG-4w9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -119,6 +121,9 @@
                     <state key="normal" title="马上登录">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="loginBtnPress:" destination="-1" eventType="touchUpInside" id="Iu1-2z-uuy"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTk-8N-6Mx">
                     <rect key="frame" x="123" y="288" width="129" height="17"/>
@@ -131,19 +136,59 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weixin" translatesAutoresizingMaskIntoConstraints="NO" id="oln-FM-AZQ">
+                    <rect key="frame" x="171" y="537" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="ZtT-eB-abw"/>
+                        <constraint firstAttribute="width" constant="33" id="uja-mi-h9A"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weibo" translatesAutoresizingMaskIntoConstraints="NO" id="8sK-r0-e0u">
+                    <rect key="frame" x="217" y="537" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="NEA-TK-6mk"/>
+                        <constraint firstAttribute="width" constant="33" id="TFM-iq-Oa1"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QQ" translatesAutoresizingMaskIntoConstraints="NO" id="LQ9-DD-OZb">
+                    <rect key="frame" x="125" y="537" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="PIC-zi-zpN"/>
+                        <constraint firstAttribute="width" constant="33" id="uay-9Z-SEQ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第三方账号登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-ci-hbk">
+                    <rect key="frame" x="137.5" y="585" width="100" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="0Zw-ci-hbk" firstAttribute="top" secondItem="oln-FM-AZQ" secondAttribute="bottom" constant="15" id="0V2-2o-PrS"/>
+                <constraint firstItem="8sK-r0-e0u" firstAttribute="leading" secondItem="oln-FM-AZQ" secondAttribute="trailing" constant="13" id="GEN-oL-cDe"/>
                 <constraint firstItem="bTk-8N-6Mx" firstAttribute="top" secondItem="xaa-5I-ZGs" secondAttribute="bottom" constant="16" id="GU6-8e-9Vm"/>
+                <constraint firstItem="8sK-r0-e0u" firstAttribute="centerY" secondItem="LQ9-DD-OZb" secondAttribute="centerY" id="HNI-kb-6G2"/>
                 <constraint firstItem="xaa-5I-ZGs" firstAttribute="top" secondItem="Azo-jQ-8jn" secondAttribute="bottom" constant="50" id="HZc-zv-OuP"/>
                 <constraint firstItem="Azo-jQ-8jn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HzL-gk-BTS"/>
+                <constraint firstItem="oln-FM-AZQ" firstAttribute="centerY" secondItem="LQ9-DD-OZb" secondAttribute="centerY" id="Knh-fJ-u96"/>
+                <constraint firstItem="0Zw-ci-hbk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NUj-YP-O4G"/>
                 <constraint firstAttribute="trailing" secondItem="Azo-jQ-8jn" secondAttribute="trailing" id="Qk5-0l-TCG"/>
                 <constraint firstItem="bTk-8N-6Mx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c4G-ZA-bJI"/>
+                <constraint firstItem="oln-FM-AZQ" firstAttribute="leading" secondItem="LQ9-DD-OZb" secondAttribute="trailing" constant="13" id="fP1-hX-sUl"/>
                 <constraint firstItem="Azo-jQ-8jn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lag-yW-Ppn"/>
+                <constraint firstItem="oln-FM-AZQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rt1-IA-Dj7"/>
                 <constraint firstItem="xaa-5I-ZGs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="x7a-M8-Bgj"/>
                 <constraint firstItem="xaa-5I-ZGs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xTr-dk-LUB"/>
+                <constraint firstAttribute="bottom" secondItem="0Zw-ci-hbk" secondAttribute="bottom" constant="65" id="yMR-oI-HPW"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="70.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="QQ" width="66" height="65"/>
+        <image name="weibo" width="66" height="65"/>
+        <image name="weixin" width="66" height="65"/>
+    </resources>
 </document>

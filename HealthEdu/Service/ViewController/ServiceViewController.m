@@ -8,13 +8,18 @@
 
 #import "ServiceViewController.h"
 #import "UIColor+HEX.h"
+#import "ServerObject.h"
+#import "SearveSource.h"
 
-
-@interface ServiceViewController () <UITextViewDelegate>
+@interface ServiceViewController () <UITextViewDelegate,SearveSourceDelegate>
 @property (weak, nonatomic) IBOutlet UIView *yuyinView;
 @property (weak, nonatomic) IBOutlet UIView *tuPianImageView;
 @property (weak, nonatomic) IBOutlet UIButton *commintButton;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITextField *titleLabel;
+
+@property (nonatomic, strong) ServerObject *serverObject;
+@property (nonatomic, strong) SearveSource *searveSource;
 
 @end
 
@@ -37,6 +42,10 @@
     
     self.textView.delegate = self;
     
+    self.serverObject = [[ServerObject alloc] init];
+    
+    self.searveSource = [[SearveSource alloc] init];
+    self.searveSource.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +56,27 @@
     if ([textView.text isEqualToString:@"请用10到500字简要描述你的问题"]) {
         textView.text = @" ";
     }
+}
+
+- (IBAction)commentBtnPress:(id)sender {
+    self.serverObject.title = self.titleLabel.text;
+    self.serverObject.desString = self.textView.text;
+    self.serverObject.price= 0;
+    
+    [self.searveSource sendSeaverData:self.serverObject];
+}
+
+- (void)onSearveSourceError{
+    UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"提交失败，请重新提交，如果反复不成功，请联系后台" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    [view show];
+}
+
+- (void)onSearveSourceSuccess:(NSString *)content{
+    UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"提醒" message:content delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    [view show];
+    self.titleLabel.text =@"";
+    self.textView.text = @"";
+    [self.view endEditing:YES];
 }
 /*
 #pragma mark - Navigation

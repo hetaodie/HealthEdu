@@ -19,7 +19,8 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 #import "SettingViewController.h"
-
+#import "UserInfoManager.h"
+#import "UserInfo.h"
 @interface AccountViewController () <UITableViewDelegate,UITableViewDataSource,LoginViewControllerDelegate,RegisterViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *settingButton;
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
@@ -28,7 +29,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *contentArray;
+@property (nonatomic, strong) UserInfo *userInfo;
 
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @end
 
 @implementation AccountViewController
@@ -43,7 +46,10 @@
     [self setUpTableView];
 
     [self testData];
+    
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -53,6 +59,18 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.hidden = YES;
+    self.userInfo = [[UserInfoManager shareManager] getUserInfo];
+    if (self.userInfo) {
+        self.loginedView.hidden = NO;
+        self.usernameLabel.text = self.userInfo.userName;
+        self.headerImageView.image = [UIImage imageNamed:@"touxiang2"];
+        self.NoLoginedView.hidden = YES;
+    }
+    else{
+        self.loginedView.hidden = YES;
+        self.NoLoginedView.hidden = NO;
+        self.headerImageView.image = [UIImage imageNamed:@"touxiang"];
+    }
 }
 
 #pragma mark -

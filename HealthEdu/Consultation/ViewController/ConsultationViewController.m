@@ -11,13 +11,20 @@
 #import "ConsultationContentTableViewCell.h"
 #import "CitysView.h"
 #import "LocationManager.h"
+#import "ConsultationObject.h"
+#import "ConsultationSource.h"
 
-@interface ConsultationViewController ()<UITableViewDelegate,UITableViewDataSource,CitysViewDelegate,SelectCityViewDelegate,LocationManagerDelegate>
+@interface ConsultationViewController ()<UITableViewDelegate,UITableViewDataSource,CitysViewDelegate,SelectCityViewDelegate,LocationManagerDelegate,ConsultationSourceDelegate>
 @property (weak, nonatomic) IBOutlet SelectCityView *selectCityView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet CitysView *cityView;
 @property (nonatomic, strong) NSMutableArray *citysArray;
 @property (nonatomic, strong) LocationManager *locationManager;
+
+@property (nonatomic, strong) ConsultationSource *consultationSource;
+@property (nonatomic, strong) ConsultationObject *consultationObject;
+@property (nonatomic, strong) NSMutableArray *listArray;
+
 @end
 
 @implementation ConsultationViewController
@@ -28,17 +35,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.citysArray= [[NSMutableArray alloc] init];
-    [self testData];
+   // [self testData];
     
     [self setUpTableView];
     
     self.cityView.delegate = self;
     self.selectCityView.delegate = self;
     
-    [self.cityView showViewWithArray:self.citysArray];
+    //[self.cityView showViewWithArray:self.citysArray];
     self.locationManager = [[LocationManager alloc] init];
     self.locationManager.delegate = self;
     [self.locationManager getLocationCity];
+    
+    self.consultationSource = [[ConsultationSource alloc] init];
+    self.consultationSource.delegate = self;
+    
+    [self.consultationSource getConsultation];
+    
+    self.listArray = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,7 +73,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+//    return 10;
+    NSInteger count = [self.listArray count];
+    return count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -69,13 +85,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ConsultationContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ConsultationContentTableViewCell" forIndexPath:indexPath];
+    ConsultationListObject *object = [self.listArray objectAtIndex:indexPath.row];
+    [cell showCellWithObject:object];
     
     return cell;
 }
 
-- (void)onSelectOneElementWithData:(NSString *)aString withIndex:(NSInteger)aIndex{
-    [self.selectCityView setSelectCityName:aString];
+- (void)onSelectOneElementWithData:(ConsultationObject *)aObject withIndex:(NSInteger)aIndex{
+    [self.selectCityView setSelectCityName:aObject.title];
     [self.cityView setHidden:YES];
+    
+    [self.consultationSource getConsultationDetail:aObject.id];
 }
 
 - (void)onSelectCity:(BOOL)isUnfold{
@@ -85,6 +105,31 @@
     else{
         self.cityView.hidden = YES;
     }
+ 
+}
+
+- (void)onConsultationSuccess:(NSArray *)aArray{
+    [self.citysArray setArray:aArray];
+    [self.cityView showViewWithArray:self.citysArray];
+    
+    if ([aArray count] >0) {
+        ConsultationObject *object = [self.citysArray objectAtIndex:0];
+        [self.consultationSource getConsultationDetail:object.id];
+    }
+    
+}
+
+- (void)onConsultationError{
+
+}
+
+- (void)onConsultationDetailSuccess:(NSArray *)aArray {
+    [self.listArray setArray:aArray];
+    [self.tableView reloadData];
+}
+
+- (void)onConsultationDetailError {
+
 }
 
 #pragma mark -

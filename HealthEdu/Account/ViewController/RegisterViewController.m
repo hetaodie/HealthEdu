@@ -8,10 +8,16 @@
 
 #import "RegisterViewController.h"
 #import "UIColor+HEX.h"
+#import "RegisterSource.h"
 
-@interface RegisterViewController ()
+@interface RegisterViewController () <RegisterSourceDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *tipsLabel;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 
+@property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
+@property (weak, nonatomic) IBOutlet UITextField *yanzhengmaTextField;
+
+@property (nonatomic, strong) RegisterSource *registerSource;
 @end
 
 @implementation RegisterViewController
@@ -24,6 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUptipsLabel];
+    
+    self.registerSource = [[RegisterSource alloc] init];
+    self.registerSource.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,6 +87,26 @@
         [self.delegate onClictToLoginViewController:self];
     }
     
+}
+
+- (IBAction)yanzhengmaBtnPress:(id)sender {
+    [self.view endEditing:YES];
+    [self.registerSource getRegisterCode:self.phoneTextField.text];
+    
+}
+
+- (IBAction)registerBtnPress:(id)sender {
+    [self.registerSource registerWithName:self.phoneTextField.text andPWD:self.pwdTextField.text andCode:self.yanzhengmaTextField.text];
+}
+
+- (void)onRegisterSuccess:(NSString *)aUsername andPWD:(NSString *)pwd{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onClictToLoginViewController:)]) {
+        [self.delegate onClictToLoginViewController:self];
+    }
+}
+
+- (void)onRegisterError{
+
 }
 
 @end

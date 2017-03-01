@@ -16,4 +16,6 @@
 + (NSString *)dateToString:(NSDate *)date;
 
 +(NSDictionary *)getUTCFormateDateWithBeginDate:(NSString *)beginDate andNewDate:(NSString *)newsDate;
+
+
 @end

@@ -8,6 +8,7 @@
 
 #import "CitysView.h"
 #import "CitysViewCollectionViewCell.h"
+#import "ConsultationObject.h"
 
 @interface CitysView()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UIView *contentView;
@@ -66,23 +67,23 @@
 - ( UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CitysViewCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CitysViewCollectionViewCell" forIndexPath:indexPath];
     
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
-    [cell showCellWithTitle:title];
+    ConsultationObject *object = [self.contentArray objectAtIndex:indexPath.row];
+    [cell showCellWithTitle:object.title];
     
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
+     ConsultationObject *object = [self.contentArray objectAtIndex:indexPath.row];
     if (self.delegate && [self.delegate respondsToSelector:@selector(onSelectOneElementWithData:withIndex:)]) {
-        [self.delegate onSelectOneElementWithData:title withIndex:indexPath.row];
+        [self.delegate onSelectOneElementWithData:object withIndex:indexPath.row];
     }
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *title = [self.contentArray objectAtIndex:indexPath.row];
+    ConsultationObject *object = [self.contentArray objectAtIndex:indexPath.row];
     
-    CGSize size =[CitysViewCollectionViewCell cellSizeForString:title];
+    CGSize size =[CitysViewCollectionViewCell cellSizeForString:object.title];
     return size;
 }
 

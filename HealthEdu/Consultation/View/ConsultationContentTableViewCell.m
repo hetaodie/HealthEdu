@@ -8,6 +8,15 @@
 
 #import "ConsultationContentTableViewCell.h"
 
+@interface ConsultationContentTableViewCell ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;  //地址的label
+
+@end
+
+
 @implementation ConsultationContentTableViewCell
 
 #pragma mark -
@@ -29,8 +38,14 @@
 #pragma mark -
 #pragma mark public
 
-+(CGFloat)cellHeightWithData:(NSString *)aString{
++(CGFloat)cellHeightWithData:(ConsultationListObject *)aObject {
     return 147;
+}
+
+- (void)showCellWithObject:(ConsultationListObject *)aObject {
+    self.titleLabel.text = aObject.title;
+    self.phoneLabel.text = aObject.phone;
+    self.addressLabel.text = aObject.content1;
 }
 
 #pragma mark -

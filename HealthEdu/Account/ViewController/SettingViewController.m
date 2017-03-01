@@ -8,6 +8,7 @@
 
 #import "SettingViewController.h"
 #import "CacheManager.h"
+#import "UserInfoManager.h"
 
 @interface SettingViewController ()
 
@@ -49,7 +50,8 @@
 }
 
 - (IBAction)tuichuBtnPress:(id)sender {
-    
+    [[UserInfoManager shareManager] unLoginSeccess];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark -
