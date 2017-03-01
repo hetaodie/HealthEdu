@@ -67,6 +67,10 @@
 		7C7997F31E667F4600938EC4 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7997F21E667F4600938EC4 /* UserInfoManager.m */; };
 		7C7997F61E667F6900938EC4 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7997F51E667F6900938EC4 /* UserInfo.m */; };
 		7C7997F91E66AC1500938EC4 /* LoginSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7997F81E66AC1500938EC4 /* LoginSource.m */; };
+		7C7997FD1E66C16600938EC4 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7997FB1E66C16600938EC4 /* AboutViewController.m */; };
+		7C7997FE1E66C16600938EC4 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C7997FC1E66C16600938EC4 /* AboutViewController.xib */; };
+		7C7998011E671A3400938EC4 /* AboutSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7998001E671A3400938EC4 /* AboutSource.m */; };
+		7C7998041E671A9000938EC4 /* AboutObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7998031E671A9000938EC4 /* AboutObject.m */; };
 		7C85FF441E5408C80019C1D5 /* PopularRecommendObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C85FF431E5408C80019C1D5 /* PopularRecommendObject.m */; };
 		7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF521DE6D76C0034C613 /* VideoDownLoaderObject.m */; };
 		7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BF551DE73F470034C613 /* UIDevice+JWDevice.m */; };
@@ -294,6 +298,13 @@
 		7C7997F51E667F6900938EC4 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		7C7997F71E66AC1500938EC4 /* LoginSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginSource.h; sourceTree = "<group>"; };
 		7C7997F81E66AC1500938EC4 /* LoginSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginSource.m; sourceTree = "<group>"; };
+		7C7997FA1E66C16600938EC4 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		7C7997FB1E66C16600938EC4 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		7C7997FC1E66C16600938EC4 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		7C7997FF1E671A3400938EC4 /* AboutSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutSource.h; sourceTree = "<group>"; };
+		7C7998001E671A3400938EC4 /* AboutSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutSource.m; sourceTree = "<group>"; };
+		7C7998021E671A9000938EC4 /* AboutObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutObject.h; sourceTree = "<group>"; };
+		7C7998031E671A9000938EC4 /* AboutObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutObject.m; sourceTree = "<group>"; };
 		7C85FF421E5408C80019C1D5 /* PopularRecommendObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularRecommendObject.h; sourceTree = "<group>"; };
 		7C85FF431E5408C80019C1D5 /* PopularRecommendObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularRecommendObject.m; sourceTree = "<group>"; };
 		7C87BF511DE6D76C0034C613 /* VideoDownLoaderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDownLoaderObject.h; sourceTree = "<group>"; };
@@ -640,6 +651,8 @@
 		7C379AE11DEBF7A8004627E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7C7997FF1E671A3400938EC4 /* AboutSource.h */,
+				7C7998001E671A3400938EC4 /* AboutSource.m */,
 				7C7997F71E66AC1500938EC4 /* LoginSource.h */,
 				7C7997F81E66AC1500938EC4 /* LoginSource.m */,
 				7C7997EE1E6679E100938EC4 /* RegisterSource.h */,
@@ -648,6 +661,8 @@
 				7C379AE31DEBF7CC004627E9 /* AccountContentObject.m */,
 				7C379B071DEC6D85004627E9 /* PersonInfoObject.h */,
 				7C379B081DEC6D85004627E9 /* PersonInfoObject.m */,
+				7C7998021E671A9000938EC4 /* AboutObject.h */,
+				7C7998031E671A9000938EC4 /* AboutObject.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1019,6 +1034,9 @@
 				7C379B2B1DEE6782004627E9 /* ChangeSexViewController.h */,
 				7C379B2C1DEE6782004627E9 /* ChangeSexViewController.m */,
 				7C379B2D1DEE6782004627E9 /* ChangeSexViewController.xib */,
+				7C7997FA1E66C16600938EC4 /* AboutViewController.h */,
+				7C7997FB1E66C16600938EC4 /* AboutViewController.m */,
+				7C7997FC1E66C16600938EC4 /* AboutViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1250,6 +1268,7 @@
 				7C87BFAF1DE8146C0034C613 /* ConsultationContentTableViewCell.xib in Resources */,
 				7C7996A31E607BB200938EC4 /* ConferenceEnrollViewController.xib in Resources */,
 				7C379AF61DEC31C3004627E9 /* SettingViewController.xib in Resources */,
+				7C7997FE1E66C16600938EC4 /* AboutViewController.xib in Resources */,
 				7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */,
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
 				7C379B011DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.xib in Resources */,
@@ -1407,6 +1426,7 @@
 				7CF736B01DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m in Sources */,
 				7C7997E01E65C86300938EC4 /* PayViewController.m in Sources */,
 				4FDE9CD81DB4EC1000D9C790 /* HomeContentHeaderView.m in Sources */,
+				7C7998011E671A3400938EC4 /* AboutSource.m in Sources */,
 				4FB205F51DB4BDA3007396A8 /* HomeTagView.m in Sources */,
 				E6EC27C41DBD9D7B00DEE06D /* CacheViewController.m in Sources */,
 				7C87BFBD1DE81C680034C613 /* CitysViewCollectionViewCell.m in Sources */,
@@ -1463,6 +1483,7 @@
 				7C379AF01DEC1C04004627E9 /* RegisterViewController.m in Sources */,
 				7C34F39B1DD1E8F800C61015 /* ConsultContentCollectionViewCell.m in Sources */,
 				7CF5E18A1E5BE03800EE42DE /* BaikeObject.m in Sources */,
+				7C7997FD1E66C16600938EC4 /* AboutViewController.m in Sources */,
 				7C379B121DED1595004627E9 /* ChangePassWordViewController.m in Sources */,
 				7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */,
 				7C7997F31E667F4600938EC4 /* UserInfoManager.m in Sources */,
@@ -1471,6 +1492,7 @@
 				7C7997F61E667F6900938EC4 /* UserInfo.m in Sources */,
 				E6E1536C1DC0BC070094A947 /* TopTabScrollViewCell.m in Sources */,
 				7C7996A71E6081F300938EC4 /* ConferenceEnrollTableViewCell.m in Sources */,
+				7C7998041E671A9000938EC4 /* AboutObject.m in Sources */,
 				7CFCCC231E5DE3A100DCEC21 /* ConferenceViewController.m in Sources */,
 				7C7997E71E65D9EC00938EC4 /* ConsultationSource.m in Sources */,
 				E6EC27AB1DBD9A4C00DEE06D /* PlayerViewController.m in Sources */,

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController">
+            <connections>
+                <outlet property="contentWebView" destination="hnG-io-RIA" id="Z1f-Gn-5ww"/>
+                <outlet property="readLabel" destination="81S-gy-Unu" id="URi-i3-suC"/>
+                <outlet property="timeLabel" destination="AkK-MC-rri" id="KRN-jS-nwx"/>
+                <outlet property="titleLabel" destination="Olc-0m-1R4" id="AH7-7J-Nt8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="浙江省协会" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olc-0m-1R4">
+                    <rect key="frame" x="149" y="20" width="76.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间：2016-12-09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkK-MC-rri">
+                    <rect key="frame" x="143" y="46" width="88.5" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="阅读421" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81S-gy-Unu">
+                    <rect key="frame" x="27" y="632.5" width="45.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnG-io-RIA">
+                    <rect key="frame" x="17" y="65" width="341" height="553.5"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="81S-gy-Unu" firstAttribute="top" secondItem="hnG-io-RIA" secondAttribute="bottom" constant="14" id="Clt-xa-kMx"/>
+                <constraint firstAttribute="trailing" secondItem="hnG-io-RIA" secondAttribute="trailing" constant="17" id="FdV-RK-zuc"/>
+                <constraint firstAttribute="bottom" secondItem="81S-gy-Unu" secondAttribute="bottom" constant="20" id="Nfp-yA-rgv"/>
+                <constraint firstItem="AkK-MC-rri" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SxI-88-u09"/>
+                <constraint firstItem="Olc-0m-1R4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aqA-91-S0g"/>
+                <constraint firstItem="hnG-io-RIA" firstAttribute="top" secondItem="AkK-MC-rri" secondAttribute="bottom" constant="7" id="bGd-BD-BNf"/>
+                <constraint firstItem="81S-gy-Unu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="27" id="mle-K8-6sD"/>
+                <constraint firstItem="Olc-0m-1R4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="oFa-uF-g0C"/>
+                <constraint firstItem="hnG-io-RIA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="pVG-5R-3av"/>
+                <constraint firstItem="AkK-MC-rri" firstAttribute="top" secondItem="Olc-0m-1R4" secondAttribute="bottom" constant="8" id="uy2-mO-RR3"/>
+            </constraints>
+            <point key="canvasLocation" x="171" y="-84"/>
+        </view>
+    </objects>
+</document>

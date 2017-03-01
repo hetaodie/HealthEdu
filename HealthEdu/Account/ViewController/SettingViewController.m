@@ -9,6 +9,7 @@
 #import "SettingViewController.h"
 #import "CacheManager.h"
 #import "UserInfoManager.h"
+#import "AboutViewController.h"
 
 @interface SettingViewController ()
 
@@ -76,6 +77,11 @@
     return path;
 }
 
+- (IBAction)aboutBtnPress:(id)sender {
+    AboutViewController *ndVC = [[AboutViewController alloc] initWithNibName:@"AboutViewController" bundle:nil];
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+}
 
 
 @end

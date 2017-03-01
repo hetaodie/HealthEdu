@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -103,6 +103,13 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cY-lU-QXE">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="aboutBtnPress:" destination="-1" eventType="touchUpInside" id="wa2-y1-nu5"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -110,12 +117,16 @@
                         <constraint firstItem="Bw2-Cf-4bf" firstAttribute="leading" secondItem="rCf-uU-6k3" secondAttribute="leading" constant="23" id="Ab6-51-0XE"/>
                         <constraint firstAttribute="trailing" secondItem="Kfa-5y-WK2" secondAttribute="trailing" id="Axc-iq-dRi"/>
                         <constraint firstItem="Kfa-5y-WK2" firstAttribute="leading" secondItem="rCf-uU-6k3" secondAttribute="leading" id="Bc6-62-VDt"/>
+                        <constraint firstItem="9cY-lU-QXE" firstAttribute="leading" secondItem="rCf-uU-6k3" secondAttribute="leading" id="FeV-yj-7DX"/>
+                        <constraint firstAttribute="trailing" secondItem="9cY-lU-QXE" secondAttribute="trailing" id="OQN-jX-o63"/>
                         <constraint firstAttribute="bottom" secondItem="Kfa-5y-WK2" secondAttribute="bottom" id="X6T-0P-usq"/>
                         <constraint firstItem="PTd-jL-jKV" firstAttribute="centerY" secondItem="rCf-uU-6k3" secondAttribute="centerY" id="ee8-RW-0fp"/>
+                        <constraint firstItem="9cY-lU-QXE" firstAttribute="top" secondItem="rCf-uU-6k3" secondAttribute="top" id="kmt-qK-1ua"/>
                         <constraint firstAttribute="trailing" secondItem="qj8-bm-ZEI" secondAttribute="trailing" constant="23" id="pEG-pR-oZZ"/>
                         <constraint firstItem="qj8-bm-ZEI" firstAttribute="centerY" secondItem="rCf-uU-6k3" secondAttribute="centerY" id="tgX-sr-EHF"/>
                         <constraint firstAttribute="height" constant="59" id="uYW-ID-W7p"/>
                         <constraint firstItem="PTd-jL-jKV" firstAttribute="leading" secondItem="Bw2-Cf-4bf" secondAttribute="trailing" constant="23" id="w8G-XD-Dnt"/>
+                        <constraint firstItem="Kfa-5y-WK2" firstAttribute="top" secondItem="9cY-lU-QXE" secondAttribute="bottom" id="yQ9-SZ-Ugf"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKq-iy-VOO">
@@ -178,6 +189,7 @@
                 <constraint firstItem="YnQ-lr-hZN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kSZ-ny-fbL"/>
                 <constraint firstItem="YnQ-lr-hZN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uVo-bE-kB5"/>
             </constraints>
+            <point key="canvasLocation" x="92.5" y="54.5"/>
         </view>
     </objects>
     <resources>
