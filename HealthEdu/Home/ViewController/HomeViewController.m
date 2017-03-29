@@ -79,13 +79,15 @@
         {
             ConsultViewController *ndVC = [[ConsultViewController alloc] initWithNibName:@"ConsultViewController" bundle:nil];
             ndVC.hidesBottomBarWhenPushed = YES;
+            ndVC.num = 2;
             [self.navigationController pushViewController:ndVC animated:YES];
             break;
         }
         case HomeTagsNameOfBaiKe:
         {
-            BaiKeViewController *ndVC = [[BaiKeViewController alloc] initWithNibName:@"BaiKeViewController" bundle:nil];
+            ConsultViewController *ndVC = [[ConsultViewController alloc] initWithNibName:@"ConsultViewController" bundle:nil];
             ndVC.hidesBottomBarWhenPushed = YES;
+            ndVC.num = 3;
             [self.navigationController pushViewController:ndVC animated:YES];
             break;
         }

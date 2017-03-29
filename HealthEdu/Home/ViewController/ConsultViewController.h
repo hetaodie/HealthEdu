@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ConsultViewController : UIViewController
-
+@property (nonatomic, assign) NSInteger num;
 @end

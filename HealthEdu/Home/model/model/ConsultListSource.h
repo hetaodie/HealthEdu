@@ -22,7 +22,7 @@
 
 @property (nonatomic, weak) id <ConsultListSourceDelegate>delegate;
 
-- (void)getConsultClassicySource;
+- (void)getConsultClassicySource:(NSInteger)num;
 - (void)getConsultListSource:(NSString *)aId;
 
 @end

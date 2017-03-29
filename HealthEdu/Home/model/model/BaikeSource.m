@@ -59,7 +59,7 @@
 }
 
 - (void)getBaikeData:(NSString *)aId{
-    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getContentList.action?cid=%@",aId];
+    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@",aId];
 
     HENetTask *task = [[HENetTask alloc] initWithUrlString:strUrl];
     

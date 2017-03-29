@@ -31,14 +31,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"健康资讯";
+    if (self.num == 2) {
+        self.navigationItem.title = @"健康资讯";
+    }
+    else {
+        self.navigationItem.title = @"权威科普";
+    }
 
     [self setUpData];
     [self setUpTopTab];
     
     self.listSource = [[ConsultListSource alloc] init];
     self.listSource.delegate = self;
-    [self.listSource getConsultClassicySource];
+    [self.listSource getConsultClassicySource:self.num];
     
 //    NSArray *tmpArray = [NSArray arrayWithObjects:@"推荐",@"热点",@"前沿",@"时评",@"政策",@"提醒", @"推荐",@"热点",@"前沿",@"时评",@"政策",@"提醒", nil];
 //    [self.topArray setArray:tmpArray];
