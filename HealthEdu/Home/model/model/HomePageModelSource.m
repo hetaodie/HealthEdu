@@ -41,7 +41,7 @@
         PopularRecommendObject *object = [[PopularRecommendObject alloc] init];
         object.title = [obj objectForKey:@"title"];
         object.id = [obj objectForKey:@"id"];
-        object.imageUrl = [obj objectForKey:@"picUrl"];
+        object.imageUrl = [obj objectForKey:@"picurl"];
         object.stype = [obj objectForKey:@"stype"];
         [array addObject:object];
     }];
