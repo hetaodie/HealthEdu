@@ -6,3 +6,4 @@ pod 'AFNetworking', '~> 3.0'
 end
 
 pod 'SDWebImage', '~>3.8'
+pod 'PLPlayerKit'
