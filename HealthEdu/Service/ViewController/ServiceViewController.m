@@ -46,6 +46,27 @@
     
     self.searveSource = [[SearveSource alloc] init];
     self.searveSource.delegate = self;
+    
+    UIToolbar *numberToolbar =
+    [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+    numberToolbar.items = @[
+                            [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                                          target:nil
+                                                                          action:nil],
+                            [[UIBarButtonItem alloc] initWithTitle:@"Apply"
+                                                             style:UIBarButtonItemStyleDone
+                                                            target:self
+                                                            action:@selector(numberTextFieldDidEndEditing)]
+                            ];
+    [numberToolbar sizeToFit];
+    
+    self.textView.inputAccessoryView = numberToolbar;
+    self.titleLabel.inputAccessoryView = numberToolbar;
+}
+
+- (void) numberTextFieldDidEndEditing {
+    [self.textView resignFirstResponder];
+    [self.titleLabel resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
