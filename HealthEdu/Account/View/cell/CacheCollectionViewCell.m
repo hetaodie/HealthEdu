@@ -65,8 +65,8 @@ const CGFloat CacheCollectionViewCellCapWidth = 43;
 
 - (void)showCellWithData:(LectureHailObject *)aData{
     self.hailContentObject = aData;
-    
-    [self setVideoInfoWithUrl:aData.exturl];
+    NSString *strUrl = [aData.exturl length]>0 ? aData.exturl : aData.content1;
+    [self setVideoInfoWithUrl:strUrl];
     self.titleLabel.text = aData.title;
 }
 

@@ -94,11 +94,12 @@
 
 - (IBAction)deleteBtnPress:(id)sender {
     [self.selectVideoArray enumerateObjectsUsingBlock:^(LectureHailObject *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *strUrl = [obj.exturl length]>0 ? obj.exturl : obj.content1;
         if (self.selectCacheTag == 0) {
-            [[VideoDownloaderManger sharedInstance] removeCompletedVideoWithString:obj.exturl];
+            [[VideoDownloaderManger sharedInstance] removeCompletedVideoWithString:strUrl];
         }
         else{
-            [[VideoDownloaderManger sharedInstance] removeDownLoadingVideoWithString:obj.exturl];
+            [[VideoDownloaderManger sharedInstance] removeDownLoadingVideoWithString:strUrl];
         }
         
     }];

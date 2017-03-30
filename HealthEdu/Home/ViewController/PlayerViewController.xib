@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,6 +16,7 @@
                 <outlet property="playerView" destination="HJx-0B-Qus" id="nBz-Kw-D9E"/>
                 <outlet property="playerViewLayout" destination="5oQ-Bn-b2f" id="LgH-Aj-EPG"/>
                 <outlet property="playerViewTopLayout" destination="1WV-NR-uwk" id="Npt-ck-pQo"/>
+                <outlet property="qnplayView" destination="M5L-ci-Cxz" id="cGC-Rq-F4b"/>
                 <outlet property="videoTitleLabel" destination="QN4-4V-6eB" id="o1K-Xg-lU3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -96,20 +97,28 @@
                         <constraint firstItem="aCT-Wy-0vH" firstAttribute="top" secondItem="NE1-QT-qev" secondAttribute="top" id="pE4-xr-FFr"/>
                     </constraints>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5L-ci-Cxz">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.12941176469999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="HJx-0B-Qus" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="107" id="1WV-NR-uwk"/>
+                <constraint firstAttribute="bottom" secondItem="M5L-ci-Cxz" secondAttribute="bottom" id="4sq-Ao-rfl"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HJx-0B-Qus" secondAttribute="bottom" id="5oQ-Bn-b2f"/>
                 <constraint firstItem="grn-Xn-uJn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="6yx-xO-b8d"/>
                 <constraint firstItem="grn-Xn-uJn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9UM-jg-Lj7"/>
+                <constraint firstItem="M5L-ci-Cxz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NkQ-Lb-64x"/>
                 <constraint firstAttribute="trailing" secondItem="HJx-0B-Qus" secondAttribute="trailing" id="R46-0I-DTJ"/>
+                <constraint firstAttribute="trailing" secondItem="M5L-ci-Cxz" secondAttribute="trailing" id="TNm-xG-oH3"/>
                 <constraint firstItem="HJx-0B-Qus" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dAk-OW-wpE"/>
                 <constraint firstAttribute="trailing" secondItem="grn-Xn-uJn" secondAttribute="trailing" id="pfD-Ip-OtQ"/>
+                <constraint firstItem="M5L-ci-Cxz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="sN0-Tm-x19"/>
                 <constraint firstItem="NE1-QT-qev" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u9a-TL-PNR"/>
                 <constraint firstItem="NE1-QT-qev" firstAttribute="top" secondItem="HJx-0B-Qus" secondAttribute="bottom" constant="30" id="xDF-3x-YnZ"/>
             </constraints>
-            <point key="canvasLocation" x="-24" y="19"/>
+            <point key="canvasLocation" x="-24.5" y="18.5"/>
         </view>
     </objects>
     <resources>

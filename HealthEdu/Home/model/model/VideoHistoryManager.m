@@ -67,7 +67,8 @@ static VideoHistoryManager *instance;
 
 - (void)addVideoToHistory:(LectureHailObject *)aObject{
     @synchronized (self.historyDic) {
-        [self.historyDic setObject:aObject forKey:aObject.exturl.MD5];
+        NSString *strUrl = [aObject.exturl length]>0 ? aObject.exturl : aObject.content1;
+        [self.historyDic setObject:aObject forKey:strUrl.MD5];
     }
     [self writeHistoryVideoToFile];
 }
@@ -78,7 +79,8 @@ static VideoHistoryManager *instance;
 
 - (void)removeVideoFromHistory:(LectureHailObject *)aObject{
     @synchronized (self.historyDic) {
-        [self.historyDic removeObjectForKey:aObject.exturl.MD5];
+        NSString *strUrl = [aObject.exturl length]>0 ? aObject.exturl : aObject.content1;
+        [self.historyDic removeObjectForKey:strUrl.MD5];
     }
     
     [self writeHistoryVideoToFile];

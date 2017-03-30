@@ -98,7 +98,8 @@ static VideoDownloaderManger *instance;
 
 
 - (void)downloadVideoWithString:(LectureHailObject *)aObject{
-    NSString *aStrUrl = aObject.exturl;
+     NSString *strUrl = [aObject.exturl length]>0 ? aObject.exturl : aObject.content1;
+    NSString *aStrUrl = strUrl;
     
     if ([aStrUrl length]==0) {
         return;
@@ -178,12 +179,13 @@ static VideoDownloaderManger *instance;
 
 - (void)removeAllDownLoadingVideo{
     [self.downVideoDic.allValues enumerateObjectsUsingBlock:^(  LectureHailObject *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSString *fullPath = [self getVideoFilePathWithUrl:obj.exturl];
+        NSString *strUrl = [obj.exturl length]>0 ? obj.exturl : obj.content1;
+        NSString *fullPath = [self getVideoFilePathWithUrl:strUrl];
         NSFileManager *fileManager = [NSFileManager defaultManager ];
         if ([fileManager fileExistsAtPath:fullPath]) {
             [fileManager removeItemAtPath:fullPath error:nil];
         }
-        VideoDownLoaderObject *lc_D = [self.taskDictionary valueForKey:obj.exturl.MD5];
+        VideoDownLoaderObject *lc_D = [self.taskDictionary valueForKey:strUrl.MD5];
         if (lc_D) {
             [lc_D.task cancel];
         }
@@ -207,7 +209,8 @@ static VideoDownloaderManger *instance;
 
 - (void)removeAllCompletedVideo{
     [self.completedVideoDic.allValues enumerateObjectsUsingBlock:^(  LectureHailObject *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSString *fullPath = [self getVideoFilePathWithUrl:obj.exturl];
+        NSString *strUrl = [obj.exturl length]>0 ? obj.exturl : obj.content1;
+        NSString *fullPath = [self getVideoFilePathWithUrl:strUrl];
         NSFileManager *fileManager = [NSFileManager defaultManager ];
         if ([fileManager fileExistsAtPath:fullPath]) {
             [fileManager removeItemAtPath:fullPath error:nil];

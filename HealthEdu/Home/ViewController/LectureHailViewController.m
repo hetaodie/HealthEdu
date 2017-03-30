@@ -18,6 +18,8 @@
 #import "LectureHailClassifyObject.h"
 #import "LectureHailObject.h"
 
+
+
 @interface LectureHailViewController ()<TopTabScrollViewDelegate,CycleBannersViewDelegate,LectureHailContentViewDelegate,LectureHailSourceDelegate>
 @property (nonatomic, strong) NSMutableArray *bannersArray;
 @property (nonatomic, strong) NSMutableArray *topArray;
@@ -27,10 +29,10 @@
 @property (weak, nonatomic) IBOutlet CycleBannersView *cycleBannersView;
 @property (weak, nonatomic) IBOutlet TopTabScrollView *topTabScrollView;
 
+@property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (weak, nonatomic) IBOutlet LectureHailContentView *contentView;
 @property (nonatomic, strong) LectureHailSource *lectureHailSource;
 @property (nonatomic, assign) NSInteger selectIndex;
-
 
 @end
 
@@ -72,7 +74,10 @@
     [self.cycleBannersView showBannersWithBannersArray:self.bannersArray];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

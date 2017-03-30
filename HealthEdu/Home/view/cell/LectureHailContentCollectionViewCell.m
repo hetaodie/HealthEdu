@@ -66,7 +66,9 @@
     
     LectureHailObject *object = [self.contentArray objectAtIndex:row];
     
-    if ([object.exturl length] == 0) {
+    NSString *strUrl = [object.exturl length]>0 ? object.exturl : object.content1;
+    
+    if ([strUrl length] == 0) {
         UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"提示" message:@"视频连接为空！" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles: nil];
         [alertview show];
         return;
