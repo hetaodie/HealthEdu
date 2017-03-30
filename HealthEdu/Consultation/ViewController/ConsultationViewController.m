@@ -13,6 +13,7 @@
 #import "LocationManager.h"
 #import "ConsultationObject.h"
 #import "ConsultationSource.h"
+#import "MapViewController.h"
 
 @interface ConsultationViewController ()<UITableViewDelegate,UITableViewDataSource,CitysViewDelegate,SelectCityViewDelegate,LocationManagerDelegate,ConsultationSourceDelegate>
 @property (weak, nonatomic) IBOutlet SelectCityView *selectCityView;
@@ -89,6 +90,15 @@
     [cell showCellWithObject:object];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ConsultationListObject *object = [self.listArray objectAtIndex:indexPath.row];
+    MapViewController *jkdeVC = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    jkdeVC.hidesBottomBarWhenPushed = YES;
+    jkdeVC.latitude = [object.latitude floatValue];
+    jkdeVC.longitude = [object.longitude floatValue];
+    [self.navigationController pushViewController:jkdeVC animated:YES];
 }
 
 - (void)onSelectOneElementWithData:(ConsultationObject *)aObject withIndex:(NSInteger)aIndex{

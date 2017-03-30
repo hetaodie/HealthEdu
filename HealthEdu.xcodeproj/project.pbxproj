@@ -13,6 +13,9 @@
 		4FDE9CD51DB4D20600D9C790 /* HomeContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE9CD31DB4D20600D9C790 /* HomeContentTableViewCell.xib */; };
 		4FDE9CD81DB4EC1000D9C790 /* HomeContentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE9CD71DB4EC1000D9C790 /* HomeContentHeaderView.m */; };
 		4FDE9CDA1DB4EC2300D9C790 /* HomeContentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE9CD91DB4EC2300D9C790 /* HomeContentHeaderView.xib */; };
+		7C34AEEB1E8CA20400A3DE5A /* KCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34AEEA1E8CA20400A3DE5A /* KCAnnotation.m */; };
+		7C34AEEF1E8CA20E00A3DE5A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34AEED1E8CA20E00A3DE5A /* MapViewController.m */; };
+		7C34AEF01E8CA20E00A3DE5A /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34AEEE1E8CA20E00A3DE5A /* MapViewController.xib */; };
 		7C34F3951DD1D4AE00C61015 /* ConsultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34F3941DD1D4AE00C61015 /* ConsultContentView.m */; };
 		7C34F3971DD1D4BD00C61015 /* ConsultContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C34F3961DD1D4BD00C61015 /* ConsultContentView.xib */; };
 		7C34F39B1DD1E8F800C61015 /* ConsultContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C34F3991DD1E8F800C61015 /* ConsultContentCollectionViewCell.m */; };
@@ -206,6 +209,11 @@
 		4FDE9CD61DB4EC1000D9C790 /* HomeContentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeContentHeaderView.h; sourceTree = "<group>"; };
 		4FDE9CD71DB4EC1000D9C790 /* HomeContentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeContentHeaderView.m; sourceTree = "<group>"; };
 		4FDE9CD91DB4EC2300D9C790 /* HomeContentHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeContentHeaderView.xib; sourceTree = "<group>"; };
+		7C34AEE91E8CA20400A3DE5A /* KCAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAnnotation.h; sourceTree = "<group>"; };
+		7C34AEEA1E8CA20400A3DE5A /* KCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAnnotation.m; sourceTree = "<group>"; };
+		7C34AEEC1E8CA20E00A3DE5A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7C34AEED1E8CA20E00A3DE5A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		7C34AEEE1E8CA20E00A3DE5A /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		7C34F3931DD1D4AE00C61015 /* ConsultContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultContentView.h; sourceTree = "<group>"; };
 		7C34F3941DD1D4AE00C61015 /* ConsultContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultContentView.m; sourceTree = "<group>"; };
 		7C34F3961DD1D4BD00C61015 /* ConsultContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultContentView.xib; sourceTree = "<group>"; };
@@ -1054,6 +1062,11 @@
 		E62342D21D9A107300FE8254 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7C34AEE91E8CA20400A3DE5A /* KCAnnotation.h */,
+				7C34AEEA1E8CA20400A3DE5A /* KCAnnotation.m */,
+				7C34AEEC1E8CA20E00A3DE5A /* MapViewController.h */,
+				7C34AEED1E8CA20E00A3DE5A /* MapViewController.m */,
+				7C34AEEE1E8CA20E00A3DE5A /* MapViewController.xib */,
 				E62342DC1D9A157600FE8254 /* ConsultationViewController.h */,
 				E62342DD1D9A157600FE8254 /* ConsultationViewController.m */,
 			);
@@ -1270,6 +1283,7 @@
 				7C379AF61DEC31C3004627E9 /* SettingViewController.xib in Resources */,
 				7C7997FE1E66C16600938EC4 /* AboutViewController.xib in Resources */,
 				7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */,
+				7C34AEF01E8CA20E00A3DE5A /* MapViewController.xib in Resources */,
 				4FB205F71DB4BDBD007396A8 /* HomeTagView.xib in Resources */,
 				7C379B011DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.xib in Resources */,
 				7CFCCC331E5E635100DCEC21 /* ConferenceDetailViewController.xib in Resources */,
@@ -1415,6 +1429,7 @@
 				7C379B001DEC69C5004627E9 /* PersonInfoHeaderTableViewCell.m in Sources */,
 				7C87BF531DE6D76C0034C613 /* VideoDownLoaderObject.m in Sources */,
 				E6123CC61DC2E37400A0369B /* UIColor+HEX.m in Sources */,
+				7C34AEEB1E8CA20400A3DE5A /* KCAnnotation.m in Sources */,
 				7CF736E71DDBB61B00F92222 /* LectureHailContentElementCollectionViewCell.m in Sources */,
 				7CF736E11DDBB3BB00F92222 /* LectureHailContentView.m in Sources */,
 				E6C699021D990B2A00D2818C /* main.m in Sources */,
@@ -1496,6 +1511,7 @@
 				7CFCCC231E5DE3A100DCEC21 /* ConferenceViewController.m in Sources */,
 				7C7997E71E65D9EC00938EC4 /* ConsultationSource.m in Sources */,
 				E6EC27AB1DBD9A4C00DEE06D /* PlayerViewController.m in Sources */,
+				7C34AEEF1E8CA20E00A3DE5A /* MapViewController.m in Sources */,
 				E6EC27CE1DBD9E4D00DEE06D /* PersonInfoViewController.m in Sources */,
 				7C379AF51DEC31C3004627E9 /* SettingViewController.m in Sources */,
 			);

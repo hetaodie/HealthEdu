@@ -58,6 +58,8 @@
 	</dict>
 	<key>NSLocationUsageDescription</key>
 	<string>如果需要定位，只有能同意才可以</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>使用地图</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>如果需要定位，只有能同意才可以</string>
 </dict>

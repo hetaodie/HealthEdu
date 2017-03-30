@@ -19,7 +19,7 @@
 @implementation ConsultationSource
 
 - (void)getConsultation{
-    HENetTask *task = [[HENetTask alloc] initWithUrlString:@"/mobile/getContentList.action?top=6"];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:@"/mobile/getCategory.action?catid=6"];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onConsultationSuccess:)]) {
@@ -55,7 +55,7 @@
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onConsultationDetailSuccess:)]) {
-            NSArray *array = [self arrayWithObject:responseObject];
+            NSArray *array = [self arrayWithListObject:responseObject];
             [weakSelf.delegate onConsultationDetailSuccess:array];
         }
     };
@@ -78,6 +78,9 @@
         object.phone = [obj objectForKey:@"phone"];
         
         object.content1 = [obj objectForKey:@"content1"];
+        object.latitude = [obj objectForKey:@"content3"];
+        object.longitude = [obj objectForKey:@"content4"];
+        
         [array addObject:object];
     }];
     return array;

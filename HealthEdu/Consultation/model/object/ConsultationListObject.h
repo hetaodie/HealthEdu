@@ -13,4 +13,6 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *phone;
 @property (nonatomic, strong) NSString *content1;   ///<地址
+@property (nonatomic, strong) NSString *latitude;
+@property (nonatomic, strong) NSString *longitude;
 @end
