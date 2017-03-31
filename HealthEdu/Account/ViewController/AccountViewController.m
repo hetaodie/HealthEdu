@@ -84,10 +84,13 @@
 }
 
 - (IBAction)infoBtnPress:(id)sender {
-    PersonInfoViewController *ndVC = [[PersonInfoViewController alloc] initWithNibName:@"PersonInfoViewController" bundle:nil];
-    ndVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:ndVC animated:YES];
-}
+    UserInfo *userinfo = [[UserInfoManager shareManager] getUserInfo];
+    if (userinfo != nil) {
+        PersonInfoViewController *ndVC = [[PersonInfoViewController alloc] initWithNibName:@"PersonInfoViewController" bundle:nil];
+        ndVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:ndVC animated:YES];
+    }
+   }
 
 - (IBAction)loginBtnPress:(id)sender {
     LoginViewController *ndVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
@@ -188,6 +191,20 @@
     [self.navigationController setViewControllers:viewControllers animated:YES];
 }
 
+- (void)onRegisterSussess:(UIViewController *)aVC {
+    LoginViewController *ndVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    ndVC.delegate = self;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+    
+    NSMutableArray * viewControllers = [self.navigationController.viewControllers mutableCopy];
+    
+    if ([viewControllers containsObject:aVC]) {
+        [viewControllers removeObject:aVC];
+    }
+    [self.navigationController setViewControllers:viewControllers animated:YES];
+}
+
 #pragma mark -
 #pragma mark delegate
 
@@ -260,6 +277,12 @@
     object3.title = @"BMI指数";
     object3.pAction = 2;
     [array2 addObject:object3];
+    
+    AccountContentObject *object4 = [[AccountContentObject alloc] init];
+    object4.headerImage = @"计步器";
+    object4.title = @"BMI指数";
+    object4.pAction = 2;
+    [array2 addObject:object4];
     
     [self.contentArray addObject:array1];
     [self.contentArray addObject:array2];

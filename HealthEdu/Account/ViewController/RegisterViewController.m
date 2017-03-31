@@ -106,6 +106,9 @@
 }
 
 - (void)onRegisterError{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onRegisterSussess:)]) {
+        [self.delegate onRegisterSussess:self];
+    }
 
 }
 

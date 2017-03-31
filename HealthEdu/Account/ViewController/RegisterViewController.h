@@ -12,6 +12,8 @@
 
 - (void)onClictToLoginViewController:(UIViewController *)aVC;
 
+- (void)onRegisterSussess:(UIViewController *)aVC;
+
 @end
 
 @interface RegisterViewController : UIViewController
