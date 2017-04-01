@@ -50,6 +50,10 @@
 		7C379B251DEE65BE004627E9 /* ChangeNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B231DEE65BE004627E9 /* ChangeNameViewController.xib */; };
 		7C379B2E1DEE6782004627E9 /* ChangeSexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C379B2C1DEE6782004627E9 /* ChangeSexViewController.m */; };
 		7C379B2F1DEE6782004627E9 /* ChangeSexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C379B2D1DEE6782004627E9 /* ChangeSexViewController.xib */; };
+		7C6D6FD11E8F0EA800A30C04 /* DoctorRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FD01E8F0EA800A30C04 /* DoctorRequestObject.m */; };
+		7C6D6FD41E8F0F5800A30C04 /* DocorRequestSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FD31E8F0F5800A30C04 /* DocorRequestSource.m */; };
+		7C6D6FD81E8F135D00A30C04 /* DoctorRequestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FD61E8F135D00A30C04 /* DoctorRequestTableViewCell.m */; };
+		7C6D6FD91E8F135D00A30C04 /* DoctorRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6D6FD71E8F135D00A30C04 /* DoctorRequestTableViewCell.xib */; };
 		7C79969B1E6000AA00938EC4 /* ConferenceDetailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */; };
 		7C79969E1E6000BD00938EC4 /* ConferenceDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79969D1E6000BD00938EC4 /* ConferenceDetailObject.m */; };
 		7C7996A21E607BB200938EC4 /* ConferenceEnrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7996A01E607BB200938EC4 /* ConferenceEnrollViewController.m */; };
@@ -269,6 +273,13 @@
 		7C379B2B1DEE6782004627E9 /* ChangeSexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeSexViewController.h; sourceTree = "<group>"; };
 		7C379B2C1DEE6782004627E9 /* ChangeSexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeSexViewController.m; sourceTree = "<group>"; };
 		7C379B2D1DEE6782004627E9 /* ChangeSexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeSexViewController.xib; sourceTree = "<group>"; };
+		7C6D6FCF1E8F0EA800A30C04 /* DoctorRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorRequestObject.h; sourceTree = "<group>"; };
+		7C6D6FD01E8F0EA800A30C04 /* DoctorRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorRequestObject.m; sourceTree = "<group>"; };
+		7C6D6FD21E8F0F5800A30C04 /* DocorRequestSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocorRequestSource.h; sourceTree = "<group>"; };
+		7C6D6FD31E8F0F5800A30C04 /* DocorRequestSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocorRequestSource.m; sourceTree = "<group>"; };
+		7C6D6FD51E8F135D00A30C04 /* DoctorRequestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorRequestTableViewCell.h; sourceTree = "<group>"; };
+		7C6D6FD61E8F135D00A30C04 /* DoctorRequestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorRequestTableViewCell.m; sourceTree = "<group>"; };
+		7C6D6FD71E8F135D00A30C04 /* DoctorRequestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorRequestTableViewCell.xib; sourceTree = "<group>"; };
 		7C7996991E6000AA00938EC4 /* ConferenceDetailSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailSource.h; sourceTree = "<group>"; };
 		7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceDetailSource.m; sourceTree = "<group>"; };
 		7C79969C1E6000BD00938EC4 /* ConferenceDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailObject.h; sourceTree = "<group>"; };
@@ -665,12 +676,16 @@
 				7C7997F81E66AC1500938EC4 /* LoginSource.m */,
 				7C7997EE1E6679E100938EC4 /* RegisterSource.h */,
 				7C7997EF1E6679E100938EC4 /* RegisterSource.m */,
+				7C6D6FD21E8F0F5800A30C04 /* DocorRequestSource.h */,
+				7C6D6FD31E8F0F5800A30C04 /* DocorRequestSource.m */,
 				7C379AE21DEBF7CC004627E9 /* AccountContentObject.h */,
 				7C379AE31DEBF7CC004627E9 /* AccountContentObject.m */,
 				7C379B071DEC6D85004627E9 /* PersonInfoObject.h */,
 				7C379B081DEC6D85004627E9 /* PersonInfoObject.m */,
 				7C7998021E671A9000938EC4 /* AboutObject.h */,
 				7C7998031E671A9000938EC4 /* AboutObject.m */,
+				7C6D6FCF1E8F0EA800A30C04 /* DoctorRequestObject.h */,
+				7C6D6FD01E8F0EA800A30C04 /* DoctorRequestObject.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -693,6 +708,9 @@
 				7C379B191DED5E74004627E9 /* CacheCollectionViewCell.h */,
 				7C379B1A1DED5E74004627E9 /* CacheCollectionViewCell.m */,
 				7C379B1B1DED5E74004627E9 /* CacheCollectionViewCell.xib */,
+				7C6D6FD51E8F135D00A30C04 /* DoctorRequestTableViewCell.h */,
+				7C6D6FD61E8F135D00A30C04 /* DoctorRequestTableViewCell.m */,
+				7C6D6FD71E8F135D00A30C04 /* DoctorRequestTableViewCell.xib */,
 			);
 			name = cell;
 			path = HealthEdu/Account/View/cell;
@@ -1280,6 +1298,7 @@
 				E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */,
 				7C87BFAF1DE8146C0034C613 /* ConsultationContentTableViewCell.xib in Resources */,
 				7C7996A31E607BB200938EC4 /* ConferenceEnrollViewController.xib in Resources */,
+				7C6D6FD91E8F135D00A30C04 /* DoctorRequestTableViewCell.xib in Resources */,
 				7C379AF61DEC31C3004627E9 /* SettingViewController.xib in Resources */,
 				7C7997FE1E66C16600938EC4 /* AboutViewController.xib in Resources */,
 				7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */,
@@ -1492,10 +1511,13 @@
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
 				7CF5E1991E5D353500EE42DE /* BaikeDetailSource.m in Sources */,
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
+				7C6D6FD41E8F0F5800A30C04 /* DocorRequestSource.m in Sources */,
 				7CF5E1931E5BE21900EE42DE /* BaikeSource.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
+				7C6D6FD81E8F135D00A30C04 /* DoctorRequestTableViewCell.m in Sources */,
 				7CFCCC2B1E5DF17E00DCEC21 /* ConferenceObject.m in Sources */,
 				7C379AF01DEC1C04004627E9 /* RegisterViewController.m in Sources */,
+				7C6D6FD11E8F0EA800A30C04 /* DoctorRequestObject.m in Sources */,
 				7C34F39B1DD1E8F800C61015 /* ConsultContentCollectionViewCell.m in Sources */,
 				7CF5E18A1E5BE03800EE42DE /* BaikeObject.m in Sources */,
 				7C7997FD1E66C16600938EC4 /* AboutViewController.m in Sources */,
