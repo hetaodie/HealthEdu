@@ -7,21 +7,27 @@
 //
 
 #import "BMIViewController.h"
+#import "BMIKnowView.h"
+
 
 @interface BMIViewController ()
-
+@property (nonatomic, strong) BMIKnowView *knowView;
 @end
 
 @implementation BMIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.knowView = [BMIKnowView viewWithXib];
+    [self.view addSubview:self.knowView];
+}
+
+- (void)viewDidLayoutSubviews {
+    self.knowView.frame = self.view.bounds;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 

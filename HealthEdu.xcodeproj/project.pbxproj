@@ -57,6 +57,8 @@
 		7C6D6FDC1E8F41A900A30C04 /* ChangeUserInSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FDB1E8F41A900A30C04 /* ChangeUserInSource.m */; };
 		7C6D6FDF1E8F45BB00A30C04 /* GetUserInfoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FDE1E8F45BB00A30C04 /* GetUserInfoSource.m */; };
 		7C6D6FE21E8F4FC400A30C04 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FE11E8F4FC400A30C04 /* UIView+Toast.m */; };
+		7C6D6FE51E8F785C00A30C04 /* BMIKnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FE41E8F785C00A30C04 /* BMIKnowView.m */; };
+		7C6D6FE71E8F787E00A30C04 /* BMIKnowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6D6FE61E8F787E00A30C04 /* BMIKnowView.xib */; };
 		7C79969B1E6000AA00938EC4 /* ConferenceDetailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */; };
 		7C79969E1E6000BD00938EC4 /* ConferenceDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79969D1E6000BD00938EC4 /* ConferenceDetailObject.m */; };
 		7C7996A21E607BB200938EC4 /* ConferenceEnrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7996A01E607BB200938EC4 /* ConferenceEnrollViewController.m */; };
@@ -289,6 +291,9 @@
 		7C6D6FDE1E8F45BB00A30C04 /* GetUserInfoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoSource.m; sourceTree = "<group>"; };
 		7C6D6FE01E8F4FC400A30C04 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		7C6D6FE11E8F4FC400A30C04 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		7C6D6FE31E8F785C00A30C04 /* BMIKnowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIKnowView.h; sourceTree = "<group>"; };
+		7C6D6FE41E8F785C00A30C04 /* BMIKnowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIKnowView.m; sourceTree = "<group>"; };
+		7C6D6FE61E8F787E00A30C04 /* BMIKnowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMIKnowView.xib; sourceTree = "<group>"; };
 		7C7996991E6000AA00938EC4 /* ConferenceDetailSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailSource.h; sourceTree = "<group>"; };
 		7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceDetailSource.m; sourceTree = "<group>"; };
 		7C79969C1E6000BD00938EC4 /* ConferenceDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailObject.h; sourceTree = "<group>"; };
@@ -1060,6 +1065,9 @@
 				E6EC27C61DBD9D9400DEE06D /* BMIViewController.h */,
 				E6EC27C71DBD9D9400DEE06D /* BMIViewController.m */,
 				E6EC27C81DBD9D9400DEE06D /* BMIViewController.xib */,
+				7C6D6FE31E8F785C00A30C04 /* BMIKnowView.h */,
+				7C6D6FE41E8F785C00A30C04 /* BMIKnowView.m */,
+				7C6D6FE61E8F787E00A30C04 /* BMIKnowView.xib */,
 				E6EC27CB1DBD9E4D00DEE06D /* PersonInfoViewController.h */,
 				E6EC27CC1DBD9E4D00DEE06D /* PersonInfoViewController.m */,
 				E6EC27CD1DBD9E4D00DEE06D /* PersonInfoViewController.xib */,
@@ -1315,6 +1323,7 @@
 				7C7996A31E607BB200938EC4 /* ConferenceEnrollViewController.xib in Resources */,
 				7C6D6FD91E8F135D00A30C04 /* DoctorRequestTableViewCell.xib in Resources */,
 				7C379AF61DEC31C3004627E9 /* SettingViewController.xib in Resources */,
+				7C6D6FE71E8F787E00A30C04 /* BMIKnowView.xib in Resources */,
 				7C7997FE1E66C16600938EC4 /* AboutViewController.xib in Resources */,
 				7CF736B71DDAD80500F92222 /* BaiKeSicknessCategoryCollectionViewCell.xib in Resources */,
 				7C34AEF01E8CA20E00A3DE5A /* MapViewController.xib in Resources */,
@@ -1529,6 +1538,7 @@
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
 				7CF5E1991E5D353500EE42DE /* BaikeDetailSource.m in Sources */,
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
+				7C6D6FE51E8F785C00A30C04 /* BMIKnowView.m in Sources */,
 				7C6D6FD41E8F0F5800A30C04 /* DocorRequestSource.m in Sources */,
 				7CF5E1931E5BE21900EE42DE /* BaikeSource.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
