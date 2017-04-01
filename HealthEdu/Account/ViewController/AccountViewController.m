@@ -279,8 +279,8 @@
     [array2 addObject:object3];
     
     AccountContentObject *object4 = [[AccountContentObject alloc] init];
-    object4.headerImage = @"计步器";
-    object4.title = @"BMI指数";
+    object4.headerImage = @"jibuqi";
+    object4.title = @"计步器";
     object4.pAction = 2;
     [array2 addObject:object4];
     

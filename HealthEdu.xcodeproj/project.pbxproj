@@ -54,6 +54,9 @@
 		7C6D6FD41E8F0F5800A30C04 /* DocorRequestSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FD31E8F0F5800A30C04 /* DocorRequestSource.m */; };
 		7C6D6FD81E8F135D00A30C04 /* DoctorRequestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FD61E8F135D00A30C04 /* DoctorRequestTableViewCell.m */; };
 		7C6D6FD91E8F135D00A30C04 /* DoctorRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6D6FD71E8F135D00A30C04 /* DoctorRequestTableViewCell.xib */; };
+		7C6D6FDC1E8F41A900A30C04 /* ChangeUserInSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FDB1E8F41A900A30C04 /* ChangeUserInSource.m */; };
+		7C6D6FDF1E8F45BB00A30C04 /* GetUserInfoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FDE1E8F45BB00A30C04 /* GetUserInfoSource.m */; };
+		7C6D6FE21E8F4FC400A30C04 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FE11E8F4FC400A30C04 /* UIView+Toast.m */; };
 		7C79969B1E6000AA00938EC4 /* ConferenceDetailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */; };
 		7C79969E1E6000BD00938EC4 /* ConferenceDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79969D1E6000BD00938EC4 /* ConferenceDetailObject.m */; };
 		7C7996A21E607BB200938EC4 /* ConferenceEnrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7996A01E607BB200938EC4 /* ConferenceEnrollViewController.m */; };
@@ -280,6 +283,12 @@
 		7C6D6FD51E8F135D00A30C04 /* DoctorRequestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorRequestTableViewCell.h; sourceTree = "<group>"; };
 		7C6D6FD61E8F135D00A30C04 /* DoctorRequestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorRequestTableViewCell.m; sourceTree = "<group>"; };
 		7C6D6FD71E8F135D00A30C04 /* DoctorRequestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorRequestTableViewCell.xib; sourceTree = "<group>"; };
+		7C6D6FDA1E8F41A900A30C04 /* ChangeUserInSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeUserInSource.h; sourceTree = "<group>"; };
+		7C6D6FDB1E8F41A900A30C04 /* ChangeUserInSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeUserInSource.m; sourceTree = "<group>"; };
+		7C6D6FDD1E8F45BB00A30C04 /* GetUserInfoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoSource.h; sourceTree = "<group>"; };
+		7C6D6FDE1E8F45BB00A30C04 /* GetUserInfoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoSource.m; sourceTree = "<group>"; };
+		7C6D6FE01E8F4FC400A30C04 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		7C6D6FE11E8F4FC400A30C04 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		7C7996991E6000AA00938EC4 /* ConferenceDetailSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailSource.h; sourceTree = "<group>"; };
 		7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceDetailSource.m; sourceTree = "<group>"; };
 		7C79969C1E6000BD00938EC4 /* ConferenceDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailObject.h; sourceTree = "<group>"; };
@@ -638,6 +647,8 @@
 				7C7997F21E667F4600938EC4 /* UserInfoManager.m */,
 				7C7997F41E667F6900938EC4 /* UserInfo.h */,
 				7C7997F51E667F6900938EC4 /* UserInfo.m */,
+				7C6D6FE01E8F4FC400A30C04 /* UIView+Toast.h */,
+				7C6D6FE11E8F4FC400A30C04 /* UIView+Toast.m */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -676,6 +687,8 @@
 				7C7997F81E66AC1500938EC4 /* LoginSource.m */,
 				7C7997EE1E6679E100938EC4 /* RegisterSource.h */,
 				7C7997EF1E6679E100938EC4 /* RegisterSource.m */,
+				7C6D6FDD1E8F45BB00A30C04 /* GetUserInfoSource.h */,
+				7C6D6FDE1E8F45BB00A30C04 /* GetUserInfoSource.m */,
 				7C6D6FD21E8F0F5800A30C04 /* DocorRequestSource.h */,
 				7C6D6FD31E8F0F5800A30C04 /* DocorRequestSource.m */,
 				7C379AE21DEBF7CC004627E9 /* AccountContentObject.h */,
@@ -686,6 +699,8 @@
 				7C7998031E671A9000938EC4 /* AboutObject.m */,
 				7C6D6FCF1E8F0EA800A30C04 /* DoctorRequestObject.h */,
 				7C6D6FD01E8F0EA800A30C04 /* DoctorRequestObject.m */,
+				7C6D6FDA1E8F41A900A30C04 /* ChangeUserInSource.h */,
+				7C6D6FDB1E8F41A900A30C04 /* ChangeUserInSource.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1419,6 +1434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C6D6FDC1E8F41A900A30C04 /* ChangeUserInSource.m in Sources */,
 				7C366BF61E531F6E00F88D85 /* HomePageModelSource.m in Sources */,
 				7C34F3A01DD1E91700C61015 /* ConsultContentTableViewCell.m in Sources */,
 				7CF736ED1DDBEDDA00F92222 /* PlayerView.m in Sources */,
@@ -1466,6 +1482,7 @@
 				7C87BFBD1DE81C680034C613 /* CitysViewCollectionViewCell.m in Sources */,
 				7CF8F3A31DE48BAA003BBE60 /* LecturePlayerView.m in Sources */,
 				7C7997E41E65D97B00938EC4 /* LocationManager.m in Sources */,
+				7C6D6FE21E8F4FC400A30C04 /* UIView+Toast.m in Sources */,
 				7CF5E18D1E5BE0B400EE42DE /* BaikeDetailObject.m in Sources */,
 				7C379AFB1DEC6985004627E9 /* AccountContentTableViewCell.m in Sources */,
 				7C366BE31E531C0200F88D85 /* NSString+MD5.m in Sources */,
@@ -1480,6 +1497,7 @@
 				7CFCCC321E5E635100DCEC21 /* ConferenceDetailViewController.m in Sources */,
 				7CF03E921E5ADE520088CD9F /* ConsultDetailSource.m in Sources */,
 				7C379B051DEC6B9B004627E9 /* PersonInfoTableViewCell.m in Sources */,
+				7C6D6FDF1E8F45BB00A30C04 /* GetUserInfoSource.m in Sources */,
 				7C7997F91E66AC1500938EC4 /* LoginSource.m in Sources */,
 				7C79969E1E6000BD00938EC4 /* ConferenceDetailObject.m in Sources */,
 				7CF5E1A21E5D398C00EE42DE /* LectureHailClassifyObject.m in Sources */,

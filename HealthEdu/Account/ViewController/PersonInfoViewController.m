@@ -18,10 +18,13 @@
 
 #import "ChangeNameViewController.h"
 #import "ChangeSexViewController.h"
+#import "UserInfoManager.h"
+#import "GetUserInfoSource.h"
 
-@interface PersonInfoViewController ()
+@interface PersonInfoViewController () <GetUserInfoSourceDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *contentArray;
+@property (nonatomic, strong) GetUserInfoSource *source;
 
 @end
 
@@ -39,6 +42,9 @@
     [self setUpTableView];
     
     [self testData];
+    
+    self.source = [[GetUserInfoSource alloc] init];
+    self.source.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,6 +58,15 @@
     self.navigationController.navigationBar.hidden = NO;
 }
 
+- (void) onGetuserInfoWithSussess:(UserInfo *)aUserInfo {
+    [[UserInfoManager shareManager] setUserInfo:aUserInfo];
+    [self testData];
+    [self.tableView reloadData];
+}
+
+- (void)onGetuserInfoWithError {
+
+}
 
 #pragma mark -
 #pragma mark IBActions
@@ -150,40 +165,25 @@
 - (void)presentVCWithObject:(PersonInfoObject *)aObject {
     NSInteger pAction = aObject.pAction;
     
-    switch (pAction) {
-        case 0:
-        {
-        
-        }
-            break;
-        case 1:
-        {
-            ChangeNameViewController *ndVC = [[ChangeNameViewController alloc] initWithNibName:@"ChangeNameViewController" bundle:nil];
-            ndVC.name = aObject.info;
-            
-            ndVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:ndVC animated:YES];
-            
-        }
-            break;
-        case 2:
-        {
-            ChangeSexViewController *ndVC = [[ChangeSexViewController alloc] initWithNibName:@"ChangeSexViewController" bundle:nil];
-            ndVC.sex = aObject.info;
-            ndVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:ndVC animated:YES];
-        }
-            break;
-        case 3:
-        {
-            ChangePassWordViewController *ndVC = [[ChangePassWordViewController alloc] initWithNibName:@"ChangePassWordViewController" bundle:nil];
-            ndVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:ndVC animated:YES];
-        }
-            break;
-            
-        default:
-            break;
+    if (pAction == 1) {
+        ChangePassWordViewController *ndVC = [[ChangePassWordViewController alloc] initWithNibName:@"ChangePassWordViewController" bundle:nil];
+        ndVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:ndVC animated:YES];
+    }
+    
+    else if (pAction == 3){
+        ChangeSexViewController *ndVC = [[ChangeSexViewController alloc] initWithNibName:@"ChangeSexViewController" bundle:nil];
+        ndVC.sex = aObject.info;
+        ndVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:ndVC animated:YES];
+    }
+    
+    else {
+    
+        ChangeNameViewController *ndVC = [[ChangeNameViewController alloc] initWithNibName:@"ChangeNameViewController" bundle:nil];
+        ndVC.pAction = pAction;
+        ndVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:ndVC animated:YES];
     }
 }
 
@@ -200,6 +200,9 @@
 }
 
 - (void)testData{
+    
+    UserInfo *userInfo = [[UserInfoManager shareManager] getUserInfo];
+    
     NSMutableArray *array1 = [NSMutableArray array];
     
     PersonInfoObject *object1 = [[PersonInfoObject alloc] init];
@@ -212,28 +215,48 @@
     
     NSMutableArray *array2 = [NSMutableArray array];
     
-    PersonInfoObject *object2 = [[PersonInfoObject alloc] init];
-    object2.infoTag = @"姓名";
-    object2.info = @"Richand张";
-    object2.pAction = 1;
-    [array2 addObject:object2];
-    
-    PersonInfoObject *object3 = [[PersonInfoObject alloc] init];
-    object3.infoTag = @"性别";
-    object3.info = @"女";
-    object3.pAction = 2;
-    [array2 addObject:object3];
-    [self.contentArray addObject:array2];
-
-    
-    NSMutableArray *array3 = [NSMutableArray array];
     
     PersonInfoObject *object4 = [[PersonInfoObject alloc] init];
     object4.infoTag = @"修改密码";
     object4.info = @"修改密码";
-    object4.pAction = 3;
-    [array3 addObject:object4];
+    object4.pAction = 1;
+    [array2 addObject:object4];
     
-    [self.contentArray addObject:array3];
+    PersonInfoObject *object2 = [[PersonInfoObject alloc] init];
+    object2.infoTag = @"姓名";
+    object2.info = userInfo.name;
+    object2.pAction = 2;
+    [array2 addObject:object2];
+    
+    PersonInfoObject *object3 = [[PersonInfoObject alloc] init];
+    object3.infoTag = @"性别";
+    object3.info = userInfo.sex;
+    object3.pAction = 3;
+    [array2 addObject:object3];
+    
+    PersonInfoObject *object5 = [[PersonInfoObject alloc] init];
+    object5.infoTag = @"手机";
+    object5.info = userInfo.userName;
+    object5.pAction = 5;
+    [array2 addObject:object5];
+    
+    PersonInfoObject *object6 = [[PersonInfoObject alloc] init];
+    object6.infoTag = @"单位";
+    object6.info = userInfo.company;
+    object6.pAction = 6;
+    [array2 addObject:object6];
+    
+    PersonInfoObject *object7 = [[PersonInfoObject alloc] init];
+    object7.infoTag = @"职位";
+    object7.info = userInfo.title;
+    object7.pAction = 7;
+    [array2 addObject:object7];
+    
+    PersonInfoObject *object8 = [[PersonInfoObject alloc] init];
+    object8.infoTag = @"邮箱";
+    object8.info = userInfo.email;
+    object8.pAction = 8;
+    [array2 addObject:object8];
+    [self.contentArray addObject:array2];
 }
 @end

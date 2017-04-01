@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @protocol ChangeNameViewControllerDelegate <NSObject>
-
-- (void)onChangeNameWithNewName:(NSString *)aNewName;
-
+- (void)onChangeNameWithNewName;
 @end
 
 @interface ChangeNameViewController : UIViewController
-
-@property (nonatomic,strong) NSString *name;
+@property (nonatomic,assign) NSInteger pAction;
 @end
