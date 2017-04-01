@@ -15,7 +15,7 @@
 
     NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)aUrl, (CFStringRef)@"!NULL,'()*+,-./:;=?@_~%#[]", NULL, kCFStringEncodingUTF8));
 
-    HENetTask *task = [[HENetTask alloc] initWithUrlString:encodedString];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:aUrl];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onChangeUserInfoSussess)]) {

@@ -36,6 +36,7 @@
     [super didReceiveMemoryWarning];
 }
 
+
 #pragma mark -
 #pragma mark IBActions
 
@@ -48,7 +49,7 @@
     switch (self.pAction) {
         case 2:
         {
-            self.strUrl = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&name=%@",userInfo.userName,self.nameTextField];
+            self.strUrl = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&name=%@",userInfo.userName,self.nameTextField.text];
         }
             break;
         case 3:
@@ -63,22 +64,22 @@
             break;
         case 5:
         {
-            self.strUrl = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&phone=%@",userInfo.userName,self.nameTextField];
+            self.strUrl = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&phone=%@",userInfo.userName,self.nameTextField.text];
         }
             break;
         case 6:
         {
-          self.strUrl = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&company=%@",userInfo.userName,self.nameTextField];
+          self.strUrl = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&company=%@",userInfo.userName,self.nameTextField.text];
         }
             break;
         case 7:
         {
-            self.strUrl = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&title=%@",userInfo.userName,self.nameTextField];
+            self.strUrl = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&title=%@",userInfo.userName,self.nameTextField.text];
         }
             break;
         case 8:
         {
-            self.strUrl = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&email=%@",userInfo.userName,self.nameTextField];               
+            self.strUrl = [NSString stringWithFormat:@"/mobile/updateStaff.action?username=%@&email=%@",userInfo.userName,self.nameTextField.text];
         }
             break;
         default:
@@ -95,7 +96,7 @@
         case 2:
         {
             navTitle = @"修改姓名";
-            self.strUrl = @"/mobile/updateStaff.action?username=%@&name=%@";
+            self.tagLabel.text = @"姓名";
         }
             break;
         case 3:
@@ -111,25 +112,25 @@
         case 5:
         {
             navTitle = @"手机";
-            self.strUrl = @"/mobile/updateStaff.action?username=%@&phone=%@";
+            self.tagLabel.text = @"手机";
         }
             break;
         case 6:
         {
             navTitle = @"单位";
-            self.strUrl = @"/mobile/updateStaff.action?username=%@&company=%@";
+            self.tagLabel.text = @"单位";
         }
             break;
         case 7:
         {
             navTitle = @"职位";
-            self.strUrl = @"/mobile/updateStaff.action?username=%@&title=%@";
+            self.tagLabel.text = @"职位";
         }
             break;
         case 8:
         {
             navTitle = @"邮箱";
-            self.strUrl = @"/mobile/updateStaff.action?username=%@&email=%@";
+            self.tagLabel.text = @"邮箱";
         }
             break;
         default:

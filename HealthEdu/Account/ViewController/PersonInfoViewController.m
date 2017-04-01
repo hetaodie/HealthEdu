@@ -56,10 +56,17 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.hidden = NO;
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    UserInfo *userInfo = [[UserInfoManager shareManager] getUserInfo];
+    
+    [self.source GetUserInfoWithuserName:userInfo.userName];
 }
 
 - (void) onGetuserInfoWithSussess:(UserInfo *)aUserInfo {
-    [[UserInfoManager shareManager] setUserInfo:aUserInfo];
+    [[UserInfoManager shareManager] saveEditedUserInfo:aUserInfo];
     [self testData];
     [self.tableView reloadData];
 }
@@ -200,6 +207,7 @@
 }
 
 - (void)testData{
+    [self.contentArray removeAllObjects];
     
     UserInfo *userInfo = [[UserInfoManager shareManager] getUserInfo];
     
