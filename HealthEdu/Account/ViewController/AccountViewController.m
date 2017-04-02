@@ -21,6 +21,8 @@
 #import "SettingViewController.h"
 #import "UserInfoManager.h"
 #import "UserInfo.h"
+
+#import "JiBuViewController.h"
 @interface AccountViewController () <UITableViewDelegate,UITableViewDataSource,LoginViewControllerDelegate,RegisterViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *settingButton;
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
@@ -244,6 +246,14 @@
  
         }
             break;
+        case 3:
+        {
+            JiBuViewController *ndVC = [[JiBuViewController alloc] initWithNibName:@"JiBuViewController" bundle:nil];
+            ndVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:ndVC animated:YES];
+            
+        }
+            break;
 
         default:
             break;
@@ -281,7 +291,7 @@
     AccountContentObject *object4 = [[AccountContentObject alloc] init];
     object4.headerImage = @"jibuqi";
     object4.title = @"计步器";
-    object4.pAction = 2;
+    object4.pAction = 3;
     [array2 addObject:object4];
     
     [self.contentArray addObject:array1];

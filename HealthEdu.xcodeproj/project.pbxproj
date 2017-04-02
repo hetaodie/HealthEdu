@@ -59,6 +59,10 @@
 		7C6D6FE21E8F4FC400A30C04 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FE11E8F4FC400A30C04 /* UIView+Toast.m */; };
 		7C6D6FE51E8F785C00A30C04 /* BMIKnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FE41E8F785C00A30C04 /* BMIKnowView.m */; };
 		7C6D6FE71E8F787E00A30C04 /* BMIKnowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6D6FE61E8F787E00A30C04 /* BMIKnowView.xib */; };
+		7C6D6FEB1E90721800A30C04 /* JiBuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FE91E90721800A30C04 /* JiBuViewController.m */; };
+		7C6D6FEC1E90721800A30C04 /* JiBuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6D6FEA1E90721800A30C04 /* JiBuViewController.xib */; };
+		7C6D6FF21E907DA200A30C04 /* QYPedometerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FEF1E907DA200A30C04 /* QYPedometerData.m */; };
+		7C6D6FF31E907DA200A30C04 /* QYPedometerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D6FF11E907DA200A30C04 /* QYPedometerManager.m */; };
 		7C79969B1E6000AA00938EC4 /* ConferenceDetailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */; };
 		7C79969E1E6000BD00938EC4 /* ConferenceDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79969D1E6000BD00938EC4 /* ConferenceDetailObject.m */; };
 		7C7996A21E607BB200938EC4 /* ConferenceEnrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7996A01E607BB200938EC4 /* ConferenceEnrollViewController.m */; };
@@ -294,6 +298,13 @@
 		7C6D6FE31E8F785C00A30C04 /* BMIKnowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIKnowView.h; sourceTree = "<group>"; };
 		7C6D6FE41E8F785C00A30C04 /* BMIKnowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIKnowView.m; sourceTree = "<group>"; };
 		7C6D6FE61E8F787E00A30C04 /* BMIKnowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMIKnowView.xib; sourceTree = "<group>"; };
+		7C6D6FE81E90721800A30C04 /* JiBuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiBuViewController.h; sourceTree = "<group>"; };
+		7C6D6FE91E90721800A30C04 /* JiBuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiBuViewController.m; sourceTree = "<group>"; };
+		7C6D6FEA1E90721800A30C04 /* JiBuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiBuViewController.xib; sourceTree = "<group>"; };
+		7C6D6FEE1E907DA200A30C04 /* QYPedometerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYPedometerData.h; sourceTree = "<group>"; };
+		7C6D6FEF1E907DA200A30C04 /* QYPedometerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYPedometerData.m; sourceTree = "<group>"; };
+		7C6D6FF01E907DA200A30C04 /* QYPedometerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYPedometerManager.h; sourceTree = "<group>"; };
+		7C6D6FF11E907DA200A30C04 /* QYPedometerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYPedometerManager.m; sourceTree = "<group>"; };
 		7C7996991E6000AA00938EC4 /* ConferenceDetailSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailSource.h; sourceTree = "<group>"; };
 		7C79969A1E6000AA00938EC4 /* ConferenceDetailSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceDetailSource.m; sourceTree = "<group>"; };
 		7C79969C1E6000BD00938EC4 /* ConferenceDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailObject.h; sourceTree = "<group>"; };
@@ -642,6 +653,7 @@
 		7C366BDD1E531BED00F88D85 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				7C6D6FED1E907DA200A30C04 /* PedometerManager */,
 				7C366BDE1E531C0200F88D85 /* HENetTask.h */,
 				7C366BDF1E531C0200F88D85 /* HENetTask.m */,
 				7C366BE01E531C0200F88D85 /* NSString+MD5.h */,
@@ -735,6 +747,17 @@
 			name = cell;
 			path = HealthEdu/Account/View/cell;
 			sourceTree = SOURCE_ROOT;
+		};
+		7C6D6FED1E907DA200A30C04 /* PedometerManager */ = {
+			isa = PBXGroup;
+			children = (
+				7C6D6FEE1E907DA200A30C04 /* QYPedometerData.h */,
+				7C6D6FEF1E907DA200A30C04 /* QYPedometerData.m */,
+				7C6D6FF01E907DA200A30C04 /* QYPedometerManager.h */,
+				7C6D6FF11E907DA200A30C04 /* QYPedometerManager.m */,
+			);
+			path = PedometerManager;
+			sourceTree = "<group>";
 		};
 		7C79978B1E648B3800938EC4 /* model */ = {
 			isa = PBXGroup;
@@ -1086,6 +1109,9 @@
 				7C7997FA1E66C16600938EC4 /* AboutViewController.h */,
 				7C7997FB1E66C16600938EC4 /* AboutViewController.m */,
 				7C7997FC1E66C16600938EC4 /* AboutViewController.xib */,
+				7C6D6FE81E90721800A30C04 /* JiBuViewController.h */,
+				7C6D6FE91E90721800A30C04 /* JiBuViewController.m */,
+				7C6D6FEA1E90721800A30C04 /* JiBuViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1366,6 +1392,7 @@
 				E6EC27CF1DBD9E4D00DEE06D /* PersonInfoViewController.xib in Resources */,
 				7C379AFC1DEC6985004627E9 /* AccountContentTableViewCell.xib in Resources */,
 				4FDE9CD51DB4D20600D9C790 /* HomeContentTableViewCell.xib in Resources */,
+				7C6D6FEC1E90721800A30C04 /* JiBuViewController.xib in Resources */,
 				E6EC27CA1DBD9D9400DEE06D /* BMIViewController.xib in Resources */,
 				E6C6990E1D990B2A00D2818C /* Main.storyboard in Resources */,
 				7CF736B21DDAD50E00F92222 /* BaiKeSicknessFoldCategoryView.xib in Resources */,
@@ -1463,6 +1490,7 @@
 				E6EC27921DBD988E00DEE06D /* ConsultViewController.m in Sources */,
 				7C379AE41DEBF7CC004627E9 /* AccountContentObject.m in Sources */,
 				7C85FF441E5408C80019C1D5 /* PopularRecommendObject.m in Sources */,
+				7C6D6FF21E907DA200A30C04 /* QYPedometerData.m in Sources */,
 				7C34F3951DD1D4AE00C61015 /* ConsultContentView.m in Sources */,
 				7CFCCC181E5D754300DCEC21 /* LearnCommunityObject.m in Sources */,
 				7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */,
@@ -1483,6 +1511,7 @@
 				E6EC27B51DBD9A8F00DEE06D /* LearnCommunityViewController.m in Sources */,
 				7C7997911E648B4C00938EC4 /* ServerObject.m in Sources */,
 				7CF736B01DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m in Sources */,
+				7C6D6FF31E907DA200A30C04 /* QYPedometerManager.m in Sources */,
 				7C7997E01E65C86300938EC4 /* PayViewController.m in Sources */,
 				4FDE9CD81DB4EC1000D9C790 /* HomeContentHeaderView.m in Sources */,
 				7C7998011E671A3400938EC4 /* AboutSource.m in Sources */,
@@ -1503,6 +1532,7 @@
 				7C87BFA71DE80BD30034C613 /* SelectCityView.m in Sources */,
 				7C379B201DED9D3F004627E9 /* CacheManager.m in Sources */,
 				7C7996AE1E6087B800938EC4 /* ConferenceEnrollPersionObject.m in Sources */,
+				7C6D6FEB1E90721800A30C04 /* JiBuViewController.m in Sources */,
 				7CFCCC321E5E635100DCEC21 /* ConferenceDetailViewController.m in Sources */,
 				7CF03E921E5ADE520088CD9F /* ConsultDetailSource.m in Sources */,
 				7C379B051DEC6B9B004627E9 /* PersonInfoTableViewCell.m in Sources */,

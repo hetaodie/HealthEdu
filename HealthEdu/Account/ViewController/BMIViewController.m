@@ -56,4 +56,7 @@
 
 }
 
+- (IBAction)WhatBMIBtnPress:(id)sender {
+    self.knowView.hidden = NO;
+}
 @end

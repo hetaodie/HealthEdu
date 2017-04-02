@@ -138,6 +138,36 @@
                         <action selector="bmiBtnPress:" destination="-1" eventType="touchUpInside" id="CeD-rC-qlt"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wenhao" translatesAutoresizingMaskIntoConstraints="NO" id="Tf3-AP-LOl">
+                    <rect key="frame" x="93" y="597.5" width="18" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18" id="vuB-nh-TfM"/>
+                        <constraint firstAttribute="height" constant="18" id="zcI-sU-ZUf"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="什么是BMI指数？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKo-WR-pSQ">
+                    <rect key="frame" x="121" y="596" width="133.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pik-5L-R8O">
+                    <rect key="frame" x="121" y="620" width="133.5" height="2"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="ENj-Ee-VdY"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6b3-SC-IgG">
+                    <rect key="frame" x="86" y="586" width="203" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="203" id="2Ub-GI-0Gj"/>
+                        <constraint firstAttribute="height" constant="43" id="YzF-13-meg"/>
+                    </constraints>
+                    <connections>
+                        <action selector="WhatBMIBtnPress:" destination="-1" eventType="touchUpInside" id="0nB-sk-KsO"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -149,15 +179,25 @@
                 <constraint firstItem="HGa-N3-eG1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="A7o-I1-NFg"/>
                 <constraint firstItem="1as-w1-NWO" firstAttribute="trailing" secondItem="vCb-vv-9bg" secondAttribute="trailing" id="ChR-55-e26"/>
                 <constraint firstItem="vCb-vv-9bg" firstAttribute="top" secondItem="HGa-N3-eG1" secondAttribute="bottom" constant="27" id="DTi-tj-4pk"/>
+                <constraint firstItem="Pik-5L-R8O" firstAttribute="trailing" secondItem="vKo-WR-pSQ" secondAttribute="trailing" id="HAy-WI-T4C"/>
+                <constraint firstItem="Tf3-AP-LOl" firstAttribute="centerY" secondItem="vKo-WR-pSQ" secondAttribute="centerY" id="Lxd-F2-tFa"/>
+                <constraint firstAttribute="bottom" secondItem="vKo-WR-pSQ" secondAttribute="bottom" constant="50" id="QG0-bn-VM0"/>
                 <constraint firstItem="1as-w1-NWO" firstAttribute="bottom" secondItem="vCb-vv-9bg" secondAttribute="bottom" id="Te8-lI-usC"/>
                 <constraint firstAttribute="trailing" secondItem="HGa-N3-eG1" secondAttribute="trailing" id="WYa-83-gcP"/>
+                <constraint firstItem="Pik-5L-R8O" firstAttribute="leading" secondItem="vKo-WR-pSQ" secondAttribute="leading" id="ZCE-s9-rJg"/>
+                <constraint firstItem="vKo-WR-pSQ" firstAttribute="leading" secondItem="Tf3-AP-LOl" secondAttribute="trailing" constant="10" id="adw-Rl-5P9"/>
+                <constraint firstItem="Pik-5L-R8O" firstAttribute="top" secondItem="vKo-WR-pSQ" secondAttribute="bottom" constant="3" id="glJ-Lx-W1M"/>
+                <constraint firstItem="vKo-WR-pSQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hew-45-tzQ"/>
+                <constraint firstItem="6b3-SC-IgG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oPJ-Bz-wNK"/>
                 <constraint firstItem="p2m-wc-Y3F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uwy-Hd-Abu"/>
+                <constraint firstAttribute="bottom" secondItem="6b3-SC-IgG" secondAttribute="bottom" constant="38" id="uze-kr-cGc"/>
                 <constraint firstItem="1as-w1-NWO" firstAttribute="leading" secondItem="vCb-vv-9bg" secondAttribute="leading" id="ylP-oi-dAo"/>
             </constraints>
-            <point key="canvasLocation" x="34.5" y="124.5"/>
+            <point key="canvasLocation" x="-267.5" y="160.5"/>
         </view>
     </objects>
     <resources>
         <image name="jisuanqi" width="41" height="49"/>
+        <image name="wenhao" width="36" height="37"/>
     </resources>
 </document>
