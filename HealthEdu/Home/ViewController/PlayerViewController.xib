@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -98,14 +99,16 @@
                     </constraints>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5L-ci-Cxz">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="211"/>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.12941176469999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="M5L-ci-Cxz" secondAttribute="height" multiplier="16:9" id="kyj-Ev-327"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="HJx-0B-Qus" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="107" id="1WV-NR-uwk"/>
-                <constraint firstAttribute="bottom" secondItem="M5L-ci-Cxz" secondAttribute="bottom" id="4sq-Ao-rfl"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="HJx-0B-Qus" secondAttribute="bottom" id="5oQ-Bn-b2f"/>
                 <constraint firstItem="grn-Xn-uJn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="6yx-xO-b8d"/>
                 <constraint firstItem="grn-Xn-uJn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9UM-jg-Lj7"/>

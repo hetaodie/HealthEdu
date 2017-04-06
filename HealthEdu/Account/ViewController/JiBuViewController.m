@@ -100,6 +100,10 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
         [refs addObject:[NSString stringWithFormat:@"%d",i]];
     }
     
+    if ([vals count] ==0 || [refs count] == 0) {
+        return;
+    }
+    
     UIColor *color = [UIColor colorWithHexString:@"0099e6" alpha:1.0];
     self.chrt = [[DSBarChart alloc] initWithFrame:self.weekView.bounds
                                                    color:color
@@ -120,8 +124,6 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
 
 - (void)getPedNumTheDayWithNum:(GetPedometerNum)block{
     
-    block(2000,3000);
-    return;
     if ([QYPedometerManager isStepCountingAvailable]) {
         [[QYPedometerManager shared]
          startPedometerUpdatesTodayWithHandler:^(QYPedometerData *pedometerData,
@@ -143,8 +145,6 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
 
 - (void)getPedFromDay:(NSDate *)fromDay toDay:(NSDate *)toDay withNum:(GetPedometerNum)block {
     
-    block(1000,3000);
-    return;
     if ([QYPedometerManager isStepCountingAvailable]) {
         [[QYPedometerManager shared]
          startPedometerUpdatesTodayWithHandler:^(QYPedometerData *pedometerData,
@@ -178,14 +178,6 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
     NSDate * date1 = [NSDate dateWithTimeIntervalSince1970:totalTime];
     return date1;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
