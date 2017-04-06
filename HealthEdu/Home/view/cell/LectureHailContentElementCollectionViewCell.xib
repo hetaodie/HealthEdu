@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,8 +25,11 @@
                             <constraint firstAttribute="width" secondItem="Zvr-Vp-HYn" secondAttribute="height" multiplier="70:37" id="ihX-AT-uT1"/>
                         </constraints>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playbg" translatesAutoresizingMaskIntoConstraints="NO" id="3HB-eP-lHG">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="74.5"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edF-Ch-OvD">
-                        <rect key="frame" x="6" y="57.5" width="27.5" height="12"/>
+                        <rect key="frame" x="6" y="57" width="27.5" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -39,7 +43,11 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="3HB-eP-lHG" firstAttribute="trailing" secondItem="Zvr-Vp-HYn" secondAttribute="trailing" id="0gq-91-opq"/>
+                <constraint firstItem="3HB-eP-lHG" firstAttribute="top" secondItem="Zvr-Vp-HYn" secondAttribute="top" id="0vI-gg-l5Q"/>
                 <constraint firstItem="edF-Ch-OvD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="6oq-7v-tQ9"/>
+                <constraint firstItem="3HB-eP-lHG" firstAttribute="bottom" secondItem="Zvr-Vp-HYn" secondAttribute="bottom" id="6qQ-6h-jua"/>
+                <constraint firstItem="3HB-eP-lHG" firstAttribute="leading" secondItem="Zvr-Vp-HYn" secondAttribute="leading" id="A2H-Wq-gyW"/>
                 <constraint firstAttribute="trailing" secondItem="Zvr-Vp-HYn" secondAttribute="trailing" id="EG9-qM-he0"/>
                 <constraint firstAttribute="trailing" secondItem="ZPI-MC-3H4" secondAttribute="trailing" constant="10" id="Jl0-43-82r"/>
                 <constraint firstItem="Zvr-Vp-HYn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aGR-zZ-IsT"/>
@@ -56,4 +64,7 @@
             <point key="canvasLocation" x="80" y="54"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="playbg" width="82" height="81"/>
+    </resources>
 </document>

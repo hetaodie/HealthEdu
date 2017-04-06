@@ -9,6 +9,7 @@
 #import "JiBuViewController.h"
 #import "DSBarChart.h"
 #import "QYPedometerManager.h"
+#import "UIColor+HEX.h"
 
 
 @interface JiBuViewController ()
@@ -31,6 +32,8 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.pedNumDic = [[NSMutableDictionary alloc] init];
+    
     [self getDateInfo];
 }
 
@@ -52,7 +55,7 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
     NSDateComponents *comps = [calendar components:NSCalendarUnitWeekday fromDate:date];
     
     
-    NSLog(@"星期 =weekDay = %ld ",comps.weekday);
+    NSLog(@"星期 =weekDay = %ld ",(long)comps.weekday);
     
     NSTimeInterval timeS = 24*60*60;
     NSTimeInterval  nowTimeS = [date timeIntervalSince1970];
@@ -72,12 +75,12 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
     [self getPedNumTheDayWithNum:^(NSInteger pednum,CGFloat distance) {
         [self.pedNumDic setObject:@(pednum) forKey:@(num)];
         self.todayBushu.text = [NSString stringWithFormat:@"%ld",(long)pednum];
-        self.todayKm.text = [NSString stringWithFormat:@"%f",distance];
+        self.todayKm.text = [NSString stringWithFormat:@"%.2f",distance];
         
     }];
     
     self.toDate = [NSDate date];
-    while (num > 1) {
+    while (num > 2) {
         sum+=1;
         NSDate *date = [self getDateBackDay:sum];
         num = [self getWeekDayWithDate:date];
@@ -92,13 +95,14 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
     NSMutableArray  *refs = [[NSMutableArray alloc] init];
 
     for (int i = 1; i<=count; i++) {
-        NSNumber *num = [NSNumber numberWithInt:i];
+        NSNumber *num = [NSNumber numberWithInt:i+1];
         [vals addObject:[self.pedNumDic objectForKey:num]];
         [refs addObject:[NSString stringWithFormat:@"%d",i]];
     }
     
+    UIColor *color = [UIColor colorWithHexString:@"0099e6" alpha:1.0];
     self.chrt = [[DSBarChart alloc] initWithFrame:self.weekView.bounds
-                                                   color:[UIColor greenColor]
+                                                   color:color
                                               references:refs
                                                andValues:vals];
     self.chrt.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -115,6 +119,9 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
 
 
 - (void)getPedNumTheDayWithNum:(GetPedometerNum)block{
+    
+    block(2000,3000);
+    return;
     if ([QYPedometerManager isStepCountingAvailable]) {
         [[QYPedometerManager shared]
          startPedometerUpdatesTodayWithHandler:^(QYPedometerData *pedometerData,
@@ -136,6 +143,8 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
 
 - (void)getPedFromDay:(NSDate *)fromDay toDay:(NSDate *)toDay withNum:(GetPedometerNum)block {
     
+    block(1000,3000);
+    return;
     if ([QYPedometerManager isStepCountingAvailable]) {
         [[QYPedometerManager shared]
          startPedometerUpdatesTodayWithHandler:^(QYPedometerData *pedometerData,
