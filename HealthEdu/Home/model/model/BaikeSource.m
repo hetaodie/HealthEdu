@@ -22,10 +22,10 @@
     
     NSString *strUrl;
     if (type==0) {
-        strUrl = @"/mobile/getCategory.action?catid=11";
+        strUrl = @"/mobile/getCategory.action?catid=11&pageSize=-1";
     }
     else if (type==1){
-        strUrl = @"/mobile/getCategory.action?catid=12";
+        strUrl = @"/mobile/getCategory.action?catid=12&pageSize=-1";
     }
     
     HENetTask *task = [[HENetTask alloc] initWithUrlString:strUrl];
@@ -59,7 +59,7 @@
 }
 
 - (void)getBaikeData:(NSString *)aId{
-    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@",aId];
+    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@&pageSize=-1",aId];
 
     HENetTask *task = [[HENetTask alloc] initWithUrlString:strUrl];
     

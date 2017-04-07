@@ -12,6 +12,7 @@
 @interface HomeContentTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *contentImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *bofangImageView;
 @end
 
 
@@ -29,6 +30,16 @@
     self.titleLabel.text = aObject.title;
     [self.contentImageView sd_setImageWithURL:[NSURL URLWithString:aObject.imageUrl] placeholderImage:[UIImage imageNamed:@"1.png"]];
     [self setNeedsLayout];
+    
+    NSInteger style = [aObject.stype integerValue];
+    
+    if (style==4 || style==5) {
+        self.bofangImageView.hidden = NO;
+    }
+    
+    else {
+        self.bofangImageView.hidden = YES;
+    }
     
 }
 

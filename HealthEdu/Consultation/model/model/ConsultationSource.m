@@ -19,7 +19,7 @@
 @implementation ConsultationSource
 
 - (void)getConsultation{
-    HENetTask *task = [[HENetTask alloc] initWithUrlString:@"/mobile/getCategory.action?catid=6"];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:@"/mobile/getCategory.action?catid=6&pageSize=-1"];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onConsultationSuccess:)]) {
@@ -50,7 +50,7 @@
 
 
 - (void)getConsultationDetail:(NSString *)aId {
-    NSString *strURL = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@",aId];
+    NSString *strURL = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@&pageSize=-1",aId];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:strURL];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {

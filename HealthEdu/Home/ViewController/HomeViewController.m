@@ -16,7 +16,8 @@
 #import "LectureHailViewController.h"
 #import "LearnCommunityViewController.h"
 #import "HomePageModelSource.h"
-#import "ConSultDetailViewController.h"
+#import "ConsultDetailViewController.h"
+#import "PlayerViewController.h"
 
 #define HomeContentCellHeight 168
 
@@ -133,10 +134,31 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     PopularRecommendObject *object = [self.contentArray objectAtIndex:indexPath.row];
     
-    ConsultDetailViewController *ndVC = [[ConsultDetailViewController alloc] initWithNibName:@"ConsultDetailViewController" bundle:nil];
-    ndVC.id = object.id;
+    NSUInteger style = [object.stype integerValue];
+    if (style == 4 || style ==5) {
+        [self.modelSource getVideoContent:object.id];
+    }
+    else {
+        ConsultDetailViewController *ndVC = [[ConsultDetailViewController alloc] initWithNibName:@"ConsultDetailViewController" bundle:nil];
+        ndVC.id = object.id;
+        ndVC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:ndVC animated:YES];
+    }
+}
+
+
+
+- (void)onGetVideoContentSuccess:(LectureHailObject *)aObject {
+    PlayerViewController *ndVC = [[PlayerViewController alloc] initWithNibName:@"PlayerViewController" bundle:nil];
+    ndVC.videoObject = aObject;
     ndVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:ndVC animated:YES];
+
+}
+
+
+- (void)onGetVideoContentError {
+
 }
 
 #pragma mark -

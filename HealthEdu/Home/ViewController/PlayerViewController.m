@@ -33,6 +33,14 @@
 
 #pragma mark -
 #pragma mark lifecycle
+
+//设置是否隐藏
+- (BOOL)prefersStatusBarHidden {
+    //    [super prefersStatusBarHidden];
+    return NO;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.playerView.delegate = self;

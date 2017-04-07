@@ -92,14 +92,17 @@
 
     NSString *strCover = nil;
     NSInteger row = indexPath.row % [self.imagePathsGroup count];
+    LectureHailObject *object = [self.imagePathsGroup objectAtIndex:row];
     
-    
-    [cell showImageContentFromNStringUrl:nil];
+    [cell showImageContentFromNStringUrl:object.picurl];
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSInteger row = indexPath.row % [self.imagePathsGroup count];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(onClickItemBannersIndex:)]) {
+        [self.delegate onClickItemBannersIndex:row];
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

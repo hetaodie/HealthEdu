@@ -15,6 +15,9 @@
 
 - (void)onLectureHailDataSuccess:(NSArray *)aArray;
 - (void)onLectureHailDataError;
+
+- (void)onGetLectureHailTuijianSuccess:(NSArray *)aArray;
+- (void)ongetLectureHailTuijianError;
 @end
 
 @interface LectureHailSource : NSObject
@@ -22,6 +25,9 @@
 @property (nonatomic, weak) id <LectureHailSourceDelegate>delegate;
 
 - (void)getLectureHailClassify;
+
+- (void)getLectureHailTuijian;
+
 
 - (void)getLectureHailData:(NSString *)aId;
 @end

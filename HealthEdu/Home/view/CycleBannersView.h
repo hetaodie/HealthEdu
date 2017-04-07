@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LectureHailObject.h"
 
 @protocol CycleBannersViewDelegate <NSObject>
 

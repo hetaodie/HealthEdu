@@ -19,7 +19,7 @@
 @implementation ConsultListSource
 
 - (void)getConsultClassicySource:(NSInteger)num{
-    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getCategory.action?catid=%ld",num];
+    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getCategory.action?catid=%ld&pageSize=-1",num];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:strUrl];
     __weak __typeof(self) weakSelf = self;
     task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
@@ -50,7 +50,7 @@
 }
 
 - (void)getConsultListSource:(NSString *)aId{
-    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@",aId];
+    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@&pageSize=-1",aId];
     HENetTask *task = [[HENetTask alloc] initWithUrlString:strUrl];
 
     __weak __typeof(self) weakSelf = self;

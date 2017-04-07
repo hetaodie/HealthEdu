@@ -15,6 +15,9 @@
 
 - (void)onLearnCommunityDataSuccess:(NSArray *)aArray;
 - (void)onLearnCommunityDataError;
+
+- (void)onGetLectureHailTuijianSuccess:(NSArray *)aArray;
+- (void)ongetLectureHailTuijianError;
 @end
 
 @interface LearnCommunitySource : NSObject
@@ -22,6 +25,7 @@
 @property (nonatomic, weak) id <LearnCommunitySourceDelegate>delegate;
 
 - (void)getLearnCommunityClassify;
+- (void)getLectureHailTuijian;
 
 - (void)getLearnCommunityData:(NSString *)aId;
 @end

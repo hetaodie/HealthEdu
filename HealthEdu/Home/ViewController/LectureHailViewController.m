@@ -68,10 +68,12 @@
     self.lectureHailSource  = [[LectureHailSource alloc] init];
     self.lectureHailSource.delegate = self;
     [self.lectureHailSource getLectureHailClassify];
+    [self.lectureHailSource getLectureHailTuijian];
+    
     
     [self.topTabScrollView selectRow:0 animated:YES scrollPosition:TopTabScrollViewScrollPositionNone];
     
-    [self.cycleBannersView showBannersWithBannersArray:self.bannersArray];
+    //[self.cycleBannersView showBannersWithBannersArray:self.bannersArray];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
@@ -94,7 +96,11 @@
 #pragma mark CycleBannersViewDelegate
 
 - (void)onClickItemBannersIndex:(NSInteger)aIndex{
-
+    LectureHailObject *object = [self.bannersArray objectAtIndex:aIndex];
+    PlayerViewController *ndVC = [[PlayerViewController alloc] initWithNibName:@"PlayerViewController" bundle:nil];
+    ndVC.videoObject = object;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 #pragma mark -
@@ -166,6 +172,17 @@
 
 }
 
+
+- (void)onGetLectureHailTuijianSuccess:(NSArray *)aArray {
+    [self.bannersArray setArray:aArray];
+    [self.cycleBannersView showBannersWithBannersArray:aArray];
+
+}
+
+- (void)ongetLectureHailTuijianError {
+
+}
+
 #pragma mark -
 #pragma mark ConsultViewConrentdelegate
 
@@ -186,8 +203,8 @@
 #pragma mark private
 
 - (void)testData{
-    NSArray *banners = [NSArray arrayWithObjects:@"1", @"1", @"1", @"1", @"1", @"1", nil];
-    [self.bannersArray setArray:banners];
+//    NSArray *banners = [NSArray arrayWithObjects:@"1", @"1", @"1", @"1", @"1", @"1", nil];
+//    [self.bannersArray setArray:banners];
     
     NSInteger count = [self.topArray count];
     for (int i= 0; i<count; i++) {

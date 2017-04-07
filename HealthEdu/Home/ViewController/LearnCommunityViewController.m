@@ -69,8 +69,9 @@
     self.communitySource  = [[LearnCommunitySource alloc] init];
     self.communitySource.delegate = self;
     [self.communitySource getLearnCommunityClassify];
-    
-    [self.cycleBannersView showBannersWithBannersArray:self.bannersArray];
+    [self.communitySource getLectureHailTuijian];
+
+    // [self.cycleBannersView showBannersWithBannersArray:self.bannersArray];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
@@ -90,7 +91,11 @@
 #pragma mark CycleBannersViewDelegate
 
 - (void)onClickItemBannersIndex:(NSInteger)aIndex{
-    
+    LectureHailObject *object = [self.bannersArray objectAtIndex:aIndex];
+    PlayerViewController *ndVC = [[PlayerViewController alloc] initWithNibName:@"PlayerViewController" bundle:nil];
+    ndVC.videoObject = object;
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 #pragma mark -
@@ -160,6 +165,16 @@
 
 - (void)onLearnCommunityDataError{
 
+}
+
+- (void)onGetLectureHailTuijianSuccess:(NSArray *)aArray {
+    [self.bannersArray setArray:aArray];
+    [self.cycleBannersView showBannersWithBannersArray:aArray];
+    
+}
+
+- (void)ongetLectureHailTuijianError {
+    
 }
 
 #pragma mark -

@@ -20,7 +20,7 @@
 - (void)getLectureHailClassify{
     
     NSString *strUrl;
-    strUrl = @"/mobile/getCategory.action?catid=4";
+    strUrl = @"/mobile/getCategory.action?catid=4&pageSize=-1";
     
     HENetTask *task = [[HENetTask alloc] initWithUrlString:strUrl];
     __weak __typeof(self) weakSelf = self;
@@ -52,7 +52,7 @@
 }
 
 - (void)getLectureHailData:(NSString *)aId{
-    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@",aId];
+    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getContentList.action?catid=%@&pageSize=-1",aId];
 
     HENetTask *task = [[HENetTask alloc] initWithUrlString:strUrl];
     
@@ -87,6 +87,30 @@
         [array addObject:object];
     }];
     return array;
+}
+
+
+
+- (void)getLectureHailTuijian {
+    NSString *strUrl = @"/mobile/getContentList.action?stype=4&top=1";
+    
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:strUrl];
+    
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetLectureHailTuijianSuccess:)]) {
+            NSArray *array = [self listarrayWithObject:responseObject];
+            [weakSelf.delegate onGetLectureHailTuijianSuccess:array];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(ongetLectureHailTuijianError)]) {
+            [self.delegate ongetLectureHailTuijianError];
+        }
+    };
+    
+    [task runInMethod:HE_GET];
 }
 
 @end

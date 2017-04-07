@@ -47,4 +47,38 @@
     }];
     return array;
 }
+
+
+- (void)getVideoContent:(NSString *)aId {
+    NSString *strUrl = [NSString stringWithFormat:@"/mobile/getContentDetail.action?cid=%@",aId];
+    HENetTask *task = [[HENetTask alloc] initWithUrlString:strUrl];
+    __weak __typeof(self) weakSelf = self;
+    task.successBlock = ^(NSURLSessionDataTask *task, id responseObject) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(onGetVideoContentSuccess:)]) {
+            LectureHailObject *object = [self listarrayWithObject:responseObject];
+            [weakSelf.delegate onGetVideoContentSuccess:object];
+        }
+    };
+    
+    task.failedBlock = ^(NSURLSessionDataTask *task, NSError *error) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(onGetVideoContentError)]) {
+            [self.delegate onGetVideoContentError];
+        }
+    };
+    
+    [task runInMethod:HE_GET];
+}
+
+- (LectureHailObject *)listarrayWithObject:(NSDictionary *)obj{
+        LectureHailObject *object = [[LectureHailObject alloc] init];
+        object.title = [obj objectForKey:@"title"];
+        object.id = [obj objectForKey:@"id"];
+        object.content1 = [obj objectForKey:@"content1"];
+        object.content2 = [obj objectForKey:@"content2"];
+        object.exturl = [obj objectForKey:@"exturl"];
+        object.picurl = [obj objectForKey:@"picurl"];
+        
+    return object;
+}
+
 @end
