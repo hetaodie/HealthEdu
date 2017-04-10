@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="downBtnNameLabel" destination="hWg-tT-gBY" id="bft-Lb-Axg"/>
                 <outlet property="downLoadButton" destination="aCT-Wy-0vH" id="PR1-ZC-sBK"/>
+                <outlet property="downView" destination="NE1-QT-qev" id="pub-Xo-AvU"/>
                 <outlet property="playerView" destination="HJx-0B-Qus" id="nBz-Kw-D9E"/>
                 <outlet property="playerViewLayout" destination="5oQ-Bn-b2f" id="LgH-Aj-EPG"/>
                 <outlet property="playerViewTopLayout" destination="1WV-NR-uwk" id="Npt-ck-pQo"/>

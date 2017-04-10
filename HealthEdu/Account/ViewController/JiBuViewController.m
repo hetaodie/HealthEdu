@@ -22,6 +22,7 @@
 
 @property (nonatomic, strong) NSMutableDictionary *pedNumDic;
 @property (nonatomic, strong) DSBarChart *chrt;
+@property (nonatomic,assign) NSInteger todayNum;
 
 typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
 
@@ -34,7 +35,7 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
     
     self.pedNumDic = [[NSMutableDictionary alloc] init];
     
-    [self getDateInfo];
+    //[self getDateInfo];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +46,11 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBar.hidden = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self getDateInfo];
 }
 
 - (void) getDateInfo
@@ -70,13 +76,14 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
     if (num == 1) {
         num = 8;
     }
+    self.todayNum = num;
     NSInteger sum = 0;
-    
+
     [self getPedNumTheDayWithNum:^(NSInteger pednum,CGFloat distance) {
         [self.pedNumDic setObject:@(pednum) forKey:@(num)];
         self.todayBushu.text = [NSString stringWithFormat:@"%ld",(long)pednum];
         self.todayKm.text = [NSString stringWithFormat:@"%.2f",distance];
-        
+         [self drawQ];
     }];
     
     self.toDate = [NSDate date];
@@ -86,16 +93,31 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
         num = [self getWeekDayWithDate:date];
         [self getPedFromDay:date toDay:self.toDate withNum:^(NSInteger pednum,CGFloat distance) {
             [self.pedNumDic setObject:@(pednum) forKey:@(num)];
+            [self drawQ];
         }];
+        self.toDate = date;
     }
     
+
+    NSLog(@"pedDic = %@",self.pedNumDic);
+}
+
+- (void)drawQ {
     NSInteger count = [[self.pedNumDic allKeys] count];
+    NSArray *allkeys = [self.pedNumDic allKeys];
     
     NSMutableArray  *vals = [[NSMutableArray alloc] init];
     NSMutableArray  *refs = [[NSMutableArray alloc] init];
-
+    if (count != (self.todayNum -1)) {
+        return;
+    }
+    
     for (int i = 1; i<=count; i++) {
+
         NSNumber *num = [NSNumber numberWithInt:i+1];
+        if (![allkeys containsObject:num]) {
+            continue;
+        }
         [vals addObject:[self.pedNumDic objectForKey:num]];
         [refs addObject:[NSString stringWithFormat:@"%d",i]];
     }
@@ -106,14 +128,13 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
     
     UIColor *color = [UIColor colorWithHexString:@"0099e6" alpha:1.0];
     self.chrt = [[DSBarChart alloc] initWithFrame:self.weekView.bounds
-                                                   color:color
-                                              references:refs
-                                               andValues:vals];
+                                            color:color
+                                       references:refs
+                                        andValues:vals];
     self.chrt.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.chrt.bounds = self.weekView.bounds;
     [self.weekView addSubview:self.chrt];
     
-    NSLog(@"pedDic = %@",self.pedNumDic);
 }
 
 - (void)viewDidLayoutSubviews {
@@ -146,13 +167,16 @@ typedef void (^GetPedometerNum)(NSInteger pednu,CGFloat distance );
 - (void)getPedFromDay:(NSDate *)fromDay toDay:(NSDate *)toDay withNum:(GetPedometerNum)block {
     
     if ([QYPedometerManager isStepCountingAvailable]) {
+        
         [[QYPedometerManager shared]
-         startPedometerUpdatesTodayWithHandler:^(QYPedometerData *pedometerData,
-                                                 NSError *error) {
+         queryPedometerDataFromDate:fromDay
+         toDate:toDay
+         withHandler:^(QYPedometerData *pedometerData, NSError *error) {
              if (!error) {
                  block([pedometerData.numberOfSteps integerValue],[pedometerData.distance floatValue]);
              }
          }];
+
     } else {
         UIAlertView *alertView = [[UIAlertView alloc]
                                   initWithTitle:@"此设备不支持记步功能"

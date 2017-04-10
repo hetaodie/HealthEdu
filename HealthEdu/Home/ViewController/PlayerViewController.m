@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *downBtnNameLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *playerViewTopLayout;
 @property (weak, nonatomic) IBOutlet UILabel *videoTitleLabel;
+@property (weak, nonatomic) IBOutlet UIView *downView;
 
 @property (nonatomic, strong) PLPlayer  *player;
 @end
@@ -55,6 +56,9 @@
     
     if ([strUrl length] >0 && [strUrl containsString:@"rtmp"]) {
         self.qnplayView.hidden = NO;
+        self.playerView.hidden = YES;
+        self.downView.hidden = YES;
+        
         PLPlayerOption *option = [PLPlayerOption defaultOption];
         [option setOptionValue:@15 forKey:PLPlayerOptionKeyTimeoutIntervalForMediaPackets];
         NSURL *url = [NSURL URLWithString:@"rtmp://pili-live-rtmp.mmqqbb.com/jkjt/jiangtang"];
@@ -66,7 +70,9 @@
     }
     else {
         self.qnplayView.hidden = YES;
-
+        self.playerView.hidden = NO;
+        self.downView.hidden = NO;
+        
         LectureHailObject *completedVideoObject = [completedVideoDic objectForKey:strUrl.MD5];
         if (completedVideoObject) {
             NSString *videoPath = [manager getVideoFilePathWithUrl:strUrl];

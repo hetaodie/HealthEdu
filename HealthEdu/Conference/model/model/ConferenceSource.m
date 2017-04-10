@@ -41,7 +41,7 @@
         ConferenceObject *object = [[ConferenceObject alloc] init];
         object.title = [obj objectForKey:@"title"];
         object.id = [obj objectForKey:@"id"];
-        object.picurl = [obj objectForKey:@"picUrl"];
+        object.picurl = [obj objectForKey:@"picurl"];
         object.content1 = [obj objectForKey:@"content1"];
         object.content3 = [obj objectForKey:@"content3"];
 
