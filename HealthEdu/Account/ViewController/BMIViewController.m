@@ -43,6 +43,9 @@
 }
 
 - (IBAction)bmiBtnPress:(id)sender {
+    [self.weightTextField resignFirstResponder];
+    [self.heightTextField resignFirstResponder];
+    
     CGFloat weight = [self.weightTextField.text floatValue];
     CGFloat height = [self.heightTextField.text floatValue];
     if (height<=0 || weight <= 0) {
@@ -53,6 +56,7 @@
     CGFloat BMI = weight/pow(height/100, 2);
     NSString *bmiMessage = [NSString stringWithFormat:@"您的BMI值为%f",BMI];
   [self.view makeToast:bmiMessage duration:2.5 position:CSToastPositionCenter];
+ 
 
 }
 

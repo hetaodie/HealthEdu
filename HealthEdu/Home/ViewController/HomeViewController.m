@@ -18,6 +18,9 @@
 #import "HomePageModelSource.h"
 #import "ConsultDetailViewController.h"
 #import "PlayerViewController.h"
+#import "UIColor+HEX.h"
+
+#import "MessageViewController.h"
 
 #define HomeContentCellHeight 168
 
@@ -45,6 +48,18 @@
     [self.modelSource getHomePageNews];
     
     self.contentArray = [[NSMutableArray alloc] init];
+    UIButton *messageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    messageBtn.frame = CGRectMake(0, 0, 55, 23);
+    [messageBtn setTitle:@"消息" forState:UIControlStateNormal];
+    [messageBtn setTintColor:[UIColor colorWithHexString:@"ffffff" alpha:1.0]];
+    messageBtn.layer.cornerRadius = 10;
+    messageBtn.layer.borderColor  = [UIColor colorWithHexString:@"ffffff" alpha:1.0].CGColor;
+    messageBtn.layer.borderWidth = 2.0;
+    messageBtn.clipsToBounds = YES;
+    [messageBtn addTarget:self action:@selector(messageBtnPress:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:messageBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +69,12 @@
 
 #pragma mark -
 #pragma mark IBActions
+
+- (void)messageBtnPress:(id)sender {
+    MessageViewController *ndVC = [[MessageViewController alloc] initWithNibName:@"MessageViewController" bundle:nil];
+    ndVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ndVC animated:YES];
+}
 
 #pragma mark -
 #pragma mark public

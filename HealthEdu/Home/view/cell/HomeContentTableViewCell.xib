@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="90" id="xL2-La-0bH"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bofang" translatesAutoresizingMaskIntoConstraints="NO" id="gOF-dQ-avF">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bofang" translatesAutoresizingMaskIntoConstraints="NO" id="gOF-dQ-avF">
                                 <rect key="frame" x="9" y="10" width="331" height="90"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lC-bc-3ll">

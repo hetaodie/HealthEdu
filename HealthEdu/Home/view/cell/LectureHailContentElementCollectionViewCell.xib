@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playbg" translatesAutoresizingMaskIntoConstraints="NO" id="3HB-eP-lHG">
-                        <rect key="frame" x="0.0" y="0.0" width="140" height="74.5"/>
+                        <rect key="frame" x="35" y="18.5" width="70" height="37.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edF-Ch-OvD">
                         <rect key="frame" x="6" y="57" width="27.5" height="12"/>
@@ -43,17 +44,17 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="3HB-eP-lHG" firstAttribute="trailing" secondItem="Zvr-Vp-HYn" secondAttribute="trailing" id="0gq-91-opq"/>
-                <constraint firstItem="3HB-eP-lHG" firstAttribute="top" secondItem="Zvr-Vp-HYn" secondAttribute="top" id="0vI-gg-l5Q"/>
                 <constraint firstItem="edF-Ch-OvD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="6oq-7v-tQ9"/>
-                <constraint firstItem="3HB-eP-lHG" firstAttribute="bottom" secondItem="Zvr-Vp-HYn" secondAttribute="bottom" id="6qQ-6h-jua"/>
-                <constraint firstItem="3HB-eP-lHG" firstAttribute="leading" secondItem="Zvr-Vp-HYn" secondAttribute="leading" id="A2H-Wq-gyW"/>
                 <constraint firstAttribute="trailing" secondItem="Zvr-Vp-HYn" secondAttribute="trailing" id="EG9-qM-he0"/>
                 <constraint firstAttribute="trailing" secondItem="ZPI-MC-3H4" secondAttribute="trailing" constant="10" id="Jl0-43-82r"/>
+                <constraint firstItem="3HB-eP-lHG" firstAttribute="width" secondItem="Zvr-Vp-HYn" secondAttribute="width" multiplier="0.5" id="Lg6-MD-6fw"/>
                 <constraint firstItem="Zvr-Vp-HYn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aGR-zZ-IsT"/>
+                <constraint firstItem="3HB-eP-lHG" firstAttribute="centerX" secondItem="Zvr-Vp-HYn" secondAttribute="centerX" id="cYZ-M7-yqC"/>
                 <constraint firstItem="ZPI-MC-3H4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="eTv-O0-wt1"/>
+                <constraint firstItem="3HB-eP-lHG" firstAttribute="height" secondItem="Zvr-Vp-HYn" secondAttribute="height" multiplier="0.5" id="f8l-h6-XIY"/>
                 <constraint firstItem="ZPI-MC-3H4" firstAttribute="top" secondItem="Zvr-Vp-HYn" secondAttribute="bottom" constant="10" id="nKB-6e-3uN"/>
                 <constraint firstItem="Zvr-Vp-HYn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ub3-cw-wAd"/>
+                <constraint firstItem="3HB-eP-lHG" firstAttribute="centerY" secondItem="Zvr-Vp-HYn" secondAttribute="centerY" id="vQK-0w-BdV"/>
                 <constraint firstItem="edF-Ch-OvD" firstAttribute="bottom" secondItem="Zvr-Vp-HYn" secondAttribute="bottom" constant="-5" id="wep-tB-jk0"/>
             </constraints>
             <connections>

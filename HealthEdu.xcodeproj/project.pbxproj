@@ -100,6 +100,16 @@
 		7C87BFB41DE81ADC0034C613 /* CitysView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BFB31DE81ADC0034C613 /* CitysView.xib */; };
 		7C87BFBD1DE81C680034C613 /* CitysViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C87BFBB1DE81C680034C613 /* CitysViewCollectionViewCell.m */; };
 		7C87BFBE1DE81C680034C613 /* CitysViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C87BFBC1DE81C680034C613 /* CitysViewCollectionViewCell.xib */; };
+		7CC4E0951E9D248A00446FF4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4E0931E9D248A00446FF4 /* MessageViewController.m */; };
+		7CC4E0961E9D248A00446FF4 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC4E0941E9D248A00446FF4 /* MessageViewController.xib */; };
+		7CC4E09A1E9D25D300446FF4 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4E0981E9D25D300446FF4 /* MessageTableViewCell.m */; };
+		7CC4E09B1E9D25D300446FF4 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC4E0991E9D25D300446FF4 /* MessageTableViewCell.xib */; };
+		7CC4E09E1E9D28FA00446FF4 /* MessageObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4E09D1E9D28FA00446FF4 /* MessageObject.m */; };
+		7CC4E0A11E9D29D700446FF4 /* MessageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4E0A01E9D29D700446FF4 /* MessageSource.m */; };
+		7CC4E0A41E9D2AE000446FF4 /* MessageDetailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4E0A31E9D2AE000446FF4 /* MessageDetailSource.m */; };
+		7CC4E0A71E9D2C9C00446FF4 /* MessageDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4E0A61E9D2C9C00446FF4 /* MessageDetailObject.m */; };
+		7CC4E0AB1E9D36E200446FF4 /* MessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC4E0A91E9D36E200446FF4 /* MessageDetailViewController.m */; };
+		7CC4E0AC1E9D36E200446FF4 /* MessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC4E0AA1E9D36E200446FF4 /* MessageDetailViewController.xib */; };
 		7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC6857C1DD97E9D00E2AB19 /* ConsultDetailViewController.m */; };
 		7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC6857D1DD97E9D00E2AB19 /* ConsultDetailViewController.xib */; };
 		7CF03E921E5ADE520088CD9F /* ConsultDetailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF03E901E5ADE520088CD9F /* ConsultDetailSource.m */; };
@@ -370,6 +380,23 @@
 		7C87BFBA1DE81C680034C613 /* CitysViewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitysViewCollectionViewCell.h; sourceTree = "<group>"; };
 		7C87BFBB1DE81C680034C613 /* CitysViewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitysViewCollectionViewCell.m; sourceTree = "<group>"; };
 		7C87BFBC1DE81C680034C613 /* CitysViewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CitysViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		7CC4E0921E9D248A00446FF4 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		7CC4E0931E9D248A00446FF4 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		7CC4E0941E9D248A00446FF4 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		7CC4E0971E9D25D300446FF4 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		7CC4E0981E9D25D300446FF4 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		7CC4E0991E9D25D300446FF4 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		7CC4E09C1E9D28FA00446FF4 /* MessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageObject.h; sourceTree = "<group>"; };
+		7CC4E09D1E9D28FA00446FF4 /* MessageObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageObject.m; sourceTree = "<group>"; };
+		7CC4E09F1E9D29D700446FF4 /* MessageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageSource.h; sourceTree = "<group>"; };
+		7CC4E0A01E9D29D700446FF4 /* MessageSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageSource.m; sourceTree = "<group>"; };
+		7CC4E0A21E9D2AE000446FF4 /* MessageDetailSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailSource.h; sourceTree = "<group>"; };
+		7CC4E0A31E9D2AE000446FF4 /* MessageDetailSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailSource.m; sourceTree = "<group>"; };
+		7CC4E0A51E9D2C9C00446FF4 /* MessageDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailObject.h; sourceTree = "<group>"; };
+		7CC4E0A61E9D2C9C00446FF4 /* MessageDetailObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailObject.m; sourceTree = "<group>"; };
+		7CC4E0A81E9D36E200446FF4 /* MessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailViewController.h; sourceTree = "<group>"; };
+		7CC4E0A91E9D36E200446FF4 /* MessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailViewController.m; sourceTree = "<group>"; };
+		7CC4E0AA1E9D36E200446FF4 /* MessageDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageDetailViewController.xib; sourceTree = "<group>"; };
 		7CC6857B1DD97E9D00E2AB19 /* ConsultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultDetailViewController.h; sourceTree = "<group>"; };
 		7CC6857C1DD97E9D00E2AB19 /* ConsultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultDetailViewController.m; sourceTree = "<group>"; };
 		7CC6857D1DD97E9D00E2AB19 /* ConsultDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultDetailViewController.xib; sourceTree = "<group>"; };
@@ -619,6 +646,9 @@
 				4FDE9CD11DB4D20600D9C790 /* HomeContentTableViewCell.h */,
 				4FDE9CD21DB4D20600D9C790 /* HomeContentTableViewCell.m */,
 				4FDE9CD31DB4D20600D9C790 /* HomeContentTableViewCell.xib */,
+				7CC4E0971E9D25D300446FF4 /* MessageTableViewCell.h */,
+				7CC4E0981E9D25D300446FF4 /* MessageTableViewCell.m */,
+				7CC4E0991E9D25D300446FF4 /* MessageTableViewCell.xib */,
 				E6E1536A1DC0BC070094A947 /* TopTabScrollViewCell.h */,
 				E6E1536B1DC0BC070094A947 /* TopTabScrollViewCell.m */,
 				E6E1536D1DC0BC1C0094A947 /* TopTabScrollViewCell.xib */,
@@ -691,6 +721,10 @@
 				7CF5E19A1E5D38F300EE42DE /* LectureHailSource.m */,
 				7CFCCC121E5D748800DCEC21 /* LearnCommunitySource.h */,
 				7CFCCC111E5D748800DCEC21 /* LearnCommunitySource.m */,
+				7CC4E09F1E9D29D700446FF4 /* MessageSource.h */,
+				7CC4E0A01E9D29D700446FF4 /* MessageSource.m */,
+				7CC4E0A21E9D2AE000446FF4 /* MessageDetailSource.h */,
+				7CC4E0A31E9D2AE000446FF4 /* MessageDetailSource.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -887,6 +921,10 @@
 				7CFCCC141E5D754300DCEC21 /* LearnCommunityObject.m */,
 				7CFCCC161E5D754300DCEC21 /* LearnCommunityClassifyObject.h */,
 				7CFCCC171E5D754300DCEC21 /* LearnCommunityClassifyObject.m */,
+				7CC4E09C1E9D28FA00446FF4 /* MessageObject.h */,
+				7CC4E09D1E9D28FA00446FF4 /* MessageObject.m */,
+				7CC4E0A51E9D2C9C00446FF4 /* MessageDetailObject.h */,
+				7CC4E0A61E9D2C9C00446FF4 /* MessageDetailObject.m */,
 			);
 			path = object;
 			sourceTree = "<group>";
@@ -1030,6 +1068,12 @@
 			children = (
 				E62342C21D9A0A6000FE8254 /* HomeViewController.h */,
 				E62342C31D9A0A6000FE8254 /* HomeViewController.m */,
+				7CC4E0921E9D248A00446FF4 /* MessageViewController.h */,
+				7CC4E0931E9D248A00446FF4 /* MessageViewController.m */,
+				7CC4E0941E9D248A00446FF4 /* MessageViewController.xib */,
+				7CC4E0A81E9D36E200446FF4 /* MessageDetailViewController.h */,
+				7CC4E0A91E9D36E200446FF4 /* MessageDetailViewController.m */,
+				7CC4E0AA1E9D36E200446FF4 /* MessageDetailViewController.xib */,
 				E6EC278F1DBD988E00DEE06D /* ConsultViewController.h */,
 				E6EC27901DBD988E00DEE06D /* ConsultViewController.m */,
 				E6EC27911DBD988E00DEE06D /* ConsultViewController.xib */,
@@ -1342,6 +1386,7 @@
 				7CF736E31DDBB41700F92222 /* LectureHailContentView.xib in Resources */,
 				7CF736C41DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.xib in Resources */,
 				7C7996A81E6081F300938EC4 /* ConferenceEnrollTableViewCell.xib in Resources */,
+				7CC4E0AC1E9D36E200446FF4 /* MessageDetailViewController.xib in Resources */,
 				7CF736DE1DDB102900F92222 /* CycleBannersCollectionViewCell.xib in Resources */,
 				E6EC279D1DBD998F00DEE06D /* BaiKeViewController.xib in Resources */,
 				E6EC27931DBD988E00DEE06D /* ConsultViewController.xib in Resources */,
@@ -1359,12 +1404,14 @@
 				E6EC27C51DBD9D7B00DEE06D /* CacheViewController.xib in Resources */,
 				7CF736C91DDAE66E00F92222 /* BaiKeSicknessContentView.xib in Resources */,
 				7CF8F3A01DE43DA4003BBE60 /* LectureHailContentCollectionViewCell.xib in Resources */,
+				7CC4E09B1E9D25D300446FF4 /* MessageTableViewCell.xib in Resources */,
 				7C34F3971DD1D4BD00C61015 /* ConsultContentView.xib in Resources */,
 				7C379B0E1DEC6F17004627E9 /* PersonMiMaTableViewCell.xib in Resources */,
 				7C379B1D1DED5E74004627E9 /* CacheCollectionViewCell.xib in Resources */,
 				7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */,
 				7C87BFB41DE81ADC0034C613 /* CitysView.xib in Resources */,
 				7CF736D91DDB101600F92222 /* CycleBannersView.xib in Resources */,
+				7CC4E0961E9D248A00446FF4 /* MessageViewController.xib in Resources */,
 				7C379B251DEE65BE004627E9 /* ChangeNameViewController.xib in Resources */,
 				7C379AF11DEC1C04004627E9 /* RegisterViewController.xib in Resources */,
 				E6E1536E1DC0BC1C0094A947 /* TopTabScrollViewCell.xib in Resources */,
@@ -1525,6 +1572,7 @@
 				7C379AFB1DEC6985004627E9 /* AccountContentTableViewCell.m in Sources */,
 				7C366BE31E531C0200F88D85 /* NSString+MD5.m in Sources */,
 				E6EC27C91DBD9D9400DEE06D /* BMIViewController.m in Sources */,
+				7CC4E0A71E9D2C9C00446FF4 /* MessageDetailObject.m in Sources */,
 				7CF5E1841E5B49C300EE42DE /* ConsultListSource.m in Sources */,
 				E62342DB1D9A154300FE8254 /* ServiceViewController.m in Sources */,
 				7CF736C31DDAE49500F92222 /* BaiKeSicknessUnfoldCategoryView.m in Sources */,
@@ -1535,12 +1583,14 @@
 				7C6D6FEB1E90721800A30C04 /* JiBuViewController.m in Sources */,
 				7CFCCC321E5E635100DCEC21 /* ConferenceDetailViewController.m in Sources */,
 				7CF03E921E5ADE520088CD9F /* ConsultDetailSource.m in Sources */,
+				7CC4E09A1E9D25D300446FF4 /* MessageTableViewCell.m in Sources */,
 				7C379B051DEC6B9B004627E9 /* PersonInfoTableViewCell.m in Sources */,
 				7C6D6FDF1E8F45BB00A30C04 /* GetUserInfoSource.m in Sources */,
 				7C7997F91E66AC1500938EC4 /* LoginSource.m in Sources */,
 				7C79969E1E6000BD00938EC4 /* ConferenceDetailObject.m in Sources */,
 				7CF5E1A21E5D398C00EE42DE /* LectureHailClassifyObject.m in Sources */,
 				7CF5E19C1E5D38F300EE42DE /* LectureHailSource.m in Sources */,
+				7CC4E0951E9D248A00446FF4 /* MessageViewController.m in Sources */,
 				7CF5E17E1E5B48FE00EE42DE /* ConsultClassifyObject.m in Sources */,
 				7C379B091DEC6D85004627E9 /* PersonInfoObject.m in Sources */,
 				7CF5E1871E5BDFBE00EE42DE /* BaiKeClassifyObject.m in Sources */,
@@ -1564,13 +1614,16 @@
 				7CFCCC271E5DE5F200DCEC21 /* ConferenceTableViewCell.m in Sources */,
 				7CF736D81DDB101600F92222 /* CycleBannersView.m in Sources */,
 				7CF8F3AB1DE57568003BBE60 /* NSString+MD5.m in Sources */,
+				7CC4E0A11E9D29D700446FF4 /* MessageSource.m in Sources */,
 				7C379B241DEE65BE004627E9 /* ChangeNameViewController.m in Sources */,
 				E62342E41D9A18A700FE8254 /* AccountViewController.m in Sources */,
 				7CF5E1991E5D353500EE42DE /* BaikeDetailSource.m in Sources */,
+				7CC4E0AB1E9D36E200446FF4 /* MessageDetailViewController.m in Sources */,
 				E6EC27BA1DBD9B1400DEE06D /* LoginViewController.m in Sources */,
 				7C6D6FE51E8F785C00A30C04 /* BMIKnowView.m in Sources */,
 				7C6D6FD41E8F0F5800A30C04 /* DocorRequestSource.m in Sources */,
 				7CF5E1931E5BE21900EE42DE /* BaikeSource.m in Sources */,
+				7CC4E0A41E9D2AE000446FF4 /* MessageDetailSource.m in Sources */,
 				E6EC27B01DBD9A6C00DEE06D /* PlayHistoryViewController.m in Sources */,
 				7C6D6FD81E8F135D00A30C04 /* DoctorRequestTableViewCell.m in Sources */,
 				7CFCCC2B1E5DF17E00DCEC21 /* ConferenceObject.m in Sources */,
@@ -1580,6 +1633,7 @@
 				7CF5E18A1E5BE03800EE42DE /* BaikeObject.m in Sources */,
 				7C7997FD1E66C16600938EC4 /* AboutViewController.m in Sources */,
 				7C379B121DED1595004627E9 /* ChangePassWordViewController.m in Sources */,
+				7CC4E09E1E9D28FA00446FF4 /* MessageObject.m in Sources */,
 				7C87BF561DE73F470034C613 /* UIDevice+JWDevice.m in Sources */,
 				7C7997F31E667F4600938EC4 /* UserInfoManager.m in Sources */,
 				7CF5E1811E5B493C00EE42DE /* ConsultListObject.m in Sources */,
