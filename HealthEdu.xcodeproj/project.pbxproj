@@ -112,6 +112,9 @@
 		7CC4E0AC1E9D36E200446FF4 /* MessageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC4E0AA1E9D36E200446FF4 /* MessageDetailViewController.xib */; };
 		7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC6857C1DD97E9D00E2AB19 /* ConsultDetailViewController.m */; };
 		7CC6857F1DD97E9D00E2AB19 /* ConsultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CC6857D1DD97E9D00E2AB19 /* ConsultDetailViewController.xib */; };
+		7CEB61F31EA5DB1B007CAEA5 /* RTCAudioSession+Configuration.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7CEB61ED1EA5DB1B007CAEA5 /* RTCAudioSession+Configuration.mm */; };
+		7CEB61F41EA5DB1B007CAEA5 /* RTCAudioSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7CEB61F01EA5DB1B007CAEA5 /* RTCAudioSession.mm */; };
+		7CEB61F51EA5DB1B007CAEA5 /* RTCAudioSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CEB61F21EA5DB1B007CAEA5 /* RTCAudioSessionConfiguration.m */; };
 		7CF03E921E5ADE520088CD9F /* ConsultDetailSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF03E901E5ADE520088CD9F /* ConsultDetailSource.m */; };
 		7CF03E951E5ADF020088CD9F /* ConsultDetailObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF03E941E5ADF020088CD9F /* ConsultDetailObject.m */; };
 		7CF5E17E1E5B48FE00EE42DE /* ConsultClassifyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5E17D1E5B48FE00EE42DE /* ConsultClassifyObject.m */; };
@@ -400,6 +403,12 @@
 		7CC6857B1DD97E9D00E2AB19 /* ConsultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultDetailViewController.h; sourceTree = "<group>"; };
 		7CC6857C1DD97E9D00E2AB19 /* ConsultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultDetailViewController.m; sourceTree = "<group>"; };
 		7CC6857D1DD97E9D00E2AB19 /* ConsultDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultDetailViewController.xib; sourceTree = "<group>"; };
+		7CEB61ED1EA5DB1B007CAEA5 /* RTCAudioSession+Configuration.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "RTCAudioSession+Configuration.mm"; sourceTree = "<group>"; };
+		7CEB61EE1EA5DB1B007CAEA5 /* RTCAudioSession+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RTCAudioSession+Private.h"; sourceTree = "<group>"; };
+		7CEB61EF1EA5DB1B007CAEA5 /* RTCAudioSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCAudioSession.h; sourceTree = "<group>"; };
+		7CEB61F01EA5DB1B007CAEA5 /* RTCAudioSession.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTCAudioSession.mm; sourceTree = "<group>"; };
+		7CEB61F11EA5DB1B007CAEA5 /* RTCAudioSessionConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCAudioSessionConfiguration.h; sourceTree = "<group>"; };
+		7CEB61F21EA5DB1B007CAEA5 /* RTCAudioSessionConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCAudioSessionConfiguration.m; sourceTree = "<group>"; };
 		7CF03E901E5ADE520088CD9F /* ConsultDetailSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultDetailSource.m; sourceTree = "<group>"; };
 		7CF03E911E5ADE520088CD9F /* ConsultDetailSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultDetailSource.h; sourceTree = "<group>"; };
 		7CF03E931E5ADF020088CD9F /* ConsultDetailObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultDetailObject.h; sourceTree = "<group>"; };
@@ -683,6 +692,7 @@
 		7C366BDD1E531BED00F88D85 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				7CEB61EC1EA5DB1B007CAEA5 /* RTCAudioSession */,
 				7C6D6FED1E907DA200A30C04 /* PedometerManager */,
 				7C366BDE1E531C0200F88D85 /* HENetTask.h */,
 				7C366BDF1E531C0200F88D85 /* HENetTask.m */,
@@ -927,6 +937,19 @@
 				7CC4E0A61E9D2C9C00446FF4 /* MessageDetailObject.m */,
 			);
 			path = object;
+			sourceTree = "<group>";
+		};
+		7CEB61EC1EA5DB1B007CAEA5 /* RTCAudioSession */ = {
+			isa = PBXGroup;
+			children = (
+				7CEB61ED1EA5DB1B007CAEA5 /* RTCAudioSession+Configuration.mm */,
+				7CEB61EE1EA5DB1B007CAEA5 /* RTCAudioSession+Private.h */,
+				7CEB61EF1EA5DB1B007CAEA5 /* RTCAudioSession.h */,
+				7CEB61F01EA5DB1B007CAEA5 /* RTCAudioSession.mm */,
+				7CEB61F11EA5DB1B007CAEA5 /* RTCAudioSessionConfiguration.h */,
+				7CEB61F21EA5DB1B007CAEA5 /* RTCAudioSessionConfiguration.m */,
+			);
+			path = RTCAudioSession;
 			sourceTree = "<group>";
 		};
 		7CF736E91DDBEDDA00F92222 /* AVPlayer */ = {
@@ -1539,6 +1562,7 @@
 				7C85FF441E5408C80019C1D5 /* PopularRecommendObject.m in Sources */,
 				7C6D6FF21E907DA200A30C04 /* QYPedometerData.m in Sources */,
 				7C34F3951DD1D4AE00C61015 /* ConsultContentView.m in Sources */,
+				7CEB61F41EA5DB1B007CAEA5 /* RTCAudioSession.mm in Sources */,
 				7CFCCC181E5D754300DCEC21 /* LearnCommunityObject.m in Sources */,
 				7CC6857E1DD97E9D00E2AB19 /* ConsultDetailViewController.m in Sources */,
 				7CF03E951E5ADF020088CD9F /* ConsultDetailObject.m in Sources */,
@@ -1557,6 +1581,7 @@
 				7CF5E1961E5CA5D600EE42DE /* Comment.m in Sources */,
 				E6EC27B51DBD9A8F00DEE06D /* LearnCommunityViewController.m in Sources */,
 				7C7997911E648B4C00938EC4 /* ServerObject.m in Sources */,
+				7CEB61F31EA5DB1B007CAEA5 /* RTCAudioSession+Configuration.mm in Sources */,
 				7CF736B01DDAD4FD00F92222 /* BaiKeSicknessFoldCategoryView.m in Sources */,
 				7C6D6FF31E907DA200A30C04 /* QYPedometerManager.m in Sources */,
 				7C7997E01E65C86300938EC4 /* PayViewController.m in Sources */,
@@ -1639,6 +1664,7 @@
 				7CF5E1811E5B493C00EE42DE /* ConsultListObject.m in Sources */,
 				E62342DE1D9A157600FE8254 /* ConsultationViewController.m in Sources */,
 				7C7997F61E667F6900938EC4 /* UserInfo.m in Sources */,
+				7CEB61F51EA5DB1B007CAEA5 /* RTCAudioSessionConfiguration.m in Sources */,
 				E6E1536C1DC0BC070094A947 /* TopTabScrollViewCell.m in Sources */,
 				7C7996A71E6081F300938EC4 /* ConferenceEnrollTableViewCell.m in Sources */,
 				7C7998041E671A9000938EC4 /* AboutObject.m in Sources */,
@@ -1810,6 +1836,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuchi.HealthEdu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1827,6 +1854,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuchi.HealthEdu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

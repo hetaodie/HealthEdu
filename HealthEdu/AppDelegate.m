@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "VideoDownloaderManger.h"
+#import <AVFoundation/AVFoundation.h>
+#import "RTCAudioSession.h"
+#import "RTCAudioSessionConfiguration.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self configureAudioSession];
     [[VideoDownloaderManger sharedInstance] downloadAllVideo];
     // Override point for customization after application launch.
     return YES;
@@ -47,6 +51,30 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)configureAudioSession {
+    RTCAudioSessionConfiguration *configuration =
+    [[RTCAudioSessionConfiguration alloc] init];
+    configuration.category = AVAudioSessionCategoryAmbient;
+    configuration.categoryOptions = AVAudioSessionCategoryOptionDuckOthers;
+    configuration.mode = AVAudioSessionModeDefault;
+    
+    RTCAudioSession *session = [RTCAudioSession sharedInstance];
+    [session lockForConfiguration];
+    BOOL hasSucceeded = NO;
+    NSError *error = nil;
+    if (session.isActive) {
+        hasSucceeded = [session setConfiguration:configuration error:&error];
+    } else {
+        hasSucceeded = [session setConfiguration:configuration
+                                          active:YES
+                                           error:&error];
+    }
+    if (!hasSucceeded) {
+        //RTCLogError(@"Error setting configuration: %@", error.localizedDescription);
+    }
+    [session unlockForConfiguration];
 }
 
 

@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIWebView *contentWebView;
-@property (weak, nonatomic) IBOutlet UIImageView *contentImage;
 @property (weak, nonatomic) IBOutlet UILabel *readNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *zanLabel;
 @end
@@ -44,7 +43,7 @@
     NSDate *date = [Comment getDateTimeFromMilliSeconds:[aObject.createdate longLongValue]];
     NSString *strDate = [Comment dateToString:date];
     self.timeLabel.text = [NSString stringWithFormat:@"时间：%@",strDate];
-    [self.contentImage sd_setImageWithURL:[NSURL URLWithString:aObject.picurl] placeholderImage:[UIImage imageNamed:@"messageDetailDefault"]];
+  
     [self.contentWebView loadHTMLString:aObject.contenttext baseURL:nil];
     self.readNumLabel.text = [NSString stringWithFormat:@"阅读%@",aObject.viewnum];
 }

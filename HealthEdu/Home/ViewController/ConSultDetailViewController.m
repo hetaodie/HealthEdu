@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *laiyuanLabel;
 @property (weak, nonatomic) IBOutlet UILabel *createDateLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *contentImageView;
 @property (weak, nonatomic) IBOutlet UIWebView *contentWebView;
 
 @end
@@ -54,7 +53,6 @@
     self.laiyuanLabel.text = aObject.content1;
     self.createDateLabel.text = strDate;
     
-    [self.contentImageView sd_setImageWithURL:[NSURL URLWithString:aObject.picurl] placeholderImage:[UIImage imageNamed:@"consultDetailDefault.png"]];
     [self.contentWebView loadHTMLString:aObject.contenttext baseURL:nil];
 
 }

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConsultDetailViewController">
             <connections>
-                <outlet property="contentImageView" destination="I6G-Tg-3QE" id="5j9-8n-QIR"/>
                 <outlet property="contentWebView" destination="4X7-Xr-NV7" id="Bfx-XU-Ufv"/>
                 <outlet property="createDateLabel" destination="ivI-um-WAg" id="MbE-AX-RSH"/>
                 <outlet property="laiyuanLabel" destination="Ca5-B4-FiQ" id="60n-Zw-5MX"/>
@@ -67,37 +66,25 @@
                         <constraint firstAttribute="height" constant="33" id="uqa-je-iOH"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="consultDetailDefault" translatesAutoresizingMaskIntoConstraints="NO" id="I6G-Tg-3QE">
-                    <rect key="frame" x="12" y="172" width="351" height="185.5"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="I6G-Tg-3QE" secondAttribute="height" multiplier="172:91" id="awh-fc-ooR"/>
-                    </constraints>
-                </imageView>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4X7-Xr-NV7">
-                    <rect key="frame" x="12" y="385" width="351" height="282"/>
+                    <rect key="frame" x="12" y="187" width="351" height="480"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </webView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="aei-7U-rZz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8El-Mg-03j"/>
-                <constraint firstItem="I6G-Tg-3QE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="8gq-ri-hPk"/>
                 <constraint firstAttribute="trailing" secondItem="4X7-Xr-NV7" secondAttribute="trailing" constant="12" id="9Tm-G1-9wh"/>
+                <constraint firstItem="4X7-Xr-NV7" firstAttribute="top" secondItem="aei-7U-rZz" secondAttribute="bottom" constant="30" id="A2V-zf-W9u"/>
                 <constraint firstAttribute="trailing" secondItem="HRY-Eo-1ri" secondAttribute="trailing" id="Frj-sZ-eWI"/>
                 <constraint firstItem="HRY-Eo-1ri" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NxZ-bO-8x5"/>
-                <constraint firstAttribute="trailing" secondItem="I6G-Tg-3QE" secondAttribute="trailing" constant="12" id="QuZ-Fw-fSN"/>
-                <constraint firstItem="I6G-Tg-3QE" firstAttribute="top" secondItem="aei-7U-rZz" secondAttribute="bottom" constant="15" id="R9Y-Il-Naq"/>
                 <constraint firstItem="aei-7U-rZz" firstAttribute="top" secondItem="HRY-Eo-1ri" secondAttribute="bottom" id="ba3-Qk-Iu3"/>
                 <constraint firstItem="HRY-Eo-1ri" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="c52-u8-3Gf"/>
                 <constraint firstItem="4X7-Xr-NV7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="fV9-V7-dfG"/>
-                <constraint firstItem="4X7-Xr-NV7" firstAttribute="top" secondItem="I6G-Tg-3QE" secondAttribute="bottom" constant="27.5" id="hba-L2-b2l"/>
                 <constraint firstAttribute="bottom" secondItem="4X7-Xr-NV7" secondAttribute="bottom" id="nPS-qq-L6v"/>
                 <constraint firstAttribute="trailing" secondItem="aei-7U-rZz" secondAttribute="trailing" id="tFj-gB-nJW"/>
             </constraints>
             <point key="canvasLocation" x="81.5" y="53.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="consultDetailDefault" width="344" height="182"/>
-    </resources>
 </document>

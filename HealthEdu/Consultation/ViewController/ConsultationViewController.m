@@ -96,8 +96,8 @@
     ConsultationListObject *object = [self.listArray objectAtIndex:indexPath.row];
     MapViewController *jkdeVC = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
     jkdeVC.hidesBottomBarWhenPushed = YES;
-    jkdeVC.latitude = [object.latitude floatValue];
-    jkdeVC.longitude = [object.longitude floatValue];
+    jkdeVC.latitude = [object.latitude doubleValue];
+    jkdeVC.longitude = [object.longitude doubleValue];
     [self.navigationController pushViewController:jkdeVC animated:YES];
 }
 

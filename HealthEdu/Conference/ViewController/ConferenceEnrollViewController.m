@@ -158,10 +158,11 @@
 }
 
 - (IBAction)PayBtnPress:(id)sender {
-    PayViewController *ndVC = [[PayViewController alloc] initWithNibName:@"PayViewController" bundle:nil];
-    ndVC.enrollObject = self.enrollObject;
-    ndVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:ndVC animated:YES];
+
+//    PayViewController *ndVC = [[PayViewController alloc] initWithNibName:@"PayViewController" bundle:nil];
+//    ndVC.enrollObject = self.enrollObject;
+//    ndVC.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:ndVC animated:YES];
 }
 
 @end
